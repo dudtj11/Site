@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Youngseo Kim - Errors (2023)</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+        <style>
+            /* 1. 세련된 미니멀 단색 배경 처리 */
+            body {
+                background: #0f0f11 !important; /* 깊이감 있는 갤러리풍 차콜 블랙 단색 */
+                background-image: none !important;
+            }
+            body::before, body::after {
+                display: none !important; /* 템플릿 기본 그라데이션 제거 */
+            }
+            #wrapper {
+                background: transparent !important;
+                background-image: none !important;
+                padding-top: 6rem !important; /* 상단 바 고정에 따른 본문 파묻힘 방지 */
+            }
+
+            /* 2. 상단 고정형 헤더 & 내비게이션 (메인 구조와 100% 동기화) */
+            #custom-header-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 4rem !important; /* 높이 절대 고정 */
+                background: rgba(15, 15, 17, 0.95) !important; /* 배경 일치 및 반투명 */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 4rem !important;
+                z-index: 10000 !important;
+                box-sizing: border-box;
+            }
+
+            /* 왼쪽 로고 텍스트 */
+            .nav-logo {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+
+            /* 오른쪽 메뉴 구역 */
+            #nav {
+                position: relative !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+            }
+            #nav ul {
+                display: flex !important;
+                flex-direction: row !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li a {
+                display: block !important;
+                height: 4rem !important;
+                line-height: 4rem !important;
+                padding: 0 1.25rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em;
+                border: none !important;
+                background: transparent !important;
+                transition: color 0.2s ease;
+            }
+            #nav ul li a:hover, #nav ul li a.active {
+                color: #ffffff !important;
+                background: transparent !important;
+            }
+
+            /* 3. 본문 컨테이너 및 텍스트 검은색 보정 디자인 */
+            .main header.major h2::after,
+            .main header.major::after {
+                background-color: #000000 !important;
+                background: #000000 !important;
+            }
+
+            /* 작품 세부 서술용 스타일 클래스 */
+            .work-detail-meta {
+                font-size: 0.95rem;
+                color: #666666 !important;
+                margin-bottom: 3rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                font-weight: 500;
+            }
+            
+            /* 다국어 섹션 스타일 */
+            .lang-section {
+                margin-bottom: 2.5rem;
+            }
+            .lang-section:last-child {
+                margin-bottom: 0;
+            }
+            .lang-label {
+                font-size: 0.8rem;
+                font-weight: 800;
+                color: #888888;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin-bottom: 0.5rem;
+                border-left: 2px solid #000000;
+                padding-left: 0.5rem;
+                line-height: 1;
+            }
+            .work-detail-content {
+                color: #000000 !important;
+                font-size: 1rem;
+                line-height: 1.8;
+                text-align: justify;
+            }
+            .work-detail-content p {
+                color: #000000 !important;
+                margin-bottom: 1.5rem;
+            }
+            .work-detail-content p:last-child {
+                margin-bottom: 0;
+            }
+
+            /* 목록으로 돌아가기 버튼 스타일 */
+            .back-to-list {
+                margin-top: 4rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid rgba(0, 0, 0, 0.08);
+            }
+            .back-to-list .button {
+                display: inline-block;
+                text-align: center;
+                height: 2.2rem !important;
+                line-height: 2.2rem !important;
+                padding: 0 1.5rem !important;
+                font-size: 0.75rem !important;
+                box-sizing: border-box;
+                border: 1px solid #000000 !important;
+                background: transparent !important;
+                color: #000000 !important;
+                box-shadow: none !important;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+            .back-to-list .button:hover {
+                background: #000000 !important;
+                color: #ffffff !important;
+            }
+
+            /* 하단 카피라이트 영역 */
+            #footer {
+                border-top: none !important;
+                padding: 0 !important;
+            }
+            .copyright {
+                margin-top: 4rem !important;
+                padding-bottom: 4rem;
+                color: rgba(255, 255, 255, 0.4) !important;
+            }
+
+            /* 반응형 뷰포트 레이아웃 대응 (980px 규격 완벽 일치) */
+            @media screen and (max-width: 980px) {
+                #custom-header-nav {
+                    position: relative !important;
+                    flex-direction: column !important;
+                    height: auto !important;
+                    padding: 1rem !important;
+                }
+                #nav ul {
+                    flex-wrap: wrap !important;
+                    justify-content: center !important;
+                }
+                #nav ul li a {
+                    height: 3rem !important;
+                    line-height: 3rem !important;
+                    padding: 0 0.75rem !important;
+                }
+                #wrapper {
+                    padding-top: 1rem !important;
+                }
+                .main {
+                    padding: 2.5rem 1.5rem !important;
+                }
+                .back-to-list .button {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <div id="custom-header-nav">
+            <div class="nav-logo">Youngseo Kim</div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../biography.html">Biography</a></li>
+                    <li><a href="../calendar.html">Calendar</a></li>
+                    <li><a href="../project.html">Project</a></li>
+                    <li><a href="../watch.html">Watch</a></li>
+                    <li><a href="../works.html" class="active">Works</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="wrapper">
+            <div id="main">
+                <section class="main">
+                    <header class="major">
+                        <h2><strong>Errors (2023)<br>for Piano Trio and Conductor</strong></h2>
+                    </header>
+
+                    <div class="work-detail-content">
+
+                        <div class="lang-section">
+                            <div class="lang-label">EN</div>
+                            <p>“Errors” is a satirical work that transforms HTTP status codes into musical language, mocking the unplayable notation, systemic contradictions, and inefficient rehearsal culture of contemporary composers. Each movement is based on a real error code and musically reinterprets the message it conveys.</p>
+                            <p>1. HTTP 400 Error: Bad Request<br/>
+                            This movement mirrors what many composers already do – placing completely unplayable demands on performers. Notes out of reach, unplayable registers, and technically impossible instructions are presented all at once.</p>
+                            <p>2. HTTP 403 Error: Forbidden<br/>
+                            This movement translates the absurdity of unnecessary conducting into music. As the piece begins, the conductor appears on stage, only to have the baton taken away and be escorted off. It satirizes the over-involvement of conductors in small ensembles, highlighting the irony of control where none is needed. The music continues freely without a conductor.</p>
+                            <p>3. HTTP 404 Error: Not Found<br/>
+                            This movement musically interprets the idea of “Page Not Found.” Lasting exactly 4 minutes and 4 seconds, the score contains nothing but the text “404 Page not found.”</p>
+                            <p>4. HTTP 502 Error: Bad Gateway<br/>
+                            This final movement parodies a misconnected stage system. At the end of the piece, musicians exit not through the usual backstage doors, but through emergency exits or random pathways, each in their own direction. It reflects how even the ending of a performance can be riddled with errors.</p>
+                        </div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">DE</div>
+                            <p>‘Errors’ ist ein satirisches Werk, das HTTP-Statuscodes in musikalische Sprache übersetzt. Es nimmt die unspielbare Notation, systemische Widersprüche und ineffiziente Probenkultur moderner Komponist aufs Korn. Jeder Satz basiert auf einem realen Fehlercode und interpretiert dessen Aussage musikalisch neu.</p>
+                            <p>1. HTTP 400 Error: Bad Request<br/>
+                            Dieser Satz ist, wie viele Partituren der Gegenwart, voller unausführbarer Anweisungen. Nicht erreichbare Töne, zu große Intervalle, unspielbare Register – alles ist enthalten.</p>
+                            <p>2. HTTP 403 Error: Forbidden<br/>
+                            Hier wird die Überflüssigkeit des Dirigierens thematisiert. Kaum hat der Dirigent die Bühne betreten, wird ihm der Taktstock entzogen und er wird hinausgeleitet. Die Szene karikiert die übermäßige Kontrolle durch Dirigent bei kleinen Ensembles. Die Musik verläuft anschließend frei und ohne Leitung.</p>
+                            <p>3. HTTP 404 Error: Not Found<br/>
+                            Dieser Satz interpretiert das Konzept „Seite nicht gefunden“ musikalisch. Er dauert exakt 4 Minuten und 4 Sekunden. Die Notenblätter zeigen lediglich die Aufschrift „404 Seite nicht gefunden“.</p>
+                            <p>4. HTTP 502 Error: Bad Gateway<br/>
+                            Im letzten Satz verlassen die Musikerinnen nicht den üblichen Bühnenausgang, sondern gehen durch Notausgänge oder falsche Türen – jeder für sich. Das symbolisiert ein fehlerhaftes System auch im Abgang.</p>
+                        </div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">FR</div>
+                            <p>« Errors » est une œuvre satirique qui traduit les codes d’erreur HTTP en langage musical. Elle se moque des partitions injouables, des absurdités systémiques et de l’inefficacité des répétitions dans la musique contemporaine. Chaque mouvement s’s’inspire d’un code d’erreur réel et en propose une réinterprétation musicale.</p>
+                            <p>1. HTTP 400 Error: Bad Request<br/>
+                            Ce mouvement illustre ce que de nombreux compositeurs font déjà : imposer aux musiciens des demandes tout simplement irréalisables. Sons hors de portée, tessitures inaccessibles, instructions techniquement impossibles.</p>
+                            <p>2. HTTP 403 Error: Forbidden<br/>
+                            Ce mouvement dénonce l’inutilité du chef d’orchestre dans certains contextes. Dès l’entrée du chef, sa baguette lui est retirée, et il est escorté hors de scène. Il s’agit d’une critique de l’intervention excessive des chefs dans des formations réduites. La musique se poursuit librement, sans direction.</p>
+                            <p>3. HTTP 404 Error: Not Found<br/>
+                            Ce mouvement traduit l’idée de « Page introuvable » en musique. Il dure exactement 4 minutes et 4 secondes. La partition ne contient qu’un seul message : « 404 Page non trouvée ».</p>
+                            <p>4. HTTP 502 Error : Bad Gateway<br/>
+                            Ce dernier mouvement met en scène une sortie chaotique : les musiciens ne quittent pas la scène par l’arrière, mais empruntent des sorties de secours ou des portes inattendues, chacun suivant son propre chemin. Cela symbolise un système de concert défaillant jusqu’à sa fin.</p>
+                        </div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">KR</div>
+                            <p>《오류들》(Errors)은 HTTP 상태 코드들을 음악적 언어로 전환하여, 현대 작곡가들의 연주 불가능한 표기, 시스템적 모순, 비효율적인 리허설 문화를 비꼬는 풍자적 작품이다. 각 악장은 실제 존재하는 오류 코드를 기반으로 하며, 각 코드가 내포한 메시지를 음악적으로 재구성한다.</p>
+                            <p>1. HTTP 400 Error : Bad Request<br/>
+                            이 악장은 많은 작곡가들이 이미 그렇게 하듯이 연주자에게 절대 수행할 수 없는 요구를 던지는 방식으로 구성되어 있다. 손이 닿을 수 없는 음, 음역을 벗어난 기보 등 불가능한 기술적 지시들이 혼재되어 있다.</p>
+                            <p>2. HTTP 403 Error : Forbidden<br/>
+                            403 악장은 ‘지휘의 불필요함’을 음악적으로 풀어낸다. 연주가 시작되자마자 지휘자는 무대에 등장하지만, 곧 지휘봉을 빼앗기고 퇴장당한다. 이는 몇 명 되지 않는 앙상블에 굳이 개입하려는 지휘자의 존재를 풍자하며, 리허설이나 연주 중 생기는 불필요한 통제의 아이러니를 꼬집는다. 실제로 이 악장은 지휘 없이도 자유롭게 흘러간다.</p>
+                            <p>3. HTTP 404 Error : Not Found<br/>
+                            ‘404’는 ‘페이지를 찾을 수 없음’을 음악적으로 해석한 악장이다. 이 악장은 정확히 4분 04초 동안 진행된다. 악보에는 ‘404 페이지를 찾을 수 없습니다’가 표기되어 있는 것이 전부다.</p>
+                            <p>4. HTTP 502 Error : Bad Gateway<br/>
+                            502 악장은 무대와 무대 밖의 ‘게이트’가 잘못 연결되어 있는 상황을 풍자한다. 곡의 마지막, 연주자들은 전통적인 퇴장 경로가 아닌 비상구 혹은 엉뚱한 문을 통해 각자 다른 방식으로 퇴장한다. 이는 공연이라는 시스템의 종료 과정조차도 오류투성이일 수 있음을 암시한다.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="back-to-list">
+                        <a href="../works.html" class="button">&larr; Back to Works</a>
+                    </div>
+
+                </section>
+            </div>
+
+            <footer id="footer">
+                <p class="copyright">&copy; Youngseo Kim</p>
+            </footer>
+        </div>
+
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.min.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+
+    </body>
+</html>

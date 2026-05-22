@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Youngseo Kim - Biography</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* 1. 세련된 미니멀 단색 배경 처리 */
+            body {
+                background: #0f0f11 !important; /* 깊이감 있는 갤러리풍 차콜 블랙 단색 */
+                background-image: none !important;
+            }
+            body::before, body::after {
+                display: none !important; /* 템플릿 기본 그라데이션 제거 */
+            }
+            #wrapper {
+                background: transparent !important;
+                background-image: none !important;
+                padding-top: 6rem !important; /* 상단 바 고정에 따른 본문 파묻힘 방지 */
+            }
+
+            /* 2. 상단 고정형 헤더 & 내비게이션 */
+            #custom-header-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 4rem !important; /* 높이 절대 고정 */
+                background: rgba(15, 15, 17, 0.95) !important; /* 배경 일치 및 반투명 */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 4rem !important;
+                z-index: 10000 !important;
+                box-sizing: border-box;
+            }
+
+            /* 왼쪽 로고 텍스트 */
+            .nav-logo {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+
+            /* 오른쪽 메뉴 구역 */
+            #nav {
+                position: relative !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+            }
+            #nav ul {
+                display: flex !important;
+                flex-direction: row !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li a {
+                display: block !important;
+                height: 4rem !important;
+                line-height: 4rem !important;
+                padding: 0 1.25rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em;
+                border: none !important;
+                background: transparent !important;
+                transition: color 0.2s ease;
+            }
+            #nav ul li a:hover, #nav ul li a.active {
+                color: #ffffff !important;
+                background: transparent !important;
+            }
+
+            /* 3. 제목 밑 하단 선 검은색 보정 */
+            .main header.major h2::after,
+            .main header.major::after {
+                background-color: #000000 !important;
+                background: #000000 !important;
+            }
+            
+            /* Footer 기본 구분선 제거 및 하단 여백 확보 */
+            #footer {
+                border-top: none !important;
+                padding: 0 !important;
+            }
+            .copyright {
+                margin-top: 4rem !important;
+                padding-bottom: 4rem;
+            }
+
+            /* 본문 텍스트 좌우 맞춤 정렬 */
+            .justify-text {
+                text-align: justify !important;
+                text-justify: inter-word;
+            }
+
+            /* 4. 언어 스위치 버튼 스타일 보정 */
+            .lang-switch {
+                margin-bottom: 2.5em;
+                text-align: center;
+            }
+            .lang-btn {
+                background-color: transparent !important;
+                box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15) !important;
+                color: #ffffff !important;
+                margin: 0 0.3em 0.5em 0.3em;
+                padding: 0 1.5em;
+                height: 2.5em;
+                line-height: 2.5em;
+                font-size: 0.85em;
+                letter-spacing: 0.1em;
+                border-radius: 4px;
+                transition: all 0.2s ease;
+            }
+            .lang-btn.active {
+                background-color: #ffffff !important;
+                color: #0f0f11 !important;
+                font-weight: bold;
+            }
+            
+            /* 기본적으로 영어만 보이고 나머지는 숨김 */
+            .lang-content {
+                display: none;
+            }
+            .lang-content.active {
+                display: block;
+            }
+
+            @media screen and (max-width: 980px) {
+                #custom-header-nav {
+                    position: relative !important;
+                    flex-direction: column !important;
+                    height: auto !important;
+                    padding: 1rem !important;
+                }
+                #nav ul {
+                    flex-wrap: wrap !important;
+                    justify-content: center !important;
+                }
+                #nav ul li a {
+                    height: 3rem !important;
+                    line-height: 3rem !important;
+                    padding: 0 0.75rem !important;
+                }
+                #wrapper {
+                    padding-top: 1rem !important;
+                }
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <div id="custom-header-nav">
+            <div class="nav-logo">Youngseo Kim</div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biography.html" class="active">Biography</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="watch.html">Watch</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="wrapper">
+
+            <div id="main">
+
+                <section class="main">
+                    <header class="major">
+                        <h2>Biography</h2>
+                    </header>
+
+                    <div class="lang-switch">
+                        <button class="button lang-btn active" onclick="changeLang('en')">EN</button>
+                        <button class="button lang-btn" onclick="changeLang('de')">DE</button>
+                        <button class="button lang-btn" onclick="changeLang('fr')">FR</button>
+                        <button class="button lang-btn" onclick="changeLang('ko')">KR</button>
+                    </div>
+
+                    <div id="lang-en" class="lang-content active">
+                        <p class="justify-text">Youngseo Kim, born in 1992 in Seoul, South Korea, began his musical education at YeWon Art Middle School. In 2008, he moved to Germany to study at the Pre-College of the Robert Schumann Hochschule Düsseldorf with Prof. Ida Bieler. He completed his Master’s degree in Düsseldorf in 2018 with top honors. He then pursued a second Master’s degree in Contemporary Music Ensemble with Annette Bik and Prof. Jean-Bernard Matter at the University of Music and Performing Arts Vienna. Currently, he is enrolled in the Artist Diploma of Ensemble NEXT with Ensemble Intercontemporain at the Conservatoire National Supérieur de Musique et de Danse de Paris.</p>
+                        <p class="justify-text">Youngseo Kim has won numerous awards, including prizes at the Asian Music Competitions (U12), the 15th Korean Youth Competition, and the 30th Sun Hwa Arts School Competition. In 2007, he was awarded First Prize at the 18th Korean Youth Competition, a Gold Medal at the National Competition of the Guri Philharmonic Orchestra, and a Silver Medal at the National Competition of the Sejong Arts and Culture Association.</p>
+                        <p class="justify-text">During his time in Germany, Youngseo continued to achieve significant success. He won Second Prize at the RSH Pre-College J.U.S.T. Competition (2010), Second Prize in the Solo Violin category at the national “Jugend Musiziert” competition (2010), and Third Prize in the Chamber Music category at the same competition (2011).</p>
+                        <p class="justify-text">As a soloist, he has performed with the Guri Philharmonic Orchestra and the NWD Philharmonic. Additionally, he played at the 40th Liesborner Chamber Music Festival, had multiple performances at the Arnold Schönberg Center in Vienna, and gave concerts at the Musikverein Wien with the Argo Kollektiv, at the Wiener Konzerthaus, at the Salzburg Festival with Klangforum Wien, at the Philharmonie de Paris and at the Festival Présences in Paris.</p>
+                        <p class="justify-text">Youngseo has been awarded scholarships for the Eastern Music Festival in Greensboro (USA) and by the Yehudi Menuhin Live Music Now Association. He has participated in international masterclasses with Prof. Ida Bieler in Germany and Italy, as well as with Robert Davidovici, Anke Schittenhelm, and Kevin Lawrence. In 2023, he attended the International Darmstadt Summer Course for Contemporary Music. He also participated in a masterclass with the Arditti Quartet and attended the Freiburg Academy Week, where he worked with Ensemble Recherche.</p>
+                        <p class="justify-text">Additionally, Youngseo was a member of the German National Youth Orchestra (Bundesjugendorchester) and completed an internship with the Bochum Symphony Orchestra in 2016/17. He is a founding member of the Ensemble Argo Kollektiv, Tacet Quartet and the Ensemble Kreis.</p>
+                        <p class="justify-text">With extensive teaching experience, he was involved in the Vivaldi Program at the Robert Schumann Hochschule Düsseldorf, where he taught underprivileged children to play the violin. He also worked as a teacher at the Ida Bieler Music Academy in Cologne.</p>
+                    </div>
+
+                    <div id="lang-de" class="lang-content">
+                        <p class="justify-text">Youngseo Kim, geboren 1992 in Seoul, Südkorea, begann seine musikalische Ausbildung an der YeWon Art Middle School. 2008 zog er nach Deutschland, um am Pre-College der Robert-Schumann-Hochschule Düsseldorf bei Prof. Ida Bieler zu studieren. Sein Masterstudium schloss er 2018 in Düsseldorf mit Bestnoten ab. An der Universität für Musik und darstellende Kunst Wien absolvierte er ein weiteres Masterstudium im Fach Neue Musik Ensemble bei Annette Bik und Prof. Jean-Bernard Matter. Derzeit studiert er im Artist Diploma Programm des Ensemble NEXT mit dem Ensemble Intercontemporain am Conservatoire National Supérieur Musique et Danse de Paris.</p>
+                        <p class="justify-text">Youngseo Kim wurde bei mehreren Wettbewerben ausgezeichnet, darunter die Asian Music Competitions (U12), die 15. Korean Youth Competition und die 30. Sun Hwa Arts School Competition. 2007 gewann er den 1. Preis bei der 18. Korean Youth Competition, eine Goldmedaille beim Nationalwettbewerb des Guri Philharmonic Orchestra sowie eine Silbermedaille beim Nationalwettbewerb der Sejong Arts and Culture Association.</p>
+                        <p class="justify-text">Auch während seiner Zeit in Deutschland erzielte Youngseo bedeutende Erfolge. Er gewann den 2. Preis beim RSH Pre College J.U.S.T. Wettbewerb (2010), den 2. Preis in der Kategorie Solovioline beim nationalen Wettbewerb “Jugend Musiziert” (2010) und den 3. Preis in der Kategorie Kammermusik beim selben Wettbewerb (2011).</p>
+                        <p class="justify-text">Als Solist trat er mit dem Guri Philharmonic Orchestra und dem NWD Philharmonic auf. Zudem spielte er beim 40. Liesborner Kammermusikfestival, hatte mehrere Auftritte im Arnold Schönberg Center in Wien sowie Konzerte im Musikverein Wien mit dem Argo Kollektiv, Wiener Konzerthaus, bei den Salzburger Festspielen mit Klangforum Wien, in der Philharmonie de Paris und beim Festival Présences in Paris.</p>
+                        <p class="justify-text">Youngseo erhielt Stipendien für das Eastern Music Festival in Greensboro (USA) sowie von der Yehudi Menuhin Live Music Now Association. Er besuchte internationale Meisterkurse bei Prof. Ida Bieler in Deutschland und Italien sowie bei Robert Davidovici, Anke Schittenhelm und Kevin Lawrence. 2023 nahm er an den Internationalen Darmstädter Ferienkursen für zeitgenössische Musik teil. Darüber hinaus besuchte er einen Meisterkurs mit dem Arditti Quartett und die Freiburger Akademie Woche, wo er mit dem Ensemble Recherche arbeitete.</p>
+                        <p class="justify-text">Zusätzlich war Youngseo Mitglied des deutschen Bundesjugendorchesters und absolvierte 2016/17 ein Praktikum beim Bochumer Symphonieorchester. Er ist Gründungsmitglied des Ensemble Argo Kollektivs, des Tacet Quartetts und des Ensemble Kreises.</p>
+                        <p class="justify-text">Mit umfassender Unterrichtserfahrung engagierte er sich im Vivaldi-Programm der Robert-Schumann-Hochschule Düsseldorf, wo er benachteiligten Kindern das Geigenspiel beibrachte. Zudem unterrichtete er an der Ida Bieler Music Academy in Köln.</p>
+                    </div>
+
+                    <div id="lang-fr" class="lang-content">
+                        <p class="justify-text">Youngseo Kim, né en 1992 à Séoul, Corée du Sud, a commencé sa formation musicale à YeWon Art Middle School. En 2008, il est allé en Allemagne pour étudier au pré-college de la Robert-Schumann-Hochschule de Düsseldorf auprès du Prof. Ida Bieler. Il a obtenu son master à Düsseldorf en 2018 avec les plus grandes distinctions. À l’Université de Musique et des Arts du Spectacle de Vienne, il a suivi un deuxième master en musique contemporaine-ensemble avec Annette Bik et le Prof. Jean-Bernard Matter. Actuellement, il poursuit des études dans le programme Artist Diploma – Ensemble NEXT avec l’Ensemble Intercontemporain au Conservatoire National Supérieur de Musique et de Danse de Paris.</p>
+                        <p class="justify-text">Youngseo Kim a été récompensé dans plusieurs compétitions, notamment les Asian Music Competitions (U12), le 15e Concours de Jeunes Musiciens de Corée et le 30e Concours de l’École des Arts Sun Hwa. En 2007, il a remporté le 1er prix au 18e Concours de Jeunes Musiciens de Corée, une médaille d’or au concours national de l’Orchestre Philharmonique de Guri, ainsi qu’une médaille d’argent au concours national de l’Association des Arts et de la Culture Sejong.</p>
+                        <p class="justify-text">Pendant son séjour en Allemagne, Youngseo a également obtenu d’importants succès. Il a remporté le 2e prix au concours RSH Pre College J.U.S.T. (2010), le 2e prix dans la catégorie violon solo au concours national «Jugend Musiziert» (2010) et le 3e prix dans la catégorie musique de chambre au même concours (2011).</p>
+                        <p class="justify-text">En tant que soliste, il a joué avec l’Orchestre Philharmonique de Guri et l’Orchestre Philharmonique NWD. Il a également participé au 40e Festival de Musique de Chambre de Liesborn en Allemagne, donné plusieurs concerts au Centre Arnold Schönberg de Vienne, et s’est produit au Musikverein de Vienne avec l’Argo Kollektiv, au Wiener Konzerthaus, au Festival de Salzbourg avec le Klangforum Wien, à la philharmonie de Paris, ainsi qu’au Festival Présences à Paris.</p>
+                        <p class="justify-text">Youngseo a reçu des bourses pour le Eastern Music Festival à Greensboro (États-Unis) ainsi que de l’Association Yehudi Menuhin Live Music Now. Il a participé à des masterclasses internationales avec le Prof. Ida Bieler en Allemagne et en Italie, ainsi qu’avec Robert Davidovici, Anke Schittenhelm et Kevin Lawrence. Il a pris part aux Ferienkurse Internationaux de Darmstadt pour la musique contemporaine. Il a également participé à une masterclass avec le Quatuor Arditti et à la Semaine de l’Académie de Fribourg, où il a travaillé avec l’Ensemble Recherche.</p>
+                        <p class="justify-text">De plus, Youngseo a été membre de l’Orchestre National des Jeunes d’Allemagne (Bundesjugendorchester) et a effectué un stage en 2016/17 auprès de l’Orchestre Symphonique de Bochum. Il est membre fondateur de l’Ensemble Argo Kollektiv et de l’Ensemble Kreis.</p>
+                        <p class="justify-text">Fort de son expérience en enseignement, il a participé au programme Vivaldi de la Robert-Schumann-Hochschule de Düsseldorf, où il a enseigné le violon à des enfants issus de milieux défavorisés. Il a également enseigné à l’Ida Bieler Music Academy à Cologne.</p>
+                    </div>
+
+                    <div id="lang-ko" class="lang-content">
+                        <p class="justify-text">1992년 대한민국 서울에서 태어난 김영서는 10살부터 고주철을 사사하며 예원학교를 졸업했다. 2008년에는 독일로 건너가 로베르트 슈만 음악대학 예비반(Robert Schumann Hochschule Düsseldorf Jungstudent)에서 Ida Bieler) 교수의 지도를 받았다. 동 대학에서 학사 졸업 후 2018년에는 최고 성적으로 석사학위를 취득했으며, 오스트리아 빈 국립음대(mdw)에서 아네트 비크(Annette Bik)와 장베르나르 마테르(Jean-Bernard Matter) 교수를 사사하며 현대음악 앙상블 과정을 전공했다. 현재는 파리국립고등음악원(CNSMDP)에서 앙상블 넥스트(Ensemble NEXT) 과정의 아티스트 디플로마를 앙상블 인테르콩탕포랭(Ensemble Intercontemporain)과 함께 이수하고 있다.</p>
+                        <p class="justify-text">아시아 음악 콩쿠르 12세 미만 부문, 제15회 한국 청소년 콩쿠르, 제30회 선화예술중학교 콩쿠르 등 다양한 대회에서 입상했다. 2007년에는 제18회 한국 청소년 콩쿠르에서 1등을 차지했으며 구리 필하모닉 오케스트라 콩쿠르에서 금상, 세종예술문화협회 콩쿠르에서 은상을 수상했다.</p>
+                        <p class="justify-text">독일 유학 시절에는 로베르트 슈만 음악대학 예비반 J.U.S.T. 대회에서 2등을 차지했으며 유겐트 무지치어트(Jugend Musiziert) 콩쿠르에서 솔로 바이올린 부문 2등, 앙상블 부문에서 3등을 수상했다.</p>
+                        <p class="justify-text">독주자로서 구리 필하모닉 오케스트라, 독일 NWD 필하모닉과 협연했으며 제40회 리스보른 실내악 축제, 빈의 아놀드 쇤베르크 센터(Arnold Schönberg Center), 아르고 콜렉티브(Argo Kollektiv)와 함께 빈 음악협회(Musikverein Wien), 클랑포룸 빈(Klangforum Wien)과 빈 콘체르트하우스(Wiener Konzerthaus), 잘츠부르크 페스티벌에서 연주했다. 또한 파리국립고등음악원 오케스트라의 악장으로 파리 필하모니(Philharmonie de Paris)와 파리의 페스티벌 프레장스(Festival Présences)에서 연주했다.</p>
+                        <p class="justify-text">미국 이스턴 뮤직 페스티벌(Eastern Music Festival) 장학금과 독일 예후디 메뉴인 라이브 뮤직 나우(Yehudi Menuhin Live Music Now) 장학금을 수여받았으며 로버트 다비도비치(Robert Davidovici), 안케 쉬텐헬름(Anke Schittenhelm), 케빈 로렌스(Kevin Lawrence) 교수의 마스터클래스에 참여했다. 또한 다름슈타트 국제 현대음악제(Internationale Darmstädter Ferienkurse)에 참여했고 아르디티 콰르텟(Arditti Quartet)과 프라이부르크 아카데미 위크에서 앙상블 리셰르슈(Ensemble Recherche)의 마스터클래스에 참가했다.</p>
+                        <p class="justify-text">독일 국립 청소년 오케스트라(Bundesjugendorchester)의 일원이었으며 2016/17년에는 보훔 교향악단(Bochumer Symphoniker)에서 연수 단원으로 활동했다. 또한 현대음악 단체 아르고 콜렉티브(Argo Kollektiv), 타체트 콰르텟(Tacet Quartet)과 앙상블 크라이스(Ensemble Kreis)의 창립 멤버이다.</p>
+                        <p class="justify-text">풍부한 교육 경험을 바탕으로 로베르트 슈만 음악대학에서 비발디 프로그램에 참여하여 소외계층 아이들에게 바이올린을 가르쳤으며, 독일 쾰른의 아이다 빌러 음악 아카데미(Ida Bieler Music Academy)에서도 교사로 활동했다.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <footer id="footer">
+                <p class="copyright">&copy; Youngseo Kim</p>
+            </footer>
+
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script>
+            function changeLang(langCode) {
+                const contents = document.querySelectorAll('.lang-content');
+                contents.forEach(content => content.classList.remove('active'));
+                
+                const buttons = document.querySelectorAll('.lang-btn');
+                buttons.forEach(btn => btn.classList.remove('active'));
+                
+                document.getElementById('lang-' + langCode).classList.add('active');
+                event.currentTarget.classList.add('active');
+            }
+        </script>
+
+    </body>
+</html>

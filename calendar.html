@@ -1,0 +1,1079 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Youngseo Kim - Calendar</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* 1. 세련된 미니멀 단색 배경 처리 */
+            body {
+                background: #0f0f11 !important; 
+                background-image: none !important;
+            }
+            body::before, body::after {
+                display: none !important; 
+            }
+            #wrapper {
+                background: transparent !important;
+                background-image: none !important;
+            }
+
+            /* 2. 상단 고정형 헤더 & 내비게이션 */
+            #custom-header-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 4rem !important; 
+                background: rgba(15, 15, 17, 0.95) !important; 
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 4rem !important;
+                z-index: 10000 !important;
+                box-sizing: border-box;
+            }
+
+            .nav-logo {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+
+            #nav {
+                position: relative !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+            }
+            #nav ul {
+                display: flex !important;
+                flex-direction: row !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li a {
+                display: block !important;
+                height: 4rem !important;
+                line-height: 4rem !important;
+                padding: 0 1.25rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em;
+                border: none !important;
+                background: transparent !important;
+                transition: color 0.2s ease;
+            }
+            #nav ul li a:hover, #nav ul li a.active {
+                color: #ffffff !important;
+                background: transparent !important;
+            }
+            
+            #wrapper {
+                padding-top: 6rem !important;
+            }
+
+            .main header.major h2::after,
+            .main header.major::after,
+            .contact-major h2::after {
+                background-color: #000000 !important;
+                background: #000000 !important;
+            }
+            
+            #footer {
+                border-top: none !important;
+                padding: 0 !important;
+            }
+            
+            #contact {
+                margin-top: 6rem !important;
+                padding-top: 2rem;
+            }
+            
+            .contact-major h2 {
+                position: relative;
+                padding-bottom: 1rem;
+                margin-bottom: 3rem;
+            }
+            .contact-major h2::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                display: block;
+            }
+
+            .brunch-svg-link {
+                display: inline-flex !important;
+                align-items: center;
+                justify-content: center;
+                vertical-align: middle;
+            }
+            .brunch-svg-link svg {
+                width: 1.1rem;
+                height: 1.1rem;
+                fill: fill;
+                transition: fill 0.2s ease;
+            }
+            
+            .copyright {
+                margin-top: 4rem !important;
+                padding-bottom: 4rem;
+            }
+
+            /* 연도 선택 탭 스타일 수정 - 글자 가독성 완전 확보 */
+            .calendar-tabs { 
+                margin-bottom: 4rem !important; 
+                text-align: center !important;
+                list-style: none !important;
+                padding: 0 !important;
+                display: flex !important;
+                justify-content: center !important;
+                gap: 0.6em !important;
+                flex-wrap: wrap !important;
+            }
+            .calendar-tabs li { 
+                padding: 0 !important; 
+                margin: 0 !important; 
+            }
+            .calendar-tabs li a { 
+                display: block !important;
+                background-color: transparent !important;
+                box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3) !important; /* 명확한 테두리선 선언 */
+                color: #888888 !important; /* 마우스 안 올라갔을 때 확실히 보이는 진한 회색으로 변경 */
+                padding: 0 1.5em !important;
+                height: 2.5em !important;
+                line-height: 2.5em !important;
+                font-size: 0.85em !important;
+                letter-spacing: 0.1em !important;
+                border-radius: 4px !important;
+                text-decoration: none !important;
+                font-weight: normal !important;
+                transition: all 0.2s ease-in-out !important;
+            }
+            /* 활성화(active) 되었거나 마우스를 올렸을(hover) 때 반전 스타일 적용 */
+            .calendar-tabs li a.active, .calendar-tabs li a:hover { 
+                background-color: #ffffff !important;
+                color: #0f0f11 !important; /* 배경이 흰색이므로 선명한 차콜 블랙 글씨로 고정 */
+                font-weight: bold !important; /* 굵은 글씨체 강제 적용 */
+                box-shadow: none !important;
+            }
+            
+            .calendar-content { display: none; }
+            .calendar-content.active { display: block; }
+            
+            .calendar-table { width: 100%; margin-top: 1rem; table-layout: fixed; border-collapse: collapse; }
+            .calendar-table th { font-weight: 700; color: #ffffff; border-bottom: 2px solid rgba(255, 255, 255, 0.1); padding: 0.75rem; text-align: left; }
+            .calendar-table td { padding: 0.75rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); vertical-align: top; word-break: break-word; font-weight: 400 !important; font-size: 0.9rem; line-height: 1.6; }
+            
+            .work-item {
+                position: relative;
+                padding-left: 1rem;
+                text-indent: -1rem;
+                margin-bottom: 0.25rem;
+            }
+            .work-item:last-child {
+                margin-bottom: 0;
+            }
+            
+            .calendar-table .date-col { width: 15%; }
+            .calendar-table .event-col { width: 30%; }
+            .calendar-table .works-col { width: 35%; }
+            .calendar-table .location-col { width: 20%; }
+            
+            @media screen and (max-width: 980px) {
+                #custom-header-nav {
+                    position: relative !important;
+                    flex-direction: column !important;
+                    height: auto !important;
+                    padding: 1rem !important;
+                }
+                #nav ul {
+                    flex-wrap: wrap !important;
+                    justify-content: center !important;
+                }
+                #nav ul li a {
+                    height: 3rem !important;
+                    line-height: 3rem !important;
+                    padding: 0 0.75rem !important;
+                }
+                #wrapper {
+                    padding-top: 1rem !important;
+                }
+                #contact { margin-top: 4rem !important; }
+            }
+
+            @media screen and (max-width: 736px) { 
+                .calendar-table { table-layout: auto; } 
+                .calendar-table .date-col, .calendar-table .event-col, .calendar-table .works-col, .calendar-table .location-col { width: auto; } 
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <div id="custom-header-nav">
+            <div class="nav-logo">Youngseo Kim</div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biography.html">Biography</a></li>
+                    <li><a href="calendar.html" class="active">Calendar</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="watch.html">Watch</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="wrapper">
+            <div id="main">
+                <section class="main">
+                    <header class="major">
+                        <h2>Calendar</h2>
+                    </header>
+                    <ul class="calendar-tabs">
+						<li><a href="#" class="tab-link active" data-year="2026">2026</a></li>
+						<li><a href="#" class="tab-link" data-year="2025">2025</a></li>
+						<li><a href="#" class="tab-link" data-year="2024">2024</a></li>
+						<li><a href="#" class="tab-link" data-year="2023">2023</a></li>
+						<li><a href="#" class="tab-link" data-year="2022">2022</a></li>
+					</ul>
+					<div id="year-2026" class="calendar-content active">
+						<h2 style="font-weight: 700; margin-bottom: 2rem;">2026 Concerts</h2>
+						<div class="table-wrapper">
+							<table class="calendar-table">
+								<thead>
+									<tr>
+										<th class="date-col">Date / Time</th>
+										<th class="event-col">Event</th>
+										<th class="works-col">Works</th>
+										<th class="location-col">Location</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="date-col">20.06.2026 / 17:30</td>
+										<td class="event-col">ManiFeste 2026 – IRCAM</td>
+										<td class="works-col"><div class='work-item'>• Unsuk Chin - Gougalon</div></td>
+										<td class="location-col">Salle 400, Centquatrei<br />5 Rue Curial<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">30.05.2026 / 18:30, 19:30, 20:15, 21:00</td>
+										<td class="event-col">Impuls Minutes Concerts</td>
+										<td class="works-col"><div class='work-item'>• George Brecht - Solo for Violin</div><div class='work-item'>• Dick Higgins - Danger Music #17</div><div class='work-item'>• George Brecht - Solo for Rich Man</div><div class='work-item'>• Enno Poppe - Feder</div></td>
+										<td class="location-col">esc Medien Kunst Labor<br />Bürgergasse 5<br />8010 Graz, Austria<br />Galerie Grill<br />Bürgergasse 5<br />8010 Graz, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">29.05.2026 / 19:00</td>
+										<td class="event-col">Studienkonzert Komposition - Studierende von Oscar Bianchi</td>
+										<td class="works-col"><div class='work-item'>• Jonas Eckenfels - An Apollo</div><div class='work-item'>• João Pinto - Liquid Light (i)</div><div class='work-item'>• Stanislav Plyaka - Purple Waters / Filip Šopar - Who is this King of glory</div><div class='work-item'>• Timo Wallna - Fire is our friend</div><div class='work-item'>• Reina Yoshioka - Swimmy</div></td>
+										<td class="location-col">Klangtheater, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">23.05.2026 / 15:00</td>
+										<td class="event-col">Next Fest</td>
+										<td class="works-col"><div class='work-item'>• Steve Reich - Clapping Music</div><div class='work-item'>• Julius Eastman - Stay on it</div></td>
+										<td class="location-col">Place de la Grande Halle de la Villette<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">18.05.2026 / 16:00</td>
+										<td class="event-col">Récitals du DNSPM et de fin de 2e cycle Saxophone</td>
+										<td class="works-col"><div class='work-item'>• Luca Francesconi - Trama</div></td>
+										<td class="location-col">Salle Rémy-Pflimlin, CNSMDP<br />209 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">04.05.2026 / 19:00</td>
+										<td class="event-col">Festival symphonique</td>
+										<td class="works-col"><div class='work-item'>• Wolfgang Amadeus Mozart - Violin Sonata No.21 KV304</div><div class='work-item'>• Max Bruch - 8 Pieces for Clarinet, VIola and Piano, op.83</div><div class='work-item'>• Händel-Halvorsen - Passacaglia</div></td>
+										<td class="location-col">Opéra d'Alger<br />pacerelle 515, Opera d'Alger, Lot 1<br />16094 Ouled Fayet, Algeria</td>
+									</tr>
+									<tr>
+										<td class="date-col">28.04.2026 / 19:30</td>
+										<td class="event-col">Concert IN.TUNE: Psóphos Itinĕrans</td>
+										<td class="works-col"><div class='work-item'>• Nacho Baeza - Phono II</div><div class='work-item'>• Julio Argudo - Voler</div></td>
+										<td class="location-col">Sala Victoria de los Ángeles, ESMUC<br />Edifici de L'Auditori, C/ de Padilla<br />155, Eixample<br />08013 Barcelona, Spain</td>
+									</tr>
+									<tr>
+										<td class="date-col">17.04.2026 / 19:30</td>
+										<td class="event-col">Atelier de Composition #2</td>
+										<td class="works-col"><div class='work-item'>• Pierre Pradier - Avrankou</div><div class='work-item'>• Jiayue Huang - La Rivière de l’oubli</div><div class='work-item'>• Mattéo Vignier - Souffle pluvieux, enfermé dans l’oubli</div><div class='work-item'>• Davide Wang - Immagini residue</div></td>
+										<td class="location-col">Salle Fleuret, CNSMDP<br />209 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">30.03.2026 / 19:00<br />31.03.2026 / 19:00</td>
+										<td class="event-col">Le festival du bureau des étudiantes</td>
+										<td class="works-col"><div class='work-item'>• Petrillo</div></td>
+										<td class="location-col">Salle Rémy-Pflimlin, CNSMDP<br />209 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">24.03.2026 / 19:00</td>
+										<td class="event-col">Atelier de Composition #1</td>
+										<td class="works-col"><div class='work-item'>• Arnau Gran I Romero - White-Out</div><div class='work-item'>• Enric Jaume Masferrer - T1Mpà..-</div><div class='work-item'>• Kurt Egemen - Tertium Datur</div><div class='work-item'>• Felix Roth - L'Encre de nos mémoires</div><div class='work-item'>• Clément Pauvert - Orlando</div><div class='work-item'>• Dilay Doganay - En dessous</div></td>
+										<td class="location-col">Salle Fleuret, CNSMDP<br />209 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">26.02.2026 / 16:00</td>
+										<td class="event-col">Les chemins des sens</td>
+										<td class="works-col"><div class='work-item'>• Steve Reich - Clapping Music</div><div class='work-item'>• Julius Eastman - Stay on it</div></td>
+										<td class="location-col">Auditorium, Conservatoire d'Aulnay - CRD<br />12 Rue de Sevran<br />93600 Aulnay-sous-Bois, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">21.02.2026 / 15:30</td>
+										<td class="event-col">Festival Elite - Ensemble Plein Jeu</td>
+										<td class="works-col"><div class='work-item'>• Wolfgang Amadeus Mozart - Piano Concerto No.20</div><div class='work-item'>• Wolfgang Amadeus Mozart - Symphony No.25 KV183</div></td>
+										<td class="location-col">Salle Cortot<br />78 Rue Cardinet<br />75017 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">08.02.2026 / 15:00</td>
+										<td class="event-col">Festival Présences 2026</td>
+										<td class="works-col"><div class='work-item'>• Jawher Matmati - Pic/Cells</div></td>
+										<td class="location-col">Auditorium, Maison de la Radio France<br />116 Avenue du Président Kennedy<br />75016 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">29.01.2026 / 12:00</td>
+										<td class="event-col">Masterabschlussprüfung Shiori Yoshino</td>
+										<td class="works-col"><div class='work-item'>• Heinz Holliger – Lieder ohne Worte</div></td>
+										<td class="location-col">Festsaal, MDW<br />Seilerstätte 26<br />1010 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">16.01.2026 / 18:30, 20:30</td>
+										<td class="event-col">Institut Giacometti</td>
+										<td class="works-col"><div class='work-item'>• Kareem Roustom - Reflections & Refractions</div></td>
+										<td class="location-col">Institut Giacometti<br />5 Rue Victor Schoelcher<br />75014 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">04.01.2026 / 16:00</td>
+										<td class="event-col">Neujahrskonzert</td>
+										<td class="works-col"><div class='work-item'>• Gabriel Fauré - Cantique de Jean Racine, op.11</div><div class='work-item'>• Camille Saint-Saëns - Oratorio de Noël, op. 12</div></td>
+										<td class="location-col">Heilig-Geist-Kirche<br />Heilig-Geist-Gasse<br />47608 Geldern, Germany</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="calendar-footnote" style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.7; text-align: left; line-height: 1.6;">
+							*CNSMDP = Conservatoire National Supérieur de Musique et de Danse de Paris (Paris Conservatory)<br />
+							*MDW = Universität für Musik und darstellende Kunst Wien (University of Music and Performing Arts Vienna)<br />
+							*IMD = Internationales Musikinstitut Darmstadt / Darmstädter Ferienkurse / Internationale Ferienkurse für Neue Musik (Darmstadt Summer Course)<br />
+							*MUMOK = Museum moderner Kunst Stiftung Ludwig Wien (Museum of modern art, Ludwig Foundation, Vienna)<br />
+							*ESMUC = Escola Superior de Música de Catalunya<br />
+							*Conservatoire d'Aulnay CRD = Conservatoire de Musique et de Danse à Rayonnement départemental Aulnay-sous-Bois
+						</div>
+					</div>
+
+					<div id="year-2025" class="calendar-content">
+						<h2 style="font-weight: 700; margin-bottom: 2rem;">2025 Concerts</h2>
+						<div class="table-wrapper">
+							<table class="calendar-table">
+								<thead>
+									<tr>
+										<th class="date-col">Date / Time</th>
+										<th class="event-col">Event</th>
+										<th class="works-col">Works</th>
+										<th class="location-col">Location</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="date-col">19.12.2025 / 19:00</td>
+										<td class="event-col">Soirée hommage à Fuminori Tanada</td>
+										<td class="works-col"><div class='work-item'>• Fuminori Tanada - Sommerwidn IIIb</div></td>
+										<td class="location-col">Salle Nadia Boulanger, CNSMDP<br />209 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">17.12.2025 / 19:00</td>
+										<td class="event-col">Concert de Noël</td>
+										<td class="works-col"></td>
+										<td class="location-col">Salle Fleuret, CNSMDP<br />209 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">12.12.2025 / 19:00</td>
+										<td class="event-col">Boulez 100</td>
+										<td class="works-col"><div class='work-item'>• Pierre Boulez - Poésie pour pouvoir</div><div class='work-item'>• Betsy Jolas - Ces belles années</div><div class='work-item'>• Alban Berg - Violin Concerto</div></td>
+										<td class="location-col">Salle des concerts, Cité de la musique<br />221 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">28.11.2025 / 19:00</td>
+										<td class="event-col">Emergence #1</td>
+										<td class="works-col"><div class='work-item'>• Sophia Chambon - Nuages</div><div class='work-item'>• Mikel Iturregi – Suave rumor</div></td>
+										<td class="location-col">Salle Fleuret, CNSMDP<br />209 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">03.10.2025 / 19:30<br />04.10.2025 / 19:30<br />05.10.2025 / 19:30</td>
+										<td class="event-col">Festival d’Automne – Tânia Carvalho</td>
+										<td class="works-col"><div class='work-item'>• Pierre Boulez – Anthèmes 1</div></td>
+										<td class="location-col">Musée d’Art Moderne de Paris<br />11 Av. du Président Wilson<br />75116 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">08.08.2025 / 18:30<br />12.08.2025 / 18:00<br />21.08.2025 / 19:30<br />24.08.2025 / 19:30</td>
+										<td class="event-col">Salzburger Festspiele</td>
+										<td class="works-col"><div class='work-item'>• Peter Eötvös – Tri Sestri</div></td>
+										<td class="location-col">Felsenreitschule<br />Hofstallgasse 1<br />5020 Salzburg, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">20.06.2025 / 20:00</td>
+										<td class="event-col">ManiFeste 2025 – IRCAM</td>
+										<td class="works-col"><div class='work-item'>• Pierre Boulez – Anthèmes 2</div></td>
+										<td class="location-col">Espace de projection, IRCAM<br />1 Place Igor Stravinsky<br />75004 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">12.05.2025 / 19:00</td>
+										<td class="event-col">Orgel Plus</td>
+										<td class="works-col"><div class='work-item'>• Paul Hindemith – Sonate für Violine Solo, op.31, No.2</div><div class='work-item'>• Pierre Boulez – Anthèmes 1</div><div class='work-item'>• Georg Philipp Telemann – Fantasie No.10 TWV40:23</div><div class='work-item'>• Josef Rheinberger – Suite für Violine und Orgel, op.166</div></td>
+										<td class="location-col">Dreieinigkeitskirche<br />Schlossberg<br />36466 Dermbach, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">11.05.2025 / 18:00</td>
+										<td class="event-col">Festkonzert – 880 Jahre Dermbach</td>
+										<td class="works-col"><div class='work-item'>• Nathan Milstein – Paganiniana</div></td>
+										<td class="location-col">Dreieinigkeitskirche<br />Schlossberg<br />36466 Dermbach, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">30.04.2025 / 19:00</td>
+										<td class="event-col">Atelier de Composition #2</td>
+										<td class="works-col"><div class='work-item'>• Mahak Sadeghzadeh – Cobalt</div><div class='work-item'>• Yeji Kim – Une goutte noire</div></td>
+										<td class="location-col">Salle Fleuret, CNSMDP<br />209 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">22.04.2025 / 19:00</td>
+										<td class="event-col">Jeunes Talents</td>
+										<td class="works-col"><div class='work-item'>• Isang Yun – Königliches Thema</div><div class='work-item'>• Adolf Busch – Suite für Violine und Saxofon</div><div class='work-item'>• Niccoló Paganini – Sonata concertante</div><div class='work-item'>• Arnold Schönberg – Sieben Kanons</div><div class='work-item'>• Improvisation générative</div></td>
+										<td class="location-col">Auditorium, Centre culturel coréen<br />20 Rue La Boétie<br />75008 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">17.04.2025 / 16:00</td>
+										<td class="event-col">La Production aléatoire</td>
+										<td class="works-col"><div class='work-item'>• Luciano Berio – 32 Duetti – 8. Peppino / 24. Aldo / 29. Alfred / 31. Mauricio</div><div class='work-item'>• Franco Donatoni – about…</div></td>
+										<td class="location-col">Auditorium, Conservatoire d'Aulnay - CRD<br />12 Rue de Sevran<br />93600 Aulnay-sous-Bois, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">31.03.2025 / 02:00</td>
+										<td class="event-col">Die verschwundene Zeit</td>
+										<td class="works-col"></td>
+										<td class="location-col">Heilig-Geist-Kirche<br />Heilig-Geist-Gasse<br />47608 Geldern, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">21.03.2025 / 19:00</td>
+										<td class="event-col">Atelier de Composition #1</td>
+										<td class="works-col"><div class='work-item'>• Çagdas Onaran – zerre</div><div class='work-item'>• Mikel Iturregi – Elurra bezain ilun</div><div class='work-item'>• Kenta Onoda – Whammy</div></td>
+										<td class="location-col">Salle Fleuret, CNSMDP<br />209 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">16.03.2025 / 17:00</td>
+										<td class="event-col">Ensemble Plein Jeu</td>
+										<td class="works-col"><div class='work-item'>• Nikolai Rimsky-Korsakov – Sheherezade, op.35</div><div class='work-item'>• Claude Debussy – Danse sacrée et danse profane</div></td>
+										<td class="location-col">Salle Colonne<br />94 Bd Auguste Blanqui<br />75013 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">14.03.2025 / 20:30</td>
+										<td class="event-col">Héroïnes et héros du monde arabe</td>
+										<td class="works-col"><div class='work-item'>• Nikolai Rimsky-Korsakov – Sheherezade, op.35</div></td>
+										<td class="location-col">Auditorium, Institut du Monde arabe<br />1 Rue des Fossés Saint-Bernard<br />75005 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">13.02.2025 / 18:30 / 20:30</td>
+										<td class="event-col">Institut Giacometti</td>
+										<td class="works-col"><div class='work-item'>• Luciano Berio – 34 Duetti – 12. Daniela / 19. Annie / 24. Aldo / 29. Alfred / 31. Mauricio</div><div class='work-item'>• Karlheinz Stockhausen – Tierkreis</div><div class='work-item'>• Steve Reich – Clapping Music</div></td>
+										<td class="location-col">Institut Giacometti<br />5 Rue Victor Schoelcher<br />75014 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">11.02.2025 / 12:00 / 13:30</td>
+										<td class="event-col">Répertoire Mixte</td>
+										<td class="works-col"><div class='work-item'>• Pierre Boulez – Anthèmes 2</div></td>
+										<td class="location-col">Plateau 1, CNSMDP<br />209 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">04.02.2025 / 20:00</td>
+										<td class="event-col">Festival Présences 2025</td>
+										<td class="works-col"><div class='work-item'>• Christophe Bertrand – Mana</div><div class='work-item'>• Menghao Xie – Fading</div><div class='work-item'>• Olga Neuwirth – Orlando’s World</div></td>
+										<td class="location-col">Auditorium, Maison de la Radio France<br />116 Avenue du Président Kennedy<br />75016 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">23.01.2025 / 19:00</td>
+										<td class="event-col">Emergences avec l’EIC</td>
+										<td class="works-col"><div class='work-item'>• Clement Pauvert – Deux roseaux – Miroir fumant pour ensemble</div></td>
+										<td class="location-col">Salle Fleuret, CNSMDP<br />209 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="calendar-footnote" style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.7; text-align: left; line-height: 1.6;">
+							*CNSMDP = Conservatoire National Supérieur de Musique et de Danse de Paris (Paris Conservatory)<br />
+							*MDW = Universität für Musik und darstellende Kunst Wien (University of Music and Performing Arts Vienna)<br />
+							*IMD = Internationales Musikinstitut Darmstadt / Darmstädter Ferienkurse / Internationale Ferienkurse für Neue Musik (Darmstadt Summer Course)<br />
+							*MUMOK = Museum moderner Kunst Stiftung Ludwig Wien (Museum of modern art, Ludwig Foundation, Vienna)<br />
+							*ESMUC = Escola Superior de Música de Catalunya<br />
+							*Conservatoire d'Aulnay CRD = Conservatoire de Musique et de Danse à Rayonnement départemental Aulnay-sous-Bois
+						</div>
+					</div>
+
+					<div id="year-2024" class="calendar-content">
+						<h2 style="font-weight: 700; margin-bottom: 2rem;">2024 Concerts</h2>
+						<div class="table-wrapper">
+							<table class="calendar-table">
+								<thead>
+									<tr>
+										<th class="date-col">Date / Time</th>
+										<th class="event-col">Event</th>
+										<th class="works-col">Works</th>
+										<th class="location-col">Location</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="date-col">28.12.2024 / 17:00</td>
+										<td class="event-col">Weihnachtskonzert</td>
+										<td class="works-col"><div class='work-item'>• Antonio Vivaldi – Gloria RV610</div></td>
+										<td class="location-col">Dreieinigkeitskirche<br />Kirchberg 6<br />36466 Dermbach, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">19.12.2024 / 14:00</td>
+										<td class="event-col">Grands Classiques avec l’EIC</td>
+										<td class="works-col"><div class='work-item'>• Anton Webern – Concerto für neun Instrumente, op.24</div><div class='work-item'>• Pierre Boulez – Memoriale (…exposante-fixe…originel)</div></td>
+										<td class="location-col">SR2, Philharmonie de Paris<br />221 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">10.12.2024 / 20:00</td>
+										<td class="event-col">Grand Soir Edgar Varèse</td>
+										<td class="works-col"><div class='work-item'>• Edgar Varèse – Offrandes</div><div class='work-item'>• Edgar Varèse – Amériques</div><div class='work-item'>• Edgar Varèse – Arcana</div></td>
+										<td class="location-col">Grand Salle Pierre Boulez, Philharmonie de Paris<br />221 Avenue Jean-Jaurès<br />75019 Paris, France</td>
+									</tr>
+									<tr>
+										<td class="date-col">24.11.2024 / 17:00</td>
+										<td class="event-col">Requiem</td>
+										<td class="works-col"><div class='work-item'>• Wolfgang Amadeus Mozart – Requiem RV626</div></td>
+										<td class="location-col">Heilig-Geist-Kirche<br />Heilig-Geist-Gasse<br />47608 Geldern, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">04.11.2024 / 18:00</td>
+										<td class="event-col">Clara Iannotta Compositions Lab</td>
+										<td class="works-col"><div class='work-item'>• Clara Iannotta – Earthing – Dead wasps (Obituary)</div><div class='work-item'>• Giuseppe Franza – Electrical parasites infect an imaginary maze</div><div class='work-item'>• Yoko Konisch – Melting beings</div><div class='work-item'>• Yuheng Chen – A lone wheat grain fell to the field – Still solitary</div><div class='work-item'>• Clara Iannotta – Echo from afar (ii)</div></td>
+										<td class="location-col">Gläserner Saal, Musikverein Wien<br />Musikvereinsplatz 1<br />1040 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">23.10.2024 / 19:00</td>
+										<td class="event-col">Öffentliche Abschlussprufung</td>
+										<td class="works-col"><div class='work-item'>• Salvatore Sciarrino – Omaggio a burri</div><div class='work-item'>• Daniel Oliver Moser – Feuilles mortes</div><div class='work-item'>• Philippe Manoury – Michigan Trio</div><div class='work-item'>• Kaija Saariaho – Tocar</div><div class='work-item'>• Reiko Füting – tanz.tanz</div><div class='work-item'>• George Maciunas – Solo for Violin</div></td>
+										<td class="location-col">Orchesterstudio, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">20.10.2024 / 15:00</td>
+										<td class="event-col">Nono 100</td>
+										<td class="works-col"><div class='work-item'>• Luigi Nono – La lontananza nostalgica utopica futura</div></td>
+										<td class="location-col">Zacherlfabrik<br />Nusswaldgasse 14<br />1190 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">12.09.2024 / 18:00</td>
+										<td class="event-col">Internal Soiree</td>
+										<td class="works-col"><div class='work-item'>• Kaija Saariaho – Tocar</div></td>
+										<td class="location-col">Ensemblehaus<br />Schützenallee 72<br />79102 Freiburg, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">17.07.2024 / 19:30</td>
+										<td class="event-col">Ex tempore</td>
+										<td class="works-col"><div class='work-item'>• Olivier Messiaen – Quatuor pour la fin du temps</div><div class='work-item'>• Heinz Holliger – Lieder ohne Worte</div></td>
+										<td class="location-col">Bank Austria Salon, Altes Rathaus<br />Wipplingerstraße 6/8<br />1010 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">29.06.2024 / 13:30</td>
+										<td class="event-col">Klassenabend Neue Musik-Ensemble</td>
+										<td class="works-col"><div class='work-item'>• Lorenzo Troiani – Cara è la fine</div><div class='work-item'>• Theodore Antoniou – 4 Likes</div></td>
+										<td class="location-col">Fanny Hensel Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">28.06.2024 / 15:00</td>
+										<td class="event-col">Interne Masterprufung</td>
+										<td class="works-col"><div class='work-item'>• Elena Mendoza – Die Macht der Gewohnheit</div><div class='work-item'>• Lorenzo Troiani – Cara è la fine</div><div class='work-item'>• Tristan Murail – La barque mystique</div></td>
+										<td class="location-col">Fanny Hensel Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">21.06.2024 / 17:00</td>
+										<td class="event-col">Abschiedskonzert Manon Winter</td>
+										<td class="works-col"><div class='work-item'>• Improvisation à 3</div></td>
+										<td class="location-col">Alter Konzertsaal, MDW<br />Rennweg 8<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">20.06.2024 / 19:30</td>
+										<td class="event-col">Musik für die Augen</td>
+										<td class="works-col"><div class='work-item'>• Tertio Druml – V’adoro pupupillelle</div></td>
+										<td class="location-col">Klangtheater, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">31.05.2024 / 19:30</td>
+										<td class="event-col">Klassenabend Komposition – Clara Iannotta</td>
+										<td class="works-col"><div class='work-item'>• Yuheng Chen – Overflowed Clouds dispose themselves</div></td>
+										<td class="location-col">Fanny Hensel Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">29.05.2024 / 18:30</td>
+										<td class="event-col">Porträt-Konzert Olga Neuwirth</td>
+										<td class="works-col"><div class='work-item'>• Arnold Schonberg – Phantasy, op.47</div><div class='work-item'>• Olga Neuwirth – Quasare / Pulsare II</div></td>
+										<td class="location-col">Arnold Schönberg Center<br />Schwarzenbergplatz 6<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">26.05.2024 / 18:45</td>
+										<td class="event-col">aNOther Festival</td>
+										<td class="works-col"><div class='work-item'>• Yuheng Chen – Deepfake-Overload</div></td>
+										<td class="location-col">Spittelbergtheater<br />Spittelberggasse 10<br />1070 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">25.05.2024 / 17:30, 19:00</td>
+										<td class="event-col">Impuls Minutes Concerts</td>
+										<td class="works-col"><div class='work-item'>• George Brecht – Solo for Violin, Viola, Cello or Contrabass</div><div class='work-item'>• Nam June Paik – Aktion mit einer Violine an Schnur</div><div class='work-item'>• Malin Bång – ..när korpen vitnar</div><div class='work-item'>• Nam June Paik – Solo for Violin</div></td>
+										<td class="location-col">Haus der Architektur<br />Mariahilferstraße 2<br />8020 Graz, Austria<br />Forum Stadtpark<br />Stadtpark 1<br />8010 Graz, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">24.05.2024 / 20:00</td>
+										<td class="event-col">Luigi Nono – Die letzten zwei Werke</td>
+										<td class="works-col"><div class='work-item'>• Luigi Nono – La lontananza nostalgica utopica futura</div><div class='work-item'>• Luigi Nono – Hay que caminar soñando</div></td>
+										<td class="location-col">Lesesaal, Bibliothek, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">24.05.2024 / 11:00</td>
+										<td class="event-col">Die Macht der Gewohnheit</td>
+										<td class="works-col"><div class='work-item'>• Elena Mendoza – Die Macht der Gewohnheit</div></td>
+										<td class="location-col">Liszt Saal, MDW<br />Lothringerstr. 18<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">15.05.2024 / 19:30</td>
+										<td class="event-col">KlangBildKlang – Korzinthio</td>
+										<td class="works-col"><div class='work-item'>• Petra Stump-Linshalm – La Rosa profunda</div><div class='work-item'>• Maddalena Casulana – Morir non può mio cuore</div><div class='work-item'>• Hildegard von Bingen – O Frondens Virga</div><div class='work-item'>• Clara Bauckholt – Luftwurzeln</div><div class='work-item'>• Maddalena Casulana – Stavasi il mio bel sol</div></td>
+										<td class="location-col">Brick-15<br />Herklotzgasse 21<br />1150 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">09.05.2024 / 19:00</td>
+										<td class="event-col">Musique spectrale – MDW meets CNSMDP</td>
+										<td class="works-col"><div class='work-item'>• Georg Friedrich Haas – Atthis</div><div class='work-item'>• Gerard Grisey – Vortex temporum</div></td>
+										<td class="location-col">Solitär, Mozarteum Salzburg<br />Mirabellplatz 1<br />5020 Salzburg, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">08.05.2024 / 18:30</td>
+										<td class="event-col">Musique spectrale – MDW meets CNSMDP</td>
+										<td class="works-col"><div class='work-item'>• Georg Friedrich Haas – Atthis</div><div class='work-item'>• Gerard Grisey – Vortex temporum</div></td>
+										<td class="location-col">Haydn Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">28.04.2024 / 19:30</td>
+										<td class="event-col">Suena Festival – Argo Kollektiv – Tan ahora alli, aqui asi tanto</td>
+										<td class="works-col"><div class='work-item'>• Maria Cecilia Villanueva – Gaudeamus II</div><div class='work-item'>• Elena Mendoza – Die Macht der Gewohnheit</div><div class='work-item'>• Arturo Fuentes – Simurg</div></td>
+										<td class="location-col">Kaisersaal<br />Kaiserstraße 10<br />1070 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">27.04.2024 / 17:30</td>
+										<td class="event-col">Suena Festival – Fata morgana</td>
+										<td class="works-col"><div class='work-item'>• Cecilia Pereyra – Mientras te expandes</div><div class='work-item'>• Ana González Gamboa – Viejo Atlas</div><div class='work-item'>• Miguel Segura Sogorb – Hypnos</div></td>
+										<td class="location-col">Konzertsaal FAL, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">06.04.2024 / 18:30</td>
+										<td class="event-col">HanaKlang – Peace Concert</td>
+										<td class="works-col"><div class='work-item'>• Edvard Grieg – Holberg Suite, op.40</div></td>
+										<td class="location-col">Yamaha Saal<br />Schleiergasse 20<br />1100 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">19.03.2024 / 18:30</td>
+										<td class="event-col">Atemzüge und Tanzschritte</td>
+										<td class="works-col"><div class='work-item'>• Anton Webern – Streichquartett, op.28</div><div class='work-item'>• Gerard Grisey – Vortex temporum</div></td>
+										<td class="location-col">Arnold Schönberg Center<br />Schwarzenbergplatz 6<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">24.02.2024 / 19:30</td>
+										<td class="event-col">ARGO – Neue Musik</td>
+										<td class="works-col"><div class='work-item'>• Marta Gentilucci – Über</div><div class='work-item'>• Adam Scime – Homenage a Fausto Romitelli</div><div class='work-item'>• Sergej Newski – Bastelmusik I</div><div class='work-item'>• Sergej Newski – Bastelmusik II</div></td>
+										<td class="location-col">Kaisersaal<br />Kaiserstraße 10<br />1070 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">29.01.2024 / 15:00</td>
+										<td class="event-col">Klassenabend Neue Musik am Klavier – Mathilde Hourgiangou</td>
+										<td class="works-col"><div class='work-item'>• Heinz Holliger – Lieder ohne Worte</div></td>
+										<td class="location-col">Festsaal, MDW<br />Seilerstätte 26<br />1010 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">27.01.2024 / 13:00</td>
+										<td class="event-col">Zeitgenössische Kammermusik</td>
+										<td class="works-col"><div class='work-item'>• Arnold Schönberg – Pierrot Lunaire, op.21</div><div class='work-item'>• Sergej Newski – Bastelmusik I</div><div class='work-item'>• Mauricio Kagel – Klangwölfe</div></td>
+										<td class="location-col">Fanny Hensel Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">20.01.2024 / 15:00</td>
+										<td class="event-col">Klassenabend Ensemble Neue Musik, Kompositionspraktikum, Zeitgenössische Kammermusik</td>
+										<td class="works-col"><div class='work-item'>• Clara Iannotta – dead wasps in the jam-jar (iii)</div><div class='work-item'>• Miguel Segura Sogorb – Nocturno</div></td>
+										<td class="location-col">Klangtheater, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">17.01.2024 / 19:30</td>
+										<td class="event-col">Klassenabend Komposition</td>
+										<td class="works-col"><div class='work-item'>• Hao Lin – Am Laternenfest</div><div class='work-item'>• Miguel Segura Sogorb – Streichquartett Nr.1 “Comment dire”</div></td>
+										<td class="location-col">Haydn Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">17.01.2024 / 11:00</td>
+										<td class="event-col">Klassenabend – Petra Stump-Linshalm</td>
+										<td class="works-col"><div class='work-item'>• Sandor Veress – Introduzione e Code</div></td>
+										<td class="location-col">Fanny Hensel Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="calendar-footnote" style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.7; text-align: left; line-height: 1.6;">
+							*CNSMDP = Conservatoire National Supérieur de Musique et de Danse de Paris (Paris Conservatory)<br />
+							*MDW = Universität für Musik und darstellende Kunst Wien (University of Music and Performing Arts Vienna)<br />
+							*IMD = Internationales Musikinstitut Darmstadt / Darmstädter Ferienkurse / Internationale Ferienkurse für Neue Musik (Darmstadt Summer Course)<br />
+							*MUMOK = Museum moderner Kunst Stiftung Ludwig Wien (Museum of modern art, Ludwig Foundation, Vienna)<br />
+							*ESMUC = Escola Superior de Música de Catalunya<br />
+							*Conservatoire d'Aulnay CRD = Conservatoire de Musique et de Danse à Rayonnement départemental Aulnay-sous-Bois
+						</div>
+					</div>
+
+					<div id="year-2023" class="calendar-content">
+						<h2 style="font-weight: 700; margin-bottom: 2rem;">2023 Concerts</h2>
+						<div class="table-wrapper">
+							<table class="calendar-table">
+								<thead>
+									<tr>
+										<th class="date-col">Date / Time</th>
+										<th class="event-col">Event</th>
+										<th class="works-col">Works</th>
+										<th class="location-col">Location</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="date-col">19.12.2023 / 18:00</td>
+										<td class="event-col">Musik der Gegenwart</td>
+										<td class="works-col"><div class='work-item'>• Rebecca Saunders – Hauch</div><div class='work-item'>• Sylvano Bussotti – Sette fogli – 7. Sensitivo</div><div class='work-item'>• Marta Gentilucci – Über</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">17.12.2023 / 12:00</td>
+										<td class="event-col">MDW meets MUMOK</td>
+										<td class="works-col"><div class='work-item'>• Aya Yoshida – Pointed Toe</div><div class='work-item'>• Cecilia Villanueva – Gaudeamus</div><div class='work-item'>• Nam June Paik – Aktion mit einer Violine an Schnur</div><div class='work-item'>• Nam June Paik – One for Violin solo</div></td>
+										<td class="location-col">MUMOK<br />Museumsplatz 1<br />1070 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">10.12.2023 / 15:00</td>
+										<td class="event-col">Bach – Weihnachtsoratorium</td>
+										<td class="works-col"><div class='work-item'>• Bach – Weihnachtsoratorium BWV248</div></td>
+										<td class="location-col">Stiftsbasilika, Stift Klosterneuburg<br />Stiftsplatz 1<br />3400 Klosterneuburg, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">07.12.2023 / 19:30</td>
+										<td class="event-col">Bach – Weihnachtsoratorium</td>
+										<td class="works-col"><div class='work-item'>• Bach – Weihnachtsoratorium BWV248</div></td>
+										<td class="location-col">Jesuitenkirche Wien<br />Doktor-Ignaz-Seipel Platz 1<br />1010 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">25.11.2023 / 16:30</td>
+										<td class="event-col">Ligeti 100.2 – Wien Modern 36</td>
+										<td class="works-col"><div class='work-item'>• György Ligeti – Violin Concerto</div><div class='work-item'>• Unsuk Chin – Double Concerto</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">21.11.2023 / 19:30</td>
+										<td class="event-col">Film + Musik live</td>
+										<td class="works-col"><div class='work-item'>• Johannes Kalitzke – Orlacs Hände</div></td>
+										<td class="location-col">Großer Saal, Wiener Konzerthaus<br />Lothringer Straße 20<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">10.11.2023 / 19:00</td>
+										<td class="event-col">Caldara – Le Concordia de Pianeti</td>
+										<td class="works-col"><div class='work-item'>• Antonio Caldara – La Concordia de’ Pianeti</div></td>
+										<td class="location-col">Festsaal der Österreichischen Akademie der Wissenschaften<br />Doktor-Ignaz-Seipel Platz 2<br />1010 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">28.10.2023 / 14:00</td>
+										<td class="event-col">Öffentliche Abschlussprufung Irini Liu</td>
+										<td class="works-col"><div class='work-item'>• Tomasz Skweres – Nyos</div><div class='work-item'>• Salvatore Sciarrino – Piano Trio No.1</div><div class='work-item'>• George Crumb – Black Angels</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">17.09.2023 / 17:00</td>
+										<td class="event-col">Barock bis Moderne</td>
+										<td class="works-col"><div class='work-item'>• Wolfgang Amadeus Mozart – Sonata for Violin and Piano No.21 KV304</div><div class='work-item'>• Salvatore Sciarrino – Sei Capricci – No.1, 4</div><div class='work-item'>• Bach-Mendelssohn – Partita in d-Moll für Violine solo BWV 1004 – 5. Ciacconna</div><div class='work-item'>• Johannes Maria Staud – Towards a Brighter Hue</div></td>
+										<td class="location-col">Heilig-Geist-Kirche<br />Heilig-Geist-Gasse<br />47608 Geldern, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">19.08.2023 / 14:00</td>
+										<td class="event-col">IMD 2023 – OS Make Fluxus Great Again</td>
+										<td class="works-col"><div class='work-item'>• Fluxus Concert</div></td>
+										<td class="location-col">Open Studio, Lichtenbergschule<br />Ludwigshöhstraße 105<br />64285 Darmstadt, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">18.08.2023 / 16:30</td>
+										<td class="event-col">IMD 2023 – OS Violin Showcase</td>
+										<td class="works-col"><div class='work-item'>• Luciano Berio – Sequenza VIII</div></td>
+										<td class="location-col">Open Studio, Lichtenbergschule<br />Ludwigshöhstraße 105<br />64285 Darmstadt, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">18.08.2023 / 13:30</td>
+										<td class="event-col">IMD 2023 – OS Showcase</td>
+										<td class="works-col"><div class='work-item'>• Sylvia Simons – Bruchstücke or Puzzle Pieces</div></td>
+										<td class="location-col">Open Studio, Lichtenbergschule<br />Ludwigshöhstraße 105<br />64285 Darmstadt, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">16.08.2023 / 14:00</td>
+										<td class="event-col">IMD 2023 – Violin Studio</td>
+										<td class="works-col"><div class='work-item'>• Steve Reich – Violin Phase</div><div class='work-item'>• Luciano Berio – 32 Duetti – 24. Aldo</div><div class='work-item'>• Lisa Yoshida – Kero Kero Violin Choir</div></td>
+										<td class="location-col">Wilhelm-Petersen-Saal, Akademie für Tonkunst<br />Ludwigshöhstraße 120<br />64285 Darmstadt, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">14.08.2023 / 17:00</td>
+										<td class="event-col">IMD 2023 – Kontra-Punkte</td>
+										<td class="works-col"><div class='work-item'>• Karlheinz Stockhausen – Kontra-Punkte</div></td>
+										<td class="location-col">Wilhelm-Petersen-Saal, Akademie für Tonkunst<br />Ludwigshöhstraße 120<br />64285 Darmstadt, Germany</td>
+									</tr>
+									<tr>
+										<td class="date-col">23.07.2023 / 20:30</td>
+										<td class="event-col">Salzburger Festspiele 2023 – Ouverture Spirituelle</td>
+										<td class="works-col"><div class='work-item'>• Claude Vivier – Wo bist du Licht!</div></td>
+										<td class="location-col">Kollegienkirche<br />Universitätsplatz 20<br />5020 Salzburg, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">30.06.2023 / 18:00</td>
+										<td class="event-col">Begegnung Neue Musik</td>
+										<td class="works-col"><div class='work-item'>• Yuheng Chen – Robot Deduce Dualcore (2023)</div><div class='work-item'>• Stefan Grimus – Stück für fünf Instrumente</div><div class='work-item'>• Aquiles Lazaro – Canción para cinco instrumentos</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">27.06.2023 / 19:00</td>
+										<td class="event-col">Klassenabend Kammermusik – Anais Tamisier</td>
+										<td class="works-col"><div class='work-item'>• Grazyna Bacewicz – Violin Quartet (1949)</div></td>
+										<td class="location-col">Franz Liszt-Saal, MDW<br />Lothringerstraße 18<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">27.06.2023 / 17:00</td>
+										<td class="event-col">Begegnung Neue Musik</td>
+										<td class="works-col"><div class='work-item'>• George Crumb – Black Angels (1970)</div><div class='work-item'>• Elliott Carter – 4 Lauds (1984-2000)</div><div class='work-item'>• Clara Iannotta – Limun (2011)</div><div class='work-item'>• Ben Vautier – Apples (1963)</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">27.06.2023 / 15:00</td>
+										<td class="event-col">Interne Masterprüfung von Irini Liu</td>
+										<td class="works-col"><div class='work-item'>• Tristan Murail – La Barque mystique</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">27.06.2023 / 13:00</td>
+										<td class="event-col">Öffentliche Diplomprüfung von Juan Alonso Moreda</td>
+										<td class="works-col"><div class='work-item'>• Anton Webern – Quartett, op.22</div></td>
+										<td class="location-col">Festsaal, MDW<br />Seilerstätte 26<br />1010 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">23.06.2023 / 18:30</td>
+										<td class="event-col">Abschlusskonzert – Bibliotheksmusik</td>
+										<td class="works-col"><div class='work-item'>• Adolf Busch – Suite for Violin and Saxophone</div><div class='work-item'>• Karlheinz Essl – Absence</div><div class='work-item'>• Igor Stravinsky – Feuervogel</div></td>
+										<td class="location-col">Bibliothek, Lese-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">22.06.2023 / 18:30</td>
+										<td class="event-col">Klassenabend Komposition – Clara Iannotta</td>
+										<td class="works-col"><div class='work-item'>• Yuheng Chen – Time Saturates The Cloudy Night Sky… (2023)</div><div class='work-item'>• Sergi Custodio – de cet enfant tellement absent (2023)</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">21.06.2023 / 18:00</td>
+										<td class="event-col">Klassenabend Kammermusik – Petra Stump-Linshalm</td>
+										<td class="works-col"><div class='work-item'>• Petra Stump-Linshalm – Inner Life (2020)</div><div class='work-item'>• Paul Hindemith – Plöner Musiktag – D. Abendmusik – 3. Zwei Duette für Violine und Klarinette</div><div class='work-item'>• Joseph Haydn – Duo für 2 Violine in B-Dur, Op.99 Hob.VI:Anh.3 (for Violin and Clarinet)</div></td>
+										<td class="location-col">Fanny Hensel-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">15.06.2023 / 18:30</td>
+										<td class="event-col">Klassenabend Komposition – Judith Varga</td>
+										<td class="works-col"><div class='work-item'>• Dror Binder – Wie bitte? (2023)</div></td>
+										<td class="location-col">Klangtheater, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">05.06.2023 / 18:00</td>
+										<td class="event-col">Klassenabend Viola – Claudia Schönauer</td>
+										<td class="works-col"><div class='work-item'>• Anton Hoffmeister – Viola Concerto in D Major. 1st Mvt.</div></td>
+										<td class="location-col">Festsaal, MDW<br />Seilerstätte 26<br />1010 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">02.06.2023 / 19:00</td>
+										<td class="event-col">Musik der Gegenwart und Neue Klänge</td>
+										<td class="works-col"><div class='work-item'>• Salvatore Sciarrino – Per Mattia (1975)</div><div class='work-item'>• Salvatore Sciarrino – Fra sé (2009)</div><div class='work-item'>• Toshio Hosokawa – Extasis (2016/2020)</div><div class='work-item'>• György Kurtag – In nomine – all’ongherese (2001)</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">01.06.2023 / 19:00</td>
+										<td class="event-col">Frei improvisierte Musik</td>
+										<td class="works-col"><div class='work-item'>• Nam June Paik – Aktion mit einer Violine an Schnur (1961)</div><div class='work-item'>• Youngseo Kim – Versuch einer Anweisung die Blockflöte zu spielen (2023)</div><div class='work-item'>• George Brecht – Drip Music (1959-62)</div></td>
+										<td class="location-col">Clara Schumann Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">27.05.2023 / 14:00</td>
+										<td class="event-col">Begegnung Neue Musik</td>
+										<td class="works-col"><div class='work-item'>• Georg Friedrich Haas – “…sodaß ich’s hernach mit einem Blick gleichsam wie ein schönes Bild … im Geist übersehe” (1991)</div><div class='work-item'>• Salvatore Sciarrino – Sei Capricci – Capriccio No.2 (1976)</div><div class='work-item'>• Salvatore Sciarrino – Sei Capricci – Capriccio No.3 (1976)</div><div class='work-item'>• Nam June Paik – Aktion mit einer Violine an Schnur (1961)</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">08.05.2023 / 18:30</td>
+										<td class="event-col">Porträt-Konzert Johannes Maria Staud</td>
+										<td class="works-col"><div class='work-item'>• Anton Webern, Quartett, op.22 (1922)</div><div class='work-item'>• Johannes Maria Staud – Towards a brighter hue (2004)</div></td>
+										<td class="location-col">Arnold Schönberg Center<br />Schwarzenbergplatz 6<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">29.04.2023 / 19:30</td>
+										<td class="event-col">Ligeti 100 – BIP</td>
+										<td class="works-col"><div class='work-item'>• Marta M. Kowalczuk – Looking Glass (2023)</div><div class='work-item'>• György Ligeti – Hamburgisches Konzert (1998)</div></td>
+										<td class="location-col">Zeneakadémia<br />Liszt Ferenc tér 8<br />1061 Budapest, Hungary</td>
+									</tr>
+									<tr>
+										<td class="date-col">28.03.2023 / 19:00</td>
+										<td class="event-col">Zeitgenössische Kammermusik und Solowerke</td>
+										<td class="works-col"><div class='work-item'>• Karlheinz Stockhausen – Sonatine Nr.1/8</div><div class='work-item'>• Salvatore Sciarrino – Sei Capricci – Capriccio No.1</div><div class='work-item'>• Salvatore Sciarrino – Sei Capricci – Capriccio No.4</div><div class='work-item'>• George Brecht – Solo for violin, viola, cello or contrabass</div></td>
+										<td class="location-col">Fanny Hensel-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">30.01.2023 / 18:00</td>
+										<td class="event-col">Ligeti 100</td>
+										<td class="works-col"><div class='work-item'>• György Ligeti – Piano Concerto (1988)</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">27.01.2023 / 21:00</td>
+										<td class="event-col">Musik im Restaurant</td>
+										<td class="works-col"><div class='work-item'>• Johann Sebastian Bach – Orchestral Suite No.3 in D major, BWV1068</div></td>
+										<td class="location-col">Kim kocht<br />Währinger Straße 46/1<br />1090 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">26.01.2023 / 18:00</td>
+										<td class="event-col">Kompositionspraktikum und zeitgenössische Kammermusik</td>
+										<td class="works-col"><div class='work-item'>• Georg Schenk – Kaskaden (2023)</div><div class='work-item'>• Sanghyun Hong – Experiment I (2023)</div><div class='work-item'>• Leon Liang – Toccatina (2023)</div><div class='work-item'>• Michael Denhoff – Huit esquisses du matin, pour violon seul, op.119 (2019)</div><div class='work-item'>• Beat Furrer – Lied für Violine und Klavier (1994)</div><div class='work-item'>• Nam June Paik – One for violin solo (1963)</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">19.01.2023 / 16:30</td>
+										<td class="event-col">Collegium Musicum</td>
+										<td class="works-col"><div class='work-item'>• Giovanni Legrenzi – 5. Sonata Quarte, op.10</div><div class='work-item'>• Jean-Féry Rebel – Prémiere Sonata Mellées de plusieures récits</div></td>
+										<td class="location-col">LEG35, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">17.01.2023 / 19:00</td>
+										<td class="event-col">Frei improvisierte Musik</td>
+										<td class="works-col"><div class='work-item'>• Improvisation von der Gruppe ‘Neue Musik – Improvisation 01’</div></td>
+										<td class="location-col">Clara Schumann-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">13.01.2023 / 18:00</td>
+										<td class="event-col">Klassenabend Komposition – Michael Jarrell</td>
+										<td class="works-col"><div class='work-item'>• Yuheng Chen – Time Saturates The Cloudy Night Sky… (2022)</div></td>
+										<td class="location-col">Klangtheater, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="calendar-footnote" style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.7; text-align: left; line-height: 1.6;">
+							*CNSMDP = Conservatoire National Supérieur de Musique et de Danse de Paris (Paris Conservatory)<br />
+							*MDW = Universität für Musik und darstellende Kunst Wien (University of Music and Performing Arts Vienna)<br />
+							*IMD = Internationales Musikinstitut Darmstadt / Darmstädter Ferienkurse / Internationale Ferienkurse für Neue Musik (Darmstadt Summer Course)<br />
+							*MUMOK = Museum moderner Kunst Stiftung Ludwig Wien (Museum of modern art, Ludwig Foundation, Vienna)<br />
+							*ESMUC = Escola Superior de Música de Catalunya<br />
+							*Conservatoire d'Aulnay CRD = Conservatoire de Musique et de Danse à Rayonnement départemental Aulnay-sous-Bois
+						</div>
+					</div>
+
+					<div id="year-2022" class="calendar-content">
+						<h2 style="font-weight: 700; margin-bottom: 2rem;">2022 Concerts</h2>
+						<div class="table-wrapper">
+							<table class="calendar-table">
+								<thead>
+									<tr>
+										<th class="date-col">Date / Time</th>
+										<th class="event-col">Event</th>
+										<th class="works-col">Works</th>
+										<th class="location-col">Location</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="date-col">06.12.2022 / 18:00</td>
+										<td class="event-col">Zeitgenössische Kammermusik</td>
+										<td class="works-col"><div class='work-item'>• Anton Webern – Quartett, op.22 (1922)</div><div class='work-item'>• Gérman Toro-Pérez – Rulfo/Voces II (2005)</div><div class='work-item'>• Salvatore Sciarrino – Sei Capricci – Capriccio No.5 (1976)</div></td>
+										<td class="location-col">Haydn-Saal, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+									<tr>
+										<td class="date-col">17.11.2022 / 15:00</td>
+										<td class="event-col">Interne Masterprüfung von Martin Skubal</td>
+										<td class="works-col"><div class='work-item'>• Gérman Toro-Pérez – leve (2008)</div></td>
+										<td class="location-col">Öhlberger Studio, MDW<br />Anton Webern Platz 1<br />1030 Vienna, Austria</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="calendar-footnote" style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.7; text-align: left; line-height: 1.6;">
+							*CNSMDP = Conservatoire National Supérieur de Musique et de Danse de Paris (Paris Conservatory)<br />
+							*MDW = Universität für Musik und darstellende Kunst Wien (University of Music and Performing Arts Vienna)<br />
+							*IMD = Internationales Musikinstitut Darmstadt / Darmstädter Ferienkurse / Internationale Ferienkurse für Neue Musik (Darmstadt Summer Course)<br />
+							*MUMOK = Museum moderner Kunst Stiftung Ludwig Wien (Museum of modern art, Ludwig Foundation, Vienna)<br />
+							*ESMUC = Escola Superior de Música de Catalunya<br />
+							*Conservatoire d'Aulnay CRD = Conservatoire de Musique et de Danse à Rayonnement départemental Aulnay-sous-Bois
+						</div>
+					</div>
+
+				</section>
+            </div>
+            <footer id="footer">
+                <section id="contact">
+                    <div class="contact-major">
+                        <h2>Contact</h2>
+                    </div>
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <ul class="alt-info">
+                                <li><strong>Email:</strong> <a href="mailto:dudtj11@gmail.com">dudtj11@gmail.com</a></li>
+                                <li><strong>Location:</strong> Based in Paris</li>
+                            </ul>
+                        </div>
+                        <ul class="icons major">
+                            <li><a href="https://www.instagram.com/youngseo.kiiiiiim/" class="icon brands fa-instagram alt" target="_blank"><span class="label">Instagram</span></a></li>
+                            <li><a href="https://www.youtube.com/@youngseokim4387" class="icon brands fa-youtube alt" target="_blank"><span class="label">Youtube</span></a></li>
+                            <li><a href="https://brunch.co.kr/@fakingispower" class="icon solid fa-pen alt" target="_blank"><span class="label">Brunch</span></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <p class="copyright">&copy; Youngseo Kim</p>
+            </footer>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            document.querySelectorAll('.tab-link').forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelectorAll('.tab-link').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    const targetYear = this.getAttribute('data-year');
+                    document.querySelectorAll('.calendar-content').forEach(content => { content.classList.remove('active'); });
+                    document.getElementById('year-' + targetYear).classList.add('active');
+                });
+            });
+        </script>
+    </body>
+</html>

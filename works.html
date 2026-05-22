@@ -1,0 +1,346 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Youngseo Kim - Works</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* 1. 세련된 미니멀 단색 배경 처리 */
+            body {
+                background: #0f0f11 !important; /* 깊이감 있는 갤러리풍 차콜 블랙 단색 */
+                background-image: none !important;
+            }
+            body::before, body::after {
+                display: none !important; /* 템플릿 기본 그라데이션 제거 */
+            }
+            #wrapper {
+                background: transparent !important;
+                background-image: none !important;
+                padding-top: 6rem !important; /* 상단 바 고정에 따른 본문 파묻힘 방지 */
+            }
+
+            /* 2. 상단 고정형 헤더 & 내비게이션 (메인 구조와 100% 동기화) */
+            #custom-header-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 4rem !important; /* 높이 절대 고정 */
+                background: rgba(15, 15, 17, 0.95) !important; /* 배경 일치 및 반투명 */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 4rem !important;
+                z-index: 10000 !important;
+                box-sizing: border-box;
+            }
+
+            /* 왼쪽 로고 텍스트 */
+            .nav-logo {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+
+            /* 오른쪽 메뉴 구역 */
+            #nav {
+                position: relative !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+            }
+            #nav ul {
+                display: flex !important;
+                flex-direction: row !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li a {
+                display: block !important;
+                height: 4rem !important;
+                line-height: 4rem !important;
+                padding: 0 1.25rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em;
+                border: none !important;
+                background: transparent !important;
+                transition: color 0.2s ease;
+            }
+            #nav ul li a:hover, #nav ul li a.active {
+                color: #ffffff !important;
+                background: transparent !important;
+            }
+
+            /* 3. 본문 컨테이너 및 텍스트 검은색 보정 디자인 */
+            .main header.major h2::after,
+            .main header.major::after {
+                background-color: #000000 !important;
+                background: #000000 !important;
+            }
+
+            /* 악보 요청 안내 문구 (검은색 톤 보정) */
+            .score-request-notice {
+                font-size: 0.95rem;
+                color: #444444 !important;
+                border-left: 2px solid #000000;
+                padding-left: 1rem;
+                margin-bottom: 3.5rem;
+            }
+            .score-request-notice a {
+                color: #000000 !important;
+                text-decoration: none;
+                font-weight: 700;
+                border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
+            }
+            .score-request-notice a:hover {
+                border-bottom-style: solid;
+            }
+
+            /* 카테고리 구분 타이틀 (검은색 톤 보정) */
+            .works-category-title {
+                font-size: 1.3rem;
+                font-weight: 800;
+                color: #000000 !important;
+                margin: 3.5rem 0 1rem 0;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                border-bottom: 2px solid #000000;
+                padding-bottom: 0.5rem;
+            }
+
+            /* Works 리스트 레이아웃 */
+            .works-list {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 3.5rem 0;
+            }
+            .works-item {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                padding: 1.25rem 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 2rem;
+            }
+            .works-item:last-child {
+                border-bottom: none;
+            }
+            .works-info {
+                flex: 1;
+                text-align: left;
+            }
+            .works-meta {
+                font-size: 0.85rem;
+                color: #666666 !important; /* 깊이감 있는 회색 메타 데이터 */
+                margin-bottom: 0.2rem;
+                font-weight: 500;
+            }
+            .works-title {
+                font-size: 1.15rem;
+                font-weight: 700;
+            }
+            .works-title a {
+                color: #000000 !important; /* 작품명 검은색 처리 */
+                text-decoration: none;
+                transition: opacity 0.2s ease;
+            }
+            .works-title a:hover {
+                opacity: 0.6;
+            }
+            .works-action {
+                flex-shrink: 0;
+            }
+            
+            /* 보기 버튼 스타일 화이트 배경에 맞춤 설정 */
+            .works-action .button {
+                display: inline-block;
+                text-align: center;
+                min-width: 7.5rem;
+                height: 2.2rem !important;
+                line-height: 2.2rem !important;
+                padding: 0 1rem !important;
+                font-size: 0.75rem !important;
+                box-sizing: border-box;
+                border: 1px solid #000000 !important;
+                background: transparent !important;
+                color: #000000 !important;
+                box-shadow: none !important;
+                font-weight: 600;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+            .works-action .button:hover {
+                background: #000000 !important;
+                color: #ffffff !important;
+            }
+
+            /* 하단 카피라이트 영역 */
+            #footer {
+                border-top: none !important;
+                padding: 0 !important;
+            }
+            .copyright {
+                margin-top: 4rem !important;
+                padding-bottom: 4rem;
+                color: rgba(255, 255, 255, 0.4) !important;
+            }
+
+            /* 반응형 뷰포트 레이아웃 대응 (980px 규격 완벽 일치) */
+            @media screen and (max-width: 980px) {
+                #custom-header-nav {
+                    position: relative !important;
+                    flex-direction: column !important;
+                    height: auto !important;
+                    padding: 1rem !important;
+                }
+                #nav ul {
+                    flex-wrap: wrap !important;
+                    justify-content: center !important;
+                }
+                #nav ul li a {
+                    height: 3rem !important;
+                    line-height: 3rem !important;
+                    padding: 0 0.75rem !important;
+                }
+                #wrapper {
+                    padding-top: 1rem !important;
+                }
+                .main {
+                    padding: 2.5rem 1.5rem !important;
+                }
+                .works-item {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1rem;
+                    padding: 1rem 0;
+                }
+                .works-action {
+                    width: 100%;
+                }
+                .works-action .button {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <div id="custom-header-nav">
+            <div class="nav-logo">Youngseo Kim</div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biography.html">Biography</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="watch.html">Watch</a></li>
+                    <li><a href="works.html" class="active">Works</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="wrapper">
+            <div id="main">
+                <section class="main">
+                    <header class="major">
+                        <h2>Works</h2>
+                    </header>
+                    
+                    <div class="score-request-notice">
+                        For score requests, please contact: <a href="mailto:dudtj11@gmail.com">dudtj11[at]gmail.com</a>
+                    </div>
+
+                    <div class="works-category-title">Chamber Music</div>
+                    <ul class="works-list">
+                        <li class="works-item">
+                            <div class="works-info">
+                                <div class="works-meta">2023 / 2 Pianos</div>
+                                <div class="works-title"><a href="works/exercise_2023_for_2_pianos.html">Exercise</a></div>
+                            </div>
+                            <div class="works-action">
+                                <a href="works/exercise_2023_for_2_pianos.html" class="button">Details &rarr;</a>
+                            </div>
+                        </li>
+					</ul>
+
+					<div class="works-category-title">Scores of Edition Idiot</div>
+					<ul class="works-list">
+                        <li class="works-item">
+                            <div class="works-info">
+                                <div class="works-meta">2023 / Piano Trio and Conductor</div>
+                                <div class="works-title"><a href="works/errors_2023_for_piano_trio_and_conductor.html">Errors</a></div>
+                            </div>
+                            <div class="works-action">
+                                <a href="works/errors_2023_for_piano_trio_and_conductor.html" class="button">Details &rarr;</a>
+                            </div>
+                        </li>
+                        <li class="works-item">
+                            <div class="works-info">
+                                <div class="works-meta">2023 / 1024 Instruments</div>
+                                <div class="works-title"><a href="works/a_life_of_plutonium-239_2023_for_4398046511104_instruments.html">A Life of Plutonium-239</a></div>
+                            </div>
+                            <div class="works-action">
+                                <a href="works/a_life_of_plutonium-239_2023_for_4398046511104_instruments.html" class="button">Details &rarr;</a>
+                            </div>
+                        </li>
+                        <li class="works-item">
+                            <div class="works-info">
+                                <div class="works-meta">2025 / String Quartet and Voice non obligata</div>
+                                <div class="works-title"><a href="works/veritas_inclusa_in_silentio_missa_pro_defunctis_2025_for_string_quartet_and_voice_non_obligata.html">Veritas inclusa in silentio – Missa pro defunctis</a></div>
+                            </div>
+                            <div class="works-action">
+                                <a href="works/veritas_inclusa_in_silentio_missa_pro_defunctis_2025_for_string_quartet_and_voice_non_obligata.html" class="button">Details &rarr;</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="works-category-title">Concert documentation</div>
+                    <ul class="works-list">
+                        <li class="works-item">
+                            <div class="works-info">
+                                <div class="works-meta">2025</div>
+                                <div class="works-title"><a href="works/die_verschwundene_zeit.html">Die verschwundene Zeit</a></div>
+                            </div>
+                            <div class="works-action">
+                                <a href="works/die_verschwundene_zeit.html" class="button">Details &rarr;</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </section>
+            </div>
+
+            <footer id="footer">
+                <p class="copyright">&copy; Youngseo Kim</p>
+            </footer>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

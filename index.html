@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Youngseo Kim</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* 1. 세련된 미니멀 단색 배경 처리 */
+			body {
+				background: #0f0f11 !important; /* 깊이감 있는 갤러리풍 차콜 블랙 단색 */
+				background-image: none !important;
+			}
+			body::before, body::after {
+				display: none !important; /* 템플릿 기본 그라데이션 제거 */
+			}
+			#wrapper {
+				background: transparent !important;
+				background-image: none !important;
+			}
+
+			/* 2. 상단 고정형 헤더 & 내비게이션 */
+			#custom-header-nav {
+				position: fixed !important;
+				top: 0 !important;
+				left: 0 !important;
+				width: 100% !important;
+				height: 4rem !important; /* 높이 절대 고정 */
+				background: rgba(15, 15, 17, 0.95) !important; /* 배경 일치 및 반투명 */
+				border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				padding: 0 4rem !important;
+				z-index: 10000 !important;
+				box-sizing: border-box;
+			}
+
+			/* 왼쪽 로고 텍스트 */
+			.nav-logo {
+				font-size: 1.2rem;
+				font-weight: 700;
+				letter-spacing: 0.1em;
+				color: #ffffff;
+				text-transform: uppercase;
+			}
+
+			/* 오른쪽 메뉴 구역 */
+			#nav {
+				position: relative !important;
+				background: transparent !important;
+				box-shadow: none !important;
+				padding: 0 !important;
+				margin: 0 !important;
+				width: auto !important;
+				height: auto !important;
+				top: auto !important;
+				right: auto !important;
+				left: auto !important;
+			}
+			#nav ul {
+				display: flex !important;
+				flex-direction: row !important;
+				list-style: none !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+			#nav ul li {
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+			#nav ul li a {
+				display: block !important;
+				height: 4rem !important;
+				line-height: 4rem !important;
+				padding: 0 1.25rem !important;
+				color: rgba(255, 255, 255, 0.6) !important;
+				font-size: 0.85rem !important;
+				font-weight: 600 !important;
+				text-transform: uppercase !important;
+				letter-spacing: 0.05em;
+				border: none !important;
+				background: transparent !important;
+				transition: color 0.2s ease;
+			}
+			#nav ul li a:hover, #nav ul li a.active {
+				color: #ffffff !important;
+				background: transparent !important;
+			}
+			
+			/* 상단 바 고정에 따른 본문 파묻힘 방지 */
+			#wrapper {
+				padding-top: 6rem !important;
+			}
+
+			/* 3. 상단 프로필 구역 */
+			.profile-half-container {
+				display: flex;
+				align-items: stretch;
+				background: #ffffff;
+				border-radius: 4px;
+				overflow: hidden;
+				margin-bottom: 2rem;
+			}
+			.profile-photo {
+				flex: 1;
+				line-height: 0;
+			}
+			.profile-photo img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+			.profile-text-box {
+				flex: 1;
+				padding: 3.5rem 2rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				text-align: center;
+				color: #000000 !important;
+			}
+			.profile-text-box .main-name {
+				font-size: 2.8rem;
+				font-weight: 800;
+				line-height: 1.1;
+				margin-bottom: 0.3rem;
+				color: #000000 !important;
+				letter-spacing: -0.02em;
+			}
+			.profile-text-box .main-job {
+				font-size: 1.4rem;
+				font-weight: 400;
+				margin-bottom: 2rem;
+				color: #444444 !important;
+			}
+			.profile-text-box .tagline-keywords {
+				font-size: 1.05rem;
+				font-weight: 700;
+				line-height: 1.6;
+				margin-bottom: 0.8rem;
+				color: #000000 !important;
+			}
+			.profile-text-box .tagline-sub-keywords {
+				font-size: 0.85rem;
+				opacity: 0.7;
+				line-height: 1.5;
+				color: #333333 !important;
+			}
+
+			/* 4. 제목 밑 하단 선 검은색 보정 및 Contact 영역 여백 설정 */
+			.main header.major h2::after,
+			.main header.major::after,
+			.contact-major h2::after {
+				background-color: #000000 !important;
+				background: #000000 !important;
+			}
+			
+			/* Footer 기본 구분선 제거 및 상단 여백 확보 */
+			#footer {
+				border-top: none !important;
+				padding: 0 !important;
+			}
+			
+			/* Contact 섹션 전체에 상단 여백 부여 */
+			#contact {
+				margin-top: 6rem !important;
+				padding-top: 2rem;
+			}
+			
+			/* Contact 제목 구조화 및 하단 검은색 선 생성 */
+			.contact-major h2 {
+				position: relative;
+				padding-bottom: 1rem;
+				margin-bottom: 3rem;
+			}
+			.contact-major h2::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				display: block;
+			}
+
+			/* 브런치 SVG 아이콘 정렬 정밀 보정 */
+			.brunch-svg-link {
+				display: inline-flex !important;
+				align-items: center;
+				justify-content: center;
+				vertical-align: middle;
+			}
+			.brunch-svg-link svg {
+				width: 1.1rem;
+				height: 1.1rem;
+				fill: currentColor;
+				transition: fill 0.2s ease;
+			}
+			
+			/* 카피라이트 문구 여백 조절 */
+			.copyright {
+				margin-top: 4rem !important;
+				padding-bottom: 4rem;
+			}
+
+			/* 본문 텍스트 좌우 맞춤 정렬 */
+			.justify-text {
+				text-align: justify !important;
+				text-justify: inter-word;
+			}
+
+			/* 5. 한 층에 2열 배치 */
+			.dual-section-row {
+				display: flex;
+				gap: 4rem;
+				text-align: left;
+			}
+			.dual-section-row > section {
+				flex: 1;
+				margin-bottom: 0 !important;
+				padding: 0 !important;
+				background: none !important;
+				border: none !important;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.dual-content-body {
+				flex-grow: 1;
+			}
+
+			/* 6. Upcoming Concerts 텍스트 스타일 */
+			.upcoming-text-container {
+				margin-bottom: 2rem;
+			}
+			.upcoming-text-line {
+				font-size: 0.95rem;
+				line-height: 1.8;
+				margin-bottom: 1rem;
+				word-break: break-all;
+			}
+			.upcoming-text-line:last-child {
+				margin-bottom: 0;
+			}
+			.upcoming-text-line strong {
+				color: #ffffff;
+				font-weight: 600;
+			}
+
+			/* 7. 버튼 높이 규격 통일 */
+			.actions .button {
+				display: inline-block;
+				text-align: center;
+				min-width: 13.5rem;
+				height: 3rem !important;
+				line-height: 3rem !important;
+				padding: 0 1.5rem !important;
+				box-sizing: border-box;
+			}
+
+			/* 8. Watch 섹션 분할 */
+			.watch-split-container {
+				display: flex;
+				align-items: center;
+				gap: 3rem;
+				text-align: left;
+			}
+			.watch-left-content { flex: 1; }
+			.watch-right-video { flex: 1.2; }
+			.video-responsive {
+				position: relative;
+				padding-bottom: 56.25%;
+				height: 0;
+				overflow: hidden;
+				border-radius: 4px;
+			}
+			.video-responsive iframe {
+				position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+			}
+
+			@media screen and (max-width: 980px) {
+				#custom-header-nav {
+					position: relative !important;
+					flex-direction: column !important;
+					height: auto !important;
+					padding: 1rem !important;
+				}
+				#nav ul {
+					flex-wrap: wrap !important;
+					justify-content: center !important;
+				}
+				#nav ul li a {
+					height: 3rem !important;
+					line-height: 3rem !important;
+					padding: 0 0.75rem !important;
+				}
+				#wrapper {
+					padding-top: 1rem !important;
+				}
+				.profile-half-container, .dual-section-row, .watch-split-container {
+					flex-direction: column;
+				}
+				.dual-section-row { gap: 4rem; }
+				.profile-photo { height: 400px; }
+				.profile-text-box { padding: 2rem; }
+				.profile-text-box .main-name { font-size: 2.2rem; }
+				.dual-section-row > section { justify-content: flex-start; }
+				#contact { margin-top: 4rem !important; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<div id="custom-header-nav">
+			<div class="nav-logo">Youngseo Kim</div>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="biography.html">Biography</a></li>
+					<li><a href="calendar.html">Calendar</a></li>
+					<li><a href="project.html">Project</a></li>
+					<li><a href="watch.html">Watch</a></li>
+					<li><a href="works.html">Works</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div id="wrapper">
+
+				<div id="main">
+
+						<section id="intro" class="main">
+								<div class="profile-half-container">
+									<div class="profile-photo">
+										<img src="images/main.jpg" alt="Youngseo Kim" />
+									</div>
+									<div class="profile-text-box">
+										<div class="main-name">Youngseo Kim</div>
+										<div class="main-job">Violinist, Composer</div>
+										<div class="tagline-keywords">
+											Violin / Contemporary Music / Fluxus / Performance / Composer / Concert Organizer / Music Theory
+										</div>
+										<div class="tagline-sub-keywords">
+											(Baroque Violin / Viola / Otamatone / Organ / Piano / Music Critic)
+										</div>
+									</div>
+								</div>
+							</section>
+
+						<section id="biography" class="main">
+								<div class="content">
+									<header class="major">
+										<h2>Biography</h2>
+									</header>
+									<p class="justify-text">Youngseo Kim (b. 1992, Seoul) began his musical education at YeWon Art Middle School and later studied in Germany at the Robert Schumann Hochschule Düsseldorf, where he completed his Master’s degree in 2018. He continued his studies in contemporary music at the University of Music and Performing Arts Vienna and is currently in the Artist Diploma program at the CNSMDP in Paris with Ensemble NEXT.</p>
+									<p class="justify-text">He has performed with orchestras such as the Guri Philharmonic and NWD Philharmonic, and appeared at major venues including Musikverein Wien, Wiener Konzerthaus, Festival Présences in Paris and the Salzburg Festival.</p>
+									<ul class="actions">
+										<li><a href="biography.html" class="button">View Full Biography &rarr;</a></li>
+									</ul>
+								</div>
+							</section>
+
+						<section id="concerts-and-works" class="main">
+							<div class="dual-section-row">
+								
+								<section id="upcoming">
+									<div class="dual-content-body">
+										<header class="major">
+											<h2>Upcoming Concerts</h2>
+										</header>
+										<div class="upcoming-text-container">
+											<div class="upcoming-text-line"><strong>20.06.2026</strong> | ManiFeste 2026 – IRCAM | Paris, France</div>
+											<div class="upcoming-text-line"><strong>30.05.2026</strong> | Impuls Minutes Concerts | Graz, Austria</div>
+											<div class="upcoming-text-line"><strong>29.05.2026</strong> | Studienkonzert Komposition - Studierende von Oscar Bianchi | Vienna, Austria</div>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><a href="calendar.html" class="button">View Full Calendar &rarr;</a></li>
+									</ul>
+								</section>
+
+								<section id="works-brief">
+									<div class="dual-content-body">
+										<header class="major">
+											<h2>Works</h2>
+										</header>
+										<p class="justify-text">As a composer, Youngseo has written chamber works and various experimental pieces that reflect on contemporary musical thought and aesthetics.</p>
+									</div>
+									<ul class="actions">
+										<li><a href="works.html" class="button">View Works &rarr;</a></li>
+									</ul>
+								</section>
+
+							</div>
+						</section>
+
+						<section id="watch" class="main">
+								<div class="watch-split-container">
+									<div class="watch-left-content">
+										<header class="major">
+											<h2>Watch</h2>
+										</header>
+										<p class="justify-text">As a violinist, Youngseo has performed a wide range of repertoire, from solo and chamber music to avant-garde and experimental works.</p>
+										<ul class="actions">
+											<li><a href="watch.html" class="button">View Full Media &rarr;</a></li>
+										</ul>
+									</div>
+									<div class="watch-right-video">
+										<div class="video-responsive">
+											<iframe src="https://www.youtube.com/embed/47dqexANZlQ?si=EPnU7aZQ1A3LqTMh" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+							</section>
+
+					</div>
+
+				<footer id="footer">
+						<section id="contact">
+							<div class="contact-major">
+								<h2>Contact</h2>
+							</div>
+							<div class="contact-container">
+								<div class="contact-info">
+									<ul class="alt-info">
+										<li><strong>Email:</strong> <a href="mailto:dudtj11@gmail.com">dudtj11@gmail.com</a></li>
+										<li><strong>Location:</strong> Based in Paris</li>
+									</ul>
+								</div>
+								<ul class="icons major">
+									<li><a href="https://www.instagram.com/youngseo.kiiiiiim/" class="icon brands fa-instagram alt" target="_blank"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.youtube.com/@youngseokim4387" class="icon brands fa-youtube alt" target="_blank"><span class="label">Youtube</span></a></li>
+									<li><a href="https://brunch.co.kr/@fakingispower" class="icon solid fa-pen alt" target="_blank"><span class="label">Brunch</span></a></li>
+								</ul>
+							</div>
+						</section>
+						<p class="copyright">&copy; Youngseo Kim</p>
+					</footer>
+
+			</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

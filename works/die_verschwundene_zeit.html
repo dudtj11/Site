@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Youngseo Kim - Die verschwundene Zeit (2025)</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+        <style>
+            /* 1. 세련된 미니멀 단색 배경 처리 */
+            body {
+                background: #0f0f11 !important;
+                background-image: none !important;
+            }
+            body::before, body::after {
+                display: none !important;
+            }
+            #wrapper {
+                background: transparent !important;
+                background-image: none !important;
+                padding-top: 6rem !important;
+            }
+
+            /* 2. 상단 고정형 헤더 & 내비게이션 */
+            #custom-header-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 4rem !important;
+                background: rgba(15, 15, 17, 0.95) !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 4rem !important;
+                z-index: 10000 !important;
+                box-sizing: border-box;
+            }
+
+            .nav-logo {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+
+            #nav {
+                position: relative !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+            }
+            #nav ul {
+                display: flex !important;
+                flex-direction: row !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li a {
+                display: block !important;
+                height: 4rem !important;
+                line-height: 4rem !important;
+                padding: 0 1.25rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em;
+                border: none !important;
+                background: transparent !important;
+                transition: color 0.2s ease;
+            }
+            #nav ul li a:hover, #nav ul li a.active {
+                color: #ffffff !important;
+                background: transparent !important;
+            }
+
+            /* 3. 본문 컨테이너 및 텍스트 디자인 */
+            .main header.major h2::after,
+            .main header.major::after {
+                background-color: #000000 !important;
+                background: #000000 !important;
+            }
+
+            /* 콘서트 상단 분할 레이아웃 */
+            .concert-top-split {
+                display: flex;
+                gap: 3rem;
+                align-items: stretch;
+                margin-bottom: 4rem;
+            }
+            .concert-info-column {
+                flex: 1.2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .concert-photo-column {
+                flex: 1;
+                line-height: 0;
+            }
+            .concert-photo-column img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 4px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            }
+
+            /* 텍스트 정보 스타일 */
+            .concert-meta-list {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 1.5rem 0;
+                font-size: 1rem;
+                color: #000;
+                line-height: 1.8;
+            }
+            .concert-meta-list li strong {
+                display: inline-block;
+                width: 5.5rem;
+                color: #888;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                letter-spacing: 0.05em;
+            }
+            .concert-program-box {
+                background: #f8f9fa;
+                padding: 1.5rem;
+                border-radius: 4px;
+                border-left: 3px solid #000;
+            }
+            .concert-program-box h4 {
+                font-size: 0.8rem;
+                font-weight: 800;
+                color: #888;
+                text-transform: uppercase;
+                margin-bottom: 0.8rem;
+                letter-spacing: 0.05em;
+            }
+            .concert-program-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                font-size: 0.95rem;
+                color: #000;
+                line-height: 1.6;
+            }
+            .concert-program-list li { margin-bottom: 0.4rem; }
+            .concert-funding {
+                margin-top: 1.2rem;
+                font-size: 0.8rem;
+                color: #999;
+                font-style: italic;
+            }
+            
+            /* 다국어 섹션 스타일 */
+            .lang-section { margin-bottom: 3rem; }
+            .lang-label {
+                font-size: 0.8rem;
+                font-weight: 800;
+                color: #888888;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin-bottom: 1rem;
+                border-left: 2px solid #000000;
+                padding-left: 0.5rem;
+                line-height: 1;
+            }
+            .work-detail-content {
+                color: #000000 !important;
+                font-size: 1rem;
+                line-height: 1.8;
+                text-align: justify;
+            }
+            .work-detail-content p { color: #000000 !important; margin-bottom: 1.5rem; }
+            .section-divider { margin: 4rem 0; border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+            .section-sub-title { font-size: 1.4rem; font-weight: 700; color: #000; margin-bottom: 2rem; }
+
+            /* 하단 버튼 및 카피라이트 */
+            .back-to-list { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+            .back-to-list .button {
+                display: inline-block;
+                border: 1px solid #000;
+                color: #000;
+                font-weight: 600;
+                text-transform: uppercase;
+                height: 2.2rem !important;
+                line-height: 2.2rem !important;
+                padding: 0 1.5rem !important;
+                font-size: 0.75rem !important;
+                background: transparent;
+            }
+            .back-to-list .button:hover { background: #000; color: #fff; }
+            .copyright { margin-top: 4rem !important; padding-bottom: 4rem; color: rgba(255, 255, 255, 0.4) !important; }
+
+            /* 반응형 뷰포트 레이아웃 대응 */
+            @media screen and (max-width: 980px) {
+                #custom-header-nav { position: relative !important; flex-direction: column !important; height: auto !important; padding: 1rem !important; }
+                #nav ul { flex-wrap: wrap !important; justify-content: center !important; }
+                #nav ul li a { height: 3rem !important; line-height: 3rem !important; padding: 0 0.75rem !important; }
+                #wrapper { padding-top: 1rem !important; }
+                .main { padding: 2.5rem 1.5rem !important; }
+                .concert-top-split { flex-direction: column; gap: 2rem; }
+                .concert-info-column, .concert-photo-column { width: 100%; }
+                .back-to-list .button { width: 100%; text-align: center; }
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <div id="custom-header-nav">
+            <div class="nav-logo">Youngseo Kim</div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../biography.html">Biography</a></li>
+                    <li><a href="../calendar.html">Calendar</a></li>
+                    <li><a href="../project.html">Project</a></li>
+                    <li><a href="../watch.html">Watch</a></li>
+                    <li><a href="../works.html" class="active">Works</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="wrapper">
+            <div id="main">
+                <section class="main">
+                    <header class="major">
+                        <h2><strong>Die verschwundene Zeit</strong></h2>
+                    </header>
+
+                    <div class="concert-top-split">
+                        
+                        <div class="concert-info-column">
+                            <ul class="concert-meta-list">
+                                <li><strong>Date</strong> 30.03.2025</li>
+                                <li><strong>Time</strong> 02:00 (CET)</li>
+                                <li><strong>Location</strong> Heilig-Geist-Kirche, Geldern</li>
+                                <li><strong>Performer</strong> Youngseo Kim</li>
+                            </ul>
+
+                            <div class="concert-program-box">
+                                <h4>Program</h4>
+                                <ul class="concert-program-list">
+                                    <li>Ben Vautier – I will be back in Ten Minutes (1963)</li>
+                                    <li>La Monte Young – Composition 1960 #6 (1960)</li>
+                                    <li>Youngseo Kim – Close your eyes (2025)</li>
+                                    <li>La Monte Young – Composition 1960 #13 (1960)</li>
+                                </ul>
+                                <div class="concert-funding">
+                                    Mit freundlicher Unterstützung von Heilig-Geist-Kirche – Evangelische Kirchengemeinde Geldern
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="concert-photo-column">
+                            <img src="../images/works/die_verschwundene_zeit.jpg" alt="Concert Documentation Photo">
+                        </div>
+
+                    </div>
+
+                    <div class="work-detail-content">
+
+                        <div class="section-sub-title">Introduction</div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">EN</div>
+                            <p>Is it still a concert if:<br/>
+                            there is no audience?<br/>
+                            there is no performer?<br/>
+                            nothing is played?<br/>
+                            it happens in a NON-EXISTENT TIME?</p>
+                        </div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">DE</div>
+                            <p>Ist es immer noch ein Konzert, wenn:<br/>
+                            es kein Publikum gibt?<br/>
+                            es keinen Performer gibt?<br/>
+                            nichts gespielt wird?<br/>
+                            es in einer NICHT EXISTIERENDEN ZEIT stattfindet?</p>
+                        </div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">FR</div>
+                            <p>Est-ce encore un concert si:<br/>
+                            il n’y a pas de public?<br/>
+                            il n’y a pas d’interprète?<br/>
+                            rien n’est joué?<br/>
+                            il se déroule dans un TEMPS INEXISTANT?</p>
+                        </div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">KR</div>
+                            <p>‘사라진 시간’<br/>
+                            단지 ‘1년에 단 하루, 단 1시간 동안만 가능한’ 연주</p>
+                            <p>만약:<br/>
+                            관객이 없다면?<br/>
+                            연주자가 없다면?<br/>
+                            아무것도 연주되지 않는다면?<br/>
+                            ‘존재하지 않는 시간’에 열린다면?<br/>
+                            이것은 여전히 연주인가? 에 관한 철학적 고찰.</p>
+                        </div>
+
+                        <div class="section-divider"></div>
+
+                        <div class="section-sub-title">Conclusion</div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">EN</div>
+                            <p>In an hour that doesn’t exist,<br/>
+                            a sound was heard<br/>
+                            and became a performance that never happened.<br/>
+                            But was it music?<br/>
+                            If no one heard it — was it still a performance?<br/>
+                            If nothing was performed — what was it, in the end?<br/>
+                            Time moves on. But even its flow is defined only within the frameworks we created.<br/>
+                            Within the time defined by human hands —<br/>
+                            no art came to be.<br/>
+                            And yet, beyond those human concepts of time —<br/>
+                            the performance did exist.</p>
+                        </div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">DE</div>
+                            <p>In einer Stunde, die nicht existiert,<br/>
+                            erklang ein Ton<br/>
+                            und wurde zu einer Aufführung, die nie stattfand.<br/>
+                            War es Musik?<br/>
+                            Wenn niemand es hörte – war es dennoch eine Aufführung?<br/>
+                            Wenn nichts aufgeführt wurde – was war es letztlich?<br/>
+                            Die Zeit vergeht. Doch selbst ihr Fluss wird nur innerhalb menschlicher Rahmen definiert.<br/>
+                            In der Zeit, die vom Menschen definiert wurde –<br/>
+                            entstand keine Kunst.<br/>
+                            Und doch, jenseits dieser menschlichen Zeitbegriffe –<br/>
+                            existierte die Aufführung.</p>
+                        </div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">FR</div>
+                            <p>Dans une heure qui n’existe pas,<br/>
+                            un son a résonné<br/>
+                            et est devenu une performance qui n’a jamais eu lieu.<br/>
+                            Était-ce de la musique ?<br/>
+                            Si personne ne l’a entendue — était-ce encore une performance ?<br/>
+                            Si rien n’a été joué — alors, qu’était-ce au fond ?<br/>
+                            Le temps passe. Mais même son écoulement n’existe que dans les cadres que l’homme a créés.<br/>
+                            Dans le temps défini par l’humain —<br/>
+                            aucun art n’a pu exister.<br/>
+                            Et pourtant, au-delà de ces concepts humains du temps —<br/>
+                            la performance a bel et bien existé.</p>
+                        </div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">KR</div>
+                            <p>존재하지 않는 시간에 울려 퍼진 음은<br/>
+                            존재하지 않는 연주가 된다.<br/>
+                            그것은 음악이었을까?<br/>
+                            만약, 아무도 듣지 못했다면 — 그것은 여전히 연주일까?<br/>
+                            만약, 아무것도 연주되지 않았다면 — 결국 무엇인가?<br/>
+                            시간은 흘러간다. 그러나 그 흐름조차, 인간이 만든 틀 안에서만 정의된다.<br/>
+                            그 인간이 정의한 시간 속에서 —<br/>
+                            어떤 예술도, 존재하지 못했다.<br/>
+                            그러나 그 연주는, 인간의 개념 너머의 시간 속에 — 분명히, 존재했다.</p>
+                        </div>
+
+                        <div class="section-divider"></div>
+
+                        <div class="section-sub-title">Documentation</div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">EN</div>
+                            <p><strong>1. October 2023</strong><br/>The idea started from a simple thought: What if a concert was held during the time when one hour is lost or gained due to Daylight Saving Time?</p>
+                            <p><strong>2. December 2024</strong><br/>Started considering directions for realization.</p>
+                            <p><strong>3. January 2025</strong><br/>Attempted to plan a concert in Vienna. Prepared funding application – abandoned due to paperwork. Expansion of concept: Deconstructing traditional concert customs and interaction.</p>
+                            <p><strong>4. February 2025</strong><br/>Location changed to Geldern, Germany. Refined format and program. Planning Part II: 『À la recherche du temps perdu』.</p>
+                            <p><strong>5. March 2025</strong><br/>Formulated philosophical questions: Is it still a concert without an audience or performer in a non-existent time?</p>
+                            <p><strong>6. March 30, 2025</strong><br/>Realization of the concert and filming.</p>
+                        </div>
+
+                        <div class="lang-section">
+                            <div class="lang-label">KR</div>
+                            <p><strong>1. 2023년 10월</strong><br/>섬머타임으로 인해 한 시간이 없어지거나 늘어나는 현상을 이용해 연주를 하면 어떨까? 라는 아이디어에서 출발.</p>
+                            <p><strong>2. 2024년 12월</strong><br/>실현을 위한 구체화 단계 진입.</p>
+                            <p><strong>3. 2025년 1월</strong><br/>오스트리아 빈에서의 기획 시도 및 중단. 플럭서스 운동 기반의 새로운 연주 포맷 구상 및 공연 관습 해체 시도.</p>
+                            <p><strong>4. 2025년 2월</strong><br/>장소를 독일 겔던으로 변경. 두 번째 파트 『잃어버린 시간을 찾아서』(À la recherche du temps perdu) 기획.</p>
+                            <p><strong>5. 2025년 3월</strong><br/>주요 철학적 질문 정리 및 시간 개념 정립.</p>
+                            <p><strong>6. 2025년 3월 30일</strong><br/>공연 실현 및 촬영.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="back-to-list">
+                        <a href="../works.html" class="button">&larr; Back to Works</a>
+                    </div>
+
+                </section>
+            </div>
+
+            <footer id="footer">
+                <p class="copyright">&copy; Youngseo Kim</p>
+            </footer>
+        </div>
+
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.min.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Youngseo Kim - Watch</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* 1. 세련된 미니멀 단색 배경 처리 */
+            body {
+                background: #0f0f11 !important; /* 깊이감 있는 갤러리풍 차콜 블랙 단색 */
+                background-image: none !important;
+            }
+            body::before, body::after {
+                display: none !important; /* 템플릿 기본 그라데이션 제거 */
+            }
+            #wrapper {
+                background: transparent !important;
+                background-image: none !important;
+                padding-top: 6rem !important; /* 상단 바 고정에 따른 본문 파묻힘 방지 */
+            }
+
+            /* 2. 상단 고정형 헤더 & 내비게이션 (메인 페이지와 완벽 일치) */
+            #custom-header-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 4rem !important; /* 높이 절대 고정 */
+                background: rgba(15, 15, 17, 0.95) !important; /* 배경 일치 및 반투명 */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 4rem !important;
+                z-index: 10000 !important;
+                box-sizing: border-box;
+            }
+
+            /* 왼쪽 로고 텍스트 */
+            .nav-logo {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+
+            /* 오른쪽 메뉴 구역 */
+            #nav {
+                position: relative !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+            }
+            #nav ul {
+                display: flex !important;
+                flex-direction: row !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li a {
+                display: block !important;
+                height: 4rem !important;
+                line-height: 4rem !important;
+                padding: 0 1.25rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em;
+                border: none !important;
+                background: transparent !important;
+                transition: color 0.2s ease;
+            }
+            #nav ul li a:hover, #nav ul li a.active {
+                color: #ffffff !important;
+                background: transparent !important;
+            }
+
+            /* 제목 밑 하단 선 검은색 보정 */
+            .main header.major h2::after, .main header.major::after, hr {
+                background-color: #000000 !important;
+                background: #000000 !important;
+                border-bottom-color: #000000 !important;
+            }
+            #footer {
+                border-top: none !important;
+                padding: 0 !important;
+            }
+            .copyright {
+                margin-top: 4rem !important;
+                padding-bottom: 4rem;
+            }
+
+            /* 탭 레이아웃 */
+            .tab-container {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 3.5rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            .tab-button {
+                background: transparent !important;
+                color: rgba(255, 255, 255, 0.4) !important;
+                border: none !important;
+                border-bottom: 2px solid transparent !important;
+                padding: 1rem 2.5rem !important;
+                font-size: 0.95rem !important;
+                font-weight: 700 !important;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                cursor: pointer;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                transition: color 0.2s ease, border-color 0.2s ease;
+            }
+            .tab-button:hover {
+                color: #ffffff !important;
+            }
+            .tab-button.active {
+                color: #ffffff !important;
+                border-bottom-color: #ffffff !important;
+            }
+
+            /* 3열 비디오 그리드 */
+            .video-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+            .video-card {
+                background: rgba(255, 255, 255, 0.01);
+                border: 1px solid rgba(255, 255, 255, 0.04);
+                padding: 1.25rem;
+                display: flex;
+                flex-direction: column;
+            }
+            .video-wrapper {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%;
+                height: 0;
+                background: #000;
+                margin-bottom: 1rem;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+            .video-wrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+            /* 비디오 카드 하단 콤팩트 버튼 스타일 */
+            .actions .button, .actions .button.primary {
+                background-color: #000000 !important;
+                color: #ffffff !important;
+                border: 1px solid #ffffff !important;
+                box-shadow: none !important;
+                width: 100%;
+                text-align: center;
+                font-size: 0.75rem !important;
+                height: 2.5rem !important;
+                line-height: 2.5rem !important;
+                padding: 0 !important;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+            .actions .button:hover, .actions .button.primary:hover {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            /* 반응형 뷰포트 대응 (메인 페이지 기준인 980px로 수정) */
+            @media screen and (max-width: 1100px) {
+                .video-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            }
+            @media screen and (max-width: 980px) {
+                #custom-header-nav {
+                    position: relative !important;
+                    flex-direction: column !important;
+                    height: auto !important;
+                    padding: 1rem !important;
+                }
+                #nav ul {
+                    flex-wrap: wrap !important;
+                    justify-content: center !important;
+                }
+                #nav ul li a {
+                    height: 3rem !important;
+                    line-height: 3rem !important;
+                    padding: 0 0.75rem !important;
+                }
+                #wrapper {
+                    padding-top: 1rem !important;
+                }
+                .tab-container {
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                }
+                .tab-button {
+                    width: 100%;
+                    padding: 0.75rem 0 !important;
+                    text-align: center;
+                }
+                .video-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <div id="custom-header-nav">
+            <div class="nav-logo">Youngseo Kim</div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biography.html">Biography</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="watch.html" class="active">Watch</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="wrapper">
+            <div id="main">
+                <section class="main">
+                    <header class="major">
+                        <h2>Watch</h2>
+                    </header>
+
+                    <div class="tab-container">
+                        <button class="tab-button active" onclick="openTab(event, 'violin')">Violin</button>
+                        <button class="tab-button" onclick="openTab(event, 'fluxus')">Fluxus / Performance</button>
+                        <button class="tab-button" onclick="openTab(event, 'other')">Others</button>
+                    </div>
+
+                    <div id="video-grid-container" class="video-grid">
+                        </div>
+
+                </section>
+            </div>
+
+            <footer id="footer">
+                <p class="copyright">&copy; Youngseo Kim</p>
+            </footer>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script src="assets/js/video-data.js"></script>
+
+        <script>
+            // 주소 문자열에서 유튜브 비디오 고유 ID를 정규식으로 추출하는 함수
+            function extractVideoId(url) {
+                const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+                const match = url.trim().match(regExp);
+                return (match && match[2].length === 11) ? match[2] : null;
+            }
+
+            // 선택된 카테고리의 텍스트 데이터를 분석하여 화면에 뿌려주는 함수
+            function renderVideos(category) {
+                const container = document.getElementById('video-grid-container');
+                container.innerHTML = ''; // 초기화
+
+                const rawText = VIDEO_LINKS[category] || '';
+                const lines = rawText.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+
+                lines.forEach(url => {
+                    const videoId = extractVideoId(url);
+                    if (!videoId) return; 
+
+                    const card = document.createElement('div');
+                    card.className = 'video-card';
+                    card.innerHTML = `
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>
+                        </div>
+                        <ul class="actions">
+                            <li><a href="https://www.youtube.com/watch?v=${videoId}" class="button primary" target="_blank">Watch on YouTube</a></li>
+                        </ul>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+
+            // 탭 클릭 제어
+            function openTab(evt, category) {
+                var i, tablinks;
+                tablinks = document.getElementsByClassName("tab-button");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].classList.remove("active");
+                }
+                evt.currentTarget.classList.add("active");
+                renderVideos(category);
+            }
+
+            // 초기 구동 시 첫 번째 탭 자동 로드
+            document.addEventListener("DOMContentLoaded", function() {
+                renderVideos('violin');
+            });
+        </script>
+    </body>
+</html>

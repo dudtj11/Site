@@ -1,0 +1,3816 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Youngseo Kim - Research No.2</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+        <style>
+            /* 1. Minimal monochrome background */
+            body {
+                background: #0f0f11 !important;
+                background-image: none !important;
+            }
+
+            body::before,
+            body::after {
+                display: none !important;
+            }
+
+            #wrapper {
+                background: transparent !important;
+                background-image: none !important;
+                padding-top: 6rem !important;
+            }
+
+
+            /* 2. Fixed header & navigation */
+            #custom-header-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 4rem !important;
+                background: rgba(15, 15, 17, 0.95) !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 4rem !important;
+                z-index: 10000 !important;
+                box-sizing: border-box;
+            }
+
+            /* Logo */
+            .nav-logo {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+
+            .nav-logo a {
+                text-decoration: none;
+                border-bottom: none;
+                color: inherit;
+            }
+
+            .nav-logo a:hover {
+                text-decoration: none;
+                border-bottom: none;
+                color: inherit;
+            }
+
+
+            /* Navigation */
+            #nav {
+                position: relative !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+            }
+
+            #nav ul {
+                display: flex !important;
+                flex-direction: row !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            #nav ul li {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            #nav ul li a {
+                display: block !important;
+                height: 4rem !important;
+                line-height: 4rem !important;
+                padding: 0 1.25rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em;
+                border: none !important;
+                background: transparent !important;
+                transition: color 0.2s ease;
+            }
+
+            #nav ul li a:hover {
+                color: #ffffff !important;
+                background: transparent !important;
+            }
+
+
+            /* 3. Research detail page */
+            .main header.major h2::after,
+            .main header.major::after {
+                background-color: #000000 !important;
+                background: #000000 !important;
+            }
+
+            .research-number {
+                font-size: 0.8rem;
+                font-weight: 800;
+                color: #888888 !important;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin-bottom: 0.75rem;
+            }
+
+            .research-detail-title {
+                font-size: 2rem;
+                font-weight: 700;
+                color: #000000 !important;
+                line-height: 1.3;
+                margin-bottom: 3rem;
+            }
+
+            .research-content {
+                color: #000000 !important;
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            .research-content h3 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #000000 !important;
+                line-height: 1.4;
+                margin: 2.5rem 0 1.25rem 0;
+            }
+
+            .research-content p {
+                color: #000000 !important;
+                margin-bottom: 1.5rem;
+            }
+
+            .research-section {
+                margin-bottom: 4rem;
+            }
+
+            .research-section-title {
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: #000000 !important;
+                margin-bottom: 2rem;
+            }
+
+            .research-section-divider {
+                margin: 4rem 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+
+            /* Language buttons */
+            .language-switcher {
+                display: flex;
+                gap: 0.5rem;
+                margin: 0 0 3rem 0;
+            }
+
+            .language-switcher button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                height: 2rem;
+                min-width: 2.5rem;
+
+                margin: 0;
+                padding: 0 0.7rem;
+
+                border: 1px solid #000000;
+                background: transparent;
+                color: #000000;
+
+                font-family: inherit;
+                font-size: 0.7rem;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: 0.08em;
+
+                text-align: center;
+                vertical-align: middle;
+
+                cursor: pointer;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+
+            .language-switcher button:hover,
+            .language-switcher button.active {
+                background: #000000;
+                color: #ffffff;
+            }
+
+            .language-title {
+                display: block;
+            }
+
+            .research-subtitle {
+                margin-top: -2rem;
+                margin-bottom: 3rem;
+                color: #888888 !important;
+            }
+
+            .research-question {
+                font-size: 1.15rem;
+                font-weight: 600;
+                margin-bottom: 3rem;
+                color: #000000 !important;
+            }
+
+            .language-content {
+                display: block;
+            }
+
+
+            /* Images */
+            .research-image {
+                width: 100%;
+                margin: 2rem 0;
+                line-height: 0;
+            }
+
+            .research-image-caption {
+                margin-top: 0.75rem;
+                font-size: 0.8rem;
+                color: #888888 !important;
+                line-height: 1.5;
+            }
+
+            .research-image img {
+                display: block;
+                width: auto;
+                max-width: 70%;
+                height: auto;
+                margin: 0 auto;
+                border-radius: 4px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+
+            @media screen and (max-width: 980px) {
+                .research-image img {
+                    max-width: 100%;
+                }
+            }
+
+            /* Back button */
+            .back-to-research {
+                margin-top: 4rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .back-to-research .button {
+                display: inline-block;
+                border: 1px solid #000000;
+                color: #000000;
+                font-weight: 600;
+                text-transform: uppercase;
+                height: 2.2rem !important;
+                line-height: 2.2rem !important;
+                padding: 0 1.5rem !important;
+                font-size: 0.75rem !important;
+                background: transparent;
+            }
+
+            .back-to-research .button:hover {
+                background: #000000;
+                color: #ffffff;
+            }
+
+
+            /* Footer */
+            #footer {
+                border-top: none !important;
+                padding: 0 !important;
+            }
+
+            .copyright {
+                margin-top: 4rem !important;
+                padding-bottom: 4rem;
+                color: rgba(255, 255, 255, 0.4) !important;
+            }
+
+
+            /* 4. Responsive layout */
+            @media screen and (max-width: 980px) {
+
+                #custom-header-nav {
+                    position: relative !important;
+                    flex-direction: column !important;
+                    height: auto !important;
+                    padding: 1rem !important;
+                }
+
+                #nav ul {
+                    flex-wrap: wrap !important;
+                    justify-content: center !important;
+                }
+
+                #nav ul li a {
+                    height: 3rem !important;
+                    line-height: 3rem !important;
+                    padding: 0 0.75rem !important;
+                }
+
+                #wrapper {
+                    padding-top: 1rem !important;
+                }
+
+                .main {
+                    padding: 2.5rem 1.5rem !important;
+                }
+
+                .research-detail-title {
+                    font-size: 1.6rem;
+                }
+
+                .back-to-research .button {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .language-switcher {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+    </head>
+
+
+    <body class="is-preload">
+
+        <div id="custom-header-nav">
+
+            <div class="nav-logo">
+                <a href="../index.html">Youngseo Kim</a>
+            </div>
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="../biography.html">Biography</a></li>
+                    <li><a href="../calendar.html">Calendar</a></li>
+                    <li><a href="../watch.html">Watch</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../works.html">Works</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+
+        <div id="wrapper">
+
+            <div id="main">
+
+                <section class="main">
+
+                    <!-- Language Buttons -->
+                    <div class="language-switcher">
+                        <button class="lang-button active" onclick="showLanguage('en', this)">EN</button>
+                        <button class="lang-button" onclick="showLanguage('de', this)">DE</button>
+                        <button class="lang-button" onclick="showLanguage('fr', this)">FR</button>
+                        <button class="lang-button" onclick="showLanguage('kr', this)">KR</button>
+                    </div>
+
+                    <header class="major">
+
+                        <div class="research-number">
+                            Research No.2
+                        </div>
+
+                        <div class="language-title" id="title-en">
+                            <h2 class="research-detail-title">
+                                Body as Musical Interface
+                            </h2>
+
+                            <p class="research-subtitle">
+                                Experimental Studies in Physiological Response, Interaction and Electronic Sound
+                            </p>
+                        </div>
+
+                        <div class="language-title" id="title-de" style="display:none;">
+                            <h2 class="research-detail-title">
+                                Der Körper als musikalische Schnittstelle
+                            </h2>
+
+                            <p class="research-subtitle">
+                                Experimentelle Studien zu physiologischen Reaktionen, Interaktion und elektronischem Klang
+                            </p>
+                        </div>
+
+                        <div class="language-title" id="title-fr" style="display:none;">
+                            <h2 class="research-detail-title">
+                                Le corps comme interface musicale
+                            </h2>
+
+                            <p class="research-subtitle">
+                                Études expérimentales sur les réponses physiologiques, l’interaction et le son électronique
+                            </p>
+                        </div>
+
+                        <div class="language-title" id="title-kr" style="display:none;">
+                            <h2 class="research-detail-title">
+                                신체를 음악적 인터페이스로
+                            </h2>
+
+                            <p class="research-subtitle">
+                                생리적 반응, 상호작용과 전자음향에 관한 실험적 연구
+                            </p>
+                        </div>
+                    </header>
+
+
+                    <div class="research-content">
+
+<!-- ENGLISH -->
+<div id="lang-en" class="language-content">
+
+    <div class="research-section">
+
+        <h3>Starting Point</h3>
+
+        <h4>The body as a musical interface</h4>
+
+        <p>
+            The starting point of this research is the body itself.
+        </p>
+
+        <p>
+            A vibrator is inserted into the performer's body and activated during a performance.
+            The stimulation produces physiological changes in the body. These changes are measured
+            through a heart-rate sensor and transmitted to Max/MSP, where the data is converted
+            into electronic sound in real time.
+        </p>
+
+        <p>
+            The basic structure is:
+        </p>
+
+<pre><code>Vibrator
+    ↓
+Sexual stimulation
+    ↓
+Physiological response
+    ↓
+Heart-rate data
+    ↓
+Max/MSP
+    ↓
+Electronic sound</code></pre>
+
+        <p>
+            The vibrator is therefore not simply an object producing physical vibration.
+            It becomes the initial condition through which the performer's physiological state
+            enters the musical system.
+        </p>
+
+        <p>
+            The research begins from a simple question:
+        </p>
+
+        <blockquote>
+            <strong>
+                What happens when the body becomes the interface through which interaction,
+                physiology and technology generate music in real time?
+            </strong>
+        </blockquote>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Research Question</h3>
+
+        <p>
+            The central question is not simply whether physiological data can be converted into sound.
+            That possibility has already been explored extensively in biofeedback and interactive electronic music.
+        </p>
+
+        <p>
+            Instead, this research focuses on the gap between an intentional external stimulus
+            and the physiological response that follows.
+        </p>
+
+        <p>
+            The vibrator provides a deliberate physical stimulus, but the resulting physiological
+            response cannot be completely predetermined.
+        </p>
+
+        <p>
+            The research therefore asks:
+        </p>
+
+        <blockquote>
+            <strong>
+                Who is making the music when the body itself becomes the musical interface?
+            </strong>
+        </blockquote>
+
+        <p>
+            Three different control structures are investigated:
+        </p>
+
+<pre><code>Performer
+    ↓
+Vibrator
+    ↓
+Sexual stimulation
+    ↓
+Body
+    ↓
+Data
+    ↓
+Sound</code></pre>
+
+<pre><code>Algorithm
+    ↓
+Vibrator
+    ↓
+Sexual stimulation
+    ↓
+Body
+    ↓
+Data
+    ↓
+Sound</code></pre>
+
+<pre><code>Audience
+    ↓
+Interface
+    ↓
+Vibrator
+    ↓
+Sexual stimulation
+    ↓
+Body
+    ↓
+Data
+    ↓
+Sound</code></pre>
+
+        <p>
+            These three structures allow the relationship between performer control,
+            algorithmic control and audience interaction to be examined separately.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Art-Historical Lineage and Prior Work</h3>
+
+        <p>
+            The research is situated within a history of experimental music, performance,
+            biofeedback and body-based electronic practice.
+        </p>
+
+        <h4>Alvin Lucier</h4>
+
+        <p>
+            Alvin Lucier's <em>Music for Solo Performer</em> (1965) is an important precedent.
+            The work uses the performer's brainwaves as the source of musical activity.
+            Electrical signals produced by the body are amplified and used to activate percussion instruments.
+        </p>
+
+        <p>
+            The basic relationship can be described as:
+        </p>
+
+<pre><code>Body
+    ↓
+Biosignal
+    ↓
+Music</code></pre>
+
+        <h4>Seiko Mikami</h4>
+
+        <p>
+            Seiko Mikami's <em>World, Membrane and the Dismembered Body</em> (1997)
+            investigates the relationship between the body, sensing technology,
+            space and interactive systems.
+        </p>
+
+        <p>
+            The body is not simply represented by technology.
+            It becomes part of an environment in which physical presence,
+            sensing and electronic response are continuously connected.
+        </p>
+
+        <h4>Marco Donnarumma</h4>
+
+        <p>
+            Marco Donnarumma's <em>Xth Sense</em> and <em>Music for Flesh II</em>
+            explore muscular activity and bio-acoustic signals as sources for electronic music.
+        </p>
+
+        <p>
+            These works demonstrate how bodily activity can become both an acoustic
+            and electronic source.
+        </p>
+
+        <h4>Marina Abramović</h4>
+
+        <p>
+            Marina Abramović's <em>Rhythm 0</em> (1974) is relevant from a different direction.
+            The work transfers control over the performer's body to the audience.
+            The body becomes the site through which another person's actions are realized.
+        </p>
+
+        <h4>Wiener Aktionismus</h4>
+
+        <p>
+            The tradition of Wiener Aktionismus provides another historical context:
+            the body is treated not simply as a representation but as material,
+            physical presence and a site of direct experience.
+        </p>
+
+        <p>
+            The present research combines these different lines:
+        </p>
+
+<pre><code>Body → Biosignal / bio-acoustics → Music
+
+External stimulus
+    ↓
+Sexual stimulation
+    ↓
+Physiological response of the body
+    ↓
+Biological data
+    ↓
+Music</code></pre>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>The Meaning of the Vibrator</h3>
+
+        <p>
+            The vibrator has several different functions within the research.
+        </p>
+
+        <p>
+            First, it is a physical input source.
+        </p>
+
+        <p>
+            Second, it provides a condition capable of producing physiological change.
+        </p>
+
+        <p>
+            Third, its physical vibration can itself become an acoustic source.
+        </p>
+
+        <p>
+            Fourth, it can become a mediator between performer, computer and audience.
+        </p>
+
+        <p>
+            The vibrator therefore exists simultaneously on several levels:
+        </p>
+
+        <ul>
+            <li>physical vibration</li>
+            <li>sexual stimulation</li>
+            <li>physiological response</li>
+            <li>biological measurement</li>
+            <li>electronic sound generation</li>
+            <li>interaction</li>
+        </ul>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Two Branches of Sound</h3>
+
+        <p>
+            The research contains two fundamentally different sound pathways.
+        </p>
+
+        <h4>Physical sound</h4>
+
+<pre><code>Vibrator
+    ↓
+Mechanical vibration
+    ↓
+Body / chair / resonating object
+    ↓
+Actual sound</code></pre>
+
+        <h4>Electronic sound</h4>
+
+<pre><code>Vibrator
+    ↓
+Sexual stimulation
+    ↓
+Physiological change
+    ↓
+Heart-rate data
+    ↓
+Max/MSP
+    ↓
+Electronic sound</code></pre>
+
+        <p>
+            These two pathways can coexist.
+            The physical sound is produced directly by vibration,
+            while the electronic sound is produced indirectly through the physiological response.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>The Relationship Between Physiological Data and Sexual Stimulation</h3>
+
+        <p>
+            Sexual stimulation is not treated as a musical parameter in itself.
+            It is the external condition that produces a changing physiological state.
+        </p>
+
+        <p>
+            The important musical material is the measurable response that follows.
+        </p>
+
+        <p>
+            This distinction is important because the same physical stimulus does not necessarily
+            produce the same physiological response at every moment.
+        </p>
+
+        <p>
+            The system therefore does not attempt to reproduce stimulation directly.
+            It translates changes in physiological state into changes in sound.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Methods for Converting Heart-Rate Data into Music</h3>
+
+        <p>
+            Heart-rate data can be mapped to several different musical parameters.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Physiological meaning</th>
+                    <th>Possible musical mapping</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HR / BPM</td>
+                    <td>Current heart-rate state</td>
+                    <td>Timbre / filter / spectral brightness</td>
+                </tr>
+                <tr>
+                    <td>ΔHR</td>
+                    <td>Amount of heart-rate change</td>
+                    <td>Modulation depth / sonic instability</td>
+                </tr>
+                <tr>
+                    <td>dHR/dt</td>
+                    <td>Rate of heart-rate change</td>
+                    <td>Rate of sonic change / feedback</td>
+                </tr>
+                <tr>
+                    <td>RR interval</td>
+                    <td>Time between beats</td>
+                    <td>Rhythm / delay time</td>
+                </tr>
+                <tr>
+                    <td>HRV</td>
+                    <td>Variability of beat intervals</td>
+                    <td>Rhythmic irregularity</td>
+                </tr>
+                <tr>
+                    <td>HR peak</td>
+                    <td>Relatively large change</td>
+                    <td>Structural transition / new sonic layer</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Several mappings can therefore operate simultaneously rather than reducing
+            the entire physiological signal to a single musical parameter.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>The Problem of the Baseline</h3>
+
+        <p>
+            A fixed absolute baseline is problematic because heart rate naturally changes over time.
+        </p>
+
+        <p>
+            Resting heart rate, movement, anticipation, fatigue and other physiological conditions
+            can all change the starting point.
+        </p>
+
+        <p>
+            Instead of defining a single fixed value as the baseline,
+            the system can use a moving average and measure relative deviation from the recent state.
+        </p>
+
+<pre><code>Current HR
+    ↓
+Moving average
+    ↓
+Relative deviation
+    ↓
+Musical mapping</code></pre>
+
+        <p>
+            This allows the musical system to respond to change rather than simply to absolute numbers.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Peak Detection</h3>
+
+        <p>
+            A significant physiological change can be treated as a structural musical event.
+        </p>
+
+        <p>
+            Instead of defining a universal BPM value as a peak,
+            the system can compare the current value with the recent moving average.
+        </p>
+
+        <p>
+            For example:
+        </p>
+
+<pre><code>Current HR > recent average + 15%
+
+or
+
+dHR/dt > defined threshold</code></pre>
+
+        <p>
+            A detected peak can trigger a new sonic layer,
+            a change of synthesis method, a transition between sections,
+            or another predefined structural event.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Non-Response as a Musical State</h3>
+
+        <p>
+            An important question is what happens when the body does not produce
+            a significant measurable change.
+        </p>
+
+        <p>
+            Instead of treating non-response as missing information,
+            the system can treat it as a musical state.
+        </p>
+
+        <p>
+            If no meaningful physiological change occurs,
+            the sound can remain in its current state.
+        </p>
+
+        <p>
+            The absence of change therefore becomes part of the musical form.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Possibilities for Future Expansion</h3>
+
+        <p>
+            Heart rate is the core physiological signal in the current stage of the research,
+            but the system could later incorporate additional forms of biological data.
+        </p>
+
+        <ul>
+            <li>EDA / GSR</li>
+            <li>respiration</li>
+            <li>skin temperature</li>
+            <li>HRV frequency-domain analysis</li>
+            <li>accelerometer data</li>
+        </ul>
+
+        <p>
+            These signals could provide additional information about changes in bodily state.
+            However, the present research keeps heart rate as the central signal
+            in order to maintain a clearly defined experimental structure.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>The Structure of Max/MSP</h3>
+
+        <p>
+            The Max/MSP system translates physiological data into sound through several parallel mappings.
+        </p>
+
+<pre><code>HEART RATE INPUT
+
+HR
+    ↓
+scale
+    ↓
+line~
+    ↓
+filter cutoff
+
+
+ΔHR
+    ↓
+abs
+    ↓
+scale
+    ↓
+modulation depth
+
+
+RR
+    ↓
+scale
+    ↓
+delay time
+
+
+HRV
+    ↓
+analysis
+    ↓
+timing irregularity
+
+
+Peak
+    ↓
+structural event</code></pre>
+
+        <p>
+            The system does not need to reproduce the physiological signal literally.
+            Instead, the data is transformed into musical relationships.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>The Performer on Stage</h3>
+
+        <p>
+            The performer remains physically visible on stage.
+        </p>
+
+        <p>
+            The basic stage arrangement consists of:
+        </p>
+
+        <ul>
+            <li>chair</li>
+            <li>performer</li>
+            <li>vibrator</li>
+            <li>heart-rate sensor</li>
+            <li>head microphone</li>
+        </ul>
+
+        <p>
+            The computer running Max/MSP and the main electronic sound processing
+            can remain offstage.
+        </p>
+
+        <p>
+            This keeps the physical body at the center of the performance
+            rather than presenting the computer as the primary visual object.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Vocalization and Breath</h3>
+
+        <p>
+            The head microphone introduces another layer of bodily sound.
+        </p>
+
+        <p>
+            Breathing, involuntary vocalization and changes in the voice can become audible
+            without being treated as conventional musical material.
+        </p>
+
+        <p>
+            These sounds provide another connection between physiological experience
+            and acoustic presence.
+        </p>
+
+        <p>
+            The performer therefore produces sound through both the electronic system
+            and the body itself.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Performance Structure</h3>
+
+        <p>
+            The complete performance is planned as approximately 60 minutes,
+            divided into three sections of approximately 20 minutes each.
+        </p>
+
+        <h4>Part I — Performer Control</h4>
+
+        <p>
+            The performer controls the vibrator directly.
+            The resulting physiological response is measured and transformed into sound.
+        </p>
+
+        <h4>Part II — Algorithmic Control</h4>
+
+        <p>
+            The computer determines changes in stimulation within predetermined limits.
+            The performer becomes the recipient of an algorithmically controlled stimulus,
+            while the physiological response continues to generate the musical material.
+        </p>
+
+        <h4>Part III — Audience Interaction</h4>
+
+        <p>
+            The audience becomes involved in determining the stimulation.
+        </p>
+
+        <p>
+            Two possible forms of audience participation are being considered:
+        </p>
+
+        <ul>
+            <li>
+                online streaming with a token-based interaction system
+            </li>
+            <li>
+                on-site interaction through a Bluetooth-connected application
+            </li>
+        </ul>
+
+        <p>
+            In both cases, audience control would remain within predetermined boundaries.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Stages of Experimentation</h3>
+
+        <p>
+            The research can be developed through a series of controlled experiments.
+        </p>
+
+        <ol>
+            <li>Heart-rate measurement without stimulation</li>
+            <li>Heart-rate measurement during controlled stimulation</li>
+            <li>Testing different stimulation levels</li>
+            <li>Testing moving-average baseline calculation</li>
+            <li>Testing ΔHR mapping</li>
+            <li>Testing dHR/dt mapping</li>
+            <li>Testing RR-interval mapping</li>
+            <li>Testing HRV mapping</li>
+            <li>Testing peak detection</li>
+            <li>Combining multiple mappings in Max/MSP</li>
+            <li>Testing performer, algorithmic and audience control separately</li>
+        </ol>
+
+        <p>
+            The purpose of these experiments is not to determine a single correct
+            relationship between physiology and sound.
+            Instead, they establish which mappings produce meaningful and controllable musical results.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>What Can and Cannot Be Controlled</h3>
+
+        <p>
+            One of the central conditions of the research is the distinction
+            between intentional input and physiological response.
+        </p>
+
+<pre><code>Intentional sexual stimulation
+    ↓
+Unintentional physiological response
+    ↓
+Measurable data
+    ↓
+Algorithmic transformation
+    ↓
+Sound</code></pre>
+
+        <p>
+            The initial stimulus can be controlled within defined limits.
+            The resulting physiological response cannot be completely controlled.
+        </p>
+
+        <p>
+            The data can be measured.
+            The transformation of that data can be programmed.
+            The resulting sound can therefore be shaped,
+            but the physiological path connecting stimulus and sound remains variable.
+        </p>
+
+        <blockquote>
+            <strong>
+                The body is not a fixed instrument. It is a changing musical interface.
+            </strong>
+        </blockquote>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Interdisciplinary Position</h3>
+
+        <p>
+            The research sits between several fields:
+        </p>
+
+<pre><code>PERFORMANCE
+│
+├── Contemporary Music
+│
+├── Body Art
+│
+├── Experimental Music
+│
+├── Electronic Music
+│
+├── Biofeedback
+│
+├── Human–Computer Interaction
+│
+└── Interactive Performance</code></pre>
+
+        <p>
+            Its main concern is the relationship between body, technology,
+            interaction and musical authorship.
+        </p>
+
+        <p>
+            Rather than treating the body as an instrument that simply produces
+            a predetermined musical result, the research considers the body as
+            an unstable and changing interface whose physiological responses
+            continuously influence the musical environment.
+        </p>
+
+        <blockquote>
+            <strong>
+                BODY AS MUSICAL INTERFACE investigates how externally stimulated
+                physiological changes can be sensed, transformed and experienced
+                as real-time electronic music, while examining how performer control,
+                algorithmic control and networked audience interaction reshape
+                the relationship between body, technology and musical authorship.
+            </strong>
+        </blockquote>
+
+        <h4>Performance Timeline</h4>
+
+<pre><code>0 min
+│
+├── PART I — PERFORMER CONTROL
+│
+│   approximately 20 min
+│
+├── PART II — ALGORITHMIC CONTROL
+│
+│   approximately 20 min
+│
+├── PART III — AUDIENCE INTERACTION
+│
+│   approximately 20 min
+│
+60 min</code></pre>
+
+        <p>
+            The research therefore brings together physiological measurement,
+            electronic sound, performance practice and audience interaction
+            within one experimental structure.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- GERMAN -->
+<div id="lang-de" class="language-content" style="display:none;">
+
+    <div class="research-section">
+
+        <h3>Ausgangspunkt</h3>
+
+        <h4>Der Körper als Schnittstelle der Musik</h4>
+
+        <p>
+            Der Ausgangspunkt dieser Forschung ist der Körper selbst.
+        </p>
+
+        <p>
+            Ein Vibrator wird in den Körper der performenden Person eingeführt und während einer
+            Aufführung aktiviert. Die Stimulation erzeugt physiologische Veränderungen im Körper.
+            Diese Veränderungen werden über einen Herzfrequenzsensor gemessen und in Echtzeit an
+            Max/MSP übertragen, wo die Daten in elektronischen Klang umgewandelt werden.
+        </p>
+
+        <p>
+            Der grundlegende Ablauf lautet:
+        </p>
+
+<pre><code>Vibrator
+    ↓
+Sexuelle Stimulation
+    ↓
+Physiologische Reaktion
+    ↓
+Herzfrequenzdaten
+    ↓
+Max/MSP
+    ↓
+Elektronischer Klang</code></pre>
+
+        <p>
+            Der Vibrator ist daher nicht einfach ein Objekt, das physische Vibration erzeugt.
+            Er wird zur Ausgangsbedingung, durch die der physiologische Zustand der performenden
+            Person in das musikalische System eintritt.
+        </p>
+
+        <p>
+            Die Forschung geht von einer einfachen Frage aus:
+        </p>
+
+        <blockquote>
+            <strong>
+                Was geschieht, wenn der Körper zur Schnittstelle wird, durch die Interaktion,
+                Physiologie und Technologie Musik in Echtzeit erzeugen?
+            </strong>
+        </blockquote>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Forschungsfrage</h3>
+
+        <p>
+            Die zentrale Frage ist nicht einfach, ob sich physiologische Daten in Klang umwandeln
+            lassen. Diese Möglichkeit wurde in Biofeedback und interaktiver elektronischer Musik
+            bereits ausführlich untersucht.
+        </p>
+
+        <p>
+            Stattdessen richtet sich diese Forschung auf den Abstand zwischen einem beabsichtigten
+            äußeren Reiz und der darauf folgenden physiologischen Reaktion.
+        </p>
+
+        <p>
+            Der Vibrator liefert einen gezielten physischen Reiz, doch die daraus entstehende
+            physiologische Reaktion lässt sich nicht vollständig vorherbestimmen.
+        </p>
+
+        <p>
+            Die Forschung fragt daher:
+        </p>
+
+        <blockquote>
+            <strong>
+                Wer macht die Musik, wenn der Körper selbst zur musikalischen Schnittstelle wird?
+            </strong>
+        </blockquote>
+
+        <p>
+            Drei unterschiedliche Steuerungsstrukturen werden untersucht:
+        </p>
+
+<pre><code>Performende Person
+    ↓
+Vibrator
+    ↓
+Sexuelle Stimulation
+    ↓
+Körper
+    ↓
+Daten
+    ↓
+Klang</code></pre>
+
+<pre><code>Algorithmus
+    ↓
+Vibrator
+    ↓
+Sexuelle Stimulation
+    ↓
+Körper
+    ↓
+Daten
+    ↓
+Klang</code></pre>
+
+<pre><code>Publikum
+    ↓
+Schnittstelle
+    ↓
+Vibrator
+    ↓
+Sexuelle Stimulation
+    ↓
+Körper
+    ↓
+Daten
+    ↓
+Klang</code></pre>
+
+        <p>
+            Diese drei Strukturen erlauben es, das Verhältnis von Steuerung durch die performende
+            Person, algorithmischer Steuerung und Publikumsinteraktion getrennt zu untersuchen.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Kunsthistorische Genealogie und verwandte Arbeiten</h3>
+
+        <p>
+            Die Forschung verortet sich in einer Geschichte experimenteller Musik, Performance,
+            Biofeedback und körperbasierter elektronischer Praxis.
+        </p>
+
+        <h4>Alvin Lucier</h4>
+
+        <p>
+            Alvin Luciers <em>Music for Solo Performer</em> (1965) ist ein wichtiger Vorläufer.
+            Das Werk nutzt die Gehirnwellen der performenden Person als Quelle musikalischer
+            Aktivität. Vom Körper erzeugte elektrische Signale werden verstärkt und zur Aktivierung
+            von Schlaginstrumenten genutzt.
+        </p>
+
+        <p>
+            Die grundlegende Beziehung lässt sich beschreiben als:
+        </p>
+
+<pre><code>Körper
+    ↓
+Biosignal
+    ↓
+Musik</code></pre>
+
+        <h4>Seiko Mikami</h4>
+
+        <p>
+            Seiko Mikamis <em>World, Membrane and the Dismembered Body</em> (1997) untersucht das
+            Verhältnis zwischen Körper, Sensortechnologie, Raum und interaktiven Systemen.
+        </p>
+
+        <p>
+            Der Körper wird nicht einfach durch Technologie dargestellt. Er wird Teil einer
+            Umgebung, in der physische Präsenz, Sensorik und elektronische Reaktion fortlaufend
+            miteinander verbunden sind.
+        </p>
+
+        <h4>Marco Donnarumma</h4>
+
+        <p>
+            Marco Donnarummas <em>Xth Sense</em> und <em>Music for Flesh II</em> erkunden
+            Muskelaktivität und bioakustische Signale als Quellen für elektronische Musik.
+        </p>
+
+        <p>
+            Diese Arbeiten zeigen, wie körperliche Aktivität zugleich zu einer akustischen und
+            einer elektronischen Quelle werden kann.
+        </p>
+
+        <h4>Marina Abramović</h4>
+
+        <p>
+            Marina Abramovićs <em>Rhythm 0</em> (1974) ist aus einer anderen Richtung relevant.
+            Das Werk überträgt die Kontrolle über den Körper der performenden Person auf das
+            Publikum. Der Körper wird zum Ort, an dem sich die Handlungen einer anderen Person
+            verwirklichen.
+        </p>
+
+        <h4>Wiener Aktionismus</h4>
+
+        <p>
+            Die Tradition des Wiener Aktionismus liefert einen weiteren historischen Kontext:
+            Der Körper wird nicht einfach als Darstellung behandelt, sondern als Material,
+            physische Präsenz und Ort unmittelbarer Erfahrung.
+        </p>
+
+        <p>
+            Die vorliegende Forschung verbindet diese unterschiedlichen Linien:
+        </p>
+
+<pre><code>Körper → Biosignal / Bioakustik → Musik
+
+Äußerer Reiz
+    ↓
+Sexuelle Stimulation
+    ↓
+Physiologische Reaktion des Körpers
+    ↓
+Biologische Daten
+    ↓
+Musik</code></pre>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Die Bedeutung des Vibrators</h3>
+
+        <p>
+            Der Vibrator hat innerhalb der Forschung mehrere unterschiedliche Funktionen.
+        </p>
+
+        <p>
+            Erstens ist er eine physische Eingangsquelle.
+        </p>
+
+        <p>
+            Zweitens liefert er eine Bedingung, die physiologische Veränderung hervorrufen kann.
+        </p>
+
+        <p>
+            Drittens kann seine physische Vibration selbst zur akustischen Quelle werden.
+        </p>
+
+        <p>
+            Viertens kann er zum Vermittler zwischen performender Person, Computer und Publikum
+            werden.
+        </p>
+
+        <p>
+            Der Vibrator existiert daher gleichzeitig auf mehreren Ebenen:
+        </p>
+
+        <ul>
+            <li>physische Vibration</li>
+            <li>sexuelle Stimulation</li>
+            <li>physiologische Reaktion</li>
+            <li>biologische Messung</li>
+            <li>elektronische Klangerzeugung</li>
+            <li>Interaktion</li>
+        </ul>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Zwei Zweige des Klangs</h3>
+
+        <p>
+            Die Forschung enthält zwei grundlegend unterschiedliche Klangwege.
+        </p>
+
+        <h4>Physischer Klang</h4>
+
+<pre><code>Vibrator
+    ↓
+Mechanische Vibration
+    ↓
+Körper / Stuhl / Resonanzobjekt
+    ↓
+Tatsächlicher Klang</code></pre>
+
+        <h4>Elektronischer Klang</h4>
+
+<pre><code>Vibrator
+    ↓
+Sexuelle Stimulation
+    ↓
+Physiologische Veränderung
+    ↓
+Herzfrequenzdaten
+    ↓
+Max/MSP
+    ↓
+Elektronischer Klang</code></pre>
+
+        <p>
+            Diese beiden Wege können nebeneinander bestehen. Der physische Klang entsteht direkt
+            durch Vibration, während der elektronische Klang indirekt über die physiologische
+            Reaktion entsteht.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Das Verhältnis von physiologischen Daten und sexueller Stimulation</h3>
+
+        <p>
+            Sexuelle Stimulation wird nicht als musikalischer Parameter an sich behandelt.
+            Sie ist die äußere Bedingung, die einen sich verändernden physiologischen Zustand
+            erzeugt.
+        </p>
+
+        <p>
+            Das wichtige musikalische Material ist die messbare Reaktion, die daraus folgt.
+        </p>
+
+        <p>
+            Diese Unterscheidung ist wichtig, weil derselbe physische Reiz nicht notwendigerweise
+            zu jedem Zeitpunkt dieselbe physiologische Reaktion erzeugt.
+        </p>
+
+        <p>
+            Das System versucht daher nicht, die Stimulation unmittelbar abzubilden.
+            Es überträgt Veränderungen des physiologischen Zustands in Veränderungen des Klangs.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Verfahren zur Umwandlung von Herzfrequenzdaten in Musik</h3>
+
+        <p>
+            Herzfrequenzdaten lassen sich auf mehrere unterschiedliche musikalische Parameter
+            abbilden.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Daten</th>
+                    <th>Physiologische Bedeutung</th>
+                    <th>Mögliche musikalische Entsprechung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HR / BPM</td>
+                    <td>Aktueller Herzfrequenzzustand</td>
+                    <td>Klangfarbe / Filter / spektrale Helligkeit</td>
+                </tr>
+                <tr>
+                    <td>ΔHR</td>
+                    <td>Ausmaß der Herzfrequenzänderung</td>
+                    <td>Modulationstiefe / klangliche Instabilität</td>
+                </tr>
+                <tr>
+                    <td>dHR/dt</td>
+                    <td>Geschwindigkeit der Herzfrequenzänderung</td>
+                    <td>Geschwindigkeit der Klangänderung / Feedback</td>
+                </tr>
+                <tr>
+                    <td>RR-Intervall</td>
+                    <td>Zeit zwischen den Schlägen</td>
+                    <td>Rhythmus / Delay-Zeit</td>
+                </tr>
+                <tr>
+                    <td>HRV</td>
+                    <td>Variabilität der Schlagintervalle</td>
+                    <td>Rhythmische Unregelmäßigkeit</td>
+                </tr>
+                <tr>
+                    <td>HR-Peak</td>
+                    <td>Relativ große Veränderung</td>
+                    <td>Struktureller Übergang / neue Klangschicht</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Mehrere Zuordnungen können daher gleichzeitig wirken, statt das gesamte physiologische
+            Signal auf einen einzigen musikalischen Parameter zu reduzieren.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Das Problem der Baseline</h3>
+
+        <p>
+            Eine feste absolute Baseline ist problematisch, weil sich die Herzfrequenz natürlicherweise
+            im Zeitverlauf verändert.
+        </p>
+
+        <p>
+            Ruheherzfrequenz, Bewegung, Erwartung, Ermüdung und andere physiologische Bedingungen
+            können den Ausgangspunkt allesamt verändern.
+        </p>
+
+        <p>
+            Statt einen einzelnen festen Wert als Baseline zu definieren, kann das System einen
+            gleitenden Durchschnitt verwenden und die relative Abweichung vom jüngsten Zustand
+            messen.
+        </p>
+
+<pre><code>Aktueller HR
+    ↓
+Gleitender Durchschnitt
+    ↓
+Relative Abweichung
+    ↓
+Musikalische Zuordnung</code></pre>
+
+        <p>
+            So kann das musikalische System auf Veränderung reagieren, statt lediglich auf
+            absolute Zahlen.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Erkennung der Peaks</h3>
+
+        <p>
+            Eine bedeutsame physiologische Veränderung kann als strukturelles musikalisches
+            Ereignis behandelt werden.
+        </p>
+
+        <p>
+            Statt einen universellen BPM-Wert als Peak zu definieren, kann das System den
+            aktuellen Wert mit dem jüngsten gleitenden Durchschnitt vergleichen.
+        </p>
+
+        <p>
+            Zum Beispiel:
+        </p>
+
+<pre><code>Current HR > recent average + 15%
+
+oder
+
+dHR/dt > defined threshold</code></pre>
+
+        <p>
+            Ein erkannter Peak kann eine neue Klangschicht, einen Wechsel der Syntheseform,
+            einen Übergang zwischen Abschnitten oder ein anderes vordefiniertes strukturelles
+            Ereignis auslösen.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Nicht-Reaktion als musikalischer Zustand</h3>
+
+        <p>
+            Eine wichtige Frage ist, was geschieht, wenn der Körper keine bedeutsame messbare
+            Veränderung hervorbringt.
+        </p>
+
+        <p>
+            Statt Nicht-Reaktion als fehlende Information zu behandeln, kann das System sie als
+            musikalischen Zustand behandeln.
+        </p>
+
+        <p>
+            Tritt keine bedeutsame physiologische Veränderung auf, kann der Klang in seinem
+            gegenwärtigen Zustand verbleiben.
+        </p>
+
+        <p>
+            Das Ausbleiben von Veränderung wird daher Teil der musikalischen Form.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Zukünftige Erweiterungsmöglichkeiten</h3>
+
+        <p>
+            Die Herzfrequenz ist im gegenwärtigen Stadium der Forschung das zentrale physiologische
+            Signal, doch das System könnte später weitere Formen biologischer Daten einbeziehen.
+        </p>
+
+        <ul>
+            <li>EDA / GSR</li>
+            <li>Atmung</li>
+            <li>Hauttemperatur</li>
+            <li>Frequenzbereichsanalyse der HRV</li>
+            <li>Beschleunigungssensordaten</li>
+        </ul>
+
+        <p>
+            Diese Signale könnten zusätzliche Informationen über Veränderungen des Körperzustands
+            liefern. Die vorliegende Forschung hält jedoch an der Herzfrequenz als zentralem
+            Signal fest, um eine klar definierte experimentelle Struktur zu bewahren.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Die Struktur des Max/MSP-Patches</h3>
+
+        <p>
+            Das Max/MSP-System überträgt physiologische Daten über mehrere parallele Zuordnungen
+            in Klang.
+        </p>
+
+<pre><code>HEART RATE INPUT
+
+HR
+    ↓
+scale
+    ↓
+line~
+    ↓
+filter cutoff
+
+
+ΔHR
+    ↓
+abs
+    ↓
+scale
+    ↓
+modulation depth
+
+
+RR
+    ↓
+scale
+    ↓
+delay time
+
+
+HRV
+    ↓
+analysis
+    ↓
+timing irregularity
+
+
+Peak
+    ↓
+structural event</code></pre>
+
+        <p>
+            Das System muss das physiologische Signal nicht wörtlich reproduzieren. Stattdessen
+            werden die Daten in musikalische Beziehungen umgewandelt.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Die performende Person auf der Bühne</h3>
+
+        <p>
+            Die performende Person bleibt auf der Bühne physisch sichtbar.
+        </p>
+
+        <p>
+            Die grundlegende Bühnenanordnung besteht aus:
+        </p>
+
+        <ul>
+            <li>Stuhl</li>
+            <li>performender Person</li>
+            <li>Vibrator</li>
+            <li>Herzfrequenzsensor</li>
+            <li>Kopfmikrofon</li>
+        </ul>
+
+        <p>
+            Der Computer, auf dem Max/MSP läuft, sowie die zentrale elektronische Klangverarbeitung
+            können außerhalb der Bühne bleiben.
+        </p>
+
+        <p>
+            So bleibt der physische Körper im Zentrum der Aufführung, statt den Computer als
+            primäres visuelles Objekt zu präsentieren.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Stimme und Atmung</h3>
+
+        <p>
+            Das Kopfmikrofon führt eine weitere Ebene körperlichen Klangs ein.
+        </p>
+
+        <p>
+            Atmung, unwillkürliche Vokalisation und Veränderungen der Stimme können hörbar werden,
+            ohne als konventionelles musikalisches Material behandelt zu werden.
+        </p>
+
+        <p>
+            Diese Klänge stellen eine weitere Verbindung zwischen physiologischer Erfahrung und
+            akustischer Präsenz her.
+        </p>
+
+        <p>
+            Die performende Person erzeugt Klang daher sowohl über das elektronische System als
+            auch über den Körper selbst.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Struktur der Aufführung</h3>
+
+        <p>
+            Die vollständige Aufführung ist auf etwa 60 Minuten angelegt, unterteilt in drei
+            Abschnitte von jeweils etwa 20 Minuten.
+        </p>
+
+        <h4>Part I — Performer Control</h4>
+
+        <p>
+            Die performende Person steuert den Vibrator direkt. Die resultierende physiologische
+            Reaktion wird gemessen und in Klang umgewandelt.
+        </p>
+
+        <h4>Part II — Algorithmic Control</h4>
+
+        <p>
+            Der Computer bestimmt Veränderungen der Stimulation innerhalb vorab festgelegter
+            Grenzen. Die performende Person wird zur Empfängerin eines algorithmisch gesteuerten
+            Reizes, während die physiologische Reaktion weiterhin das musikalische Material
+            erzeugt.
+        </p>
+
+        <h4>Part III — Audience Interaction</h4>
+
+        <p>
+            Das Publikum wird in die Bestimmung der Stimulation einbezogen.
+        </p>
+
+        <p>
+            Zwei mögliche Formen der Publikumsbeteiligung werden erwogen:
+        </p>
+
+        <ul>
+            <li>
+                Online-Streaming mit einem tokenbasierten Interaktionssystem
+            </li>
+            <li>
+                Interaktion vor Ort über eine per Bluetooth verbundene Anwendung
+            </li>
+        </ul>
+
+        <p>
+            In beiden Fällen bleibt die Steuerung durch das Publikum innerhalb vorab festgelegter
+            Grenzen.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Stufen der Experimente</h3>
+
+        <p>
+            Die Forschung kann über eine Reihe kontrollierter Experimente entwickelt werden.
+        </p>
+
+        <ol>
+            <li>Herzfrequenzmessung ohne Stimulation</li>
+            <li>Herzfrequenzmessung während kontrollierter Stimulation</li>
+            <li>Testen unterschiedlicher Stimulationsstufen</li>
+            <li>Testen der Baseline-Berechnung über den gleitenden Durchschnitt</li>
+            <li>Testen der ΔHR-Zuordnung</li>
+            <li>Testen der dHR/dt-Zuordnung</li>
+            <li>Testen der RR-Intervall-Zuordnung</li>
+            <li>Testen der HRV-Zuordnung</li>
+            <li>Testen der Peak-Erkennung</li>
+            <li>Kombinieren mehrerer Zuordnungen in Max/MSP</li>
+            <li>Getrenntes Testen von Steuerung durch performende Person, Algorithmus und Publikum</li>
+        </ol>
+
+        <p>
+            Der Zweck dieser Experimente ist nicht, eine einzige korrekte Beziehung zwischen
+            Physiologie und Klang festzulegen. Stattdessen ermitteln sie, welche Zuordnungen
+            bedeutungsvolle und kontrollierbare musikalische Ergebnisse erzeugen.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Was sich kontrollieren lässt und was nicht</h3>
+
+        <p>
+            Eine der zentralen Bedingungen der Forschung ist die Unterscheidung zwischen
+            beabsichtigtem Input und physiologischer Reaktion.
+        </p>
+
+<pre><code>Beabsichtigte sexuelle Stimulation
+    ↓
+Unbeabsichtigte physiologische Reaktion
+    ↓
+Messbare Daten
+    ↓
+Algorithmische Umwandlung
+    ↓
+Klang</code></pre>
+
+        <p>
+            Der anfängliche Reiz lässt sich innerhalb festgelegter Grenzen steuern. Die daraus
+            resultierende physiologische Reaktion lässt sich nicht vollständig kontrollieren.
+        </p>
+
+        <p>
+            Die Daten lassen sich messen. Die Umwandlung dieser Daten lässt sich programmieren.
+            Der resultierende Klang lässt sich daher formen, doch der physiologische Weg, der
+            Reiz und Klang verbindet, bleibt variabel.
+        </p>
+
+        <blockquote>
+            <strong>
+                Der Körper ist kein festes Instrument. Er ist eine sich verändernde musikalische
+                Schnittstelle.
+            </strong>
+        </blockquote>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Interdisziplinäre Verortung</h3>
+
+        <p>
+            Die Forschung steht zwischen mehreren Feldern:
+        </p>
+
+<pre><code>PERFORMANCE
+│
+├── Zeitgenössische Musik
+│
+├── Body Art
+│
+├── Experimentelle Musik
+│
+├── Elektronische Musik
+│
+├── Biofeedback
+│
+├── Mensch-Computer-Interaktion
+│
+└── Interaktive Performance</code></pre>
+
+        <p>
+            Ihr Hauptanliegen ist das Verhältnis zwischen Körper, Technologie, Interaktion und
+            musikalischer Autorschaft.
+        </p>
+
+        <p>
+            Statt den Körper als Instrument zu behandeln, das lediglich ein vorab festgelegtes
+            musikalisches Ergebnis erzeugt, betrachtet die Forschung den Körper als eine instabile
+            und sich verändernde Schnittstelle, deren physiologische Reaktionen die musikalische
+            Umgebung fortlaufend beeinflussen.
+        </p>
+
+        <blockquote>
+            <strong>
+                BODY AS MUSICAL INTERFACE untersucht, wie von außen stimulierte physiologische
+                Veränderungen erfasst, umgewandelt und als elektronische Echtzeitmusik erfahren
+                werden können, und wie Steuerung durch die performende Person, algorithmische
+                Steuerung und vernetzte Publikumsinteraktion das Verhältnis von Körper, Technologie
+                und musikalischer Autorschaft neu gestalten.
+            </strong>
+        </blockquote>
+
+        <h4>Zeitlicher Ablauf der Aufführung</h4>
+
+<pre><code>0 Min.
+│
+├── PART I — PERFORMER CONTROL
+│
+│   ca. 20 Min.
+│
+├── PART II — ALGORITHMIC CONTROL
+│
+│   ca. 20 Min.
+│
+├── PART III — AUDIENCE INTERACTION
+│
+│   ca. 20 Min.
+│
+60 Min.</code></pre>
+
+        <p>
+            Die Forschung bringt daher physiologische Messung, elektronischen Klang,
+            Performancepraxis und Publikumsinteraktion innerhalb einer einzigen experimentellen
+            Struktur zusammen.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- FRENCH -->
+<div id="lang-fr" class="language-content" style="display:none;">
+
+    <div class="research-section">
+
+        <h3>Point de départ</h3>
+
+        <h4>Le corps comme interface musicale</h4>
+
+        <p>
+            Le point de départ de cette recherche est le corps lui-même.
+        </p>
+
+        <p>
+            Un vibromasseur est inséré dans le corps de la personne performeuse et activé pendant
+            une performance. La stimulation produit des changements physiologiques dans le corps.
+            Ces changements sont mesurés par un capteur de fréquence cardiaque et transmis en
+            temps réel à Max/MSP, où les données sont converties en son électronique.
+        </p>
+
+        <p>
+            La structure de base est la suivante :
+        </p>
+
+<pre><code>Vibromasseur
+    ↓
+Stimulation sexuelle
+    ↓
+Réponse physiologique
+    ↓
+Données de fréquence cardiaque
+    ↓
+Max/MSP
+    ↓
+Son électronique</code></pre>
+
+        <p>
+            Le vibromasseur n'est donc pas simplement un objet produisant une vibration physique.
+            Il devient la condition initiale par laquelle l'état physiologique de la personne
+            performeuse entre dans le système musical.
+        </p>
+
+        <p>
+            La recherche part d'une question simple :
+        </p>
+
+        <blockquote>
+            <strong>
+                Que se passe-t-il lorsque le corps devient l'interface par laquelle l'interaction,
+                la physiologie et la technologie génèrent de la musique en temps réel ?
+            </strong>
+        </blockquote>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Question de recherche</h3>
+
+        <p>
+            La question centrale n'est pas simplement de savoir si des données physiologiques
+            peuvent être converties en son. Cette possibilité a déjà été largement explorée dans
+            le biofeedback et la musique électronique interactive.
+        </p>
+
+        <p>
+            Cette recherche se concentre plutôt sur l'écart entre un stimulus externe intentionnel
+            et la réponse physiologique qui en découle.
+        </p>
+
+        <p>
+            Le vibromasseur fournit un stimulus physique délibéré, mais la réponse physiologique
+            qui en résulte ne peut pas être entièrement prédéterminée.
+        </p>
+
+        <p>
+            La recherche pose donc la question :
+        </p>
+
+        <blockquote>
+            <strong>
+                Qui fait la musique lorsque le corps lui-même devient l'interface musicale ?
+            </strong>
+        </blockquote>
+
+        <p>
+            Trois structures de contrôle différentes sont étudiées :
+        </p>
+
+<pre><code>Performeur
+    ↓
+Vibromasseur
+    ↓
+Stimulation sexuelle
+    ↓
+Corps
+    ↓
+Données
+    ↓
+Son</code></pre>
+
+<pre><code>Algorithme
+    ↓
+Vibromasseur
+    ↓
+Stimulation sexuelle
+    ↓
+Corps
+    ↓
+Données
+    ↓
+Son</code></pre>
+
+<pre><code>Public
+    ↓
+Interface
+    ↓
+Vibromasseur
+    ↓
+Stimulation sexuelle
+    ↓
+Corps
+    ↓
+Données
+    ↓
+Son</code></pre>
+
+        <p>
+            Ces trois structures permettent d'examiner séparément la relation entre le contrôle
+            par la personne performeuse, le contrôle algorithmique et l'interaction du public.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Généalogie de l'histoire de l'art et travaux antérieurs</h3>
+
+        <p>
+            La recherche se situe dans une histoire de musique expérimentale, de performance,
+            de biofeedback et de pratique électronique fondée sur le corps.
+        </p>
+
+        <h4>Alvin Lucier</h4>
+
+        <p>
+            <em>Music for Solo Performer</em> (1965) d'Alvin Lucier est un précédent important.
+            L'œuvre utilise les ondes cérébrales de la personne performeuse comme source d'activité
+            musicale. Les signaux électriques produits par le corps sont amplifiés et utilisés
+            pour activer des instruments de percussion.
+        </p>
+
+        <p>
+            La relation de base peut se décrire ainsi :
+        </p>
+
+<pre><code>Corps
+    ↓
+Biosignal
+    ↓
+Musique</code></pre>
+
+        <h4>Seiko Mikami</h4>
+
+        <p>
+            <em>World, Membrane and the Dismembered Body</em> (1997) de Seiko Mikami étudie la
+            relation entre le corps, les technologies de captation, l'espace et les systèmes
+            interactifs.
+        </p>
+
+        <p>
+            Le corps n'est pas simplement représenté par la technologie. Il devient partie d'un
+            environnement où présence physique, captation et réponse électronique sont
+            continuellement connectées.
+        </p>
+
+        <h4>Marco Donnarumma</h4>
+
+        <p>
+            <em>Xth Sense</em> et <em>Music for Flesh II</em> de Marco Donnarumma explorent
+            l'activité musculaire et les signaux bio-acoustiques comme sources pour la musique
+            électronique.
+        </p>
+
+        <p>
+            Ces œuvres montrent comment l'activité corporelle peut devenir à la fois une source
+            acoustique et une source électronique.
+        </p>
+
+        <h4>Marina Abramović</h4>
+
+        <p>
+            <em>Rhythm 0</em> (1974) de Marina Abramović est pertinent dans une autre direction.
+            L'œuvre transfère au public le contrôle sur le corps de la personne performeuse.
+            Le corps devient le lieu où se réalisent les actions d'une autre personne.
+        </p>
+
+        <h4>Actionnisme viennois</h4>
+
+        <p>
+            La tradition de l'actionnisme viennois (Wiener Aktionismus) fournit un autre contexte
+            historique : le corps y est traité non pas simplement comme une représentation, mais
+            comme matière, présence physique et lieu d'expérience directe.
+        </p>
+
+        <p>
+            La présente recherche combine ces différentes lignées :
+        </p>
+
+<pre><code>Corps → Biosignal / bio-acoustique → Musique
+
+Stimulus externe
+    ↓
+Stimulation sexuelle
+    ↓
+Réponse physiologique du corps
+    ↓
+Données biologiques
+    ↓
+Musique</code></pre>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>La signification du vibromasseur</h3>
+
+        <p>
+            Le vibromasseur remplit plusieurs fonctions différentes dans la recherche.
+        </p>
+
+        <p>
+            Premièrement, il est une source d'entrée physique.
+        </p>
+
+        <p>
+            Deuxièmement, il fournit une condition capable de produire un changement physiologique.
+        </p>
+
+        <p>
+            Troisièmement, sa vibration physique peut elle-même devenir une source acoustique.
+        </p>
+
+        <p>
+            Quatrièmement, il peut devenir un médiateur entre la personne performeuse, l'ordinateur
+            et le public.
+        </p>
+
+        <p>
+            Le vibromasseur existe donc simultanément à plusieurs niveaux :
+        </p>
+
+        <ul>
+            <li>vibration physique</li>
+            <li>stimulation sexuelle</li>
+            <li>réponse physiologique</li>
+            <li>mesure biologique</li>
+            <li>génération de son électronique</li>
+            <li>interaction</li>
+        </ul>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Deux branches du son</h3>
+
+        <p>
+            La recherche comporte deux voies sonores fondamentalement différentes.
+        </p>
+
+        <h4>Son physique</h4>
+
+<pre><code>Vibromasseur
+    ↓
+Vibration mécanique
+    ↓
+Corps / chaise / objet résonant
+    ↓
+Son réel</code></pre>
+
+        <h4>Son électronique</h4>
+
+<pre><code>Vibromasseur
+    ↓
+Stimulation sexuelle
+    ↓
+Changement physiologique
+    ↓
+Données de fréquence cardiaque
+    ↓
+Max/MSP
+    ↓
+Son électronique</code></pre>
+
+        <p>
+            Ces deux voies peuvent coexister. Le son physique est produit directement par la
+            vibration, tandis que le son électronique est produit indirectement par la réponse
+            physiologique.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>La relation entre données physiologiques et stimulation sexuelle</h3>
+
+        <p>
+            La stimulation sexuelle n'est pas traitée comme un paramètre musical en soi. Elle est
+            la condition externe qui produit un état physiologique changeant.
+        </p>
+
+        <p>
+            Le matériau musical important est la réponse mesurable qui en découle.
+        </p>
+
+        <p>
+            Cette distinction est importante car un même stimulus physique ne produit pas
+            nécessairement la même réponse physiologique à chaque instant.
+        </p>
+
+        <p>
+            Le système ne cherche donc pas à reproduire directement la stimulation. Il traduit
+            les changements de l'état physiologique en changements du son.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Méthodes de conversion des données de fréquence cardiaque en musique</h3>
+
+        <p>
+            Les données de fréquence cardiaque peuvent être associées à plusieurs paramètres
+            musicaux différents.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Donnée</th>
+                    <th>Signification physiologique</th>
+                    <th>Correspondance musicale possible</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HR / BPM</td>
+                    <td>État actuel de la fréquence cardiaque</td>
+                    <td>Timbre / filtre / luminosité spectrale</td>
+                </tr>
+                <tr>
+                    <td>ΔHR</td>
+                    <td>Amplitude du changement de fréquence cardiaque</td>
+                    <td>Profondeur de modulation / instabilité sonore</td>
+                </tr>
+                <tr>
+                    <td>dHR/dt</td>
+                    <td>Vitesse du changement de fréquence cardiaque</td>
+                    <td>Vitesse du changement sonore / feedback</td>
+                </tr>
+                <tr>
+                    <td>Intervalle RR</td>
+                    <td>Temps entre les battements</td>
+                    <td>Rythme / temps de délai</td>
+                </tr>
+                <tr>
+                    <td>HRV</td>
+                    <td>Variabilité des intervalles entre battements</td>
+                    <td>Irrégularité rythmique</td>
+                </tr>
+                <tr>
+                    <td>Pic de HR</td>
+                    <td>Changement relativement important</td>
+                    <td>Transition structurelle / nouvelle couche sonore</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Plusieurs correspondances peuvent donc fonctionner simultanément, plutôt que de
+            réduire l'ensemble du signal physiologique à un seul paramètre musical.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Le problème de la ligne de base</h3>
+
+        <p>
+            Une ligne de base absolue et fixe pose problème car la fréquence cardiaque change
+            naturellement avec le temps.
+        </p>
+
+        <p>
+            La fréquence cardiaque au repos, le mouvement, l'anticipation, la fatigue et d'autres
+            conditions physiologiques peuvent tous modifier le point de départ.
+        </p>
+
+        <p>
+            Plutôt que de définir une valeur fixe unique comme ligne de base, le système peut
+            utiliser une moyenne mobile et mesurer l'écart relatif par rapport à l'état récent.
+        </p>
+
+<pre><code>HR actuel
+    ↓
+Moyenne mobile
+    ↓
+Écart relatif
+    ↓
+Correspondance musicale</code></pre>
+
+        <p>
+            Cela permet au système musical de réagir au changement plutôt qu'à de simples valeurs
+            absolues.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Détection des pics</h3>
+
+        <p>
+            Un changement physiologique important peut être traité comme un événement musical
+            structurel.
+        </p>
+
+        <p>
+            Plutôt que de définir une valeur BPM universelle comme pic, le système peut comparer
+            la valeur actuelle à la moyenne mobile récente.
+        </p>
+
+        <p>
+            Par exemple :
+        </p>
+
+<pre><code>Current HR > recent average + 15%
+
+ou
+
+dHR/dt > defined threshold</code></pre>
+
+        <p>
+            Un pic détecté peut déclencher une nouvelle couche sonore, un changement de méthode
+            de synthèse, une transition entre sections, ou un autre événement structurel
+            prédéfini.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>L'absence de réponse comme état musical</h3>
+
+        <p>
+            Une question importante est ce qui se passe lorsque le corps ne produit pas de
+            changement mesurable significatif.
+        </p>
+
+        <p>
+            Plutôt que de traiter l'absence de réponse comme une information manquante, le
+            système peut la traiter comme un état musical.
+        </p>
+
+        <p>
+            Si aucun changement physiologique significatif ne se produit, le son peut rester dans
+            son état actuel.
+        </p>
+
+        <p>
+            L'absence de changement devient donc partie intégrante de la forme musicale.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Possibilités d'extension future</h3>
+
+        <p>
+            La fréquence cardiaque est le signal physiologique central à ce stade de la recherche,
+            mais le système pourrait par la suite intégrer d'autres formes de données biologiques.
+        </p>
+
+        <ul>
+            <li>EDA / GSR</li>
+            <li>respiration</li>
+            <li>température cutanée</li>
+            <li>analyse fréquentielle de la HRV</li>
+            <li>données d'accéléromètre</li>
+        </ul>
+
+        <p>
+            Ces signaux pourraient fournir des informations supplémentaires sur les changements
+            de l'état corporel. Toutefois, la présente recherche conserve la fréquence cardiaque
+            comme signal central afin de maintenir une structure expérimentale clairement définie.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>La structure du patch Max/MSP</h3>
+
+        <p>
+            Le système Max/MSP traduit les données physiologiques en son à travers plusieurs
+            correspondances parallèles.
+        </p>
+
+<pre><code>HEART RATE INPUT
+
+HR
+    ↓
+scale
+    ↓
+line~
+    ↓
+filter cutoff
+
+
+ΔHR
+    ↓
+abs
+    ↓
+scale
+    ↓
+modulation depth
+
+
+RR
+    ↓
+scale
+    ↓
+delay time
+
+
+HRV
+    ↓
+analysis
+    ↓
+timing irregularity
+
+
+Peak
+    ↓
+structural event</code></pre>
+
+        <p>
+            Le système n'a pas besoin de reproduire littéralement le signal physiologique. Les
+            données sont plutôt transformées en relations musicales.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>La personne performeuse sur scène</h3>
+
+        <p>
+            La personne performeuse reste physiquement visible sur scène.
+        </p>
+
+        <p>
+            La disposition scénique de base comprend :
+        </p>
+
+        <ul>
+            <li>une chaise</li>
+            <li>la personne performeuse</li>
+            <li>le vibromasseur</li>
+            <li>le capteur de fréquence cardiaque</li>
+            <li>un micro-casque</li>
+        </ul>
+
+        <p>
+            L'ordinateur exécutant Max/MSP et le traitement principal du son électronique peuvent
+            rester hors scène.
+        </p>
+
+        <p>
+            Cela maintient le corps physique au centre de la performance, plutôt que de présenter
+            l'ordinateur comme l'objet visuel principal.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Voix et respiration</h3>
+
+        <p>
+            Le micro-casque introduit une autre couche de son corporel.
+        </p>
+
+        <p>
+            La respiration, la vocalisation involontaire et les changements de la voix peuvent
+            devenir audibles sans être traités comme un matériau musical conventionnel.
+        </p>
+
+        <p>
+            Ces sons créent un autre lien entre l'expérience physiologique et la présence
+            acoustique.
+        </p>
+
+        <p>
+            La personne performeuse produit ainsi du son à la fois par le système électronique
+            et par le corps lui-même.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Structure de la performance</h3>
+
+        <p>
+            La performance complète est prévue pour environ 60 minutes, divisées en trois parties
+            d'environ 20 minutes chacune.
+        </p>
+
+        <h4>Part I — Performer Control</h4>
+
+        <p>
+            La personne performeuse contrôle directement le vibromasseur. La réponse physiologique
+            qui en résulte est mesurée et transformée en son.
+        </p>
+
+        <h4>Part II — Algorithmic Control</h4>
+
+        <p>
+            L'ordinateur détermine les changements de stimulation dans des limites prédéterminées.
+            La personne performeuse devient la destinataire d'un stimulus contrôlé
+            algorithmiquement, tandis que la réponse physiologique continue de générer le matériau
+            musical.
+        </p>
+
+        <h4>Part III — Audience Interaction</h4>
+
+        <p>
+            Le public participe à la détermination de la stimulation.
+        </p>
+
+        <p>
+            Deux formes possibles de participation du public sont envisagées :
+        </p>
+
+        <ul>
+            <li>
+                le streaming en ligne avec un système d'interaction basé sur des jetons
+            </li>
+            <li>
+                l'interaction sur place via une application connectée par Bluetooth
+            </li>
+        </ul>
+
+        <p>
+            Dans les deux cas, le contrôle du public resterait dans des limites prédéterminées.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Étapes des expériences</h3>
+
+        <p>
+            La recherche peut être développée à travers une série d'expériences contrôlées.
+        </p>
+
+        <ol>
+            <li>Mesure de la fréquence cardiaque sans stimulation</li>
+            <li>Mesure de la fréquence cardiaque pendant une stimulation contrôlée</li>
+            <li>Test de différents niveaux de stimulation</li>
+            <li>Test du calcul de ligne de base par moyenne mobile</li>
+            <li>Test de la correspondance ΔHR</li>
+            <li>Test de la correspondance dHR/dt</li>
+            <li>Test de la correspondance de l'intervalle RR</li>
+            <li>Test de la correspondance HRV</li>
+            <li>Test de la détection des pics</li>
+            <li>Combinaison de plusieurs correspondances dans Max/MSP</li>
+            <li>Test séparé du contrôle par la personne performeuse, algorithmique et par le public</li>
+        </ol>
+
+        <p>
+            L'objectif de ces expériences n'est pas de déterminer une relation unique et correcte
+            entre physiologie et son. Elles permettent plutôt d'établir quelles correspondances
+            produisent des résultats musicaux significatifs et contrôlables.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Ce qui peut et ne peut pas être contrôlé</h3>
+
+        <p>
+            L'une des conditions centrales de la recherche est la distinction entre l'entrée
+            intentionnelle et la réponse physiologique.
+        </p>
+
+<pre><code>Stimulation sexuelle intentionnelle
+    ↓
+Réponse physiologique non intentionnelle
+    ↓
+Données mesurables
+    ↓
+Transformation algorithmique
+    ↓
+Son</code></pre>
+
+        <p>
+            Le stimulus initial peut être contrôlé dans des limites définies. La réponse
+            physiologique qui en résulte ne peut pas être entièrement contrôlée.
+        </p>
+
+        <p>
+            Les données peuvent être mesurées. La transformation de ces données peut être
+            programmée. Le son résultant peut donc être façonné, mais le chemin physiologique
+            reliant stimulus et son reste variable.
+        </p>
+
+        <blockquote>
+            <strong>
+                Le corps n'est pas un instrument fixe. Il est une interface musicale changeante.
+            </strong>
+        </blockquote>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Position interdisciplinaire</h3>
+
+        <p>
+            La recherche se situe entre plusieurs champs :
+        </p>
+
+<pre><code>PERFORMANCE
+│
+├── Musique contemporaine
+│
+├── Body Art
+│
+├── Musique expérimentale
+│
+├── Musique électronique
+│
+├── Biofeedback
+│
+├── Interaction homme-machine
+│
+└── Performance interactive</code></pre>
+
+        <p>
+            Sa préoccupation principale est la relation entre corps, technologie, interaction et
+            autorité musicale.
+        </p>
+
+        <p>
+            Plutôt que de traiter le corps comme un instrument produisant simplement un résultat
+            musical prédéterminé, la recherche considère le corps comme une interface instable et
+            changeante dont les réponses physiologiques influencent continuellement l'environnement
+            musical.
+        </p>
+
+        <blockquote>
+            <strong>
+                BODY AS MUSICAL INTERFACE examine comment des changements physiologiques stimulés
+                de l'extérieur peuvent être captés, transformés et vécus comme de la musique
+                électronique en temps réel, tout en étudiant comment le contrôle par la personne
+                performeuse, le contrôle algorithmique et l'interaction en réseau du public
+                redéfinissent la relation entre corps, technologie et autorité musicale.
+            </strong>
+        </blockquote>
+
+        <h4>Chronologie de la performance</h4>
+
+<pre><code>0 min
+│
+├── PART I — PERFORMER CONTROL
+│
+│   environ 20 min
+│
+├── PART II — ALGORITHMIC CONTROL
+│
+│   environ 20 min
+│
+├── PART III — AUDIENCE INTERACTION
+│
+│   environ 20 min
+│
+60 min</code></pre>
+
+        <p>
+            La recherche réunit ainsi mesure physiologique, son électronique, pratique de la
+            performance et interaction du public au sein d'une seule structure expérimentale.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- KOREAN -->
+<div id="lang-kr" class="language-content" style="display:none;">
+
+    <div class="research-section">
+
+        <h3>출발점</h3>
+
+        <h4>신체를 음악의 인터페이스로</h4>
+
+        <p>
+            이 연구의 출발점은 신체 그 자체다.
+        </p>
+
+        <p>
+            바이브레이터가 퍼포머의 신체에 삽입되어 공연 중 가동된다. 자극은 신체에 생리적 변화를
+            일으킨다. 이 변화는 심박 센서로 측정되어 실시간으로 Max/MSP에 전달되고, 데이터는
+            그곳에서 전자음향으로 변환된다.
+        </p>
+
+        <p>
+            기본 구조는 다음과 같다:
+        </p>
+
+<pre><code>바이브레이터
+    ↓
+성적 자극
+    ↓
+생리적 반응
+    ↓
+심박 데이터
+    ↓
+Max/MSP
+    ↓
+전자음향</code></pre>
+
+        <p>
+            따라서 바이브레이터는 단순히 물리적 진동을 만들어내는 물체가 아니다.
+            그것은 퍼포머의 생리적 상태가 음악 체계로 들어서는 출발 조건이 된다.
+        </p>
+
+        <p>
+            이 연구는 하나의 단순한 질문에서 출발한다:
+        </p>
+
+        <blockquote>
+            <strong>
+                신체가 상호작용과 생리, 기술이 실시간으로 음악을 만들어내는 인터페이스가 될 때
+                무엇이 일어나는가?
+            </strong>
+        </blockquote>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>연구 질문</h3>
+
+        <p>
+            중심 질문은 단순히 생리적 데이터를 소리로 바꿀 수 있는가가 아니다.
+            그 가능성은 바이오피드백과 인터랙티브 전자음악에서 이미 폭넓게 다루어졌다.
+        </p>
+
+        <p>
+            대신 이 연구는 의도된 외부 자극과 그 뒤를 잇는 생리적 반응 사이의 간격에 주목한다.
+        </p>
+
+        <p>
+            바이브레이터는 의도된 물리적 자극을 주지만, 그 결과로 나타나는 생리적 반응은
+            완전히 미리 정해질 수 없다.
+        </p>
+
+        <p>
+            그러므로 이 연구는 다음을 묻는다:
+        </p>
+
+        <blockquote>
+            <strong>
+                신체 자체가 음악적 인터페이스가 될 때 누가 음악을 만드는가?
+            </strong>
+        </blockquote>
+
+        <p>
+            세 가지 서로 다른 제어 구조를 다룬다:
+        </p>
+
+<pre><code>퍼포머
+    ↓
+바이브레이터
+    ↓
+성적 자극
+    ↓
+신체
+    ↓
+데이터
+    ↓
+소리</code></pre>
+
+<pre><code>알고리즘
+    ↓
+바이브레이터
+    ↓
+성적 자극
+    ↓
+신체
+    ↓
+데이터
+    ↓
+소리</code></pre>
+
+<pre><code>관객
+    ↓
+인터페이스
+    ↓
+바이브레이터
+    ↓
+성적 자극
+    ↓
+신체
+    ↓
+데이터
+    ↓
+소리</code></pre>
+
+        <p>
+            이 세 가지 구조는 퍼포머 제어, 알고리즘 제어, 관객 상호작용 사이의 관계를
+            각각 따로 살필 수 있게 한다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>예술사적 계보와 선행 연구</h3>
+
+        <p>
+            이 연구는 실험음악, 퍼포먼스, 바이오피드백, 신체 기반 전자 작업의 역사 안에 놓인다.
+        </p>
+
+        <h4>알빈 루시에 (Alvin Lucier)</h4>
+
+        <p>
+            루시에의 《독주자를 위한 음악》(Music for Solo Performer, 1965)은 중요한 선례다.
+            이 작품은 퍼포머의 뇌파를 음악적 활동의 원천으로 삼는다. 신체가 만들어낸 전기 신호는
+            증폭되어 타악기를 가동시키는 데 쓰인다.
+        </p>
+
+        <p>
+            기본 관계는 다음과 같이 서술할 수 있다:
+        </p>
+
+<pre><code>신체
+    ↓
+생체신호
+    ↓
+음악</code></pre>
+
+        <h4>세이코 미카미 (Seiko Mikami)</h4>
+
+        <p>
+            미카미의 《세계, 막과 해체된 신체》(World, Membrane and the Dismembered Body, 1997)는
+            신체, 센싱 기술, 공간, 상호작용 체계 사이의 관계를 탐구한다.
+        </p>
+
+        <p>
+            신체는 단순히 기술에 의해 재현되지 않는다. 신체는 물리적 현존, 센싱, 전자적 반응이
+            끊임없이 이어지는 환경의 일부가 된다.
+        </p>
+
+        <h4>마르코 도나룸마 (Marco Donnarumma)</h4>
+
+        <p>
+            도나룸마의 《Xth Sense》와 《Music for Flesh II》는 근육 활동과 생체음향 신호를
+            전자음악의 원천으로 탐구한다.
+        </p>
+
+        <p>
+            이 작업들은 신체 활동이 동시에 음향적 원천이자 전자적 원천이 될 수 있음을 보여준다.
+        </p>
+
+        <h4>마리나 아브라모비치 (Marina Abramović)</h4>
+
+        <p>
+            아브라모비치의 《리듬 0》(Rhythm 0, 1974)은 다른 방향에서 관련이 있다.
+            이 작품은 퍼포머 신체에 대한 통제권을 관객에게 넘긴다. 신체는 다른 사람의 행위가
+            실현되는 자리가 된다.
+        </p>
+
+        <h4>빈 행동주의 (Wiener Aktionismus)</h4>
+
+        <p>
+            빈 행동주의의 전통은 또 다른 역사적 맥락을 제공한다: 신체는 단순한 재현이 아니라
+            물질, 물리적 현존, 직접 경험의 자리로 다루어진다.
+        </p>
+
+        <p>
+            이 연구는 이러한 서로 다른 흐름들을 결합한다:
+        </p>
+
+<pre><code>신체 → 생체신호 / 생체음향 → 음악
+
+외부 자극
+    ↓
+성적 자극
+    ↓
+신체의 생리적 반응
+    ↓
+생물학적 데이터
+    ↓
+음악</code></pre>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>바이브레이터의 의미</h3>
+
+        <p>
+            바이브레이터는 이 연구 안에서 여러 다른 기능을 지닌다.
+        </p>
+
+        <p>
+            첫째, 물리적 입력원이다.
+        </p>
+
+        <p>
+            둘째, 생리적 변화를 만들어낼 수 있는 조건을 제공한다.
+        </p>
+
+        <p>
+            셋째, 그 물리적 진동 자체가 음향원이 될 수 있다.
+        </p>
+
+        <p>
+            넷째, 퍼포머와 컴퓨터와 관객 사이를 잇는 매개자가 될 수 있다.
+        </p>
+
+        <p>
+            따라서 바이브레이터는 동시에 여러 층위에 존재한다:
+        </p>
+
+        <ul>
+            <li>물리적 진동</li>
+            <li>성적 자극</li>
+            <li>생리적 반응</li>
+            <li>생물학적 측정</li>
+            <li>전자음향 생성</li>
+            <li>상호작용</li>
+        </ul>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>소리의 두 갈래</h3>
+
+        <p>
+            이 연구는 근본적으로 다른 두 소리 경로를 포함한다.
+        </p>
+
+        <h4>물리적 소리</h4>
+
+<pre><code>바이브레이터
+    ↓
+기계적 진동
+    ↓
+신체 / 의자 / 공명체
+    ↓
+실제 소리</code></pre>
+
+        <h4>전자음향</h4>
+
+<pre><code>바이브레이터
+    ↓
+성적 자극
+    ↓
+생리적 변화
+    ↓
+심박 데이터
+    ↓
+Max/MSP
+    ↓
+전자음향</code></pre>
+
+        <p>
+            이 두 경로는 함께 존재할 수 있다. 물리적 소리는 진동에 의해 직접 만들어지는 반면,
+            전자음향은 생리적 반응을 거쳐 간접적으로 만들어진다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>생리적 데이터와 성적 자극의 관계</h3>
+
+        <p>
+            성적 자극은 그 자체로 음악적 매개변수로 다루어지지 않는다.
+            그것은 변화하는 생리적 상태를 만들어내는 외부 조건이다.
+        </p>
+
+        <p>
+            중요한 음악적 재료는 그 뒤를 잇는 측정 가능한 반응이다.
+        </p>
+
+        <p>
+            이 구분은 중요한데, 동일한 물리적 자극이 매 순간 반드시 같은 생리적 반응을
+            만들어내는 것은 아니기 때문이다.
+        </p>
+
+        <p>
+            따라서 이 체계는 자극 자체를 직접 재현하려 하지 않는다.
+            대신 생리적 상태의 변화를 소리의 변화로 옮긴다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>심박 데이터를 음악으로 바꾸는 방법</h3>
+
+        <p>
+            심박 데이터는 여러 다른 음악적 매개변수에 대응시킬 수 있다.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>데이터</th>
+                    <th>생리적 의미</th>
+                    <th>가능한 음악적 대응</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HR / BPM</td>
+                    <td>현재 심박 상태</td>
+                    <td>음색 / 필터 / 스펙트럼 밝기</td>
+                </tr>
+                <tr>
+                    <td>ΔHR</td>
+                    <td>심박 변화량</td>
+                    <td>변조 깊이 / 음향적 불안정성</td>
+                </tr>
+                <tr>
+                    <td>dHR/dt</td>
+                    <td>심박 변화 속도</td>
+                    <td>음향 변화 속도 / 피드백</td>
+                </tr>
+                <tr>
+                    <td>RR interval</td>
+                    <td>박동 사이의 시간</td>
+                    <td>리듬 / 딜레이 시간</td>
+                </tr>
+                <tr>
+                    <td>HRV</td>
+                    <td>박동 간격의 변동성</td>
+                    <td>리듬의 불규칙성</td>
+                </tr>
+                <tr>
+                    <td>HR peak</td>
+                    <td>상대적으로 큰 변화</td>
+                    <td>구조적 전환 / 새로운 음향층</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            따라서 전체 생리적 신호를 하나의 음악적 매개변수로 환원하는 대신,
+            여러 대응을 동시에 작동시킬 수 있다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>베이스라인의 문제</h3>
+
+        <p>
+            고정된 절대적 베이스라인은 문제가 있는데, 심박수는 시간에 따라 자연스럽게 변하기
+            때문이다.
+        </p>
+
+        <p>
+            안정시 심박수, 움직임, 기대, 피로, 그 밖의 생리적 조건 모두 출발점을 바꿀 수 있다.
+        </p>
+
+        <p>
+            하나의 고정값을 베이스라인으로 정의하는 대신, 이 체계는 이동평균을 사용하여
+            최근 상태로부터의 상대적 편차를 측정할 수 있다.
+        </p>
+
+<pre><code>현재 HR
+    ↓
+이동평균
+    ↓
+상대적 편차
+    ↓
+음악적 대응</code></pre>
+
+        <p>
+            이를 통해 음악 체계는 절대적인 수치가 아니라 변화 자체에 반응할 수 있다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>피크 검출</h3>
+
+        <p>
+            의미 있는 생리적 변화는 구조적인 음악적 사건으로 다룰 수 있다.
+        </p>
+
+        <p>
+            보편적인 BPM 값을 피크로 정의하는 대신, 이 체계는 현재 값을 최근의 이동평균과
+            비교할 수 있다.
+        </p>
+
+        <p>
+            예를 들면:
+        </p>
+
+<pre><code>Current HR > recent average + 15%
+
+또는
+
+dHR/dt > defined threshold</code></pre>
+
+        <p>
+            검출된 피크는 새로운 음향층, 합성 방식의 전환, 구간 사이의 전환,
+            또는 그 밖의 미리 정의된 구조적 사건을 촉발할 수 있다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>무반응이라는 음악적 상태</h3>
+
+        <p>
+            중요한 질문은 신체가 의미 있는 측정 가능한 변화를 만들어내지 않을 때 무슨 일이
+            일어나는가이다.
+        </p>
+
+        <p>
+            무반응을 정보의 결여로 다루는 대신, 이 체계는 그것을 하나의 음악적 상태로 다룰 수
+            있다.
+        </p>
+
+        <p>
+            의미 있는 생리적 변화가 일어나지 않으면 소리는 현재 상태를 유지할 수 있다.
+        </p>
+
+        <p>
+            따라서 변화의 부재 역시 음악적 형식의 일부가 된다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>향후 확장 가능성</h3>
+
+        <p>
+            심박은 이 연구의 현재 단계에서 핵심적인 생리적 신호이지만,
+            이 체계는 이후 다른 형태의 생물학적 데이터를 포함할 수도 있다.
+        </p>
+
+        <ul>
+            <li>EDA / GSR</li>
+            <li>호흡</li>
+            <li>피부 온도</li>
+            <li>HRV 주파수 영역 분석</li>
+            <li>가속도 센서 데이터</li>
+        </ul>
+
+        <p>
+            이러한 신호들은 신체 상태의 변화에 관한 추가 정보를 제공할 수 있다.
+            그러나 이 연구는 명확하게 정의된 실험 구조를 유지하기 위해 심박을 중심 신호로
+            유지한다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Max/MSP의 구조</h3>
+
+        <p>
+            Max/MSP 체계는 여러 병렬 대응을 통해 생리적 데이터를 소리로 옮긴다.
+        </p>
+
+<pre><code>HEART RATE INPUT
+
+HR
+    ↓
+scale
+    ↓
+line~
+    ↓
+filter cutoff
+
+
+ΔHR
+    ↓
+abs
+    ↓
+scale
+    ↓
+modulation depth
+
+
+RR
+    ↓
+scale
+    ↓
+delay time
+
+
+HRV
+    ↓
+analysis
+    ↓
+timing irregularity
+
+
+Peak
+    ↓
+structural event</code></pre>
+
+        <p>
+            이 체계는 생리적 신호를 문자 그대로 재현할 필요가 없다.
+            대신 데이터는 음악적 관계로 변환된다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>무대 위의 퍼포머</h3>
+
+        <p>
+            퍼포머는 무대 위에서 물리적으로 계속 보인다.
+        </p>
+
+        <p>
+            기본적인 무대 구성은 다음과 같다:
+        </p>
+
+        <ul>
+            <li>의자</li>
+            <li>퍼포머</li>
+            <li>바이브레이터</li>
+            <li>심박 센서</li>
+            <li>헤드 마이크</li>
+        </ul>
+
+        <p>
+            Max/MSP를 구동하는 컴퓨터와 주된 전자음향 처리는 무대 밖에 둘 수 있다.
+        </p>
+
+        <p>
+            이는 컴퓨터를 주된 시각적 대상으로 내세우는 대신, 신체를 공연의 중심에 둔다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>발성과 호흡</h3>
+
+        <p>
+            헤드 마이크는 신체적 소리의 또 다른 층위를 끌어들인다.
+        </p>
+
+        <p>
+            호흡, 의도하지 않은 발성, 목소리의 변화는 통상적인 음악적 재료로 다루어지지 않은 채
+            들릴 수 있다.
+        </p>
+
+        <p>
+            이러한 소리들은 생리적 경험과 음향적 현존 사이의 또 다른 연결을 만들어낸다.
+        </p>
+
+        <p>
+            따라서 퍼포머는 전자적 체계와 신체 그 자체 모두를 통해 소리를 만들어낸다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>공연 구조</h3>
+
+        <p>
+            전체 공연은 약 60분으로 계획되며, 각각 약 20분씩 세 구간으로 나뉜다.
+        </p>
+
+        <h4>Part I — Performer Control</h4>
+
+        <p>
+            퍼포머가 바이브레이터를 직접 제어한다. 그 결과로 나타나는 생리적 반응이 측정되어
+            소리로 변환된다.
+        </p>
+
+        <h4>Part II — Algorithmic Control</h4>
+
+        <p>
+            컴퓨터가 미리 정해진 범위 안에서 자극의 변화를 결정한다. 퍼포머는 알고리즘으로
+            제어되는 자극을 받는 쪽이 되며, 생리적 반응은 계속해서 음악적 재료를 만들어낸다.
+        </p>
+
+        <h4>Part III — Audience Interaction</h4>
+
+        <p>
+            관객이 자극을 결정하는 데 관여하게 된다.
+        </p>
+
+        <p>
+            관객 참여의 두 가지 가능한 형태가 고려되고 있다:
+        </p>
+
+        <ul>
+            <li>
+                토큰 기반 상호작용 체계를 갖춘 온라인 스트리밍
+            </li>
+            <li>
+                블루투스로 연결된 응용프로그램을 통한 현장 상호작용
+            </li>
+        </ul>
+
+        <p>
+            두 경우 모두 관객의 제어는 미리 정해진 범위 안에 머무른다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>실험의 단계들</h3>
+
+        <p>
+            이 연구는 일련의 통제된 실험을 통해 진행될 수 있다.
+        </p>
+
+        <ol>
+            <li>자극 없는 심박 측정</li>
+            <li>통제된 자극 중의 심박 측정</li>
+            <li>서로 다른 자극 수준 테스트</li>
+            <li>이동평균 베이스라인 계산 테스트</li>
+            <li>ΔHR 대응 테스트</li>
+            <li>dHR/dt 대응 테스트</li>
+            <li>RR 간격 대응 테스트</li>
+            <li>HRV 대응 테스트</li>
+            <li>피크 검출 테스트</li>
+            <li>Max/MSP 안에서 여러 대응을 결합</li>
+            <li>퍼포머, 알고리즘, 관객 제어를 각각 따로 테스트</li>
+        </ol>
+
+        <p>
+            이 실험들의 목적은 생리와 소리 사이의 단 하나의 옳은 관계를 정하는 데 있지 않다.
+            대신 어떤 대응이 의미 있고 통제 가능한 음악적 결과를 만들어내는지를 확인하는 데 있다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>통제할 수 있는 것과 없는 것</h3>
+
+        <p>
+            이 연구의 중심 조건 가운데 하나는 의도된 입력과 생리적 반응 사이의 구분이다.
+        </p>
+
+<pre><code>의도된 성적 자극
+    ↓
+의도되지 않은 생리적 반응
+    ↓
+측정 가능한 데이터
+    ↓
+알고리즘적 변환
+    ↓
+소리</code></pre>
+
+        <p>
+            초기 자극은 정해진 범위 안에서 통제될 수 있다. 그 결과로 나타나는 생리적 반응은
+            완전히 통제될 수 없다.
+        </p>
+
+        <p>
+            데이터는 측정될 수 있다. 그 데이터의 변환은 프로그램될 수 있다.
+            따라서 결과로 나오는 소리는 형태를 갖출 수 있지만,
+            자극과 소리를 잇는 생리적 경로는 여전히 가변적으로 남는다.
+        </p>
+
+        <blockquote>
+            <strong>
+                신체는 고정된 악기가 아니다. 신체는 끊임없이 변화하는 음악적 인터페이스다.
+            </strong>
+        </blockquote>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>학제적 위치</h3>
+
+        <p>
+            이 연구는 여러 분야 사이에 놓인다:
+        </p>
+
+<pre><code>PERFORMANCE
+│
+├── 동시대 음악
+│
+├── 바디 아트
+│
+├── 실험음악
+│
+├── 전자음악
+│
+├── 바이오피드백
+│
+├── 인간-컴퓨터 상호작용
+│
+└── 인터랙티브 퍼포먼스</code></pre>
+
+        <p>
+            이 연구의 주된 관심은 신체, 기술, 상호작용, 음악적 저작권 사이의 관계다.
+        </p>
+
+        <p>
+            신체를 단순히 미리 정해진 음악적 결과를 만들어내는 악기로 다루는 대신,
+            이 연구는 신체를 그 생리적 반응이 음악적 환경에 끊임없이 영향을 미치는
+            불안정하고 변화하는 인터페이스로 여긴다.
+        </p>
+
+        <blockquote>
+            <strong>
+                BODY AS MUSICAL INTERFACE는 외부에서 자극된 생리적 변화가 어떻게 감지되고
+                변환되어 실시간 전자음악으로 경험될 수 있는지를 탐구하는 동시에,
+                퍼포머 제어, 알고리즘 제어, 네트워크로 연결된 관객 상호작용이
+                신체, 기술, 음악적 저작권 사이의 관계를 어떻게 다시 짜는지를 살핀다.
+            </strong>
+        </blockquote>
+
+        <h4>공연 타임라인</h4>
+
+<pre><code>0분
+│
+├── PART I — PERFORMER CONTROL
+│
+│   약 20분
+│
+├── PART II — ALGORITHMIC CONTROL
+│
+│   약 20분
+│
+├── PART III — AUDIENCE INTERACTION
+│
+│   약 20분
+│
+60분</code></pre>
+
+        <p>
+            따라서 이 연구는 생리적 측정, 전자음향, 퍼포먼스 실천, 관객 상호작용을
+            하나의 실험 구조 안에 함께 담아낸다.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+                    <div class="back-to-research">
+
+                        <a href="../research.html" class="button">
+                            &larr; Back to Research
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <footer id="footer">
+                <p class="copyright">&copy; Youngseo Kim</p>
+            </footer>
+
+        </div>
+
+
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+
+        <script>
+        function showLanguage(lang, button) {
+
+            document.querySelectorAll('.language-content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            document.querySelectorAll('.language-title').forEach(function(title) {
+                title.style.display = 'none';
+            });
+
+            document.querySelectorAll('.lang-button').forEach(function(button) {
+                button.classList.remove('active');
+            });
+
+            document.getElementById('lang-' + lang).style.display = 'block';
+            document.getElementById('title-' + lang).style.display = 'block';
+
+            button.classList.add('active');
+        }
+        </script>
+
+    </body>
+</html>

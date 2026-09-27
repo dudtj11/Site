@@ -1,0 +1,3213 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Youngseo Kim - Research No.3</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+        <style>
+            /* 1. Minimal monochrome background */
+            body {
+                background: #0f0f11 !important;
+                background-image: none !important;
+            }
+
+            body::before,
+            body::after {
+                display: none !important;
+            }
+
+            #wrapper {
+                background: transparent !important;
+                background-image: none !important;
+                padding-top: 6rem !important;
+            }
+
+
+            /* 2. Fixed header & navigation */
+            #custom-header-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 4rem !important;
+                background: rgba(15, 15, 17, 0.95) !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 4rem !important;
+                z-index: 10000 !important;
+                box-sizing: border-box;
+            }
+
+            /* Logo */
+            .nav-logo {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+
+            .nav-logo a {
+                text-decoration: none;
+                border-bottom: none;
+                color: inherit;
+            }
+
+            .nav-logo a:hover {
+                text-decoration: none;
+                border-bottom: none;
+                color: inherit;
+            }
+
+
+            /* Navigation */
+            #nav {
+                position: relative !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+            }
+
+            #nav ul {
+                display: flex !important;
+                flex-direction: row !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            #nav ul li {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            #nav ul li a {
+                display: block !important;
+                height: 4rem !important;
+                line-height: 4rem !important;
+                padding: 0 1.25rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em;
+                border: none !important;
+                background: transparent !important;
+                transition: color 0.2s ease;
+            }
+
+            #nav ul li a:hover {
+                color: #ffffff !important;
+                background: transparent !important;
+            }
+
+
+            /* 3. Research detail page */
+            .main header.major h2::after,
+            .main header.major::after {
+                background-color: #000000 !important;
+                background: #000000 !important;
+            }
+
+            .research-number {
+                font-size: 0.8rem;
+                font-weight: 800;
+                color: #888888 !important;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin-bottom: 0.75rem;
+            }
+
+            .research-detail-title {
+                font-size: 2rem;
+                font-weight: 700;
+                color: #000000 !important;
+                line-height: 1.3;
+                margin-bottom: 3rem;
+            }
+
+            .research-content {
+                color: #000000 !important;
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            .research-content h3 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #000000 !important;
+                line-height: 1.4;
+                margin: 2.5rem 0 1.25rem 0;
+            }
+
+            .research-content p {
+                color: #000000 !important;
+                margin-bottom: 1.5rem;
+            }
+
+            .research-section {
+                margin-bottom: 4rem;
+            }
+
+            .research-section-title {
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: #000000 !important;
+                margin-bottom: 2rem;
+            }
+
+            .research-section-divider {
+                margin: 4rem 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+
+            /* Language buttons */
+            .language-switcher {
+                display: flex;
+                gap: 0.5rem;
+                margin: 0 0 3rem 0;
+            }
+
+            .language-switcher button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                height: 2rem;
+                min-width: 2.5rem;
+
+                margin: 0;
+                padding: 0 0.7rem;
+
+                border: 1px solid #000000;
+                background: transparent;
+                color: #000000;
+
+                font-family: inherit;
+                font-size: 0.7rem;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: 0.08em;
+
+                text-align: center;
+                vertical-align: middle;
+
+                cursor: pointer;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+
+            .language-switcher button:hover,
+            .language-switcher button.active {
+                background: #000000;
+                color: #ffffff;
+            }
+
+            .language-title {
+                display: block;
+            }
+
+            .research-subtitle {
+                margin-top: -2rem;
+                margin-bottom: 3rem;
+                color: #888888 !important;
+            }
+
+            .research-question {
+                font-size: 1.15rem;
+                font-weight: 600;
+                margin-bottom: 3rem;
+                color: #000000 !important;
+            }
+
+            .language-content {
+                display: block;
+            }
+
+
+            /* Images */
+            .research-image {
+                width: 100%;
+                margin: 2rem 0;
+                line-height: 0;
+            }
+
+            .research-image-caption {
+                margin-top: 0.75rem;
+                font-size: 0.8rem;
+                color: #888888 !important;
+                line-height: 1.5;
+            }
+
+            .research-image img {
+                display: block;
+                width: auto;
+                max-width: 70%;
+                height: auto;
+                margin: 0 auto;
+                border-radius: 4px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+
+            @media screen and (max-width: 980px) {
+                .research-image img {
+                    max-width: 100%;
+                }
+            }
+
+            /* Back button */
+            .back-to-research {
+                margin-top: 4rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .back-to-research .button {
+                display: inline-block;
+                border: 1px solid #000000;
+                color: #000000;
+                font-weight: 600;
+                text-transform: uppercase;
+                height: 2.2rem !important;
+                line-height: 2.2rem !important;
+                padding: 0 1.5rem !important;
+                font-size: 0.75rem !important;
+                background: transparent;
+            }
+
+            .back-to-research .button:hover {
+                background: #000000;
+                color: #ffffff;
+            }
+
+
+            /* Footer */
+            #footer {
+                border-top: none !important;
+                padding: 0 !important;
+            }
+
+            .copyright {
+                margin-top: 4rem !important;
+                padding-bottom: 4rem;
+                color: rgba(255, 255, 255, 0.4) !important;
+            }
+
+            /* Final Result layout */
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.result-text {
+    grid-column: 1;
+}
+
+.result-image {
+    grid-column: 2;
+    width: 100%;
+    margin: 0;
+    line-height: 0;
+}
+
+.result-image img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Video */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Mobile */
+@media screen and (max-width: 980px) {
+    .result-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .result-text,
+    .result-image {
+        grid-column: 1;
+    }
+
+    .result-image img {
+        max-width: 100%;
+    }
+}
+
+            /* 4. Responsive layout */
+            @media screen and (max-width: 980px) {
+
+                #custom-header-nav {
+                    position: relative !important;
+                    flex-direction: column !important;
+                    height: auto !important;
+                    padding: 1rem !important;
+                }
+
+                #nav ul {
+                    flex-wrap: wrap !important;
+                    justify-content: center !important;
+                }
+
+                #nav ul li a {
+                    height: 3rem !important;
+                    line-height: 3rem !important;
+                    padding: 0 0.75rem !important;
+                }
+
+                #wrapper {
+                    padding-top: 1rem !important;
+                }
+
+                .main {
+                    padding: 2.5rem 1.5rem !important;
+                }
+
+                .research-detail-title {
+                    font-size: 1.6rem;
+                }
+
+                .back-to-research .button {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .language-switcher {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+    </head>
+
+
+    <body class="is-preload">
+
+        <div id="custom-header-nav">
+
+            <div class="nav-logo">
+                <a href="../index.html">Youngseo Kim</a>
+            </div>
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="../biography.html">Biography</a></li>
+                    <li><a href="../calendar.html">Calendar</a></li>
+                    <li><a href="../watch.html">Watch</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../works.html">Works</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+
+        <div id="wrapper">
+
+            <div id="main">
+
+                <section class="main">
+
+                    <!-- Language Buttons -->
+                    <div class="language-switcher">
+                        <button class="lang-button active" onclick="showLanguage('en', this)">EN</button>
+                        <button class="lang-button" onclick="showLanguage('de', this)">DE</button>
+                        <button class="lang-button" onclick="showLanguage('fr', this)">FR</button>
+                        <button class="lang-button" onclick="showLanguage('kr', this)">KR</button>
+                    </div>
+
+                    <header class="major">
+
+                        <div class="research-number">
+                            Research No.3
+                        </div>
+
+                        <div class="language-title" id="title-en">
+                            <h2 class="research-detail-title">
+                                A Study on Performance in Non-Existent Time
+                            </h2>
+
+                            <p class="research-subtitle">
+                                Playing music during the hour Daylight Saving Time deletes
+                            </p>
+
+                            <p class="research-question">
+                                Can a performance take place in a time that does not exist?
+                            </p>
+                        </div>
+
+                        <div class="language-title" id="title-de" style="display:none;">
+                            <h2 class="research-detail-title">
+                                Eine Studie zur Aufführung in nicht existierender Zeit
+                            </h2>
+
+                            <p class="research-subtitle">
+                                Musizieren in der Stunde, die die Sommerzeit streicht
+                            </p>
+
+                            <p class="research-question">
+                                Kann eine Aufführung in einer Zeit stattfinden, die nicht existiert?
+                            </p>
+                        </div>
+
+                        <div class="language-title" id="title-fr" style="display:none;">
+                                <h2 class="research-detail-title">
+                                    Étude sur la performance dans un temps inexistant
+                                </h2>
+
+                                <p class="research-subtitle">
+                                    jouer de la musique pendant l'heure que le passage à l'heure d'été supprime
+                                </p>
+
+                                <p class="research-question">
+                                    Une performance peut-elle avoir lieu dans un temps qui n'existe pas ?
+                                </p>
+                        </div>
+
+                        <div class="language-title" id="title-kr" style="display:none;">
+                            <h2 class="research-detail-title">
+                                존재하지 않는 시간 속의 공연에 관한 연구
+                            </h2>
+
+                            <p class="research-subtitle">
+                                서머타임이 지워 버리는 한 시간 동안 음악을 연주하며
+                            </p>
+
+                            <p class="research-question">
+                                존재하지 않는 시간에 공연이 이루어질 수 있을까?
+                            </p>
+                        </div>
+                    </header>
+
+
+                    <div class="research-content">
+
+                    <!-- ENGLISH -->
+                    <div id="lang-en" class="language-content">
+
+                        <div class="research-section">
+
+                            <div class="research-section-title">
+                                PART 1 — RESEARCH
+                            </div>
+
+                            <div class="research-section">
+
+                                <h3>The Question</h3>
+
+                                <p>
+                                    Every year, one hour disappears from the clock.
+                                </p>
+
+                                <p>
+                                    I thought: what if I used that hour to do something?
+                                </p>
+
+                                <p>
+                                    What would happen if I played a concert during the hour that doesn't exist?
+                                </p>
+
+                                <p>
+                                    At first this was barely an idea — more like a joke I told myself. Schedule a concert for 02:00. Except that day, the clock never shows 02:00. So when does the concert actually happen?
+                                </p>
+
+                                <p>
+                                    I kept coming back to that question. The more I tried to plan it seriously, the less it felt like a joke — because I couldn't answer it. Not "where," not "who," not "how loud." Just: when.
+                                </p>
+
+                                <p>
+                                    And once time itself became uncertain, everything scheduled inside it became uncertain too. If the hour doesn't exist, does the thing placed inside it exist? If no clock can confirm when something started, can it still be said to have happened at all?
+                                </p>
+
+                                <p>
+                                    What started as a joke about a missing hour became a real question about time itself — not about performance, not yet. Just time.
+                                </p>
+
+                                <p>
+                                    That question became the starting point for everything that follows.
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Time</h3>
+
+                                <p>
+                                    So: what is this thing that disappears?
+                                </p>
+
+                                <p>
+                                    Saying "time passes" and the way a clock marks time are not the same thing. Physical processes continue uninterrupted, whatever the clock says. But a clock assigns a name to a particular moment according to rules that humans have set.
+                                </p>
+
+                                <p>
+                                    01:59<br>
+                                    02:00<br>
+                                    02:01
+                                </p>
+
+                                <p>
+                                    This notation is not an object that exists in nature. It's a system humans built to share and record time — a naming convention we all silently agreed to.
+                                </p>
+
+                                <p>
+                                    Daylight Saving Time exposes that system directly. As the clock jumps forward by an hour, a particular moment is erased entirely — not the moment itself, but its name. That doesn't mean nothing happens during that hour in the physical world.
+                                </p>
+
+                                <p>
+                                    People keep moving.<br>
+                                    The earth keeps rotating.<br>
+                                    Sound can keep occurring.<br>
+                                    A camera can keep recording.
+                                </p>
+
+                                <p>
+                                    But the name attached to that hour on the clock disappears. And if the name disappears, so does every ordinary way of saying <em>when</em> something happened.
+                                </p>
+
+                                <p>
+                                    That was the "when" I couldn't answer.
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>The Missing Hour</h3>
+
+                                <p>
+                                    This isn't hypothetical. It happens, on the clock, every year — and on 30 March 2025, it happened in Germany.
+                                </p>
+
+                                <p>
+                                    The clock moved from <strong>01:59:59 CET</strong> directly to <strong>03:00:00 CEST</strong>. The time 02:00 never appeared. So the following times were never shown in official local time:
+                                </p>
+
+                                <p>
+                                    02:00 · 02:15 · 02:30 · 02:45 · 02:59
+                                </p>
+
+                                <p>
+                                    This gave me something to actually work with — a real date, a real hour, a real gap in an official, legally recognized clock system. A performance could be assigned to that hour. But that hour could never be confirmed on any clock.
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Research</h3>
+
+                                <h4>What is a performance?</h4>
+
+                                <p>
+                                    Once I had a real missing hour to work with, the question changed shape. It was no longer just "when did this happen" — it became "what happens to an event when its <em>when</em> is missing."
+                                </p>
+
+                                <p>
+                                    A performance seemed like the right test case, because a performance is usually pinned to time more tightly than almost anything else. So I separated out the conditions usually assumed to constitute one — to see which of them actually depend on time being available, and which don't.
+                                </p>
+
+                                <p>
+                                    <strong>Performer</strong> — someone carries out an action.<br>
+                                    <strong>Audience</strong> — someone experiences it.<br>
+                                    <strong>Sound</strong> — in a musical performance, sound occurs.<br>
+                                    <strong>Space</strong> — an event occurs in a particular place.<br>
+                                    <strong>Action</strong> — something happens.<br>
+                                    <strong>Time</strong> — the moment the event occurred can be specified.<br>
+                                    <strong>Instruction</strong> — what should be done may be determined in advance.<br>
+                                    <strong>Documentation</strong> — a record that it existed may remain after the event.
+                                </p>
+
+                                <p>
+                                    In a traditional concert these overlap without friction. A performer goes on stage at a set time; an audience listens there; once it ends, it becomes a past event — dated, placed, closed.
+                                </p>
+
+                                <p>
+                                    But is <em>time</em>, specifically, actually necessary — in the sense of a nameable, clock-confirmable time? Or is it just the condition we're least used to seeing removed?
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Previous Works</h3>
+
+                                <p>
+                                    To sharpen that question, I looked at works from 20th-century experimental music and performance that had already pulled at other conditions on that list — audience, performer, sound — to see how far a performance could stretch before it stopped being one.
+                                </p>
+
+                                <h3>John Cage</h3>
+
+                                <p>
+                                <em>4'33"</em> (1952) directly targets sound as a condition on this list. The performer walks on stage, sits for a fixed duration, and leaves. Yet no note is deliberately played on any instrument. What can be heard during those four minutes and thirty-three seconds is only the audience's coughing, the creak of chairs, and the noise of the space itself.
+                                </p>
+
+                                <p>
+                                What disappears here is not the audience or the performer, but the very sound thought to be what makes music music. And yet the piece is still recognized as a performance — even as a work. Its duration is clearly fixed, and its start and end are measured by the clock. <strong>Emptying out sound does not collapse the frame of performance.</strong>
+                                </p>
+
+                                <blockquote>
+                                <strong>If a performance can hold without sound, why couldn't it hold without time?</strong>
+                                </blockquote>
+
+                                <p>
+                                This question shows that sound and time function as conditions in different ways. <em>4'33"</em> emptied sound within a frame of time. What this research attempts is closer to the reverse: leaving sound and action intact, while emptying the very frame of time that holds them.
+                                </p>
+
+                                <h3>Ben Vautier</h3>
+
+                                <p>
+                                    <em>I will be back in Ten Minutes</em> (1963) makes it hard to locate the performance in any particular sound. What matters is not a musical result but <strong>the promise, the expectation, and the absence that constitute a performance</strong>. The audience expects something to happen. A gap opens between that expectation and what is actually experienced — and the gap itself becomes the piece.
+                                </p>
+
+                                <blockquote>
+                                    <strong>Must something be performed for a performance to exist?</strong>
+                                </blockquote>
+
+                                <p>
+                                    If a performance can consist of an absence, then perhaps time — the specific, nameable <em>when</em> — could be absent too, without the performance disappearing along with it.
+                                </p>
+
+                                <h3>La Monte Young</h3>
+
+                                <p>
+                                    <em>Compositions 1960</em> (1960) is a set of pieces written as short instructions rather than notation. <em>Composition 1960 #6</em> has the performer sit on stage and watch the audience — reversing who is watched and who watches — and requires no fixed duration. <em>Composition 1960 #13</em> is a single line:
+                                </p>
+
+                                <blockquote>
+                                    <strong>The performer should prepare any composition and then perform it as well as he can.</strong>
+                                </blockquote>
+
+                                <p>
+                                    What struck me here wasn't the audience-reversal or the openness of the instruction — it was the <strong>duration</strong>. <em>No fixed duration</em> means these pieces already refuse one part of clock time: how long. It made me ask the next question directly:
+                                </p>
+
+                                <blockquote>
+                                    If a piece can refuse <em>how long</em>, could a piece also refuse <em>when</em>?
+                                </blockquote>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>The Problem</h3>
+
+                                <p>
+                                    Once I tried to actually place a performance in the missing hour, the "when" problem split into several concrete problems.
+                                </p>
+
+                                <p>
+                                    <strong>Problem 1 — When did the performance happen?</strong><br>
+                                    The performance was set for 02:00. But 02:00 does not exist. So when can we say the performance took place?
+                                </p>
+
+                                <p>
+                                    <strong>Problem 2 — How long did it last?</strong><br>
+                                    Say it ran the full hour, 02:00–03:00. That hour, too, is absent from the clock. Start and end can't both be expressed inside a time system that doesn't contain them.
+                                </p>
+
+                                <p>
+                                    <strong>Problem 3 — Can an event exist without a temporal position?</strong><br>
+                                    An event ordinarily occurs at a specific point in time. If that point can't be specified, does the event still exist?
+                                </p>
+
+                                <p>
+                                    <strong>Problem 4 — Who determines whether the event existed?</strong><br>
+                                    The clock? The performer? The audience? The recording? The instructions of the piece? Once the clock is disqualified, something else has to answer for the event — and it's not obvious what.
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Research Question</h3>
+
+                                <p>
+                                    These problems compressed into one:
+                                </p>
+
+                                <blockquote>
+                                    <strong>Can a performance take place in a time that does not exist?</strong>
+                                </blockquote>
+
+                                <p>
+                                    And that expanded into four sub-questions — three about the performance, one about time itself:
+                                </p>
+
+                                <ol>
+                                    <li>Can a performance exist without an audience?</li>
+                                    <li>Can a performance exist without a conventional performer?</li>
+                                    <li>Can music exist without a conventional musical action?</li>
+                                    <li>Can a performance exist in a time that cannot be represented by the clock?</li>
+                                </ol>
+
+                                <p>
+                                    The first three were useful — they'd already been tested by others. But the fourth is the one this research is actually about.
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Hypothesis</h3>
+
+                                <p>
+                                    Time itself can't actually be removed. What can be removed is only the <em>system</em> that represents it — the clock, the calendar, the booking form.
+                                </p>
+
+                                <p>
+                                    So the object of this study was never time. It was <strong>the system that names time</strong>, and whether an event can survive that system's failure to name it.
+                                </p>
+
+                                <blockquote>
+                                    <strong>
+                                        If a performance is assigned to a time that cannot be represented within the official clock system, the event may still exist even though its temporal position cannot be conventionally identified.
+                                    </strong>
+                                </blockquote>
+
+                                <p>
+                                    In other words: the existence of an event and the time system that marks it don't have to be the same thing.
+                                </p>
+
+                                <p>
+                                    To test that, an actual performance was placed inside that hour.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="research-section-divider"></div>
+
+
+                        <div class="research-section">
+
+                            <div class="research-section-title">
+                                PART 2 — PERFORMANCE
+                            </div>
+
+                            <div class="research-section">
+
+                                <h3>Statement</h3>
+
+                                <p>
+                                    Is it still a concert if:<br>
+                                    there is no audience?<br>
+                                    there is no performer?<br>
+                                    nothing is played?<br>
+                                    it happens in a <strong>NON-EXISTENT TIME</strong>?
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Realization Process</h3>
+
+                                <p>
+                                    <strong>1. October 2023</strong><br>
+                                    The idea started from a simple thought: what if a concert was held during the hour Daylight Saving Time deletes?
+                                </p>
+
+                                <p>
+                                    <strong>2. December 2024</strong><br>
+                                    Started considering directions for realization.
+                                </p>
+
+                                <p>
+                                    <strong>3. January 2025</strong><br>
+                                    Attempted to plan a concert in Vienna. Prepared a funding application — abandoned due to paperwork. Expanded the concept: deconstructing traditional concert customs and interaction, drawing on a new performance format grounded in the Fluxus movement.
+                                </p>
+
+                                <p>
+                                    <strong>4. February 2025</strong><br>
+                                    Location changed to Geldern, Germany. Refined the format and program. Began planning Part II: <em>À la recherche du temps perdu</em>.
+                                </p>
+
+                                <p>
+                                    <strong>5. March 2025</strong><br>
+                                    Finalized the research question: can a performance take place in a time that does not exist?
+                                </p>
+
+                                <p>
+                                    <strong>6. March 30, 2025</strong><br>
+                                    Realized the concert. Filmed it.
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Experiment</h3>
+
+                                <p>
+                                    The conditions were deliberately kept simple.
+                                </p>
+
+                                <p>
+                                    <strong>Date</strong> — 30 March 2025<br>
+                                    <strong>Location</strong> — Heilig-Geist-Kirche, Geldern, Germany<br>
+                                    <strong>Scheduled Time</strong> — 02:00 CET<br>
+                                    <strong>Condition</strong> — The scheduled hour must disappear from the local clock.
+                                </p>
+
+                                <p>
+                                    Under this condition, a performance could be assigned to a time that does not exist.
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Result</h3>
+
+                                <h4>Die verschwundene Zeit</h4>
+
+                                <p>
+                                    The outcome of this research is an actual performance.
+                                </p>
+
+                                <p>
+                                    <strong>30.03.2025 / 02:00 CET</strong><br>
+                                    Heilig-Geist-Kirche, Geldern
+                                </p>
+
+                                <p>
+                                    <strong>Program</strong>
+                                </p>
+
+                                <p>
+                                    John Cage — <em>4'33"</em> (1952)<br>
+                                    Ben Vautier — <em>I will be back in Ten Minutes</em> (1963)<br>
+                                    La Monte Young — <em>Composition 1960 #6</em> (1960)<br>
+                                    Youngseo Kim — <em>Close your eyes</em> (2025)<br>
+                                    La Monte Young — <em>Composition 1960 #13</em> (1960)
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Why This Program?</h3>
+
+                                <p>
+                                    The program was built to put the research question inside the structure of the performance itself.
+                                </p>
+
+                                <p>
+                                    <em>4'33"</em> — <strong>Sound.</strong> Tests whether the frame of performance holds even when sound is emptied out.<br>
+                                </p>
+
+                                <p>
+                                    <em>I will be back in Ten Minutes</em> — <strong>Absence.</strong> Brings a state of non-existence into the performance.
+                                </p>
+
+                                <p>
+                                    <em>Composition 1960 #6</em> — <strong>Listening / Performer / Audience.</strong> Unsettles who watches whom.
+                                </p>
+
+                                <p>
+                                    <em>Close your eyes</em> — <strong>Perception.</strong> Makes the performer's own perception a condition of the piece.
+                                </p>
+
+                                <p>
+                                    <em>Composition 1960 #13</em> — <strong>Action / Performance.</strong> Reopens the question of what "performing" even requires.
+                                </p>
+
+                                <p>
+                                    <strong>Absence → Listening → Perception → Action</strong>
+                                </p>
+
+                                <p>
+                                    And the condition enclosing the whole thing is <strong>a time that does not exist</strong>.
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>The Performance</h3>
+
+                                <p>
+                                    What mattered here wasn't producing a specific musical result. It was checking whether the performance itself could satisfy one condition.
+                                </p>
+
+                                <p>
+                                    The date was set. The place, the performer, the program, the time — all specified. But that time never appeared inside the official time system.
+                                </p>
+
+                                <p>
+                                    <strong>All the information needed for the performance exists — only the time it was assigned to does not.</strong>
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Observation</h3>
+
+                                <p>
+                                    The event can be announced.<br>
+                                    The event can be planned.<br>
+                                    The event can be performed.<br>
+                                    The event can be documented.<br>
+                                    The event can be described afterward.
+                                </p>
+
+                                <p>
+                                    And yet one piece of information resists the usual way of recording it.
+                                </p>
+
+                                <p>
+                                    <strong>Exactly when did the performance happen?</strong>
+                                </p>
+
+                                <p>
+                                    You can say 02:00 — but that 02:00 doesn't appear anywhere in the day's official local time.
+                                </p>
+
+                                <p>
+                                    <strong>Problem: Can a system with no place for the missing hour still host it?</strong><br>
+                                    When I tried to list the event on an online promotion site, 02:00 simply couldn't be selected. Time didn't just disappear from the physical world or a wristwatch — it disappeared from the digital form designed to register the event in the first place. A system can't accept a value that doesn't exist.
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>The Recording</h3>
+
+                                <p>
+                                    The performance was filmed, and the footage was edited.
+                                </p>
+
+                                <p>
+                                    Following the actual logic of time, the clock in the footage also jumps directly from 1:59 to 3:00. The segment that would correspond to 02:00–02:59 doesn't exist inside the recording either.
+                                </p>
+
+                                <p>
+                                    This wasn't just an editing choice. If the performance was placed in a missing hour, the record of it had to carry the same gap — smoothing that hour over in the footage would have contradicted the actual condition the event took place under.
+                                </p>
+
+                                <p>
+                                    So it isn't only the performance that was placed in a time that doesn't exist. <strong>The record of it carries the same absence.</strong>
+                                </p>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Final Result</h3>
+
+<div class="result-grid">
+
+    <div class="result-text">
+
+        <h4>Die verschwundene Zeit</h4>
+
+        <p>
+            <strong>Date</strong> 30.03.2025<br>
+            <strong>Time</strong> 02:00 (CET)<br>
+            <strong>Location</strong> Heilig-Geist-Kirche, Geldern<br>
+            <strong>Performer</strong> Youngseo Kim
+        </p>
+
+        <p>
+            <strong>Program</strong>
+        </p>
+
+        <ul>
+            <li>John Cage – <em>4'33"</em> (1952)</li>
+            <li>Ben Vautier – <em>I will be back in Ten Minutes</em> (1963)</li>
+            <li>La Monte Young – <em>Composition 1960 #6</em> (1960)</li>
+            <li>Youngseo Kim – <em>Close your eyes</em> (2025)</li>
+            <li>La Monte Young – <em>Composition 1960 #13</em> (1960)</li>
+        </ul>
+
+        <p>
+            <em>With kind support from Heilig-Geist-Kirche – Evangelische Kirchengemeinde Geldern</em>
+        </p>
+
+    </div>
+
+    <div class="result-image">
+        <img src="../images/works/die_verschwundene_zeit.jpg"
+             alt="Concert Documentation Photo">
+    </div>
+
+</div>
+
+<div class="video-wrapper">
+    <iframe 
+        src="https://www.youtube.com/embed/PkCohsOeVVE"
+        allowfullscreen>
+    </iframe>
+</div>
+
+                            </div>
+
+                                <div class="research-section-divider"></div>                            
+
+                            <div class="research-section">
+
+                                <h3>Video Conclusion Text</h3>
+
+                                <blockquote>
+                                    In an hour that doesn't exist,<br>
+                                    a sound was heard<br>
+                                    and became a performance that never happened.<br>
+                                    But was it music?<br>
+                                    If no one heard it — was it still a performance?<br>
+                                    If nothing was performed — what was it, in the end?<br>
+                                    Time moves on. But even its flow is defined only within the frameworks we created.<br>
+                                    Within the time defined by human hands —<br>
+                                    no art came to be.<br>
+                                    And yet, beyond those human concepts of time —<br>
+                                    the performance did exist.
+                                </blockquote>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                        <!-- GERMAN -->
+                        <div id="lang-de" class="language-content" style="display: none;">
+
+                            <div class="research-section">
+
+                                <div class="research-section-title">
+                                    TEIL 1 — FORSCHUNG
+                                </div>
+
+
+                                <div class="research-section">
+
+                                    <h3>Die Frage</h3>
+
+                                    <p>
+                                        Jedes Jahr verschwindet eine Stunde von der Uhr.
+                                    </p>
+
+                                    <p>
+                                        Ich dachte: Was wäre, wenn ich diese Stunde für etwas nutzen würde?
+                                    </p>
+
+                                    <p>
+                                        Was würde geschehen, wenn ich in der Stunde, die es nicht gibt, ein Konzert spielte?
+                                    </p>
+
+                                    <p>
+                                        Anfangs war das kaum eine Idee – eher ein Witz, den ich mir selbst erzählte. Ein Konzert für 02:00 Uhr ansetzen. Nur zeigt die Uhr an diesem Tag nie 02:00 an. Wann findet das Konzert also tatsächlich statt?
+                                    </p>
+
+                                    <p>
+                                        Ich kam immer wieder auf diese Frage zurück. Je ernsthafter ich es zu planen versuchte, desto weniger fühlte es sich wie ein Witz an – denn ich konnte sie nicht beantworten. Nicht „wo“, nicht „wer“, nicht „wie laut“. Nur: wann.
+                                    </p>
+
+                                    <p>
+                                        Und sobald die Zeit selbst unsicher wurde, wurde alles unsicher, was in ihr angesetzt war. Wenn die Stunde nicht existiert, existiert dann das, was in sie hineingelegt wird? Wenn keine Uhr bestätigen kann, wann etwas begann, lässt sich dann überhaupt sagen, dass es stattgefunden hat?
+                                    </p>
+
+                                    <p>
+                                        Was als Witz über eine fehlende Stunde begann, wurde zu einer echten Frage über die Zeit selbst – noch nicht über die Aufführung. Nur über die Zeit.
+                                    </p>
+
+                                    <p>
+                                        Diese Frage wurde zum Ausgangspunkt für alles Folgende.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Zeit</h3>
+
+                                    <p>
+                                        Also: Was ist das, was da verschwindet?
+                                    </p>
+
+                                    <p>
+                                        Zu sagen, „die Zeit vergeht“, und die Art, wie eine Uhr Zeit anzeigt, sind nicht dasselbe. Physikalische Prozesse laufen ununterbrochen weiter, gleichgültig, was die Uhr sagt. Eine Uhr aber gibt einem bestimmten Augenblick nach Regeln, die Menschen festgelegt haben, einen Namen.
+                                    </p>
+
+                                    <p>
+                                        01:59<br>
+                                        02:00<br>
+                                        02:01
+                                    </p>
+
+                                    <p>
+                                        Diese Notation ist kein Gegenstand, der in der Natur vorkommt. Sie ist ein System, das Menschen gebaut haben, um Zeit zu teilen und festzuhalten – eine Benennungskonvention, auf die wir uns alle stillschweigend geeinigt haben.
+                                    </p>
+
+                                    <p>
+                                        Die Sommerzeit legt dieses System unmittelbar offen. Wenn die Uhr eine Stunde vorspringt, wird ein bestimmter Augenblick vollständig gelöscht – nicht der Augenblick selbst, sondern sein Name. Das heißt nicht, dass in der physischen Welt während dieser Stunde nichts geschieht.
+                                    </p>
+
+                                    <p>
+                                        Menschen bewegen sich weiter.<br>
+                                        Die Erde dreht sich weiter.<br>
+                                        Klang kann weiter entstehen.<br>
+                                        Eine Kamera kann weiter aufzeichnen.
+                                    </p>
+
+                                    <p>
+                                        Aber der Name, der dieser Stunde auf der Uhr zugeordnet ist, verschwindet. Und mit dem Namen verschwindet jede gewöhnliche Weise, zu sagen, <em>wann</em> etwas geschehen ist.
+                                    </p>
+
+                                    <p>
+                                        Das war das „Wann“, das ich nicht beantworten konnte.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Die fehlende Stunde</h3>
+
+                                    <p>
+                                        Das ist nicht hypothetisch. Es geschieht jedes Jahr auf der Uhr – und am 30. März 2025 geschah es in Deutschland.
+                                    </p>
+
+                                    <p>
+                                        Die Uhr sprang von <strong>01:59:59 MEZ</strong> direkt auf <strong>03:00:00 MESZ</strong>. Die Zeit 02:00 erschien nie. Folgende Uhrzeiten wurden in der offiziellen Ortszeit daher nie angezeigt:
+                                    </p>
+
+                                    <p>
+                                        02:00 · 02:15 · 02:30 · 02:45 · 02:59
+                                    </p>
+
+                                    <p>
+                                        Damit hatte ich etwas, womit sich tatsächlich arbeiten ließ – ein reales Datum, eine reale Stunde, eine reale Lücke in einem offiziellen, rechtlich anerkannten Uhrensystem. Man konnte dieser Stunde eine Aufführung zuweisen. Doch diese Stunde ließ sich auf keiner Uhr bestätigen.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Untersuchung</h3>
+
+                                    <h3>Was ist eine Aufführung?</h3>
+
+                                    <p>
+                                        Mit einer realen fehlenden Stunde in der Hand veränderte sich die Frage. Sie lautete nicht mehr nur „Wann ist das geschehen?“, sondern „Was geschieht mit einem Ereignis, wenn sein <em>Wann</em> fehlt?“
+                                    </p>
+
+                                    <p>
+                                        Eine Aufführung schien ein geeigneter Testfall, denn sie ist gewöhnlich enger an die Zeit gebunden als fast alles andere. Deshalb trennte ich die Bedingungen heraus, die üblicherweise als konstitutiv für eine Aufführung gelten – um zu sehen, welche von ihnen tatsächlich davon abhängen, dass Zeit verfügbar ist, und welche nicht.
+                                    </p>
+
+                                    <p>
+                                        <strong>Performer</strong> — jemand führt eine Handlung aus.<br>
+                                        <strong>Publikum</strong> — jemand erlebt sie.<br>
+                                        <strong>Klang</strong> — in einer musikalischen Aufführung entsteht Klang.<br>
+                                        <strong>Raum</strong> — ein Ereignis findet an einem bestimmten Ort statt.<br>
+                                        <strong>Handlung</strong> — etwas geschieht.<br>
+                                        <strong>Zeit</strong> — der Moment, in dem das Ereignis stattfand, lässt sich angeben.<br>
+                                        <strong>Anweisung</strong> — was zu tun ist, kann im Voraus festgelegt werden.<br>
+                                        <strong>Dokumentation</strong> — eine Aufzeichnung, dass es existierte, kann nach dem Ereignis bleiben.
+                                    </p>
+
+                                    <p>
+                                        In einem traditionellen Konzert überlagern sich diese Bedingungen reibungslos. Ein Performer betritt zu einer festgelegten Zeit die Bühne; ein Publikum hört dort zu; ist es vorbei, wird es zu einem vergangenen Ereignis – datiert, verortet, abgeschlossen.
+                                    </p>
+
+                                    <p>
+                                        Aber ist <em>Zeit</em> – im Sinne einer benennbaren, an der Uhr überprüfbaren Zeit – tatsächlich notwendig? Oder ist sie nur die Bedingung, deren Fehlen wir am wenigsten gewohnt sind?
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Frühere Arbeiten</h3>
+
+                                    <p>
+                                        Um diese Frage zu schärfen, betrachtete ich Werke der experimentellen Musik und Performance des 20. Jahrhunderts, die bereits an anderen Bedingungen dieser Liste gezogen hatten – Publikum, Performer, Klang –, um zu sehen, wie weit sich eine Aufführung dehnen lässt, bevor sie aufhört, eine zu sein.
+                                    </p>
+
+                                    <h3>John Cage</h3>
+
+                                    <p>
+                                    <em>4'33"</em> (1952) zielt in dieser Liste direkt auf die Bedingung des Klangs. Der Performer betritt die Bühne, sitzt eine festgelegte Zeit lang und verlässt sie wieder. Doch auf keinem Instrument wird absichtlich ein Ton gespielt. Was während dieser vier Minuten dreiunddreißig Sekunden zu hören ist, sind nur das Husten des Publikums, das Knarren der Stühle und die Geräusche des Raumes selbst.
+                                    </p>
+
+                                    <p>
+                                    Was hier verschwindet, ist nicht das Publikum oder der Performer, sondern der Klang selbst, von dem man annahm, er mache Musik zu Musik. Und dennoch wird dieses Stück weiterhin als Aufführung anerkannt – sogar als Werk. Seine Dauer ist klar festgelegt, Anfang und Ende werden von der Uhr gemessen. <strong>Auch wenn der Klang geleert wird, bricht der Rahmen der Aufführung nicht zusammen.</strong>
+                                    </p>
+
+                                    <blockquote>
+                                    <strong>Wenn eine Aufführung ohne Klang bestehen kann, warum sollte sie dann nicht ohne Zeit bestehen können?</strong>
+                                    </blockquote>
+
+                                    <p>
+                                    Diese Frage zeigt, dass Klang und Zeit als Bedingungen auf unterschiedliche Weise wirken. <em>4'33"</em> hat den Klang innerhalb eines zeitlichen Rahmens geleert. Was diese Forschung versucht, ist eher das Gegenteil: Klang und Handlung bleiben bestehen, während der zeitliche Rahmen selbst, der sie enthält, geleert wird.
+                                    </p>
+
+                                    <h3>Ben Vautier</h3>
+
+                                    <p>
+                                        <em>I will be back in Ten Minutes</em> (1963) macht es schwer, die Aufführung an einem bestimmten Klang festzumachen. Entscheidend ist nicht ein musikalisches Ergebnis, sondern <strong>das Versprechen, die Erwartung und die Abwesenheit, die eine Aufführung ausmachen</strong>. Das Publikum erwartet, dass etwas geschieht. Zwischen dieser Erwartung und dem tatsächlich Erlebten öffnet sich eine Lücke – und diese Lücke selbst wird zum Stück.
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>Muss etwas aufgeführt werden, damit eine Aufführung existiert?</strong>
+                                    </blockquote>
+
+                                    <p>
+                                        Wenn eine Aufführung aus Abwesenheit bestehen kann, dann könnte vielleicht auch die Zeit – das konkrete, benennbare <em>Wann</em> – fehlen, ohne dass die Aufführung mit ihr verschwindet.
+                                    </p>
+
+                                    <h3>La Monte Young</h3>
+
+                                    <p>
+                                        <em>Compositions 1960</em> (1960) ist eine Sammlung von Stücken, die statt in Notenschrift als kurze Anweisungen verfasst sind. In <em>Composition 1960 #6</em> sitzt der Performer auf der Bühne und beobachtet das Publikum – die Rollen von Betrachtetem und Betrachtendem kehren sich um –, und es wird keine feste Dauer verlangt. <em>Composition 1960 #13</em> besteht aus einer einzigen Zeile:
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>Der Performer soll eine beliebige Komposition vorbereiten und sie dann so gut aufführen, wie er kann.</strong>
+                                    </blockquote>
+
+                                    <p>
+                                        Was mich hier beschäftigte, war weder die Umkehrung des Publikums noch die Offenheit der Anweisung – es war die <strong>Dauer</strong>. <em>Keine feste Dauer</em> bedeutet, dass diese Stücke bereits einen Teil der Uhrzeit verweigern: wie lange. Das führte mich unmittelbar zur nächsten Frage:
+                                    </p>
+
+                                    <blockquote>
+                                        Wenn ein Stück das <em>Wie lange</em> verweigern kann – könnte es dann auch das <em>Wann</em> verweigern?
+                                    </blockquote>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Das Problem</h3>
+
+                                    <p>
+                                        Als ich versuchte, eine Aufführung tatsächlich in die fehlende Stunde zu legen, zerfiel das „Wann“-Problem in mehrere konkrete Probleme.
+                                    </p>
+
+                                    <p>
+                                        <strong>Problem 1 — Wann hat die Aufführung stattgefunden?</strong><br>
+                                        Die Aufführung war für 02:00 angesetzt. Aber 02:00 existiert nicht. Wann also lässt sich sagen, dass die Aufführung stattfand?
+                                    </p>
+
+                                    <p>
+                                        <strong>Problem 2 — Wie lange dauerte sie?</strong><br>
+                                        Angenommen, sie lief die volle Stunde, 02:00–03:00. Auch diese Stunde fehlt auf der Uhr. Beginn und Ende lassen sich nicht beide innerhalb eines Zeitsystems ausdrücken, das sie nicht enthält.
+                                    </p>
+
+                                    <p>
+                                        <strong>Problem 3 — Kann ein Ereignis ohne zeitliche Position existieren?</strong><br>
+                                        Ein Ereignis findet gewöhnlich zu einem bestimmten Zeitpunkt statt. Wenn sich dieser Zeitpunkt nicht angeben lässt – existiert das Ereignis dann noch?
+                                    </p>
+
+                                    <p>
+                                        <strong>Problem 4 — Wer entscheidet, ob das Ereignis existiert hat?</strong><br>
+                                        Die Uhr? Der Performer? Das Publikum? Die Aufzeichnung? Die Anweisungen des Stücks? Sobald die Uhr ausfällt, muss etwas anderes für das Ereignis einstehen – und es ist nicht offensichtlich, was.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Forschungsfrage</h3>
+
+                                    <p>
+                                        Diese Probleme verdichteten sich zu einer einzigen Frage:
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>Kann eine Aufführung in einer Zeit stattfinden, die nicht existiert?</strong>
+                                    </blockquote>
+
+                                    <p>
+                                        Daraus ergaben sich vier Teilfragen – drei über die Aufführung, eine über die Zeit selbst:
+                                    </p>
+
+                                    <ol>
+                                        <li>Kann eine Aufführung ohne Publikum existieren?</li>
+                                        <li>Kann eine Aufführung ohne konventionellen Performer existieren?</li>
+                                        <li>Kann Musik ohne konventionelle musikalische Handlung existieren?</li>
+                                        <li>Kann eine Aufführung in einer Zeit existieren, die sich nicht auf der Uhr darstellen lässt?</li>
+                                    </ol>
+
+                                    <p>
+                                        Die ersten drei waren nützlich – sie waren bereits von anderen erprobt worden. Aber die vierte ist diejenige, um die es in dieser Forschung eigentlich geht.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Hypothese</h3>
+
+                                    <p>
+                                        Zeit selbst lässt sich nicht tatsächlich entfernen. Entfernen lässt sich nur das <em>System</em>, das sie darstellt – die Uhr, der Kalender, das Buchungsformular.
+                                    </p>
+
+                                    <p>
+                                        Der Gegenstand dieser Studie war also nie die Zeit. Er war <strong>das System, das die Zeit benennt</strong>, und die Frage, ob ein Ereignis überleben kann, wenn dieses System es nicht benennen kann.
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>
+                                            Wird eine Aufführung einer Zeit zugewiesen, die sich im offiziellen Uhrensystem nicht darstellen lässt, kann das Ereignis dennoch existieren, auch wenn sich seine zeitliche Position nicht auf herkömmliche Weise bestimmen lässt.
+                                        </strong>
+                                    </blockquote>
+
+                                    <p>
+                                        Mit anderen Worten: Die Existenz eines Ereignisses und das Zeitsystem, das es markiert, müssen nicht dasselbe sein.
+                                    </p>
+
+                                    <p>
+                                        Um das zu prüfen, wurde eine tatsächliche Aufführung in diese Stunde gelegt.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="research-section-divider"></div>
+
+
+                            <div class="research-section">
+
+                                <div class="research-section-title">
+                                    TEIL 2 — AUFFÜHRUNG
+                                </div>
+
+
+                                <div class="research-section">
+
+                                    <h3>Statement</h3>
+
+                                    <p>
+                                        Ist es noch ein Konzert, wenn<br>
+                                        es kein Publikum gibt?<br>
+                                        es keinen Performer gibt?<br>
+                                        nichts gespielt wird?<br>
+                                        es in einer <strong>NICHT EXISTIERENDEN ZEIT</strong> stattfindet?
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Realisierungsprozess</h3>
+
+                                    <p>
+                                        <strong>1. Oktober 2023</strong><br>
+                                        Die Idee entstand aus einem einfachen Gedanken: Was wäre, wenn ein Konzert in der Stunde stattfände, die die Sommerzeit streicht?
+                                    </p>
+
+                                    <p>
+                                        <strong>2. Dezember 2024</strong><br>
+                                        Ich begann, über Möglichkeiten der Realisierung nachzudenken.
+                                    </p>
+
+                                    <p>
+                                        <strong>3. Januar 2025</strong><br>
+                                        Versuch, ein Konzert in Wien zu planen. Ein Förderantrag wurde vorbereitet – und wegen des Papierkrams aufgegeben. Das Konzept wurde erweitert: die Dekonstruktion traditioneller Konzertbräuche und Interaktionen, unter Rückgriff auf ein neues Aufführungsformat, das in der Fluxus-Bewegung gründet.
+                                    </p>
+
+                                    <p>
+                                        <strong>4. Februar 2025</strong><br>
+                                        Der Ort wechselte nach Geldern, Deutschland. Format und Programm wurden verfeinert. Beginn der Planung von Teil II: <em>À la recherche du temps perdu</em>.
+                                    </p>
+
+                                    <p>
+                                        <strong>5. März 2025</strong><br>
+                                        Die Forschungsfrage wurde festgelegt: Kann eine Aufführung in einer Zeit stattfinden, die nicht existiert?
+                                    </p>
+
+                                    <p>
+                                        <strong>6. 30. März 2025</strong><br>
+                                        Das Konzert wurde realisiert. Es wurde gefilmt.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Experiment</h3>
+
+                                    <p>
+                                        Die Bedingungen wurden bewusst einfach gehalten.
+                                    </p>
+
+                                    <p>
+                                        <strong>Datum</strong> — 30. März 2025<br>
+                                        <strong>Ort</strong> — Heilig-Geist-Kirche, Geldern, Deutschland<br>
+                                        <strong>Angesetzte Zeit</strong> — 02:00 MEZ<br>
+                                        <strong>Bedingung</strong> — Die angesetzte Stunde muss von der Ortszeit verschwinden.
+                                    </p>
+
+                                    <p>
+                                        Unter dieser Bedingung ließ sich eine Aufführung einer Zeit zuweisen, die nicht existiert.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Ergebnis</h3>
+
+                                    <h3>Die verschwundene Zeit</h3>
+
+                                    <p>
+                                        Das Ergebnis dieser Forschung ist eine tatsächliche Aufführung.
+                                    </p>
+
+                                    <p>
+                                        <strong>30.03.2025 / 02:00 MEZ</strong><br>
+                                        Heilig-Geist-Kirche, Geldern
+                                    </p>
+
+                                    <p>
+                                        <strong>Programm</strong>
+                                    </p>
+
+                                    <p>
+                                        John Cage — <em>4'33"</em> (1952)<br>
+                                        Ben Vautier — <em>I will be back in Ten Minutes</em> (1963)<br>
+                                        La Monte Young — <em>Composition 1960 #6</em> (1960)<br>
+                                        Youngseo Kim — <em>Close your eyes</em> (2025)<br>
+                                        La Monte Young — <em>Composition 1960 #13</em> (1960)
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Warum dieses Programm?</h3>
+
+                                    <p>
+                                        Das Programm wurde so gebaut, dass es die Forschungsfrage in die Struktur der Aufführung selbst legt.
+                                    </p>
+
+                                    <p>
+                                        <em>4'33"</em> — <strong>Klang.</strong> Prüft, ob der Rahmen der Aufführung bestehen bleibt, auch wenn der Klang geleert wird.<br>
+                                    </p>
+
+                                    <p>
+                                        <em>I will be back in Ten Minutes</em> — <strong>Abwesenheit.</strong> Bringt einen Zustand der Nichtexistenz in die Aufführung.
+                                    </p>
+
+                                    <p>
+                                        <em>Composition 1960 #6</em> — <strong>Hören / Performer / Publikum.</strong> Verunsichert, wer wen beobachtet.
+                                    </p>
+
+                                    <p>
+                                        <em>Close your eyes</em> — <strong>Wahrnehmung.</strong> Macht die eigene Wahrnehmung des Performers zur Bedingung des Stücks.
+                                    </p>
+
+                                    <p>
+                                        <em>Composition 1960 #13</em> — <strong>Handlung / Aufführung.</strong> Öffnet erneut die Frage, was „aufführen“ überhaupt voraussetzt.
+                                    </p>
+
+                                    <p>
+                                        <strong>Abwesenheit → Hören → Wahrnehmung → Handlung</strong>
+                                    </p>
+
+                                    <p>
+                                        Und die Bedingung, die das Ganze umschließt, ist <strong>eine Zeit, die nicht existiert</strong>.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Die Aufführung</h3>
+
+                                    <p>
+                                        Es ging nicht darum, ein bestimmtes musikalisches Ergebnis hervorzubringen. Es ging darum zu prüfen, ob die Aufführung selbst eine Bedingung erfüllen konnte.
+                                    </p>
+
+                                    <p>
+                                        Das Datum stand fest. Ort, Performer, Programm, Zeit – alles war festgelegt. Aber diese Zeit erschien nie im offiziellen Zeitsystem.
+                                    </p>
+
+                                    <p>
+                                        <strong>Alle Informationen, die für die Aufführung nötig sind, existieren – nur die Zeit, der sie zugewiesen wurde, nicht.</strong>
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Beobachtung</h3>
+
+                                    <p>
+                                        Das Ereignis lässt sich ankündigen.<br>
+                                        Das Ereignis lässt sich planen.<br>
+                                        Das Ereignis lässt sich aufführen.<br>
+                                        Das Ereignis lässt sich dokumentieren.<br>
+                                        Das Ereignis lässt sich nachträglich beschreiben.
+                                    </p>
+
+                                    <p>
+                                        Und doch widersetzt sich eine Information der üblichen Art der Aufzeichnung.
+                                    </p>
+
+                                    <p>
+                                        <strong>Wann genau hat die Aufführung stattgefunden?</strong>
+                                    </p>
+
+                                    <p>
+                                        Man kann 02:00 sagen – aber diese 02:00 taucht nirgendwo in der offiziellen Ortszeit dieses Tages auf.
+                                    </p>
+
+                                    <p>
+                                        <strong>Problem: Kann ein System, das keinen Platz für die fehlende Stunde hat, sie dennoch aufnehmen?</strong><br>
+                                        Als ich versuchte, das Ereignis auf einer Online-Werbeplattform einzutragen, ließ sich 02:00 schlicht nicht auswählen. Die Zeit verschwand nicht nur aus der physischen Welt oder von einer Armbanduhr – sie verschwand aus dem digitalen Formular, das dazu gedacht war, das Ereignis überhaupt zu registrieren. Ein System kann keinen Wert akzeptieren, der nicht existiert.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Die Aufzeichnung</h3>
+
+                                    <p>
+                                        Die Aufführung wurde gefilmt, und das Material wurde geschnitten.
+                                    </p>
+
+                                    <p>
+                                        Der tatsächlichen Logik der Zeit folgend, springt auch die Uhr im Video direkt von 1:59 auf 3:00. Das Segment, das 02:00–02:59 entsprechen würde, existiert auch innerhalb der Aufnahme nicht.
+                                    </p>
+
+                                    <p>
+                                        Das war nicht bloß eine Schnittentscheidung. Wenn die Aufführung in eine fehlende Stunde gelegt wurde, musste ihre Aufzeichnung dieselbe Lücke tragen – diese Stunde im Material zu glätten, hätte der tatsächlichen Bedingung widersprochen, unter der das Ereignis stattfand.
+                                    </p>
+
+                                    <p>
+                                        Es ist also nicht nur die Aufführung, die in eine Zeit gelegt wurde, die nicht existiert. <strong>Ihre Aufzeichnung trägt dieselbe Abwesenheit.</strong>
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Endergebnis</h3>
+
+                                    <div class="result-grid">
+
+                                        <div class="result-text">
+
+                                            <h4>Die verschwundene Zeit</h4>
+
+                                            <p>
+                                                <strong>Datum</strong> 30.03.2025<br>
+                                                <strong>Zeit</strong> 02:00 (MEZ)<br>
+                                                <strong>Ort</strong> Heilig-Geist-Kirche, Geldern<br>
+                                                <strong>Performer</strong> Youngseo Kim
+                                            </p>
+
+                                            <p>
+                                                <strong>Programm</strong>
+                                            </p>
+
+                                            <ul>
+                                                <li>John Cage – <em>4'33"</em> (1952)</li>
+                                                <li>Ben Vautier – <em>I will be back in Ten Minutes</em> (1963)</li>
+                                                <li>La Monte Young – <em>Composition 1960 #6</em> (1960)</li>
+                                                <li>Youngseo Kim – <em>Close your eyes</em> (2025)</li>
+                                                <li>La Monte Young – <em>Composition 1960 #13</em> (1960)</li>
+                                            </ul>
+
+                                            <p>
+                                                <em>Mit freundlicher Unterstützung der Heilig-Geist-Kirche – Evangelische Kirchengemeinde Geldern</em>
+                                            </p>
+
+                                        </div>
+
+                                        <div class="result-image">
+                                            <img src="../images/works/die_verschwundene_zeit.jpg"
+                                                alt="Konzertdokumentation, Foto">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="video-wrapper">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/PkCohsOeVVE"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Schlusstext des Videos</h3>
+
+                                    <blockquote>
+                                        In einer Stunde, die es nicht gibt,<br>
+                                        war ein Klang zu hören<br>
+                                        und wurde zu einer Aufführung, die nie stattfand.<br>
+                                        Aber war es Musik?<br>
+                                        Wenn niemand es hörte – war es dann noch eine Aufführung?<br>
+                                        Wenn nichts aufgeführt wurde – was war es am Ende?<br>
+                                        Die Zeit läuft weiter. Aber selbst ihr Fluss ist nur innerhalb der Rahmen bestimmt, die wir geschaffen haben.<br>
+                                        In der von Menschenhand bestimmten Zeit<br>
+                                        entstand keine Kunst.<br>
+                                        Und doch – jenseits dieser menschlichen Zeitbegriffe –<br>
+                                        gab es die Aufführung.
+                                    </blockquote>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        </div>
+
+
+
+                        <!-- FRENCH -->
+                        <div id="lang-fr" class="language-content" style="display: none;">
+
+                            <div class="research-section">
+
+                                <div class="research-section-title">
+                                    PARTIE 1 — RECHERCHE
+                                </div>
+
+
+                                <div class="research-section">
+
+                                    <h3>La question</h3>
+
+                                    <p>
+                                        Chaque année, une heure disparaît de l'horloge.
+                                    </p>
+
+                                    <p>
+                                        Je me suis dit : et si j'utilisais cette heure pour faire quelque chose ?
+                                    </p>
+
+                                    <p>
+                                        Que se passerait-il si je jouais un concert pendant l'heure qui n'existe pas ?
+                                    </p>
+
+                                    <p>
+                                        Au début, c'était à peine une idée — plutôt une plaisanterie que je me faisais à moi-même. Programmer un concert à 02:00. Sauf que ce jour-là, l'horloge n'affiche jamais 02:00. Alors, quand le concert a-t-il réellement lieu ?
+                                    </p>
+
+                                    <p>
+                                        Je revenais sans cesse à cette question. Plus j'essayais de le planifier sérieusement, moins cela ressemblait à une plaisanterie — parce que je ne parvenais pas à y répondre. Non pas « où », non pas « qui », non pas « à quel volume ». Simplement : quand.
+                                    </p>
+
+                                    <p>
+                                        Et dès que le temps lui-même est devenu incertain, tout ce qui y était inscrit l'est devenu aussi. Si l'heure n'existe pas, ce qu'on y place existe-t-il ? Si aucune horloge ne peut confirmer quand quelque chose a commencé, peut-on encore dire que cela a eu lieu ?
+                                    </p>
+
+                                    <p>
+                                        Ce qui avait commencé comme une plaisanterie sur une heure manquante est devenu une vraie question sur le temps lui-même — pas sur la performance, pas encore. Seulement sur le temps.
+                                    </p>
+
+                                    <p>
+                                        Cette question est devenue le point de départ de tout ce qui suit.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Le temps</h3>
+
+                                    <p>
+                                        Alors : qu'est-ce que cette chose qui disparaît ?
+                                    </p>
+
+                                    <p>
+                                        Dire que « le temps passe » et la manière dont une horloge marque le temps ne sont pas la même chose. Les processus physiques se poursuivent sans interruption, quoi que dise l'horloge. Mais une horloge attribue un nom à un instant précis selon des règles que les humains ont fixées.
+                                    </p>
+
+                                    <p>
+                                        01:59<br>
+                                        02:00<br>
+                                        02:01
+                                    </p>
+
+                                    <p>
+                                        Cette notation n'est pas un objet qui existe dans la nature. C'est un système que les humains ont construit pour partager et enregistrer le temps — une convention de désignation sur laquelle nous nous sommes tous silencieusement accordés.
+                                    </p>
+
+                                    <p>
+                                        Le passage à l'heure d'été met ce système à nu. Lorsque l'horloge saute d'une heure, un instant précis est entièrement effacé — non pas l'instant lui-même, mais son nom. Cela ne signifie pas que rien ne se passe pendant cette heure dans le monde physique.
+                                    </p>
+
+                                    <p>
+                                        Les gens continuent de bouger.<br>
+                                        La Terre continue de tourner.<br>
+                                        Le son peut continuer de se produire.<br>
+                                        Une caméra peut continuer d'enregistrer.
+                                    </p>
+
+                                    <p>
+                                        Mais le nom rattaché à cette heure sur l'horloge disparaît. Et si le nom disparaît, avec lui disparaît toute manière ordinaire de dire <em>quand</em> quelque chose a eu lieu.
+                                    </p>
+
+                                    <p>
+                                        C'était ce « quand » auquel je ne pouvais pas répondre.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>L'heure manquante</h3>
+
+                                    <p>
+                                        Ce n'est pas une hypothèse. Cela se produit, sur l'horloge, chaque année — et le 30 mars 2025, cela s'est produit en Allemagne.
+                                    </p>
+
+                                    <p>
+                                        L'horloge est passée de <strong>01:59:59 CET</strong> directement à <strong>03:00:00 CEST</strong>. L'heure 02:00 n'est jamais apparue. Les heures suivantes n'ont donc jamais été affichées dans l'heure locale officielle :
+                                    </p>
+
+                                    <p>
+                                        02:00 · 02:15 · 02:30 · 02:45 · 02:59
+                                    </p>
+
+                                    <p>
+                                        Cela me donnait enfin quelque chose de concret avec quoi travailler — une date réelle, une heure réelle, une lacune réelle dans un système horaire officiel, reconnu par la loi. On pouvait assigner une performance à cette heure. Mais cette heure ne pouvait être confirmée sur aucune horloge.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Recherche</h3>
+
+                                    <h3>Qu'est-ce qu'une performance ?</h3>
+
+                                    <p>
+                                        Une fois cette heure manquante bien réelle entre les mains, la question a changé de forme. Il ne s'agissait plus seulement de « quand cela a-t-il eu lieu », mais de « que devient un événement dont le <em>quand</em> est absent ».
+                                    </p>
+
+                                    <p>
+                                        Une performance m'a semblé un bon cas d'essai, car elle est généralement attachée au temps plus étroitement que presque toute autre chose. J'ai donc isolé les conditions habituellement supposées la constituer — pour voir lesquelles dépendent réellement de la disponibilité du temps, et lesquelles n'en dépendent pas.
+                                    </p>
+
+                                    <p>
+                                        <strong>Interprète</strong> — quelqu'un accomplit une action.<br>
+                                        <strong>Public</strong> — quelqu'un en fait l'expérience.<br>
+                                        <strong>Son</strong> — dans une performance musicale, du son se produit.<br>
+                                        <strong>Espace</strong> — un événement a lieu en un lieu précis.<br>
+                                        <strong>Action</strong> — quelque chose se passe.<br>
+                                        <strong>Temps</strong> — le moment où l'événement a eu lieu peut être précisé.<br>
+                                        <strong>Instruction</strong> — ce qu'il faut faire peut être déterminé à l'avance.<br>
+                                        <strong>Documentation</strong> — une trace de son existence peut subsister après l'événement.
+                                    </p>
+
+                                    <p>
+                                        Dans un concert traditionnel, ces conditions se superposent sans frottement. Un interprète monte sur scène à une heure fixée ; un public écoute sur place ; une fois terminé, cela devient un événement passé — daté, situé, clos.
+                                    </p>
+
+                                    <p>
+                                        Mais le <em>temps</em>, précisément — au sens d'un temps nommable, vérifiable à l'horloge — est-il vraiment nécessaire ? Ou est-il seulement la condition dont nous sommes le moins habitués à voir l'absence ?
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Œuvres antérieures</h3>
+
+                                    <p>
+                                        Pour affiner cette question, j'ai examiné des œuvres de la musique expérimentale et de la performance du XX<sup>e</sup> siècle qui avaient déjà tiré sur d'autres conditions de cette liste — le public, l'interprète, le son — afin de voir jusqu'où une performance peut s'étirer avant de cesser d'en être une.
+                                    </p>
+
+                                    <h3>John Cage</h3>
+
+                                    <p>
+                                    <em>4'33"</em> (1952) vise directement, dans cette liste, la condition du son. L'interprète monte sur scène, reste assis pendant une durée fixée, puis quitte la scène. Pourtant, aucune note n'est délibérément jouée sur un instrument. Ce qu'on entend pendant ces quatre minutes trente-trois secondes, ce sont seulement les toux du public, le grincement des chaises et les bruits de l'espace lui-même.
+                                    </p>
+
+                                    <p>
+                                    Ce qui disparaît ici, ce n'est ni le public ni l'interprète, mais le son lui-même, celui qu'on croyait faire de la musique de la musique. Et pourtant, cette pièce est toujours reconnue comme une performance — voire comme une œuvre. Sa durée est clairement fixée, et son début et sa fin sont mesurés par l'horloge. <strong>Vider le son ne fait pas s'effondrer le cadre de la performance.</strong>
+                                    </p>
+
+                                    <blockquote>
+                                    <strong>Si une performance peut tenir sans le son, pourquoi ne tiendrait-elle pas sans le temps ?</strong>
+                                    </blockquote>
+
+                                    <p>
+                                    Cette question montre que le son et le temps fonctionnent comme des conditions de manières différentes. <em>4'33"</em> a vidé le son à l'intérieur d'un cadre temporel. Ce que tente cette recherche s'apparente plutôt à l'inverse : laisser intacts le son et l'action, tout en vidant le cadre temporel lui-même qui les contient.
+                                    </p>
+
+                                    <h3>Ben Vautier</h3>
+
+                                    <p>
+                                        <em>I will be back in Ten Minutes</em> (1963) rend difficile de situer la performance dans un son particulier. Ce qui compte n'est pas un résultat musical, mais <strong>la promesse, l'attente et l'absence qui constituent une performance</strong>. Le public s'attend à ce que quelque chose se produise. Un écart s'ouvre entre cette attente et ce qui est réellement vécu — et cet écart devient lui-même la pièce.
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>Faut-il que quelque chose soit joué pour qu'une performance existe ?</strong>
+                                    </blockquote>
+
+                                    <p>
+                                        Si une performance peut consister en une absence, alors peut-être le temps — le <em>quand</em> précis et nommable — pourrait-il lui aussi être absent, sans que la performance disparaisse avec lui.
+                                    </p>
+
+                                    <h3>La Monte Young</h3>
+
+                                    <p>
+                                        <em>Compositions 1960</em> (1960) est un ensemble de pièces écrites sous forme de courtes instructions plutôt qu'en notation musicale. Dans <em>Composition 1960 #6</em>, l'interprète s'assoit sur scène et regarde le public — ce qui inverse qui regarde et qui est regardé — et aucune durée fixe n'est requise. <em>Composition 1960 #13</em> tient en une seule ligne :
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>L'interprète doit préparer une composition quelconque, puis l'exécuter du mieux qu'il peut.</strong>
+                                    </blockquote>
+
+                                    <p>
+                                        Ce qui m'a frappé ici n'était ni l'inversion du public ni l'ouverture de l'instruction — c'était la <strong>durée</strong>. <em>Pas de durée fixe</em> signifie que ces pièces refusent déjà une part du temps d'horloge : combien de temps. Cela m'a conduit directement à la question suivante :
+                                    </p>
+
+                                    <blockquote>
+                                        Si une pièce peut refuser <em>combien de temps</em>, pourrait-elle aussi refuser <em>quand</em> ?
+                                    </blockquote>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Le problème</h3>
+
+                                    <p>
+                                        Lorsque j'ai essayé de placer réellement une performance dans l'heure manquante, le problème du « quand » s'est divisé en plusieurs problèmes concrets.
+                                    </p>
+
+                                    <p>
+                                        <strong>Problème 1 — Quand la performance a-t-elle eu lieu ?</strong><br>
+                                        La performance était fixée à 02:00. Mais 02:00 n'existe pas. Alors quand peut-on dire que la performance a eu lieu ?
+                                    </p>
+
+                                    <p>
+                                        <strong>Problème 2 — Combien de temps a-t-elle duré ?</strong><br>
+                                        Admettons qu'elle ait occupé l'heure entière, 02:00–03:00. Cette heure aussi est absente de l'horloge. Le début et la fin ne peuvent pas être exprimés tous deux dans un système horaire qui ne les contient pas.
+                                    </p>
+
+                                    <p>
+                                        <strong>Problème 3 — Un événement peut-il exister sans position temporelle ?</strong><br>
+                                        Un événement se produit ordinairement à un moment précis. Si ce moment ne peut être précisé, l'événement existe-t-il encore ?
+                                    </p>
+
+                                    <p>
+                                        <strong>Problème 4 — Qui détermine si l'événement a existé ?</strong><br>
+                                        L'horloge ? L'interprète ? Le public ? L'enregistrement ? Les instructions de la pièce ? Dès lors que l'horloge est disqualifiée, autre chose doit répondre de l'événement — et ce n'est pas évident de savoir quoi.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Question de recherche</h3>
+
+                                    <p>
+                                        Ces problèmes se sont condensés en une seule question :
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>Une performance peut-elle avoir lieu dans un temps qui n'existe pas ?</strong>
+                                    </blockquote>
+
+                                    <p>
+                                        Et celle-ci s'est déployée en quatre sous-questions — trois portant sur la performance, une sur le temps lui-même :
+                                    </p>
+
+                                    <ol>
+                                        <li>Une performance peut-elle exister sans public ?</li>
+                                        <li>Une performance peut-elle exister sans interprète conventionnel ?</li>
+                                        <li>La musique peut-elle exister sans action musicale conventionnelle ?</li>
+                                        <li>Une performance peut-elle exister dans un temps que l'horloge ne peut pas représenter ?</li>
+                                    </ol>
+
+                                    <p>
+                                        Les trois premières étaient utiles — d'autres les avaient déjà mises à l'épreuve. Mais la quatrième est celle dont traite réellement cette recherche.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Hypothèse</h3>
+
+                                    <p>
+                                        Le temps lui-même ne peut pas être véritablement supprimé. Ce qui peut l'être, c'est seulement le <em>système</em> qui le représente — l'horloge, le calendrier, le formulaire de réservation.
+                                    </p>
+
+                                    <p>
+                                        L'objet de cette étude n'a donc jamais été le temps. C'était <strong>le système qui nomme le temps</strong>, et la question de savoir si un événement peut survivre à l'incapacité de ce système à le nommer.
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>
+                                            Si une performance est assignée à un temps qui ne peut être représenté dans le système horaire officiel, l'événement peut néanmoins exister, même si sa position temporelle ne peut être identifiée de manière conventionnelle.
+                                        </strong>
+                                    </blockquote>
+
+                                    <p>
+                                        Autrement dit : l'existence d'un événement et le système horaire qui le marque ne sont pas nécessairement une seule et même chose.
+                                    </p>
+
+                                    <p>
+                                        Pour le vérifier, une performance réelle a été placée dans cette heure.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="research-section-divider"></div>
+
+
+                            <div class="research-section">
+
+                                <div class="research-section-title">
+                                    PARTIE 2 — PERFORMANCE
+                                </div>
+
+
+                                <div class="research-section">
+
+                                    <h3>Déclaration</h3>
+
+                                    <p>
+                                        Est-ce encore un concert si :<br>
+                                        il n'y a pas de public ?<br>
+                                        il n'y a pas d'interprète ?<br>
+                                        rien n'est joué ?<br>
+                                        cela a lieu dans un <strong>TEMPS INEXISTANT</strong> ?
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Processus de réalisation</h3>
+
+                                    <p>
+                                        <strong>1. Octobre 2023</strong><br>
+                                        L'idée est née d'une pensée simple : et si un concert avait lieu pendant l'heure que le passage à l'heure d'été supprime ?
+                                    </p>
+
+                                    <p>
+                                        <strong>2. Décembre 2024</strong><br>
+                                        Début de la réflexion sur les directions de réalisation.
+                                    </p>
+
+                                    <p>
+                                        <strong>3. Janvier 2025</strong><br>
+                                        Tentative de planifier un concert à Vienne. Un dossier de demande de financement a été préparé — abandonné à cause des démarches administratives. Le concept s'est élargi : déconstruire les usages et l'interaction propres au concert traditionnel, en s'appuyant sur un nouveau format de performance fondé sur le mouvement Fluxus.
+                                    </p>
+
+                                    <p>
+                                        <strong>4. Février 2025</strong><br>
+                                        Le lieu a changé pour Geldern, en Allemagne. Le format et le programme ont été affinés. Début de la planification de la Partie II : <em>À la recherche du temps perdu</em>.
+                                    </p>
+
+                                    <p>
+                                        <strong>5. Mars 2025</strong><br>
+                                        La question de recherche a été arrêtée : une performance peut-elle avoir lieu dans un temps qui n'existe pas ?
+                                    </p>
+
+                                    <p>
+                                        <strong>6. 30 mars 2025</strong><br>
+                                        Le concert a été réalisé. Il a été filmé.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Expérience</h3>
+
+                                    <p>
+                                        Les conditions ont été volontairement gardées simples.
+                                    </p>
+
+                                    <p>
+                                        <strong>Date</strong> — 30 mars 2025<br>
+                                        <strong>Lieu</strong> — Heilig-Geist-Kirche, Geldern, Allemagne<br>
+                                        <strong>Heure prévue</strong> — 02:00 CET<br>
+                                        <strong>Condition</strong> — L'heure prévue doit disparaître de l'horloge locale.
+                                    </p>
+
+                                    <p>
+                                        Dans cette condition, une performance pouvait être assignée à un temps qui n'existe pas.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Résultat</h3>
+
+                                    <h3>Die verschwundene Zeit</h3>
+
+                                    <p>
+                                        Le résultat de cette recherche est une performance réelle.
+                                    </p>
+
+                                    <p>
+                                        <strong>30.03.2025 / 02:00 CET</strong><br>
+                                        Heilig-Geist-Kirche, Geldern
+                                    </p>
+
+                                    <p>
+                                        <strong>Programme</strong>
+                                    </p>
+
+                                    <p>
+                                        John Cage — <em>4'33"</em> (1952)<br>
+                                        Ben Vautier — <em>I will be back in Ten Minutes</em> (1963)<br>
+                                        La Monte Young — <em>Composition 1960 #6</em> (1960)<br>
+                                        Youngseo Kim — <em>Close your eyes</em> (2025)<br>
+                                        La Monte Young — <em>Composition 1960 #13</em> (1960)
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Pourquoi ce programme ?</h3>
+
+                                    <p>
+                                        Le programme a été construit pour placer la question de recherche à l'intérieur même de la structure de la performance.
+                                    </p>
+
+                                    <p>
+                                        <em>4'33"</em> — <strong>Son.</strong> Teste si le cadre de la performance tient même quand le son est vidé.<br>
+                                    </p>
+
+                                    <p>
+                                        <em>I will be back in Ten Minutes</em> — <strong>Absence.</strong> Introduit un état de non-existence dans la performance.
+                                    </p>
+
+                                    <p>
+                                        <em>Composition 1960 #6</em> — <strong>Écoute / Interprète / Public.</strong> Trouble la question de qui regarde qui.
+                                    </p>
+
+                                    <p>
+                                        <em>Close your eyes</em> — <strong>Perception.</strong> Fait de la perception même de l'interprète une condition de la pièce.
+                                    </p>
+
+                                    <p>
+                                        <em>Composition 1960 #13</em> — <strong>Action / Performance.</strong> Rouvre la question de ce que « performer » exige au juste.
+                                    </p>
+
+                                    <p>
+                                        <strong>Absence → Écoute → Perception → Action</strong>
+                                    </p>
+
+                                    <p>
+                                        Et la condition qui enveloppe l'ensemble est <strong>un temps qui n'existe pas</strong>.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>La performance</h3>
+
+                                    <p>
+                                        Ce qui importait ici n'était pas de produire un résultat musical précis. C'était de vérifier si la performance elle-même pouvait satisfaire une condition.
+                                    </p>
+
+                                    <p>
+                                        La date était fixée. Le lieu, l'interprète, le programme, l'heure — tout était précisé. Mais cette heure n'est jamais apparue dans le système horaire officiel.
+                                    </p>
+
+                                    <p>
+                                        <strong>Toutes les informations nécessaires à la performance existent — seul le temps auquel elle a été assignée n'existe pas.</strong>
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Observation</h3>
+
+                                    <p>
+                                        L'événement peut être annoncé.<br>
+                                        L'événement peut être planifié.<br>
+                                        L'événement peut être joué.<br>
+                                        L'événement peut être documenté.<br>
+                                        L'événement peut être décrit après coup.
+                                    </p>
+
+                                    <p>
+                                        Et pourtant, une information résiste à la manière habituelle de consigner.
+                                    </p>
+
+                                    <p>
+                                        <strong>À quel moment exactement la performance a-t-elle eu lieu ?</strong>
+                                    </p>
+
+                                    <p>
+                                        On peut dire 02:00 — mais ce 02:00 n'apparaît nulle part dans l'heure locale officielle de ce jour-là.
+                                    </p>
+
+                                    <p>
+                                        <strong>Problème : un système qui n'a pas de place pour l'heure manquante peut-il quand même l'accueillir ?</strong><br>
+                                        Lorsque j'ai tenté de référencer l'événement sur un site de promotion en ligne, 02:00 ne pouvait tout simplement pas être sélectionné. Le temps n'a pas seulement disparu du monde physique ou d'une montre-bracelet — il a disparu du formulaire numérique conçu pour enregistrer l'événement. Un système ne peut pas accepter une valeur qui n'existe pas.
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>
+
+                                <div class="research-section">
+
+                                    <h3>L'enregistrement</h3>
+
+                                    <p>
+                                        La performance a été filmée, et les images ont été montées.
+                                    </p>
+
+                                    <p>
+                                        Suivant la logique réelle du temps, l'horloge dans la vidéo saute elle aussi directement de 1:59 à 3:00. Le segment qui correspondrait à 02:00–02:59 n'existe pas non plus dans l'enregistrement.
+                                    </p>
+
+                                    <p>
+                                        Ce n'était pas seulement un choix de montage. Si la performance était placée dans une heure manquante, sa trace devait porter la même lacune — lisser cette heure dans les images aurait contredit la condition réelle dans laquelle l'événement a eu lieu.
+                                    </p>
+
+                                    <p>
+                                        Ce n'est donc pas seulement la performance qui a été placée dans un temps qui n'existe pas. <strong>Son enregistrement porte la même absence.</strong>
+                                    </p>
+
+                                </div>
+
+                                <div class="research-section-divider"></div>                               
+
+                                <div class="research-section">
+
+                                    <h3>Résultat final</h3>
+
+                                    <div class="result-grid">
+
+                                        <div class="result-text">
+
+                                            <h4>Die verschwundene Zeit</h4>
+
+                                            <p>
+                                                <strong>Date</strong> 30.03.2025<br>
+                                                <strong>Heure</strong> 02:00 (CET)<br>
+                                                <strong>Lieu</strong> Heilig-Geist-Kirche, Geldern<br>
+                                                <strong>Interprète</strong> Youngseo Kim
+                                            </p>
+
+                                            <p>
+                                                <strong>Programme</strong>
+                                            </p>
+
+                                            <ul>
+                                                <li>John Cage – <em>4'33"</em> (1952)</li>
+                                                <li>Ben Vautier – <em>I will be back in Ten Minutes</em> (1963)</li>
+                                                <li>La Monte Young – <em>Composition 1960 #6</em> (1960)</li>
+                                                <li>Youngseo Kim – <em>Close your eyes</em> (2025)</li>
+                                                <li>La Monte Young – <em>Composition 1960 #13</em> (1960)</li>
+                                            </ul>
+
+                                            <p>
+                                                <em>Avec le soutien amical de la Heilig-Geist-Kirche – Evangelische Kirchengemeinde Geldern</em>
+                                            </p>
+
+                                        </div>
+
+                                        <div class="result-image">
+                                            <img src="../images/works/die_verschwundene_zeit.jpg"
+                                                alt="Photo de documentation du concert">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="video-wrapper">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/PkCohsOeVVE"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+
+                                <div class="research-section-divider"></div>                                
+
+                                <div class="research-section">
+
+                                    <h3>Texte de conclusion de la vidéo</h3>
+
+                                    <blockquote>
+                                        Dans une heure qui n'existe pas,<br>
+                                        un son a été entendu<br>
+                                        et est devenu une performance qui n'a jamais eu lieu.<br>
+                                        Mais était-ce de la musique ?<br>
+                                        Si personne ne l'a entendu — était-ce encore une performance ?<br>
+                                        Si rien n'a été joué — qu'était-ce, au bout du compte ?<br>
+                                        Le temps avance. Mais même son cours n'est défini que dans les cadres que nous avons créés.<br>
+                                        Dans le temps défini par des mains humaines —<br>
+                                        aucun art n'est né.<br>
+                                        Et pourtant — au-delà de ces conceptions humaines du temps —<br>
+                                        la performance a bel et bien existé.
+                                    </blockquote>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        </div>
+
+
+
+                        <!-- KOREAN -->
+                        <div id="lang-kr" class="language-content" style="display:none;">
+
+                            <div class="research-content">
+
+                                <div class="research-section">
+
+                                    <div class="research-section-title">
+                                        PART 1 — 연구
+                                    </div>
+
+                                    <h3>질문</h3>
+
+                                    <p>
+                                        해마다 한 시간이 시계에서 사라진다.
+                                    </p>
+
+                                    <p>
+                                        나는 생각했다. 그 시간을 무언가에 쓰면 어떨까?
+                                    </p>
+
+                                    <p>
+                                        존재하지 않는 그 한 시간 동안 콘서트를 열면 어떻게 될까?
+                                    </p>
+
+                                    <p>
+                                        처음에는 아이디어라고 하기도 어려웠다. 나 자신에게 던진 농담에 가까웠다.
+                                        콘서트를 02:00에 잡는다. 하지만 그날 시계는 02:00를 한 번도 보여 주지 않는다.
+                                        그렇다면 그 콘서트는 대체 언제 열리는 것일까?
+                                    </p>
+
+                                    <p>
+                                        나는 이 질문으로 계속 돌아갔다. 진지하게 계획해 볼수록 농담처럼 느껴지지 않았다.
+                                        답할 수 없었기 때문이다. "어디서"도, "누가"도, "얼마나 크게"도 아니었다.
+                                        오직 "언제"였다.
+                                    </p>
+
+                                    <p>
+                                        시간 자체가 불확실해지자, 그 안에 잡아 둔 모든 것도 불확실해졌다.
+                                        그 시간이 존재하지 않는다면, 그 안에 놓인 것은 존재하는가?
+                                        어떤 시계도 그것이 언제 시작되었는지 확인해 줄 수 없다면,
+                                        그것이 일어났다고 말할 수는 있는가?
+                                    </p>
+
+                                    <p>
+                                        사라진 한 시간에 대한 농담으로 시작한 일이 시간 자체에 대한 진짜 질문이 되었다.
+                                        아직은 공연에 관한 것이 아니었다. 그저 시간에 관한 것이었다.
+                                    </p>
+
+                                    <p>
+                                        이 질문이 이어지는 모든 내용의 출발점이 되었다.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <h3>시간</h3>
+
+                                    <p>
+                                        그렇다면 사라지는 이것은 무엇일까?
+                                    </p>
+
+                                    <p>
+                                        "시간이 흐른다"는 말과 시계가 시간을 표시하는 방식은 같지 않다.
+                                        시계가 무엇을 가리키든 물리적 과정은 끊김 없이 이어진다.
+                                        그러나 시계는 사람들이 정한 규칙에 따라 특정한 순간에 이름을 붙인다.
+                                    </p>
+
+                                    <p>
+                                        01:59<br>
+                                        02:00<br>
+                                        02:01
+                                    </p>
+
+                                    <p>
+                                        이 표기는 자연에 존재하는 사물이 아니다.
+                                        시간을 함께 나누고 기록하기 위해 인간이 만든 체계,
+                                        우리 모두가 암묵적으로 합의한 명명 규칙이다.
+                                    </p>
+
+                                    <p>
+                                        서머타임은 이 체계를 그대로 드러낸다.
+                                        시계가 한 시간 앞으로 건너뛰면 특정한 순간이 통째로 지워진다.
+                                        순간 자체가 아니라 그 이름이 지워진다.
+                                        그렇다고 그 한 시간 동안 물리적 세계에서 아무 일도 일어나지 않는 것은 아니다.
+                                    </p>
+
+                                    <p>
+                                        사람들은 계속 움직인다.<br>
+                                        지구는 계속 자전한다.<br>
+                                        소리는 계속 발생할 수 있다.<br>
+                                        카메라는 계속 녹화할 수 있다.
+                                    </p>
+
+                                    <p>
+                                        하지만 시계에서 그 시간에 붙어 있던 이름은 사라진다.
+                                        이름이 사라지면 어떤 일이 <em>언제</em> 일어났는지 말하는
+                                        일상적인 방법도 모두 사라진다.
+                                    </p>
+
+                                    <p>
+                                        내가 답하지 못했던 "언제"가 바로 이것이었다.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <h3>사라진 한 시간</h3>
+
+                                    <p>
+                                        이것은 가정이 아니다. 시계 위에서 해마다 일어나는 일이고,
+                                        2025년 3월 30일에는 독일에서 일어났다.
+                                    </p>
+
+                                    <p>
+                                        시계는 <strong>01:59:59 CET</strong>에서 곧바로
+                                        <strong>03:00:00 CEST</strong>로 넘어갔다.
+                                        02:00는 나타나지 않았다. 따라서 다음 시각들은 공식 현지 시간에 한 번도 표시되지 않았다.
+                                    </p>
+
+                                    <p>
+                                        02:00 · 02:15 · 02:30 · 02:45 · 02:59
+                                    </p>
+
+                                    <p>
+                                        덕분에 실제로 다룰 수 있는 것이 생겼다.
+                                        실재하는 날짜, 실재하는 한 시간, 공식적이고 법적으로 인정된
+                                        시계 체계 안의 실재하는 틈이다.
+                                        이 시간에 공연을 배정할 수는 있었다.
+                                        그러나 그 시간은 어떤 시계에서도 확인할 수 없었다.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <div class="research-section-title">
+                                        조사
+                                    </div>
+
+                                    <h3>공연이란 무엇인가?</h3>
+
+                                    <p>
+                                        실제로 존재하는 사라진 한 시간이 생기자 질문의 모양이 달라졌다.
+                                        더 이상 "이것은 언제 일어났는가"만이 아니라
+                                        "<em>언제</em>가 없는 사건은 어떻게 되는가"가 되었다.
+                                    </p>
+
+                                    <p>
+                                        공연은 알맞은 시험 대상처럼 보였다.
+                                        공연은 대개 다른 무엇보다도 시간에 단단히 묶여 있기 때문이다.
+                                        그래서 공연을 이룬다고 흔히 가정되는 조건들을 하나씩 분리해,
+                                        그중 어떤 것이 실제로 시간의 존재에 의존하고 어떤 것이 그렇지 않은지 살펴보았다.
+                                    </p>
+
+                                    <p>
+                                        <strong>퍼포머</strong> — 누군가가 행위를 수행한다.<br>
+                                        <strong>관객</strong> — 누군가가 그것을 경험한다.<br>
+                                        <strong>소리</strong> — 음악 공연에서는 소리가 발생한다.<br>
+                                        <strong>공간</strong> — 사건이 특정한 장소에서 일어난다.<br>
+                                        <strong>행위</strong> — 무언가가 일어난다.<br>
+                                        <strong>시간</strong> — 사건이 일어난 순간을 특정할 수 있다.<br>
+                                        <strong>지시문</strong> — 무엇을 해야 하는지 미리 정해 둘 수 있다.<br>
+                                        <strong>기록</strong> — 그것이 존재했다는 기록이 사건 뒤에 남을 수 있다.
+                                    </p>
+
+                                    <p>
+                                        전통적인 콘서트에서 이 조건들은 마찰 없이 겹친다.
+                                        퍼포머는 정해진 시각에 무대에 오르고, 관객은 그곳에서 듣고,
+                                        끝나고 나면 그것은 과거의 사건이 된다.
+                                        날짜가 있고, 장소가 있고, 닫힌 사건이다.
+                                    </p>
+
+                                    <p>
+                                        그런데 <em>시간</em>, 그중에서도 이름을 붙일 수 있고 시계로 확인할 수 있는 시간이 정말로 필요한가?
+                                        아니면 그저 우리가 그것이 빠진 모습을 가장 보아 오지 못한 조건일 뿐인가?
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <div class="research-section-title">
+                                        선행 작업
+                                    </div>
+
+                                    <p>
+                                        이 질문을 더 날카롭게 다듬기 위해, 20세기 실험음악과 퍼포먼스 가운데
+                                        앞의 목록에서 다른 조건, 즉 관객, 퍼포머, 소리를 이미 끌어당겨 본 작업들을 살펴보았다.
+                                        공연이 공연이기를 멈추기까지 얼마나 늘어날 수 있는지 보기 위해서였다.
+                                    </p>
+
+                                    <h3>John Cage</h3>
+
+                                    <p>
+                                        <em>4'33"</em> (1952)는 이 목록에서 소리라는 조건을 직접 겨냥한다. 퍼포머는 무대에 오르고, 정해진 시간 동안 앉아 있고, 무대를 떠난다. 그러나 악기에서는 어떤 음도 의도적으로 연주되지 않는다. 그 4분 33초 동안 들리는 것은 관객의 기침 소리, 의자가 삐걱이는 소리, 공간 자체의 소음뿐이다.
+
+                                    </p>
+
+                                    <p>
+                                        여기서 사라지는 것은 관객이나 퍼포머가 아니라, 음악을 음악이게 한다고 여겨졌던 소리 그 자체다. 그런데도 이 곡은 여전히 하나의 공연으로, 심지어 하나의 작품으로 인정된다. 연주 시간은 명확히 정해져 있고, 시작과 끝은 시계로 측정된다. <strong>소리를 비워도 공연이라는 틀은 무너지지 않는다.</strong>
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>소리가 빠져도 공연이 성립한다면, 시간이 빠져도 공연이 성립하지 않을 이유가 있을까?</strong>
+                                    </blockquote>
+
+                                    <p>
+                                        이 질문은 소리라는 조건과 시간이라는 조건이 서로 다른 방식으로 작동한다는 것을 보여 준다. <strong>4'33"</strong>은 시간의 틀 안에서 소리를 비웠다. 이 연구가 시도하는 것은 그 반대에 가깝다. 소리와 행위는 남겨 둔 채, 그것들을 담는 시간의 틀 자체를 비우는 것이다.
+                                    </p>
+
+                                    <h3>Ben Vautier</h3>
+
+                                    <p>
+                                        <em>I will be back in Ten Minutes</em> (1963)는 공연을 특정한 소리에서 찾기 어렵게 만든다.
+                                        중요한 것은 음악적 결과가 아니라 <strong>공연을 이루는 약속, 기대, 그리고 부재</strong>이다.
+                                        관객은 무언가 일어나기를 기대한다. 그 기대와 실제로 경험하는 것 사이에 틈이 생기고,
+                                        그 틈 자체가 작품이 된다.
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>공연이 존재하려면 무언가가 연주되어야 하는가?</strong>
+                                    </blockquote>
+
+                                    <p>
+                                        공연이 부재로 이루어질 수 있다면, 시간, 즉 구체적으로 이름 붙일 수 있는
+                                        "언제" 역시 공연이 함께 사라지지 않은 채 부재할 수 있을지도 모른다.
+                                    </p>
+
+
+                                    <h3>La Monte Young</h3>
+
+                                    <p>
+                                        <em>Compositions 1960</em> (1960)은 악보 대신 짧은 지시문으로 쓰인 작품 모음이다.
+                                        <em>Composition 1960 #6</em>에서 퍼포머는 무대에 앉아 관객을 바라본다.
+                                        누가 보고 누가 보이는지를 뒤집는 것이며, 정해진 지속 시간도 요구하지 않는다.
+                                        <em>Composition 1960 #13</em>은 단 한 줄이다.
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>
+                                            퍼포머는 아무 곡이나 준비한 다음, 할 수 있는 한 잘 연주해야 한다.
+                                        </strong>
+                                    </blockquote>
+
+                                    <p>
+                                        여기서 나를 사로잡은 것은 관객의 역전이나 지시문의 열린 성격이 아니라
+                                        <strong>지속 시간</strong>이었다.
+                                        <em>정해진 지속 시간이 없다</em>는 것은 이 작품들이 이미 시계 시간의 한 부분,
+                                        즉 "얼마나 오래"를 거부하고 있다는 뜻이다.
+                                        그래서 곧바로 다음 질문이 떠올랐다.
+                                    </p>
+
+                                    <blockquote>
+                                        작품이 "얼마나 오래"를 거부할 수 있다면, "언제"도 거부할 수 있지 않을까?
+                                    </blockquote>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <div class="research-section-title">
+                                        문제
+                                    </div>
+
+                                    <p>
+                                        사라진 한 시간 안에 실제로 공연을 놓아 보려 하자
+                                        "언제"의 문제는 몇 가지 구체적인 문제로 갈라졌다.
+                                    </p>
+
+                                    <p>
+                                        <strong>문제 1 — 공연은 언제 일어났는가?</strong><br>
+                                        공연은 02:00로 정해졌다. 하지만 02:00는 존재하지 않는다.
+                                        그렇다면 공연이 언제 열렸다고 말할 수 있는가?
+                                    </p>
+
+                                    <p>
+                                        <strong>문제 2 — 얼마나 오래 지속되었는가?</strong><br>
+                                        한 시간을 꽉 채워 02:00부터 03:00까지 이어졌다고 해 보자.
+                                        그 한 시간 역시 시계에는 없다.
+                                        시작과 끝을 그것들을 담고 있지 않은 시간 체계 안에서 둘 다 표현할 수는 없다.
+                                    </p>
+
+                                    <p>
+                                        <strong>문제 3 — 사건이 시간상의 위치 없이 존재할 수 있는가?</strong><br>
+                                        사건은 보통 특정한 시점에 일어난다.
+                                        그 시점을 특정할 수 없다면, 그 사건은 여전히 존재하는가?
+                                    </p>
+
+                                    <p>
+                                        <strong>문제 4 — 그 사건이 존재했는지는 누가 판단하는가?</strong><br>
+                                        시계인가? 퍼포머인가? 관객인가? 녹화물인가? 작품의 지시문인가?
+                                        시계가 자격을 잃으면 다른 무언가가 그 사건을 책임져야 하는데,
+                                        그것이 무엇인지는 분명하지 않다.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <div class="research-section-title">
+                                        연구 질문
+                                    </div>
+
+                                    <p>
+                                        이 문제들은 하나로 압축되었다.
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>존재하지 않는 시간 속에서 공연이 이루어질 수 있는가?</strong>
+                                    </blockquote>
+
+                                    <p>
+                                        그리고 이 질문은 네 개의 하위 질문으로 확장되었다.
+                                        세 개는 공연에 관한 것이고, 하나는 시간 자체에 관한 것이다.
+                                    </p>
+
+                                    <ol>
+                                        <li>관객 없이 공연이 존재할 수 있는가?</li>
+                                        <li>관습적인 퍼포머 없이 공연이 존재할 수 있는가?</li>
+                                        <li>관습적인 음악적 행위 없이 음악이 존재할 수 있는가?</li>
+                                        <li>시계로 표현할 수 없는 시간 속에서 공연이 존재할 수 있는가?</li>
+                                    </ol>
+
+                                    <p>
+                                        앞의 세 질문은 유용했다. 이미 다른 이들이 시험해 본 것들이었다.
+                                        그러나 이 연구가 실제로 다루는 것은 네 번째 질문이다.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <div class="research-section-title">
+                                        가설
+                                    </div>
+
+                                    <p>
+                                        시간 자체는 실제로 제거할 수 없다.
+                                        제거할 수 있는 것은 시간을 표현하는 <em>체계</em>,
+                                        즉 시계, 달력, 예약 양식뿐이다.
+                                    </p>
+
+                                    <p>
+                                        그러므로 이 연구의 대상은 처음부터 시간이 아니었다.
+                                        <strong>시간에 이름을 붙이는 체계</strong>였고,
+                                        그 체계가 이름을 붙이지 못할 때 사건이 살아남을 수 있는가였다.
+                                    </p>
+
+                                    <blockquote>
+                                        <strong>
+                                            공식 시계 체계 안에서 표현할 수 없는 시간에 공연이 배정된다면,
+                                            그 시간적 위치를 관습적인 방식으로 확인할 수 없더라도
+                                            그 사건은 여전히 존재할 수 있다.
+                                        </strong>
+                                    </blockquote>
+
+                                    <p>
+                                        다시 말해, 사건의 존재와 그것을 표시하는 시간 체계는 같은 것일 필요가 없다.
+                                    </p>
+
+                                    <p>
+                                        이를 검증하기 위해 실제 공연을 그 한 시간 안에 놓았다.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <div class="research-section-title">
+                                        PART 2 — 공연
+                                    </div>
+
+                                    <h3>선언</h3>
+
+                                    <p>
+                                        다음과 같아도 여전히 콘서트인가?<br>
+                                        관객이 없다.<br>
+                                        퍼포머가 없다.<br>
+                                        아무것도 연주되지 않는다.<br>
+                                        <strong>존재하지 않는 시간</strong>에 열린다.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <h3>실현 과정</h3>
+
+                                    <p>
+                                        <strong>1. 2023년 10월</strong><br>
+                                        서머타임이 지우는 한 시간 동안 콘서트를 연다면 어떨까 하는 단순한 생각에서 아이디어가 시작되었다.
+                                    </p>
+
+                                    <p>
+                                        <strong>2. 2024년 12월</strong><br>
+                                        실현 방향을 구상하기 시작했다.
+                                    </p>
+
+                                    <p>
+                                        <strong>3. 2025년 1월</strong><br>
+                                        빈에서 콘서트를 계획해 보았다. 지원금 신청서를 준비했으나 서류 작업 때문에 접었다.
+                                        콘셉트를 넓혀, 전통적인 콘서트의 관습과 상호작용을 해체하고
+                                        Fluxus 운동에 뿌리를 둔 새로운 공연 형식을 끌어오기로 했다.
+                                    </p>
+
+                                    <p>
+                                        <strong>4. 2025년 2월</strong><br>
+                                        장소를 독일 Geldern으로 바꾸었다. 형식과 프로그램을 다듬었다.
+                                        Part II <em>À la recherche du temps perdu</em> 계획을 시작했다.
+                                    </p>
+
+                                    <p>
+                                        <strong>5. 2025년 3월</strong><br>
+                                        연구 질문을 확정했다. 존재하지 않는 시간 속에서 공연이 이루어질 수 있는가?
+                                    </p>
+
+                                    <p>
+                                        <strong>6. 2025년 3월 30일</strong><br>
+                                        콘서트를 실현했다. 촬영했다.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <h3>실험</h3>
+
+                                    <p>
+                                        조건은 일부러 단순하게 두었다.
+                                    </p>
+
+                                    <p>
+                                        <strong>날짜</strong> — 2025년 3월 30일<br>
+                                        <strong>장소</strong> — 독일 Geldern, Heilig-Geist-Kirche<br>
+                                        <strong>예정 시각</strong> — 02:00 CET<br>
+                                        <strong>조건</strong> — 예정된 시간이 현지 시계에서 사라져야 한다.
+                                    </p>
+
+                                    <p>
+                                        이 조건에서 공연은 존재하지 않는 시간에 배정될 수 있었다.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <div class="research-section-title">
+                                        결과
+                                    </div>
+
+                                    <h3>Die verschwundene Zeit</h3>
+
+                                    <p>
+                                        이 연구의 결과물은 실제 공연이다.
+                                    </p>
+
+                                    <p>
+                                        <strong>30.03.2025 / 02:00 CET</strong><br>
+                                        Heilig-Geist-Kirche, Geldern
+                                    </p>
+
+                                    <p>
+                                        <strong>프로그램</strong>
+                                    </p>
+
+                                    <p>
+                                        John Cage — <em>4'33"</em> (1952)<br>
+                                        Ben Vautier — <em>I will be back in Ten Minutes</em> (1963)<br>
+                                        La Monte Young — <em>Composition 1960 #6</em> (1960)<br>
+                                        Youngseo Kim — <em>Close your eyes</em> (2025)<br>
+                                        La Monte Young — <em>Composition 1960 #13</em> (1960)
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <h3>왜 이 프로그램인가?</h3>
+
+                                    <p>
+                                        프로그램은 연구 질문을 공연의 구조 안에 넣도록 구성되었다.
+                                    </p>
+
+                                    <p>
+                                        <em>4'33"</em> — <strong>소리.</strong> 
+                                        소리를 비워도 공연이라는 틀이 유지되는지 시험한다.<br>
+
+                                        <em>I will be back in Ten Minutes</em> — <strong>부재.</strong>
+                                        존재하지 않음의 상태를 공연 안으로 들여온다.<br>
+
+
+                                        <em>Composition 1960 #6</em> — <strong>듣기 / 퍼포머 / 관객.</strong>
+                                        누가 누구를 바라보는지를 흔든다.<br>
+
+                                        <em>Close your eyes</em> — <strong>지각.</strong>
+                                        퍼포머 자신의 지각을 작품의 조건으로 삼는다.<br>
+
+                                        <em>Composition 1960 #13</em> — <strong>행위 / 공연.</strong>
+                                        "공연한다"는 것이 실제로 무엇을 필요로 하는지 다시 묻는다.
+                                    </p>
+
+                                    <p>
+                                        <strong>부재 → 듣기 → 지각 → 행위</strong>
+                                    </p>
+
+                                    <p>
+                                        그리고 이 모든 것을 둘러싼 조건은 <strong>존재하지 않는 시간</strong>이다.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <h3>공연</h3>
+
+                                    <p>
+                                        여기서 중요한 것은 특정한 음악적 결과를 만들어 내는 일이 아니었다.
+                                        공연 자체가 하나의 조건을 충족할 수 있는지 확인하는 일이었다.
+                                    </p>
+
+                                    <p>
+                                        날짜는 정해졌다. 장소, 퍼포머, 프로그램, 시간까지 모두 특정되었다.
+                                        그러나 그 시간은 공식 시간 체계 안에 한 번도 나타나지 않았다.
+                                    </p>
+
+                                    <p>
+                                        <strong>
+                                            공연에 필요한 정보는 모두 존재한다.
+                                            다만 그 공연이 배정된 시간만 존재하지 않는다.
+                                        </strong>
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <h3>관찰</h3>
+
+                                    <p>
+                                        사건은 공지할 수 있다.<br>
+                                        사건은 계획할 수 있다.<br>
+                                        사건은 연주할 수 있다.<br>
+                                        사건은 기록할 수 있다.<br>
+                                        사건은 끝난 뒤에 서술할 수 있다.
+                                    </p>
+
+                                    <p>
+                                        그럼에도 한 가지 정보는 평소의 기록 방식에 저항한다.
+                                    </p>
+
+                                    <p>
+                                        <strong>공연은 정확히 언제 일어났는가?</strong>
+                                    </p>
+
+                                    <p>
+                                        02:00라고 말할 수는 있다.
+                                        그러나 그 02:00는 그날의 공식 현지 시간 어디에도 나타나지 않는다.
+                                    </p>
+
+                                    <p>
+                                        <strong>
+                                            문제: 사라진 한 시간을 넣을 자리가 없는 체계가 그래도 그 시간을 받아들일 수 있는가?
+                                        </strong>
+                                    </p>
+
+                                    <p>
+                                        온라인 홍보 사이트에 이 공연을 올리려 하자 02:00는 아예 선택할 수 없었다.
+                                        시간은 물리적 세계나 손목시계에서만 사라진 것이 아니었다.
+                                        애초에 공연을 등록하기 위해 만들어진 디지털 양식에서도 사라졌다.
+                                        체계는 존재하지 않는 값을 받아들일 수 없다.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <h3>녹화</h3>
+
+                                    <p>
+                                        공연은 촬영되었고, 영상은 편집되었다.
+                                    </p>
+
+                                    <p>
+                                        시간의 실제 논리를 따라 영상 속 시계도 1:59에서 곧바로 3:00로 건너뛴다.
+                                        02:00–02:59에 해당하는 구간은 녹화물 안에도 존재하지 않는다.
+                                    </p>
+
+                                    <p>
+                                        이는 단순한 편집상의 선택이 아니었다.
+                                        공연이 사라진 한 시간 속에 놓였다면, 그 기록도 같은 틈을 지녀야 했다.
+                                        영상에서 그 시간을 매끄럽게 메우는 것은 공연이 일어난 실제 조건과 모순되었을 것이다.
+                                    </p>
+
+                                    <p>
+                                        그러므로 존재하지 않는 시간에 놓인 것은 공연만이 아니다.
+                                        <strong>그 기록도 같은 부재를 지니고 있다.</strong>
+                                    </p>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+<div class="research-section-title">
+    최종 결과
+</div>
+
+<div class="result-grid">
+
+    <div class="result-text">
+
+        <h4>Die verschwundene Zeit</h4>
+
+        <p>
+            <strong>날짜</strong> 30.03.2025<br>
+            <strong>시간</strong> 02:00 (CET)<br>
+            <strong>장소</strong> Heilig-Geist-Kirche, Geldern<br>
+            <strong>퍼포머</strong> Youngseo Kim
+        </p>
+
+        <p>
+            <strong>프로그램</strong>
+        </p>
+
+        <ul>
+            <li>John Cage – <em>4'33"</em> (1952)</li>
+            <li>Ben Vautier – <em>I will be back in Ten Minutes</em> (1963)</li>
+            <li>La Monte Young – <em>Composition 1960 #6</em> (1960)</li>
+            <li>Youngseo Kim – <em>Close your eyes</em> (2025)</li>
+            <li>La Monte Young – <em>Composition 1960 #13</em> (1960)</li>
+        </ul>
+
+        <p>
+            <em>
+                Heilig-Geist-Kirche – Evangelische Kirchengemeinde Geldern의 따뜻한 후원으로
+            </em>
+        </p>
+
+    </div>
+
+    <div class="result-image">
+        <img src="../images/works/die_verschwundene_zeit.jpg"
+             alt="콘서트 기록 사진">
+    </div>
+
+</div>
+
+<div class="video-wrapper">
+    <iframe 
+        src="https://www.youtube.com/embed/PkCohsOeVVE"
+        allowfullscreen>
+    </iframe>
+</div>
+
+                                </div>
+
+
+                                <div class="research-section-divider"></div>
+
+
+                                <div class="research-section">
+
+                                    <div class="research-section-title">
+                                        영상 결론문
+                                    </div>
+
+                                    <p>
+                                        존재하지 않는 한 시간 속에서<br>
+                                        소리가 들렸고<br>
+                                        일어나지 않은 공연이 되었다.
+                                    </p>
+
+                                    <p>
+                                        그러나 그것은 음악이었을까?<br>
+                                        아무도 듣지 않았다면 그래도 공연이었을까?<br>
+                                        아무것도 연주되지 않았다면, 결국 그것은 무엇이었을까?
+                                    </p>
+
+                                    <p>
+                                        시간은 흘러간다.
+                                        하지만 그 흐름조차 우리가 만든 틀 안에서만 정의된다.
+                                    </p>
+
+                                    <p>
+                                        인간의 손이 정의한 시간 안에서<br>
+                                        어떤 예술도 생겨나지 않았다.
+                                    </p>
+
+                                    <p>
+                                        그러나 인간이 만든 시간 개념 너머에서는<br>
+                                        공연이 존재했다.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    <div class="back-to-research">
+
+                        <a href="../research.html" class="button">
+                            &larr; Back to Research
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <footer id="footer">
+                <p class="copyright">&copy; Youngseo Kim</p>
+            </footer>
+
+        </div>
+
+
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+
+        <script>
+        function showLanguage(lang, button) {
+
+            document.querySelectorAll('.language-content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            document.querySelectorAll('.language-title').forEach(function(title) {
+                title.style.display = 'none';
+            });
+
+            document.querySelectorAll('.lang-button').forEach(function(button) {
+                button.classList.remove('active');
+            });
+
+            document.getElementById('lang-' + lang).style.display = 'block';
+            document.getElementById('title-' + lang).style.display = 'block';
+
+            button.classList.add('active');
+        }
+        </script>
+
+    </body>
+</html>

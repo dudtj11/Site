@@ -3875,3 +3875,15 @@ input, select, textarea {
 			}
 
 		}
+
+.nav-logo a {
+	text-decoration: none;
+	border-bottom: none;
+	color: inherit;
+}
+
+.nav-logo a:hover {
+	text-decoration: none;
+	border-bottom: none;
+	color: inherit;
+}

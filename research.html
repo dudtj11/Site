@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Youngseo Kim - Research</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+        <style>
+            /* 1. Minimal monochrome background */
+            body {
+                background: #0f0f11 !important;
+                background-image: none !important;
+            }
+
+            body::before,
+            body::after {
+                display: none !important;
+            }
+
+            #wrapper {
+                background: transparent !important;
+                background-image: none !important;
+                padding-top: 6rem !important;
+            }
+
+
+            /* 2. Fixed header & navigation */
+            #custom-header-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 4rem !important;
+                background: rgba(15, 15, 17, 0.95) !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 4rem !important;
+                z-index: 10000 !important;
+                box-sizing: border-box;
+            }
+
+            /* Logo */
+            .nav-logo {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+
+            .nav-logo a {
+                text-decoration: none;
+                border-bottom: none;
+                color: inherit;
+            }
+
+            .nav-logo a:hover {
+                text-decoration: none;
+                border-bottom: none;
+                color: inherit;
+            }
+
+
+            /* Navigation */
+            #nav {
+                position: relative !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+            }
+
+            #nav ul {
+                display: flex !important;
+                flex-direction: row !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            #nav ul li {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            #nav ul li a {
+                display: block !important;
+                height: 4rem !important;
+                line-height: 4rem !important;
+                padding: 0 1.25rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em;
+                border: none !important;
+                background: transparent !important;
+                transition: color 0.2s ease;
+            }
+
+            #nav ul li a:hover {
+                color: #ffffff !important;
+                background: transparent !important;
+            }
+
+
+            /* 3. Research page */
+            .main header.major h2::after,
+            .main header.major::after {
+                background-color: #000000 !important;
+                background: #000000 !important;
+            }
+
+            .research-intro {
+                max-width: 850px;
+                margin-bottom: 3.5rem;
+            }
+
+            .research-intro p {
+                margin-bottom: 0;
+            }
+
+
+            /* Research list */
+            .research-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .research-item {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                padding: 1.5rem 0;
+                display: flex;
+                align-items: center;
+            }
+
+            .research-item:first-child {
+                border-top: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .research-info {
+                width: 100%;
+                text-align: left;
+            }
+
+            .research-meta {
+                font-size: 0.8rem;
+                color: #666666 !important;
+                margin-bottom: 0.35rem;
+                font-weight: 600;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+
+            .research-title {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+
+            .research-title a {
+                color: #000000 !important;
+                text-decoration: none;
+                border-bottom: none;
+                transition: opacity 0.2s ease;
+            }
+
+            .research-title a:hover {
+                opacity: 0.6;
+            }
+
+
+            /* Footer */
+            #footer {
+                border-top: none !important;
+                padding: 0 !important;
+            }
+
+            .copyright {
+                margin-top: 4rem !important;
+                padding-bottom: 4rem;
+                color: rgba(255, 255, 255, 0.4) !important;
+            }
+
+
+            /* 4. Responsive layout */
+            @media screen and (max-width: 980px) {
+
+                #custom-header-nav {
+                    position: relative !important;
+                    flex-direction: column !important;
+                    height: auto !important;
+                    padding: 1rem !important;
+                }
+
+                #nav ul {
+                    flex-wrap: wrap !important;
+                    justify-content: center !important;
+                }
+
+                #nav ul li a {
+                    height: 3rem !important;
+                    line-height: 3rem !important;
+                    padding: 0 0.75rem !important;
+                }
+
+                #wrapper {
+                    padding-top: 1rem !important;
+                }
+
+                .main {
+                    padding: 2.5rem 1.5rem !important;
+                }
+
+                .research-item {
+                    padding: 1.25rem 0;
+                }
+
+                .research-title {
+                    font-size: 1.05rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="is-preload">
+
+        <div id="custom-header-nav">
+            <div class="nav-logo">
+                <a href="index.html">Youngseo Kim</a>
+            </div>
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="biography.html">Biography</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="watch.html">Watch</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div id="wrapper">
+
+            <div id="main">
+
+                <section class="main">
+
+                    <header class="major">
+                        <h2>Research</h2>
+                    </header>
+
+
+                    <div class="research-intro">
+                        <p class="justify-text">
+                            Research is a space for exploring ideas, questions, and experiments beyond conventional musical practice.
+                            Each project begins with a question or an unusual idea and develops through research, observation, and experimentation.
+                        </p>
+                    </div>
+
+
+                    <ul class="research-list">
+
+                        <li class="research-item">
+                            <div class="research-info">
+                                <div class="research-meta">Research No.1</div>
+                                <div class="research-title">
+                                    <a href="research/research_no_1.html">
+                                        Extended Techniques via Non-Standard Bodily Interfaces
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="research-item">
+                            <div class="research-info">
+                                <div class="research-meta">Research No.2</div>
+                                <div class="research-title">
+                                    <a href="research/research_no_2.html">
+                                        Body as Musical Interface
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="research-item">
+                            <div class="research-info">
+                                <div class="research-meta">Research No.3</div>
+                                <div class="research-title">
+                                    <a href="research/research_no_3.html">
+                                        A Study on Performance in Non-Existent Time
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+                </section>
+
+            </div>
+
+
+            <footer id="footer">
+                <p class="copyright">&copy; Youngseo Kim</p>
+            </footer>
+
+        </div>
+
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

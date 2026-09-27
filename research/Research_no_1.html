@@ -1,0 +1,3477 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Youngseo Kim - Research No.1</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+        <style>
+            /* 1. Minimal monochrome background */
+            body {
+                background: #0f0f11 !important;
+                background-image: none !important;
+            }
+
+            body::before,
+            body::after {
+                display: none !important;
+            }
+
+            #wrapper {
+                background: transparent !important;
+                background-image: none !important;
+                padding-top: 6rem !important;
+            }
+
+
+            /* 2. Fixed header & navigation */
+            #custom-header-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 4rem !important;
+                background: rgba(15, 15, 17, 0.95) !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 4rem !important;
+                z-index: 10000 !important;
+                box-sizing: border-box;
+            }
+
+            /* Logo */
+            .nav-logo {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+
+            .nav-logo a {
+                text-decoration: none;
+                border-bottom: none;
+                color: inherit;
+            }
+
+            .nav-logo a:hover {
+                text-decoration: none;
+                border-bottom: none;
+                color: inherit;
+            }
+
+
+            /* Navigation */
+            #nav {
+                position: relative !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+            }
+
+            #nav ul {
+                display: flex !important;
+                flex-direction: row !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            #nav ul li {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            #nav ul li a {
+                display: block !important;
+                height: 4rem !important;
+                line-height: 4rem !important;
+                padding: 0 1.25rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em;
+                border: none !important;
+                background: transparent !important;
+                transition: color 0.2s ease;
+            }
+
+            #nav ul li a:hover {
+                color: #ffffff !important;
+                background: transparent !important;
+            }
+
+
+            /* 3. Research detail page */
+            .main header.major h2::after,
+            .main header.major::after {
+                background-color: #000000 !important;
+                background: #000000 !important;
+            }
+
+            .research-number {
+                font-size: 0.8rem;
+                font-weight: 800;
+                color: #888888 !important;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin-bottom: 0.75rem;
+            }
+
+            .research-detail-title {
+                font-size: 2rem;
+                font-weight: 700;
+                color: #000000 !important;
+                line-height: 1.3;
+                margin-bottom: 3rem;
+            }
+
+            .research-content {
+                color: #000000 !important;
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            .research-content h3 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #000000 !important;
+                line-height: 1.4;
+                margin: 2.5rem 0 1.25rem 0;
+            }
+
+            .research-content h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000000 !important;
+    line-height: 1.4;
+    margin: 2rem 0 1rem 0;
+}
+
+            .research-content p {
+                color: #000000 !important;
+                margin-bottom: 1.5rem;
+            }
+
+            .research-section {
+                margin-bottom: 4rem;
+            }
+
+            .research-section-title {
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: #000000 !important;
+                margin-bottom: 2rem;
+            }
+
+            .research-section-divider {
+                margin: 4rem 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+
+            /* Language buttons */
+            .language-switcher {
+                display: flex;
+                gap: 0.5rem;
+                margin: 0 0 3rem 0;
+            }
+
+            .language-switcher button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                height: 2rem;
+                min-width: 2.5rem;
+
+                margin: 0;
+                padding: 0 0.7rem;
+
+                border: 1px solid #000000;
+                background: transparent;
+                color: #000000;
+
+                font-family: inherit;
+                font-size: 0.7rem;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: 0.08em;
+
+                text-align: center;
+                vertical-align: middle;
+
+                cursor: pointer;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+
+            .language-switcher button:hover,
+            .language-switcher button.active {
+                background: #000000;
+                color: #ffffff;
+            }
+
+            .language-title {
+                display: block;
+            }
+
+            .research-subtitle {
+                margin-top: -2rem;
+                margin-bottom: 3rem;
+                color: #888888 !important;
+            }
+
+            .research-question {
+                font-size: 1.15rem;
+                font-weight: 600;
+                margin-bottom: 3rem;
+                color: #000000 !important;
+            }
+
+            .language-content {
+                display: block;
+            }
+
+
+            /* Images */
+            .research-image {
+                width: 100%;
+                margin: 2rem 0;
+                line-height: 0;
+            }
+
+            .research-image-caption {
+                margin-top: 0.75rem;
+                font-size: 0.8rem;
+                color: #888888 !important;
+                line-height: 1.5;
+            }
+
+            .research-image img {
+                display: block;
+                width: auto;
+                max-width: 70%;
+                height: auto;
+                margin: 0 auto;
+                border-radius: 4px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+
+            @media screen and (max-width: 980px) {
+                .research-image img {
+                    max-width: 100%;
+                }
+            }
+
+            /* Back button */
+            .back-to-research {
+                margin-top: 4rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .back-to-research .button {
+                display: inline-block;
+                border: 1px solid #000000;
+                color: #000000;
+                font-weight: 600;
+                text-transform: uppercase;
+                height: 2.2rem !important;
+                line-height: 2.2rem !important;
+                padding: 0 1.5rem !important;
+                font-size: 0.75rem !important;
+                background: transparent;
+            }
+
+            .back-to-research .button:hover {
+                background: #000000;
+                color: #ffffff;
+            }
+
+
+            /* Footer */
+            #footer {
+                border-top: none !important;
+                padding: 0 !important;
+            }
+
+            .copyright {
+                margin-top: 4rem !important;
+                padding-bottom: 4rem;
+                color: rgba(255, 255, 255, 0.4) !important;
+            }
+
+.video-wrapper.vertical {
+    position: relative;
+    width: min(calc(100% - 30px), 400px);
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
+}
+
+.video-wrapper.vertical iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+            /* 4. Responsive layout */
+            @media screen and (max-width: 980px) {
+
+                #custom-header-nav {
+                    position: relative !important;
+                    flex-direction: column !important;
+                    height: auto !important;
+                    padding: 1rem !important;
+                }
+
+                #nav ul {
+                    flex-wrap: wrap !important;
+                    justify-content: center !important;
+                }
+
+                #nav ul li a {
+                    height: 3rem !important;
+                    line-height: 3rem !important;
+                    padding: 0 0.75rem !important;
+                }
+
+                #wrapper {
+                    padding-top: 1rem !important;
+                }
+
+                .main {
+                    padding: 2.5rem 1.5rem !important;
+                }
+
+                .research-detail-title {
+                    font-size: 1.6rem;
+                }
+
+                .back-to-research .button {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .language-switcher {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+    </head>
+
+
+    <body class="is-preload">
+
+        <div id="custom-header-nav">
+
+            <div class="nav-logo">
+                <a href="../index.html">Youngseo Kim</a>
+            </div>
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="../biography.html">Biography</a></li>
+                    <li><a href="../calendar.html">Calendar</a></li>
+                    <li><a href="../watch.html">Watch</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../research.html">Research</a></li>
+                    <li><a href="../works.html">Works</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+
+        <div id="wrapper">
+
+            <div id="main">
+
+                <section class="main">
+
+                    <!-- Language Buttons -->
+                    <div class="language-switcher">
+                        <button class="lang-button active" onclick="showLanguage('en', this)">EN</button>
+                        <button class="lang-button" onclick="showLanguage('de', this)">DE</button>
+                        <button class="lang-button" onclick="showLanguage('fr', this)">FR</button>
+                        <button class="lang-button" onclick="showLanguage('kr', this)">KR</button>
+                    </div>
+
+                    <header class="major">
+
+                        <div class="research-number">
+                            Research No.1
+                        </div>
+
+                        <div class="language-title" id="title-en">
+                            <h2 class="research-detail-title">
+                                Extended Techniques via Non-Standard Bodily Interfaces
+                            </h2>
+
+                            <p class="research-subtitle">
+                                Percussive Techniques for String Instruments
+                            </p>
+                        </div>
+
+                        <div class="language-title" id="title-de" style="display:none;">
+                            <h2 class="research-detail-title">
+                                Erweiterte Spieltechniken durch nicht-standardisierte körperliche Schnittstellen
+                            </h2>
+
+                            <p class="research-subtitle">
+                                Perkussive Spieltechniken für Streichinstrumente
+                            </p>
+                        </div>
+
+                        <div class="language-title" id="title-fr" style="display:none;">
+                                <h2 class="research-detail-title">
+                                    Techniques étendues par l’intermédiaire d’une interface corporelle non standard
+                                </h2>
+
+                                <p class="research-subtitle">
+                                    Techniques de jeu percussif pour instruments à cordes
+                                </p>
+                        </div>
+
+                        <div class="language-title" id="title-kr" style="display:none;">
+                            <h2 class="research-detail-title">
+                                비표준적 신체 인터페이스를 통한 확장기법
+                            </h2>
+
+                            <p class="research-subtitle">
+                                현악기를 위한 타악적 연주기법
+                            </p>
+                        </div>
+                    </header>
+
+
+                    <div class="research-content">
+
+                    <!-- ENGLISH -->
+                    <div id="lang-en" class="language-content">
+
+    <div class="research-section">
+
+        <div class="research-section-title">
+            PART I — RESEARCH
+        </div>
+
+        <div class="research-section">
+
+            <h3>Research Question</h3>
+
+            <p>
+                <strong>Can a non-standard bodily interface be used in the performance of an existing string instrument?</strong>
+            </p>
+
+            <p>
+                This research investigates whether a part of the body that is not normally used in instrumental performance can be incorporated into the physical process of playing an existing instrument.
+            </p>
+
+            <p>
+                Here, the body is not treated as an instrument or as artistic material, but as an <strong>interface</strong> through which physical force is transferred from the performer to the existing instrument.
+            </p>
+
+            <p>
+                More specifically, focusing on striking the back plate of a violin, the research examines whether a modified physical interface can produce sufficiently controllable sound, attack, dynamics, and rhythmic accuracy.
+            </p>
+
+        </div>
+
+        <div class="research-section-divider"></div>
+
+        <div class="research-section">
+
+            <h3>Research Objective</h3>
+
+            <p>
+                The purpose of this research is to determine whether a non-standard bodily interface can provide sufficient physical control for a repeatable and musically meaningful percussive playing technique.
+            </p>
+
+            <p>
+                The following elements are observed:
+            </p>
+
+            <ul>
+                <li>sound production</li>
+                <li>clarity of attack</li>
+                <li>dynamic control</li>
+                <li>rhythmic accuracy</li>
+                <li>repeatability</li>
+                <li>motor control</li>
+                <li>endurance</li>
+            </ul>
+
+            <p>
+                The research does not simply examine whether sound can be produced. A primary criterion is whether the resulting sound can be <strong>controlled, repeated, and intentionally organized into a musical unit</strong>.
+            </p>
+
+            <p>
+                In conventional percussive performance, performers can generally use implements or objects with relatively stable physical properties. When the body is used as an interface, however, the physical conditions themselves may continuously change.
+            </p>
+
+            <p>
+                The research therefore considers not only the production or volume of sound, but also the precise motor control and repeatability required during performance.
+            </p>
+
+        </div>
+
+        <div class="research-section-divider"></div>
+
+        <div class="research-section">
+
+            <h3>Research Method</h3>
+
+            <h4>Instrument</h4>
+
+            <ul>
+                <li>violin</li>
+                <li>primary striking surface: the back plate of the violin</li>
+                <li>playing method: production of percussive sound through impact</li>
+                <li>the physical interface used to stimulate the instrument is the variable being changed</li>
+            </ul>
+
+            <p>
+                The same violin is maintained throughout the research, while a non-standard bodily interface is used instead of conventional hand or bow techniques to produce sound.
+            </p>
+
+            <p>
+                The primary research focus is therefore not a change in the instrument's structure or musical material, but a <strong>change in the physical relationship between performer and instrument</strong>.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Bodily Interface</h4>
+
+            <p>
+                The bodily interface investigated in this research is the <strong>penis</strong>.
+            </p>
+
+            <p>
+                The penis is not treated as an instrument itself, but as a playing interface through which physical force is transferred to the violin.
+            </p>
+
+            <p>
+                From a percussive perspective, it is not an instrument but a <strong>physical interface comparable to a playing beater</strong> used to strike the back plate of the violin.
+            </p>
+
+            <p>
+                The relevant aspect is not the meaning of the body part itself, but its physical properties in the process of transferring force to the instrument.
+            </p>
+
+            <p>
+                The following properties are observed:
+            </p>
+
+            <ul>
+                <li>rigidity</li>
+                <li>flexibility</li>
+                <li>contact area</li>
+                <li>friction at the contact surface</li>
+                <li>rebound</li>
+                <li>range of movement</li>
+                <li>endurance during repeated movement</li>
+            </ul>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Physical Variables</h4>
+
+            <p>
+                The influence of the bodily interface on impact and playing control is observed through the following variables:
+            </p>
+
+            <ul>
+                <li>impact force</li>
+                <li>contact area</li>
+                <li>rigidity</li>
+                <li>degree of rebound</li>
+                <li>rhythmic control</li>
+                <li>dynamic control</li>
+                <li>consistency of repeated impacts</li>
+            </ul>
+
+            <p>
+                The preliminary observations compare two bodily states in particular:
+            </p>
+
+            <ul>
+                <li>flaccid state</li>
+                <li>erect state</li>
+            </ul>
+
+            <p>
+                By comparing the physical differences in impact and motor control between these two states, the research observes how the physical condition of the body affects sound production and playing possibilities.
+            </p>
+
+        </div>
+
+        <div class="research-section-divider"></div>
+
+        <div class="research-section">
+
+            <h3>Preliminary Observations</h3>
+
+            <h4>Flaccid State</h4>
+
+            <p>
+                The following characteristics were observed in the flaccid state:
+            </p>
+
+            <ul>
+                <li>relatively low impact volume</li>
+                <li>soft attack</li>
+                <li>individual impacts are sometimes insufficiently distinct</li>
+                <li>lower sound projection compared with the erect state</li>
+                <li>relatively limited energy transferred to the violin's back plate</li>
+            </ul>
+
+            <p>
+                A lower degree of rigidity appeared to limit the transfer of energy during contact with the striking surface.
+            </p>
+
+            <p>
+                As a result, sound could be produced, but there were limitations in achieving the clear attack and sufficient volume required for repeated percussive playing.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Erect State</h4>
+
+            <p>
+                Compared with the flaccid state, the erect state showed the following differences:
+            </p>
+
+            <ul>
+                <li>stronger impacts</li>
+                <li>greater volume</li>
+                <li>clearer percussive attack</li>
+                <li>increased impact energy</li>
+                <li>increased difficulty in fine motor control</li>
+                <li>greater difficulty maintaining precise rhythmic repetition</li>
+            </ul>
+
+            <p>
+                As rigidity increased, the impact transferred to the violin's back plate became stronger. At the same time, however, controlling small movements and repeating them at regular intervals became more difficult.
+            </p>
+
+            <p>
+                In other words, <strong>a physical condition that improves sound production may reduce the precision required for musical performance.</strong>
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Impact and Control</h4>
+
+            <p>
+                The observations above indicate that the suitability of a bodily interface cannot be evaluated simply according to how loudly it can produce sound.
+            </p>
+
+            <p>
+                Greater rigidity may increase impact efficiency, while reducing the flexibility required for precise control of rhythm and dynamics.
+            </p>
+
+            <p>
+                The central research question therefore shifts from:
+            </p>
+
+            <blockquote>
+                “Can a sound be produced?”
+            </blockquote>
+
+            <p>
+                to:
+            </p>
+
+            <blockquote>
+                “Can that sound be controlled?”
+            </blockquote>
+
+            <p>
+                For a non-standard bodily interface to function as an actual playing technique, sound production alone is insufficient. Repeatability, temporal accuracy, attack control, and dynamic control must also be achieved.
+            </p>
+
+        </div>
+
+        <div class="research-section-divider"></div>
+
+        <div class="research-section">
+
+            <h3>Limitations and Problems</h3>
+
+            <h4>Physiological Variables</h4>
+
+            <p>
+                When the body is used as a physical interface, individual differences exist in the following areas:
+            </p>
+
+            <ul>
+                <li>rigidity</li>
+                <li>flexibility</li>
+                <li>surface friction</li>
+                <li>contact area</li>
+                <li>rebound</li>
+                <li>range of movement</li>
+                <li>endurance</li>
+            </ul>
+
+            <p>
+                Anatomical differences may also affect the conditions of performance.
+            </p>
+
+            <p>
+                For example, <strong>anatomical characteristics such as circumcision status may potentially create differences in tissue movement, the shape of the contact surface, and frictional properties.</strong> The extent to which such differences affect impact force or controllability would require individual observation and further research.
+            </p>
+
+            <p>
+                The present research therefore considers this as a potential variable.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Intermediate Degree of Rigidity</h4>
+
+            <p>
+                In theory, an intermediate degree of rigidity between the flaccid and erect states could provide a compromise between impact strength and fine motor control.
+            </p>
+
+            <p>
+                However, maintaining such a state consistently over an extended period is difficult.
+            </p>
+
+            <p>
+                The bodily state may also change naturally during performance, making it difficult to reproduce identical conditions.
+            </p>
+
+            <p>
+                Thus, although a physically optimal intermediate point may potentially exist, maintaining it consistently during actual performance presents a separate problem.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Continuous Friction and Changes in Rigidity</h4>
+
+            <p>
+                During repeated impacts, continuous friction and physical stimulation occur between the body and the violin.
+            </p>
+
+            <p>
+                These repeated movements themselves may cause changes in the bodily state during performance.
+            </p>
+
+            <p>
+                The physical condition at the beginning of a performance therefore cannot necessarily be assumed to remain constant throughout the entire performance.
+            </p>
+
+            <p>
+                Such changes may affect:
+            </p>
+
+            <ul>
+                <li>impact force</li>
+                <li>contact area</li>
+                <li>rebound</li>
+                <li>rhythmic accuracy</li>
+                <li>consistency of repeated impacts</li>
+                <li>fine motor control</li>
+            </ul>
+
+            <p>
+                This is distinct from individual anatomical variation. Individual physical characteristics differ from the beginning, but <strong>the act of performing itself may also change the bodily condition during performance.</strong>
+            </p>
+
+            <p>
+                For longer performances, changes in bodily condition therefore need to be considered as a research variable.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Hygiene and Instrument Maintenance</h4>
+
+            <p>
+                Direct contact between the penis and the violin raises practical questions concerning hygiene and instrument maintenance.
+            </p>
+
+            <ul>
+                <li>direct contact between body and instrument</li>
+                <li>possibility of contact with sweat or other bodily fluids</li>
+            </ul>
+
+            <p>
+                For repeated experimentation or performance, hygiene procedures before and after playing, as well as methods for maintaining the instrument's surface, need to be considered separately.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Reproducibility</h4>
+
+            <p>
+                One of the important problems in this research is whether identical playing conditions can be reproduced repeatedly.
+            </p>
+
+            <p>
+                Unlike percussion instruments or playing implements with relatively fixed physical properties, the body does not remain in exactly the same condition.
+            </p>
+
+            <p>
+                Even when the same movement is performed, the result may vary according to factors such as:
+            </p>
+
+            <ul>
+                <li>bodily condition</li>
+                <li>rigidity</li>
+                <li>fatigue</li>
+                <li>contact position</li>
+                <li>contact area</li>
+                <li>movement speed</li>
+                <li>number of repetitions</li>
+            </ul>
+
+            <p>
+                Therefore, the production of sound in a single performance is not sufficient to establish a playing technique.
+            </p>
+
+            <p>
+                Whether consistent results can be achieved through repeated performance is an important criterion for developing this method into a reproducible playing technique.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Social and Performance Context</h4>
+
+            <p>
+                When this method is presented in an actual performance, conditions beyond acoustic and technical considerations also need to be considered.
+            </p>
+
+            <ul>
+                <li>audience perception</li>
+                <li>degree of nudity or exposure</li>
+                <li>possible sexual interpretation</li>
+                <li>venue regulations</li>
+                <li>consent and prior audience awareness</li>
+                <li>performer comfort</li>
+                <li>video and photographic documentation</li>
+                <li>legal and institutional restrictions</li>
+            </ul>
+
+            <p>
+                These issues are separate from the acoustic possibilities of the bodily interface itself and need to be considered independently when developing the method for performance.
+            </p>
+
+        </div>
+
+        <div class="research-section-divider"></div>
+
+        <div class="research-section">
+
+            <h3>Historical Context and Precedents</h3>
+
+            <h4>Direct Precedent</h4>
+
+            <p>
+                Based on the materials investigated so far, <strong>no clear and sufficiently documented historical precedent has been identified in which the penis or vulva was intentionally used as a physical interface for playing an existing musical instrument.</strong>
+            </p>
+
+            <p>
+                The body has long been used as an important medium in contemporary art and performance.
+            </p>
+
+            <p>
+                Existing forms include:
+            </p>
+
+            <ul>
+                <li>using the body itself as artistic material</li>
+                <li>performances directly addressing sexuality</li>
+                <li>combining nudity with instrumental performance</li>
+                <li>using the human body as an acoustic or resonant medium</li>
+            </ul>
+
+            <p>
+                These practices, however, need to be distinguished from the purpose of the present research.
+            </p>
+
+            <p>
+                The present research does not investigate sexuality or the body as artistic expression, but rather the use of <strong>genital tissue itself as a direct physical interface for transferring force to an existing musical instrument.</strong>
+            </p>
+
+            <p>
+                Within this narrower definition, existing body art and sexually explicit performance cannot be regarded as direct technical precedents.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Indirect Historical Context</h4>
+
+            <h4>Nam June Paik and Charlotte Moorman</h4>
+
+            <p>
+                Paik and Moorman's Human Cello (1965) directly addresses the relationship between the human body and a string instrument.
+            </p>
+
+            <p>
+                Its unconventional configuration of the relationship between body and string instrument provides a relevant historical context for the present research.
+            </p>
+
+            <p>
+                However, the genital tissue is not used as a physical interface for directly striking the string instrument.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Nam June Paik</h4>
+
+            <p>
+                Paik's Opera Sextronique (1967) combines instrumental performance with nudity, sexual imagery, and performance.
+            </p>
+
+            <p>
+                The work provides an important context for the relationship between instrumental performance and sexual representation of the body, but it does not use the genitalia themselves as a physical interface for instrumental performance.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Vito Acconci</h4>
+
+            <p>
+                Acconci's Seedbed (1972) combines sexual bodily activity with voice, space, and audience.
+            </p>
+
+            <p>
+                The connection between bodily activity and the sonic and spatial experience of the work makes it relevant as a contextual reference, but it differs from the use of the penis as a technique for playing an existing instrument.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Günter Brus and Viennese Actionism</h4>
+
+            <p>
+                In the work of Günter Brus and other figures associated with Viennese Actionism, the body itself becomes a primary medium of performance.
+            </p>
+
+            <p>
+                The materiality, exposure, pain, and social norms associated with the body are connected to artistic action.
+            </p>
+
+            <p>
+                However, these works likewise do not directly correspond to the use of a specific part of the body as a physical interface for playing an existing instrument.
+            </p>
+
+        </div>
+
+        <div class="research-section-divider"></div>
+
+        <div class="research-section">
+
+            <h3>Distinction from Existing Extended Techniques</h3>
+
+            <p>
+                Existing extended techniques include various methods that depart from conventional playing practices and alter the ways in which an instrument and its sounds are produced.
+            </p>
+
+            <p>
+                Such changes may involve:
+            </p>
+
+            <ul>
+                <li>changing the way the instrument is contacted</li>
+                <li>changing the point of contact</li>
+                <li>changing the object used to stimulate the instrument</li>
+                <li>changing the physical relationship between performer and instrument</li>
+            </ul>
+
+            <p>
+                In the present research, what changes is the <strong>bodily interface used to stimulate the instrument</strong>.
+            </p>
+
+            <p>
+                In other words:
+            </p>
+
+            <ul>
+                <li>instrument: unchanged</li>
+                <li>musical material: unchanged</li>
+                <li>sound-producing surface: unchanged</li>
+                <li>physical interface: changed</li>
+            </ul>
+
+            <p>
+                This approach does not regard extended technique simply as “playing the instrument in a different way,” but extends the concept toward a <strong>change in the physical relationship through which sound is produced.</strong>
+            </p>
+
+            <p>
+                This raises the following question:
+            </p>
+
+            <blockquote>
+                <strong>How far can the concept of instrumental technique be extended, and at what point does the physical interface itself become the primary variable of the experiment?</strong>
+            </blockquote>
+
+        </div>
+
+        <div class="research-section-divider"></div>
+
+        <div class="research-section">
+
+            <h3>Working Hypothesis</h3>
+
+            <p>
+                The preliminary observations confirmed that it is possible to produce percussive sounds on the back plate of a violin using the penis.
+            </p>
+
+            <p>
+                However, the ability to produce sound alone is not sufficient to establish this as a playing technique.
+            </p>
+
+            <p>
+                For it to function as an actual playing technique, the following conditions are required:
+            </p>
+
+            <ul>
+                <li>repeatability</li>
+                <li>dynamic control</li>
+                <li>temporal accuracy</li>
+                <li>attack control</li>
+                <li>rhythmic accuracy</li>
+                <li>endurance</li>
+                <li>intentional motor control</li>
+            </ul>
+
+            <p>
+                The observations so far indicate that <strong>sound production itself is possible, but precise and stable musical control represents the main technical challenge.</strong>
+            </p>
+
+            <p>
+                The next stage of the research therefore does not simply ask whether sound can be produced, but how stably the resulting sound can be controlled and organized into a musical unit through actual musical material.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <div class="research-section-title">
+            PART II — EXPERIMENT
+        </div>
+
+        <div class="research-section">
+
+            <h3>A Study Using a Penis: Clapping Music</h3>
+
+            <p>
+                In order to apply the physical characteristics of the bodily interface identified in the preliminary observations to actual musical material, Steve Reich's Clapping Music (1972) was performed and documented on video.
+            </p>
+
+            <p>
+                The work is based on the repetition of a short and clearly defined rhythmic pattern and was therefore selected as musical material for observing repeated impacts and rhythmic accuracy.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Experimental Material</h4>
+
+            <ul>
+                <li>Steve Reich, Clapping Music (1972)</li>
+                <li>violin</li>
+                <li>penis as bodily interface</li>
+                <li>video documentation</li>
+            </ul>
+
+            <p>
+                The rhythmic material originally performed through hand clapping is replaced by impacts on the back plate of the violin using the penis.
+            </p>
+
+            <p>
+                This allows the bodily interface investigated in the preceding research to be applied within a concrete musical structure and documents its physical characteristics during repeated rhythmic performance.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Experimental Conditions</h4>
+
+            <p>
+                The actual performance video did not fix a specific bodily state as a separate experimental condition.
+            </p>
+
+            <p>
+                The preliminary observations compared the flaccid and erect states separately. During the performance and recording of 《클래핑 뮤직》(Clapping Music, 1972), however, the two states naturally appeared in combination.
+            </p>
+
+            <p>
+                The experiment therefore did not aim to maintain a specific degree of rigidity, but instead recorded the bodily changes occurring during the actual performance and the corresponding changes in impact.
+            </p>
+
+            <p>
+                This approach allows the physical characteristics identified in the preliminary observations to be observed within an actual musical performance.
+            </p>
+
+        </div>
+
+        <div class="research-section">
+
+            <h4>Performance and Video Recording Method</h4>
+
+            <p>
+                The two performance parts of Clapping Music were recorded independently.
+            </p>
+
+            <p>
+                Each part maintained the rhythmic structure of the original work while using the penis to strike the back plate of the violin.
+            </p>
+
+            <p>
+                The two independently recorded performances were then combined into a single video in which both parts are presented together.
+            </p>
+
+            <p>
+                The editing serves only to combine the two performances into a single documented result and was not treated as a separate research variable.
+            </p>
+
+            <p>
+                The video documents the application of the physical characteristics of the bodily interface identified in the preliminary observations to actual musical material.
+            </p>
+
+            <p>
+                It presents how percussive playing through a non-standard bodily interface can be performed within a specific musical structure.
+            </p>
+
+                                    <div class="video-wrapper vertical">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/GABL001ZBxk"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+                        <!-- GERMAN -->
+                        <div id="lang-de" class="language-content" style="display: none;">
+
+<div class="research-section">
+
+    <div class="research-section-title">
+        TEIL I — FORSCHUNG
+    </div>
+
+    <div class="research-section">
+
+        <h3>Forschungsfrage</h3>
+
+        <p>
+            <strong>Kann eine nicht-standardisierte körperliche Schnittstelle beim Spiel eines bestehenden Streichinstruments eingesetzt werden?</strong>
+        </p>
+
+        <p>
+            Die vorliegende Forschung untersucht, ob ein Körperteil, das beim gewöhnlichen Instrumentalspiel nicht verwendet wird, in den physischen Spielvorgang eines bestehenden Instruments einbezogen werden kann.
+        </p>
+
+        <p>
+            Der Körper wird dabei weder als Instrument noch als künstlerisches Material verstanden, sondern als eine <strong>Schnittstelle</strong>, über die physische Kraft vom Körper des Spielers auf das bestehende Instrument übertragen wird.
+        </p>
+
+        <p>
+            Konkret wird ausgehend vom Anschlagen des Bodens einer Violine untersucht, ob über eine veränderte physische Schnittstelle kontrollierbarer Klang, Attacke, Dynamik und rhythmische Genauigkeit erzeugt werden können.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Forschungsziel</h3>
+
+        <p>
+            Ziel der Forschung ist es festzustellen, ob eine nicht-standardisierte körperliche Schnittstelle eine ausreichende physische Kontrolle für eine wiederholbare und musikalisch sinnvolle perkussive Spieltechnik ermöglicht.
+        </p>
+
+        <p>
+            Dabei werden folgende Aspekte untersucht:
+        </p>
+
+        <ul>
+            <li>Klangerzeugung</li>
+            <li>Klarheit der Attacke</li>
+            <li>Dynamikkontrolle</li>
+            <li>rhythmische Genauigkeit</li>
+            <li>Wiederholbarkeit</li>
+            <li>motorische Kontrolle</li>
+            <li>Ausdauer</li>
+        </ul>
+
+        <p>
+            Es wird nicht lediglich untersucht, ob überhaupt ein Klang erzeugt werden kann. Ein wesentliches Kriterium ist vielmehr, ob der erzeugte Klang <strong>kontrolliert, wiederholt und bewusst zu einer musikalischen Einheit organisiert werden kann</strong>.
+        </p>
+
+        <p>
+            Beim konventionellen perkussiven Spiel können relativ stabile physische Eigenschaften von Schlägeln oder anderen Gegenständen genutzt werden. Wird dagegen der Körper als Schnittstelle eingesetzt, können sich die physischen Bedingungen selbst kontinuierlich verändern.
+        </p>
+
+        <p>
+            Die Forschung berücksichtigt deshalb neben der Klangerzeugung und Lautstärke auch die präzise motorische Kontrolle und die Wiederholbarkeit während des Spielvorgangs.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Forschungsmethode</h3>
+
+        <h4>Instrument</h4>
+
+        <ul>
+            <li>Violine</li>
+            <li>hauptsächliche Anschlagfläche: Boden der Violine</li>
+            <li>Spielweise: perkussive Klangerzeugung durch Anschlagen</li>
+            <li>verändert wird die physische Schnittstelle, mit der das Instrument angeregt wird</li>
+        </ul>
+
+        <p>
+            Während der gesamten Untersuchung wird dieselbe Violine verwendet. Anstelle konventioneller Spielweisen mit Hand oder Bogen wird eine andere körperliche Schnittstelle zur Klangerzeugung eingesetzt.
+        </p>
+
+        <p>
+            Im Mittelpunkt steht somit nicht eine Veränderung der Konstruktion des Instruments oder des musikalischen Materials, sondern eine <strong>Veränderung der physischen Beziehung zwischen Spieler und Instrument</strong>.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Körperliche Schnittstelle</h4>
+
+        <p>
+            Die in dieser Forschung untersuchte körperliche Schnittstelle ist der <strong>Penis</strong>.
+        </p>
+
+        <p>
+            Der Penis wird nicht als Instrument selbst verstanden, sondern als Spielschnittstelle, über die physische Kraft auf die Violine übertragen wird.
+        </p>
+
+        <p>
+            Aus perkussiver Perspektive handelt es sich nicht um ein Instrument, sondern um eine <strong>physische Schnittstelle, die mit einem Schlägel vergleichbar ist</strong>, mit der der Boden der Violine angeschlagen wird.
+        </p>
+
+        <p>
+            Entscheidend ist dabei nicht die Bedeutung des Körperteils selbst, sondern seine physischen Eigenschaften bei der Übertragung von Kraft auf das Instrument.
+        </p>
+
+        <p>
+            Untersucht werden insbesondere:
+        </p>
+
+        <ul>
+            <li>Steifigkeit</li>
+            <li>Flexibilität</li>
+            <li>Kontaktfläche</li>
+            <li>Reibung an der Kontaktfläche</li>
+            <li>Rückprall</li>
+            <li>Bewegungsumfang</li>
+            <li>Belastbarkeit bei wiederholten Bewegungen</li>
+        </ul>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Physische Variablen</h4>
+
+        <p>
+            Der Einfluss der körperlichen Schnittstelle auf Anschlag und Spielkontrolle wird anhand folgender Variablen untersucht:
+        </p>
+
+        <ul>
+            <li>Anschlagskraft</li>
+            <li>Kontaktfläche</li>
+            <li>Steifigkeit</li>
+            <li>Grad des Rückpralls</li>
+            <li>rhythmische Kontrolle</li>
+            <li>Dynamikkontrolle</li>
+            <li>Konsistenz wiederholter Anschläge</li>
+        </ul>
+
+        <p>
+            In den Vorbeobachtungen werden insbesondere zwei körperliche Zustände miteinander verglichen:
+        </p>
+
+        <ul>
+            <li>schlaffer Zustand</li>
+            <li>erigierter Zustand</li>
+        </ul>
+
+        <p>
+            Durch den Vergleich der physischen Unterschiede beim Anschlag und bei der motorischen Kontrolle zwischen diesen beiden Zuständen wird untersucht, wie der körperliche Zustand die Klangerzeugung und die Spielbarkeit beeinflusst.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Vorbeobachtungen</h3>
+
+        <h4>Schlaffer Zustand</h4>
+
+        <p>
+            Im schlaffen Zustand wurden folgende Eigenschaften beobachtet:
+        </p>
+
+        <ul>
+            <li>relativ geringe Lautstärke der Anschläge</li>
+            <li>weiche Attacke</li>
+            <li>einzelne Anschläge sind teilweise nicht deutlich voneinander getrennt</li>
+            <li>geringere Klangprojektion als im erigierten Zustand</li>
+            <li>vergleichsweise begrenzte Energieübertragung auf den Boden der Violine</li>
+        </ul>
+
+        <p>
+            Eine geringere Steifigkeit schien die Übertragung von Energie während des Kontakts mit der Anschlagfläche zu begrenzen.
+        </p>
+
+        <p>
+            Dadurch konnte zwar ein Klang erzeugt werden, jedoch zeigten sich Einschränkungen bei der Erzeugung einer klaren Attacke und einer ausreichenden Lautstärke für wiederholtes perkussives Spiel.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Erekter Zustand</h4>
+
+        <p>
+            Im Vergleich zum schlaffen Zustand wurden im erigierten Zustand folgende Unterschiede beobachtet:
+        </p>
+
+        <ul>
+            <li>stärkere Anschläge</li>
+            <li>größere Lautstärke</li>
+            <li>deutlichere perkussive Attacke</li>
+            <li>erhöhte Anschlagsenergie</li>
+            <li>gleichzeitig größere Schwierigkeiten bei der feinen motorischen Kontrolle</li>
+            <li>größere Schwierigkeiten bei der Aufrechterhaltung präziser rhythmischer Wiederholungen</li>
+        </ul>
+
+        <p>
+            Mit zunehmender Steifigkeit wurde der auf den Boden der Violine übertragene Impuls stärker. Gleichzeitig wurde es schwieriger, kleine Bewegungen zu kontrollieren und sie in gleichmäßigen Abständen zu wiederholen.
+        </p>
+
+        <p>
+            Mit anderen Worten: <strong>Ein physischer Zustand, der die Klangerzeugung verbessert, kann die für eine musikalische Aufführung notwendige Präzision verringern.</strong>
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Anschlag und Kontrolle</h4>
+
+        <p>
+            Die Beobachtungen zeigen, dass die Eignung einer körperlichen Schnittstelle nicht allein danach beurteilt werden kann, wie laut sie einen Klang erzeugen kann.
+        </p>
+
+        <p>
+            Eine höhere Steifigkeit kann die Effizienz des Anschlags erhöhen, während gleichzeitig die für eine präzise Kontrolle von Rhythmus und Dynamik notwendige Flexibilität abnehmen kann.
+        </p>
+
+        <p>
+            Die zentrale Forschungsfrage verschiebt sich daher von:
+        </p>
+
+        <blockquote>
+            „Kann ein Klang erzeugt werden?“
+        </blockquote>
+
+        <p>
+            zu:
+        </p>
+
+        <blockquote>
+            „Kann dieser Klang kontrolliert werden?“
+        </blockquote>
+
+        <p>
+            Damit eine nicht-standardisierte körperliche Schnittstelle als tatsächliche Spieltechnik eingesetzt werden kann, reicht die Klangerzeugung allein nicht aus. Wiederholbarkeit, zeitliche Genauigkeit sowie Kontrolle von Attacke und Dynamik müssen ebenfalls gewährleistet sein.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Grenzen und Probleme</h3>
+
+        <h4>Physiologische Variablen</h4>
+
+        <p>
+            Bei der Verwendung des Körpers als physische Schnittstelle bestehen individuelle Unterschiede in folgenden Bereichen:
+        </p>
+
+        <ul>
+            <li>Steifigkeit</li>
+            <li>Flexibilität</li>
+            <li>Oberflächenreibung</li>
+            <li>Kontaktfläche</li>
+            <li>Rückprall</li>
+            <li>Bewegungsumfang</li>
+            <li>Belastbarkeit</li>
+        </ul>
+
+        <p>
+            Auch anatomische Unterschiede können die Spielbedingungen beeinflussen.
+        </p>
+
+        <p>
+            So können beispielsweise <strong>anatomische Merkmale wie der Beschneidungsstatus möglicherweise Unterschiede in der Bewegung des Gewebes, der Form der Kontaktfläche und den Reibungseigenschaften hervorrufen.</strong> Inwieweit solche Unterschiede die Anschlagskraft oder Kontrollierbarkeit beeinflussen, müsste durch individuelle Beobachtung und weitere Forschung untersucht werden.
+        </p>
+
+        <p>
+            In der vorliegenden Forschung wird dies daher als potenzielle Variable berücksichtigt.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Mittlerer Grad der Steifigkeit</h4>
+
+        <p>
+            Theoretisch könnte ein mittlerer Grad der Steifigkeit zwischen dem schlaffen und dem erigierten Zustand einen Kompromiss zwischen Anschlagsstärke und feiner motorischer Kontrolle ermöglichen.
+        </p>
+
+        <p>
+            Es ist jedoch schwierig, einen solchen Zustand über einen längeren Zeitraum konstant aufrechtzuerhalten.
+        </p>
+
+        <p>
+            Darüber hinaus kann sich der körperliche Zustand während des Spiels von selbst verändern, wodurch identische Bedingungen nur schwer reproduzierbar sind.
+        </p>
+
+        <p>
+            Auch wenn möglicherweise ein physisch optimaler Zwischenbereich existiert, stellt seine konstante Aufrechterhaltung während einer tatsächlichen Aufführung ein eigenes Problem dar.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Kontinuierliche Reibung und Veränderungen der Steifigkeit</h4>
+
+        <p>
+            Während wiederholter Anschläge entstehen zwischen Körper und Violine kontinuierliche Reibung und physische Stimulation.
+        </p>
+
+        <p>
+            Diese wiederholten Bewegungen selbst können zu Veränderungen des körperlichen Zustands während des Spiels führen.
+        </p>
+
+        <p>
+            Der körperliche Zustand zu Beginn einer Aufführung kann daher nicht unbedingt als über die gesamte Dauer konstant angenommen werden.
+        </p>
+
+        <p>
+            Solche Veränderungen können folgende Faktoren beeinflussen:
+        </p>
+
+        <ul>
+            <li>Anschlagskraft</li>
+            <li>Kontaktfläche</li>
+            <li>Rückprall</li>
+            <li>rhythmische Genauigkeit</li>
+            <li>Konsistenz wiederholter Anschläge</li>
+            <li>feine motorische Kontrolle</li>
+        </ul>
+
+        <p>
+            Dies ist von individuellen anatomischen Unterschieden zu unterscheiden. Die körperlichen Eigenschaften verschiedener Personen unterscheiden sich bereits zu Beginn, aber <strong>auch der eigentliche Spielvorgang kann den körperlichen Zustand während der Aufführung verändern.</strong>
+        </p>
+
+        <p>
+            Bei längeren Aufführungen müssen Veränderungen des körperlichen Zustands daher als Forschungsvariable berücksichtigt werden.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Hygiene und Instrumentenpflege</h4>
+
+        <p>
+            Der direkte Kontakt zwischen Penis und Violine wirft praktische Fragen hinsichtlich Hygiene und Instrumentenpflege auf.
+        </p>
+
+        <ul>
+            <li>direkter Kontakt zwischen Körper und Instrument</li>
+            <li>mögliche Berührung mit Schweiß oder anderen Körperflüssigkeiten</li>
+        </ul>
+
+        <p>
+            Bei wiederholten Experimenten oder Aufführungen müssen Hygiene vor und nach dem Spiel sowie die Pflege der Oberfläche des Instruments gesondert berücksichtigt werden.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Reproduzierbarkeit</h4>
+
+        <p>
+            Eine wichtige Frage dieser Forschung ist, ob identische Spielbedingungen wiederholt reproduziert werden können.
+        </p>
+
+        <p>
+            Im Gegensatz zu Schlaginstrumenten oder Spielhilfsmitteln mit relativ konstanten physischen Eigenschaften bleibt der Körper nicht in exakt demselben Zustand.
+        </p>
+
+        <p>
+            Selbst bei derselben Bewegung kann das Ergebnis von folgenden Faktoren abhängen:
+        </p>
+
+        <ul>
+            <li>körperlicher Zustand</li>
+            <li>Steifigkeit</li>
+            <li>Ermüdung</li>
+            <li>Kontaktposition</li>
+            <li>Kontaktfläche</li>
+            <li>Bewegungsgeschwindigkeit</li>
+            <li>Anzahl der Wiederholungen</li>
+        </ul>
+
+        <p>
+            Die Tatsache, dass in einer einzelnen Aufführung ein Klang erzeugt werden kann, reicht daher nicht aus, um eine Spieltechnik zu etablieren.
+        </p>
+
+        <p>
+            Die Fähigkeit, auch bei wiederholten Aufführungen konsistente Ergebnisse zu erzielen, ist ein wesentliches Kriterium für die Entwicklung dieser Methode zu einer reproduzierbaren Spieltechnik.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Sozialer und performativer Kontext</h4>
+
+        <p>
+            Bei einer tatsächlichen Aufführung müssen neben akustischen und technischen Fragen weitere Bedingungen berücksichtigt werden:
+        </p>
+
+        <ul>
+            <li>Wahrnehmung durch das Publikum</li>
+            <li>Grad der Nacktheit bzw. Sichtbarkeit</li>
+            <li>mögliche sexuelle Interpretation</li>
+            <li>Regeln des Veranstaltungsortes</li>
+            <li>Einverständnis und vorherige Information des Publikums</li>
+            <li>körperliches Wohlbefinden des Performers</li>
+            <li>Video- und Fotodokumentation</li>
+            <li>rechtliche und institutionelle Einschränkungen</li>
+        </ul>
+
+        <p>
+            Diese Fragen sind von den akustischen Möglichkeiten der körperlichen Schnittstelle selbst zu unterscheiden und müssen bei einer Weiterentwicklung zur Aufführung unabhängig betrachtet werden.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Historischer Kontext und Präzedenzfälle</h3>
+
+        <h4>Direkter Präzedenzfall</h4>
+
+        <p>
+            Auf Grundlage der bisher untersuchten Materialien konnte <strong>kein eindeutig dokumentierter und ausreichend belegter historischer Präzedenzfall gefunden werden, bei dem Penis oder Vulva bewusst als physische Schnittstelle zum Spielen eines bestehenden Musikinstruments eingesetzt wurden.</strong>
+        </p>
+
+        <p>
+            Der Körper wird seit Langem als wichtiges Medium in der zeitgenössischen Kunst und Performance eingesetzt.
+        </p>
+
+        <p>
+            Dazu gehören unter anderem:
+        </p>
+
+        <ul>
+            <li>der Körper selbst als künstlerisches Material</li>
+            <li>Performances, die sich direkt mit Sexualität auseinandersetzen</li>
+            <li>die Verbindung von Nacktheit und Instrumentalspiel</li>
+            <li>der menschliche Körper als akustisches oder resonantes Medium</li>
+        </ul>
+
+        <p>
+            Diese Praktiken müssen jedoch von der Zielsetzung der vorliegenden Forschung unterschieden werden.
+        </p>
+
+        <p>
+            Die vorliegende Forschung untersucht nicht Sexualität oder den Körper als künstlerischen Ausdruck, sondern die Verwendung <strong>von Genitalgewebe selbst als direkter physischer Schnittstelle zur Übertragung von Kraft auf ein bestehendes Musikinstrument.</strong>
+        </p>
+
+        <p>
+            Unter dieser engeren Definition können bestehende Körperkunst und sexuell explizite Performances nicht als direkte technische Präzedenzfälle betrachtet werden.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Indirekter historischer Kontext</h4>
+
+        <h4>Nam June Paik und Charlotte Moorman</h4>
+
+        <p>
+            Paik und Moorman's Human Cello (1965) thematisiert unmittelbar die Beziehung zwischen menschlichem Körper und Streichinstrument.
+        </p>
+
+        <p>
+            Die ungewöhnliche Gestaltung dieser Beziehung zwischen Körper und Streichinstrument bietet einen relevanten historischen Kontext für die vorliegende Forschung.
+        </p>
+
+        <p>
+            Das Genitalgewebe wird dort jedoch nicht als physische Schnittstelle zum direkten Anschlagen des Streichinstruments eingesetzt.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Nam June Paik</h4>
+
+        <p>
+            Paiks Opera Sextronique (1967) verbindet Instrumentalspiel mit Nacktheit, sexuellen Bildern und Performance.
+        </p>
+
+        <p>
+            Die Arbeit bietet einen wichtigen Kontext für die Beziehung zwischen Instrumentalspiel und sexueller Darstellung des Körpers, verwendet jedoch nicht die Genitalien selbst als physische Schnittstelle des Instrumentalspiels.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Vito Acconci</h4>
+
+        <p>
+            Acconcis Seedbed (1972) verbindet sexuelle körperliche Aktivität mit Stimme, Raum und Publikum.
+        </p>
+
+        <p>
+            Die Verbindung zwischen körperlicher Handlung sowie der klanglichen und räumlichen Erfahrung des Werks macht es als kontextuellen Bezug relevant. Es unterscheidet sich jedoch von der Verwendung des Penis als Spieltechnik für ein bestehendes Instrument.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Günter Brus und Wiener Aktionismus</h4>
+
+        <p>
+            In den Arbeiten von Günter Brus und anderen Vertretern des Wiener Aktionismus wird der Körper selbst zu einem zentralen Medium der Performance.
+        </p>
+
+        <p>
+            Materialität, Entblößung, Schmerz und gesellschaftliche Normen des Körpers werden mit künstlerischer Handlung verbunden.
+        </p>
+
+        <p>
+            Auch diese Arbeiten entsprechen jedoch nicht unmittelbar der Verwendung eines bestimmten Körperteils als physische Schnittstelle zum Spielen eines bestehenden Instruments.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Abgrenzung von bestehenden erweiterten Spieltechniken</h3>
+
+        <p>
+            Bestehende Extended Techniques umfassen verschiedene Methoden, die von konventionellen Spielweisen abweichen und die Art der Klangerzeugung auf einem Instrument verändern.
+        </p>
+
+        <p>
+            Solche Veränderungen können unter anderem Folgendes betreffen:
+        </p>
+
+        <ul>
+            <li>die Art des Kontakts mit dem Instrument</li>
+            <li>die Kontaktstelle</li>
+            <li>den Gegenstand, mit dem das Instrument angeregt wird</li>
+            <li>die physische Beziehung zwischen Spieler und Instrument</li>
+        </ul>
+
+        <p>
+            In der vorliegenden Forschung verändert sich die <strong>körperliche Schnittstelle, mit der das Instrument angeregt wird</strong>.
+        </p>
+
+        <p>
+            Das bedeutet:
+        </p>
+
+        <ul>
+            <li>Instrument: unverändert</li>
+            <li>musikalisches Material: unverändert</li>
+            <li>klangerzeugende Oberfläche: unverändert</li>
+            <li>physische Schnittstelle: verändert</li>
+        </ul>
+
+        <p>
+            Aus dieser Perspektive wird Extended Technique nicht lediglich als „eine andere Art, das Instrument zu spielen“ verstanden, sondern als <strong>Veränderung der physischen Beziehung, durch die Klang entsteht</strong>.
+        </p>
+
+        <p>
+            Daraus ergibt sich folgende Frage:
+        </p>
+
+        <blockquote>
+            <strong>Wie weit kann der Begriff der Instrumentaltechnik erweitert werden, und ab welchem Punkt wird die physische Schnittstelle selbst zur zentralen Variable des Experiments?</strong>
+        </blockquote>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Arbeitshypothese</h3>
+
+        <p>
+            Die Vorbeobachtungen haben gezeigt, dass es möglich ist, mit dem Penis perkussive Klänge auf dem Boden einer Violine zu erzeugen.
+        </p>
+
+        <p>
+            Die bloße Möglichkeit der Klangerzeugung reicht jedoch nicht aus, um dies als Spieltechnik zu etablieren.
+        </p>
+
+        <p>
+            Damit es als tatsächliche Spieltechnik eingesetzt werden kann, sind folgende Bedingungen erforderlich:
+        </p>
+
+        <ul>
+            <li>Wiederholbarkeit</li>
+            <li>Dynamikkontrolle</li>
+            <li>zeitliche Genauigkeit</li>
+            <li>Attackenkontrolle</li>
+            <li>rhythmische Genauigkeit</li>
+            <li>Ausdauer</li>
+            <li>bewusste motorische Kontrolle</li>
+        </ul>
+
+        <p>
+            Die bisherigen Beobachtungen zeigen, dass <strong>die Klangerzeugung selbst möglich ist, die präzise und stabile musikalische Kontrolle jedoch die zentrale technische Herausforderung darstellt.</strong>
+        </p>
+
+        <p>
+            Die nächste Forschungsphase fragt daher nicht lediglich, ob Klang erzeugt werden kann, sondern wie stabil dieser Klang innerhalb konkreten musikalischen Materials kontrolliert und zu einer musikalischen Einheit organisiert werden kann.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="research-section-divider"></div>
+
+<div class="research-section">
+
+    <div class="research-section-title">
+        TEIL II — EXPERIMENT
+    </div>
+
+    <div class="research-section">
+
+        <h3>A Study Using a Penis: Clapping Music</h3>
+
+        <p>
+            Um die in den Vorbeobachtungen festgestellten physischen Eigenschaften der körperlichen Schnittstelle auf konkretes musikalisches Material anzuwenden, wurde Steve Reichs Clapping Music (1972) aufgeführt und per Video dokumentiert.
+        </p>
+
+        <p>
+            Das Werk basiert auf der Wiederholung eines kurzen und klar definierten rhythmischen Musters und wurde daher als musikalisches Material zur Beobachtung wiederholter Anschläge und rhythmischer Genauigkeit ausgewählt.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Experimentelles Material</h4>
+
+        <ul>
+            <li>Steve Reich, Clapping Music (1972)</li>
+            <li>Violine</li>
+            <li>Penis als körperliche Schnittstelle</li>
+            <li>Videodokumentation</li>
+        </ul>
+
+        <p>
+            Das im Original durch Händeklatschen ausgeführte rhythmische Material wird durch Anschläge des Penis auf den Boden der Violine ersetzt.
+        </p>
+
+        <p>
+            Auf diese Weise wird die zuvor untersuchte körperliche Schnittstelle innerhalb einer konkreten musikalischen Struktur eingesetzt und ihre physischen Eigenschaften während der wiederholten rhythmischen Ausführung dokumentiert.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Experimentelle Bedingungen</h4>
+
+        <p>
+            Die tatsächliche Aufführung für das Video legte keinen bestimmten körperlichen Zustand als gesonderte experimentelle Bedingung fest.
+        </p>
+
+        <p>
+            In den Vorbeobachtungen wurden der schlaffe und der erigierte Zustand getrennt miteinander verglichen. Während der Aufführung und Aufnahme von Clapping Music traten beide Zustände jedoch auf natürliche Weise gemischt auf.
+        </p>
+
+        <p>
+            Das Experiment zielte daher nicht darauf ab, einen bestimmten Grad der Steifigkeit aufrechtzuerhalten, sondern dokumentierte die während der tatsächlichen Aufführung auftretenden körperlichen Veränderungen und die damit verbundenen Veränderungen der Anschläge.
+        </p>
+
+        <p>
+            Auf diese Weise können die in den Vorbeobachtungen festgestellten physischen Eigenschaften innerhalb einer tatsächlichen musikalischen Aufführung beobachtet werden.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Methode der Aufführung und Videodokumentation</h4>
+
+        <p>
+            Die beiden Spielparts von Clapping Music wurden unabhängig voneinander aufgenommen.
+        </p>
+
+        <p>
+            Bei jedem Part wurde die rhythmische Struktur des Originals beibehalten, während der Boden der Violine mit dem Penis angeschlagen wurde.
+        </p>
+
+        <p>
+            Die beiden unabhängig aufgenommenen Aufführungen wurden anschließend zu einem einzigen Video zusammengeführt, in dem beide Parts gemeinsam präsentiert werden.
+        </p>
+
+        <p>
+            Die Bearbeitung dient ausschließlich dazu, die beiden Aufführungen zu einem gemeinsamen dokumentarischen Ergebnis zusammenzuführen, und wurde nicht als eigene Forschungsvariable behandelt.
+        </p>
+
+        <p>
+            Das Video dokumentiert die Anwendung der in den Vorbeobachtungen festgestellten physischen Eigenschaften der körperlichen Schnittstelle auf konkretes musikalisches Material.
+        </p>
+
+        <p>
+            Es zeigt, wie perkussives Spiel über eine nicht-standardisierte körperliche Schnittstelle innerhalb einer konkreten musikalischen Struktur ausgeführt werden kann.
+        </p>
+
+                                    <div class="video-wrapper vertical">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/GABL001ZBxk"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+                        <!-- FRENCH -->
+                        <div id="lang-fr" class="language-content" style="display: none;">
+
+<div class="research-section">
+
+    <div class="research-section-title">
+        PARTIE I — RECHERCHE
+    </div>
+
+    <div class="research-section">
+
+        <h3>Question de recherche</h3>
+
+        <p>
+            <strong>Une interface corporelle non standard peut-elle être utilisée dans le jeu d’un instrument à cordes existant ?</strong>
+        </p>
+
+        <p>
+            Cette recherche étudie la possibilité d’intégrer une partie du corps qui n’est normalement pas utilisée dans la pratique instrumentale au processus physique de jeu d’un instrument existant.
+        </p>
+
+        <p>
+            Le corps n’est ici considéré ni comme un instrument ni comme un matériau artistique, mais comme une <strong>interface</strong> permettant de transmettre une force physique du corps de l’interprète vers l’instrument existant.
+        </p>
+
+        <p>
+            Plus précisément, en prenant comme point de départ la percussion de la table arrière d’un violon, cette recherche examine si une interface physique modifiée peut produire un son suffisamment contrôlable, ainsi qu’une attaque, une dynamique et une précision rythmique maîtrisables.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Objectif de la recherche</h3>
+
+        <p>
+            L’objectif de cette recherche est de déterminer si une interface corporelle non standard peut fournir un contrôle physique suffisant pour une technique de jeu percussif répétable et musicalement significative.
+        </p>
+
+        <p>
+            Les éléments suivants sont observés :
+        </p>
+
+        <ul>
+            <li>production du son</li>
+            <li>netteté de l’attaque</li>
+            <li>contrôle de la dynamique</li>
+            <li>précision rythmique</li>
+            <li>répétabilité</li>
+            <li>contrôle moteur</li>
+            <li>endurance</li>
+        </ul>
+
+        <p>
+            La recherche ne cherche pas simplement à déterminer si un son peut être produit. Le critère principal est de savoir si le son produit peut être <strong>contrôlé, répété et organisé intentionnellement en une unité musicale</strong>.
+        </p>
+
+        <p>
+            Dans le jeu percussif conventionnel, l’interprète peut généralement utiliser des baguettes ou des objets présentant des propriétés physiques relativement stables. Lorsque le corps est utilisé comme interface, les conditions physiques elles-mêmes peuvent toutefois changer continuellement.
+        </p>
+
+        <p>
+            La recherche prend donc en compte non seulement la production et le volume sonore, mais aussi le contrôle moteur précis et la répétabilité nécessaires au cours de l’interprétation.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Méthode de recherche</h3>
+
+        <h4>Instrument</h4>
+
+        <ul>
+            <li>violon</li>
+            <li>principale surface de percussion : table arrière du violon</li>
+            <li>mode de jeu : production d’un son percussif par impact</li>
+            <li>l’interface physique utilisée pour stimuler l’instrument constitue la variable modifiée</li>
+        </ul>
+
+        <p>
+            Le même violon est conservé tout au long de la recherche, tandis qu’une interface corporelle non conventionnelle est utilisée à la place des modes de jeu habituels avec la main ou l’archet.
+        </p>
+
+        <p>
+            L’objet principal de la recherche n’est donc ni une modification de la structure de l’instrument ni une modification du matériau musical, mais une <strong>modification de la relation physique entre l’interprète et l’instrument</strong>.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Interface corporelle</h4>
+
+        <p>
+            L’interface corporelle étudiée dans cette recherche est le <strong>pénis</strong>.
+        </p>
+
+        <p>
+            Le pénis n’est pas considéré comme un instrument en soi, mais comme une interface de jeu permettant de transmettre une force physique au violon.
+        </p>
+
+        <p>
+            D’un point de vue percussif, il ne s’agit pas d’un instrument, mais d’une <strong>interface physique comparable à une baguette de percussion</strong>, utilisée pour frapper la table arrière du violon.
+        </p>
+
+        <p>
+            Ce qui importe ici n’est pas la signification de cette partie du corps, mais ses propriétés physiques dans le processus de transmission de la force à l’instrument.
+        </p>
+
+        <p>
+            Les propriétés principalement observées sont :
+        </p>
+
+        <ul>
+            <li>rigidité</li>
+            <li>flexibilité</li>
+            <li>surface de contact</li>
+            <li>friction au niveau de la surface de contact</li>
+            <li>rebond</li>
+            <li>amplitude du mouvement</li>
+            <li>endurance lors de mouvements répétés</li>
+        </ul>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Variables physiques</h4>
+
+        <p>
+            L’influence de l’interface corporelle sur l’impact et le contrôle du jeu est observée à travers les variables suivantes :
+        </p>
+
+        <ul>
+            <li>force de l’impact</li>
+            <li>surface de contact</li>
+            <li>rigidité</li>
+            <li>degré de rebond</li>
+            <li>contrôle rythmique</li>
+            <li>contrôle dynamique</li>
+            <li>régularité des impacts répétés</li>
+        </ul>
+
+        <p>
+            Les observations préliminaires comparent notamment deux états corporels :
+        </p>
+
+        <ul>
+            <li>état flaccide</li>
+            <li>état en érection</li>
+        </ul>
+
+        <p>
+            En comparant les différences physiques d’impact et de contrôle moteur entre ces deux états, la recherche observe comment l’état physique du corps influence la production sonore et les possibilités de jeu.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Observations préliminaires</h3>
+
+        <h4>État flaccide</h4>
+
+        <p>
+            Dans l’état flaccide, les caractéristiques suivantes ont été observées :
+        </p>
+
+        <ul>
+            <li>volume d’impact relativement faible</li>
+            <li>attaque douce</li>
+            <li>impacts individuels parfois insuffisamment distincts</li>
+            <li>projection sonore plus faible que dans l’état en érection</li>
+            <li>énergie relativement limitée transmise à la table arrière du violon</li>
+        </ul>
+
+        <p>
+            Une rigidité moindre semble limiter la transmission d’énergie lors du contact avec la surface de percussion.
+        </p>
+
+        <p>
+            Le son peut ainsi être produit, mais des limites apparaissent lorsqu’il s’agit d’obtenir une attaque claire et un volume suffisant pour un jeu percussif répété.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>État en érection</h4>
+
+        <p>
+            Par rapport à l’état flaccide, l’état en érection présente les différences suivantes :
+        </p>
+
+        <ul>
+            <li>impacts plus forts</li>
+            <li>volume plus important</li>
+            <li>attaque percussive plus nette</li>
+            <li>augmentation de l’énergie de l’impact</li>
+            <li>difficulté accrue du contrôle moteur fin</li>
+            <li>difficulté accrue à maintenir une répétition rythmique précise</li>
+        </ul>
+
+        <p>
+            Lorsque la rigidité augmente, l’impulsion transmise à la table arrière du violon devient plus forte. En revanche, le contrôle des petits mouvements et leur répétition à intervalles réguliers deviennent plus difficiles.
+        </p>
+
+        <p>
+            Autrement dit, <strong>un état physique qui améliore la production sonore peut réduire la précision nécessaire à l’interprétation musicale.</strong>
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Impact et contrôle</h4>
+
+        <p>
+            Les observations précédentes montrent que l’adéquation d’une interface corporelle ne peut pas être évaluée uniquement en fonction du volume sonore qu’elle permet de produire.
+        </p>
+
+        <p>
+            Une plus grande rigidité peut augmenter l’efficacité de l’impact, tout en réduisant la flexibilité nécessaire au contrôle précis du rythme et de la dynamique.
+        </p>
+
+        <p>
+            La question centrale de la recherche se déplace donc de :
+        </p>
+
+        <blockquote>
+            « Peut-on produire un son ? »
+        </blockquote>
+
+        <p>
+            vers :
+        </p>
+
+        <blockquote>
+            « Peut-on contrôler ce son ? »
+        </blockquote>
+
+        <p>
+            Pour qu’une interface corporelle non standard puisse constituer une véritable technique de jeu, la simple production sonore ne suffit pas. La répétabilité, la précision temporelle ainsi que le contrôle de l’attaque et de la dynamique doivent également être assurés.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Limites et problèmes</h3>
+
+        <h4>Variables physiologiques</h4>
+
+        <p>
+            Lorsque le corps est utilisé comme interface physique, des différences individuelles existent notamment dans les domaines suivants :
+        </p>
+
+        <ul>
+            <li>rigidité</li>
+            <li>flexibilité</li>
+            <li>friction de la surface</li>
+            <li>surface de contact</li>
+            <li>rebond</li>
+            <li>amplitude du mouvement</li>
+            <li>endurance</li>
+        </ul>
+
+        <p>
+            Les différences anatomiques peuvent également influencer les conditions de jeu.
+        </p>
+
+        <p>
+            Par exemple, <strong>des caractéristiques anatomiques telles que le statut de circoncision peuvent potentiellement entraîner des différences dans le mouvement des tissus, la forme de la surface de contact et les propriétés de friction.</strong> L’influence réelle de ces différences sur la force d’impact ou la contrôlabilité nécessiterait des observations individuelles et des recherches complémentaires.
+        </p>
+
+        <p>
+            La présente recherche les considère donc comme une variable potentielle.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Degré intermédiaire de rigidité</h4>
+
+        <p>
+            En théorie, un degré intermédiaire de rigidité entre les états flaccide et en érection pourrait offrir un compromis entre la force de l’impact et le contrôle moteur fin.
+        </p>
+
+        <p>
+            Cependant, il est difficile de maintenir un tel état de manière constante pendant une période prolongée.
+        </p>
+
+        <p>
+            L’état corporel peut également se modifier naturellement au cours de l’interprétation, ce qui rend difficile la reproduction de conditions identiques.
+        </p>
+
+        <p>
+            Même si un point intermédiaire physiquement optimal peut potentiellement exister, son maintien constant pendant une interprétation réelle constitue un problème distinct.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Friction continue et changements de rigidité</h4>
+
+        <p>
+            Lors d’impacts répétés, une friction et une stimulation physique continues se produisent entre le corps et le violon.
+        </p>
+
+        <p>
+            Ces mouvements répétés peuvent eux-mêmes entraîner des modifications de l’état corporel au cours de l’interprétation.
+        </p>
+
+        <p>
+            L’état corporel au début de l’interprétation ne peut donc pas nécessairement être considéré comme constant pendant toute sa durée.
+        </p>
+
+        <p>
+            Ces changements peuvent influencer :
+        </p>
+
+        <ul>
+            <li>la force de l’impact</li>
+            <li>la surface de contact</li>
+            <li>le rebond</li>
+            <li>la précision rythmique</li>
+            <li>la régularité des impacts répétés</li>
+            <li>le contrôle moteur fin</li>
+        </ul>
+
+        <p>
+            Ce problème est distinct des différences anatomiques individuelles. Les caractéristiques physiques diffèrent dès le départ d’une personne à l’autre, mais <strong>le fait même de jouer peut également modifier l’état corporel pendant l’interprétation.</strong>
+        </p>
+
+        <p>
+            Dans le cas d’une interprétation prolongée, les changements de l’état corporel doivent donc être considérés comme une variable de recherche.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Hygiène et entretien de l’instrument</h4>
+
+        <p>
+            Le contact direct entre le pénis et le violon soulève des questions pratiques concernant l’hygiène et l’entretien de l’instrument.
+        </p>
+
+        <ul>
+            <li>contact direct entre le corps et l’instrument</li>
+            <li>possibilité de contact avec la transpiration ou d’autres fluides corporels</li>
+        </ul>
+
+        <p>
+            Pour des expérimentations ou des interprétations répétées, les procédures d’hygiène avant et après le jeu ainsi que les méthodes d’entretien de la surface de l’instrument doivent être considérées séparément.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Reproductibilité</h4>
+
+        <p>
+            L’une des questions importantes de cette recherche est de savoir si des conditions de jeu identiques peuvent être reproduites de manière répétée.
+        </p>
+
+        <p>
+            Contrairement aux instruments de percussion ou aux accessoires de jeu présentant des propriétés physiques relativement fixes, le corps ne reste pas exactement dans le même état.
+        </p>
+
+        <p>
+            Même en reproduisant le même mouvement, le résultat peut varier en fonction de plusieurs facteurs :
+        </p>
+
+        <ul>
+            <li>état corporel</li>
+            <li>rigidité</li>
+            <li>fatigue</li>
+            <li>position de contact</li>
+            <li>surface de contact</li>
+            <li>vitesse du mouvement</li>
+            <li>nombre de répétitions</li>
+        </ul>
+
+        <p>
+            La production d’un son lors d’une seule interprétation ne suffit donc pas à établir une technique de jeu.
+        </p>
+
+        <p>
+            La capacité à obtenir des résultats constants lors d’interprétations répétées constitue un critère important pour transformer cette méthode en technique de jeu reproductible.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Contexte social et performatif</h4>
+
+        <p>
+            Lorsque cette méthode est présentée dans le cadre d’une performance, d’autres conditions doivent être prises en compte au-delà des questions acoustiques et techniques :
+        </p>
+
+        <ul>
+            <li>perception du public</li>
+            <li>degré de nudité ou d’exposition</li>
+            <li>possibilité d’une interprétation sexuelle</li>
+            <li>règlement du lieu de représentation</li>
+            <li>consentement et information préalable du public</li>
+            <li>confort physique de l’interprète</li>
+            <li>documentation vidéo et photographique</li>
+            <li>restrictions juridiques et institutionnelles</li>
+        </ul>
+
+        <p>
+            Ces questions sont distinctes des possibilités acoustiques de l’interface corporelle elle-même et doivent être considérées séparément lors du développement de cette méthode pour la scène.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Contexte historique et précédents</h3>
+
+        <h4>Précédent direct</h4>
+
+        <p>
+            Sur la base des documents étudiés jusqu’à présent, <strong>aucun précédent historique clair et suffisamment documenté n’a été identifié dans lequel le pénis ou la vulve aurait été intentionnellement utilisé comme interface physique pour jouer un instrument de musique existant.</strong>
+        </p>
+
+        <p>
+            Le corps est depuis longtemps utilisé comme médium important dans l’art contemporain et la performance.
+        </p>
+
+        <p>
+            On trouve notamment :
+        </p>
+
+        <ul>
+            <li>le corps lui-même comme matériau artistique</li>
+            <li>des performances abordant directement la sexualité</li>
+            <li>l’association de la nudité et du jeu instrumental</li>
+            <li>le corps humain comme médium acoustique ou résonant</li>
+        </ul>
+
+        <p>
+            Ces pratiques doivent cependant être distinguées de l’objectif de la présente recherche.
+        </p>
+
+        <p>
+            La présente recherche n’étudie ni la sexualité ni le corps comme expression artistique, mais l’utilisation <strong>du tissu génital lui-même comme interface physique directe permettant de transmettre une force à un instrument de musique existant.</strong>
+        </p>
+
+        <p>
+            Dans cette définition plus restreinte, l’art corporel existant et les performances sexuellement explicites ne peuvent pas être considérés comme des précédents techniques directs.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Contexte historique indirect</h4>
+
+        <h4>Nam June Paik et Charlotte Moorman</h4>
+
+        <p>
+            Le travail de Paik et Moorman, Human Cello (1965), aborde directement la relation entre le corps humain et l’instrument à cordes.
+        </p>
+
+        <p>
+            La configuration inhabituelle de cette relation entre corps et instrument à cordes constitue un contexte historique pertinent pour la présente recherche.
+        </p>
+
+        <p>
+            Cependant, le tissu génital n’y est pas utilisé comme interface physique pour frapper directement l’instrument à cordes.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Nam June Paik</h4>
+
+        <p>
+            Opera Sextronique (1967) de Paik associe jeu instrumental, nudité, imagerie sexuelle et performance.
+        </p>
+
+        <p>
+            Cette œuvre constitue un contexte important pour la relation entre pratique instrumentale et représentation sexuelle du corps, mais elle n’utilise pas les organes génitaux eux-mêmes comme interface physique du jeu instrumental.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Vito Acconci</h4>
+
+        <p>
+            Seedbed (1972) de Acconci associe activité corporelle sexuelle, voix, espace et public.
+        </p>
+
+        <p>
+            Le lien entre l’action corporelle et l’expérience sonore et spatiale de l’œuvre en fait une référence contextuelle pertinente, mais cette œuvre se distingue de l’utilisation du pénis comme technique de jeu d’un instrument existant.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Günter Brus et l’Actionnisme viennois</h4>
+
+        <p>
+            Dans les travaux de Günter Brus et d’autres représentants de l’Actionnisme viennois, le corps lui-même devient un médium central de la performance.
+        </p>
+
+        <p>
+            La matérialité, l’exposition, la douleur et les normes sociales liées au corps sont mises en relation avec l’action artistique.
+        </p>
+
+        <p>
+            Ces travaux ne correspondent cependant pas directement à l’utilisation d’une partie spécifique du corps comme interface physique pour jouer un instrument existant.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Distinction avec les techniques étendues existantes</h3>
+
+        <p>
+            Les techniques étendues comprennent différentes méthodes qui s’écartent des modes de jeu conventionnels et modifient la manière dont le son est produit sur un instrument.
+        </p>
+
+        <p>
+            Ces modifications peuvent notamment concerner :
+        </p>
+
+        <ul>
+            <li>la manière de contacter l’instrument</li>
+            <li>le point de contact</li>
+            <li>l’objet utilisé pour stimuler l’instrument</li>
+            <li>la relation physique entre l’interprète et l’instrument</li>
+        </ul>
+
+        <p>
+            Dans la présente recherche, ce qui change est <strong>l’interface corporelle utilisée pour stimuler l’instrument</strong>.
+        </p>
+
+        <p>
+            Autrement dit :
+        </p>
+
+        <ul>
+            <li>instrument : identique</li>
+            <li>matériau musical : identique</li>
+            <li>surface productrice du son : identique</li>
+            <li>interface physique : modifiée</li>
+        </ul>
+
+        <p>
+            Dans cette perspective, la technique étendue n’est pas simplement comprise comme « jouer de l’instrument d’une autre manière », mais comme une <strong>modification de la relation physique par laquelle le son est produit</strong>.
+        </p>
+
+        <p>
+            Cela conduit à la question suivante :
+        </p>
+
+        <blockquote>
+            <strong>Jusqu’où le concept de technique instrumentale peut-il être étendu, et à partir de quel point l’interface physique elle-même devient-elle la variable principale de l’expérimentation ?</strong>
+        </blockquote>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>Hypothèse de travail</h3>
+
+        <p>
+            Les observations préliminaires ont montré qu’il est possible de produire des sons percussifs sur la table arrière d’un violon à l’aide du pénis.
+        </p>
+
+        <p>
+            Cependant, la seule possibilité de produire un son ne suffit pas à établir cette pratique comme une technique de jeu.
+        </p>
+
+        <p>
+            Pour qu’elle puisse être utilisée comme véritable technique instrumentale, les conditions suivantes sont nécessaires :
+        </p>
+
+        <ul>
+            <li>répétabilité</li>
+            <li>contrôle de la dynamique</li>
+            <li>précision temporelle</li>
+            <li>contrôle de l’attaque</li>
+            <li>précision rythmique</li>
+            <li>endurance</li>
+            <li>contrôle moteur intentionnel</li>
+        </ul>
+
+        <p>
+            Les observations réalisées jusqu’à présent indiquent que <strong>la production sonore est possible, mais que le contrôle musical précis et stable constitue le principal défi technique.</strong>
+        </p>
+
+        <p>
+            La prochaine étape de la recherche ne consiste donc pas simplement à déterminer si un son peut être produit, mais à observer dans quelle mesure ce son peut être contrôlé de manière stable et organisé en une unité musicale à partir d’un matériau musical concret.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="research-section-divider"></div>
+
+<div class="research-section">
+
+    <div class="research-section-title">
+        PARTIE II — EXPÉRIMENTATION
+    </div>
+
+    <div class="research-section">
+
+        <h3>A Study Using a Penis: Clapping Music</h3>
+
+        <p>
+            Afin d’appliquer à un matériau musical concret les caractéristiques physiques de l’interface corporelle identifiées lors des observations préliminaires, Clapping Music (1972) de Steve Reich a été interprété et enregistré en vidéo.
+        </p>
+
+        <p>
+            Cette œuvre repose sur la répétition d’un motif rythmique court et clairement défini et a donc été choisie comme matériau musical permettant d’observer les impacts répétés et la précision rythmique.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Matériel expérimental</h4>
+
+        <ul>
+            <li>Steve Reich, Clapping Music (1972)</li>
+            <li>violon</li>
+            <li>pénis comme interface corporelle</li>
+            <li>documentation vidéo</li>
+        </ul>
+
+        <p>
+            Le matériau rythmique, initialement exécuté par des claquements de mains, est remplacé par des impacts du pénis sur la table arrière du violon.
+        </p>
+
+        <p>
+            Cette transformation permet d’appliquer l’interface corporelle étudiée précédemment à une structure musicale concrète et d’enregistrer ses caractéristiques physiques au cours d’une interprétation rythmique répétitive.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Conditions expérimentales</h4>
+
+        <p>
+            La vidéo de l’interprétation réelle ne fixe pas un état corporel précis comme condition expérimentale distincte.
+        </p>
+
+        <p>
+            Les observations préliminaires comparaient séparément les états flaccide et en érection. Au cours de l’interprétation et de l’enregistrement de Clapping Music, les deux états sont cependant apparus naturellement de manière mélangée.
+        </p>
+
+        <p>
+            L’expérimentation ne cherchait donc pas à maintenir un degré précis de rigidité, mais à enregistrer les changements corporels qui apparaissent au cours de l’interprétation réelle ainsi que les changements correspondants dans les impacts.
+        </p>
+
+        <p>
+            Cette méthode permet d’observer les caractéristiques physiques identifiées lors des observations préliminaires dans le contexte d’une véritable interprétation musicale.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>Méthode d’interprétation et d’enregistrement vidéo</h4>
+
+        <p>
+            Les deux parties de Clapping Music ont été enregistrées indépendamment.
+        </p>
+
+        <p>
+            Pour chaque partie, la structure rythmique de l’œuvre originale a été conservée, tandis que la table arrière du violon était frappée à l’aide du pénis.
+        </p>
+
+        <p>
+            Les deux interprétations enregistrées indépendamment ont ensuite été réunies dans une seule vidéo présentant les deux parties simultanément.
+        </p>
+
+        <p>
+            Le montage sert uniquement à réunir les deux interprétations en un seul résultat documentaire et n’a pas été considéré comme une variable de recherche distincte.
+        </p>
+
+        <p>
+            La vidéo documente l’application des caractéristiques physiques de l’interface corporelle identifiées lors des observations préliminaires à un matériau musical concret.
+        </p>
+
+        <p>
+            Elle présente la manière dont un jeu percussif utilisant une interface corporelle non standard peut être réalisé au sein d’une structure musicale précise.
+        </p>
+
+                                    <div class="video-wrapper vertical">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/GABL001ZBxk"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+
+    </div>
+
+</div>
+
+                        </div>
+
+
+
+
+
+
+                        <!-- KOREAN -->
+                        <div id="lang-kr" class="language-content" style="display:none;">
+
+<div class="research-section">
+
+    <div class="research-section-title">
+        PART I — 연구
+    </div>
+
+    <div class="research-section">
+
+        <h3>연구 질문</h3>
+
+        <p>
+            <strong>비표준적인 신체 인터페이스를 기존의 현악기 연주에 사용할 수 있는가?</strong>
+        </p>
+
+        <p>
+            본 연구는 일반적인 악기 연주에서 사용되지 않는 신체의 일부를 기존 악기의 물리적 연주 과정에 포함할 수 있는지를 조사한다.
+        </p>
+
+        <p>
+            여기서 신체는 악기나 예술적 소재로 취급되는 것이 아니라, 연주자의 신체에서 기존 악기로 물리적인 힘을 전달하는 <strong>인터페이스</strong>로 다룬다.
+        </p>
+
+        <p>
+            구체적으로 바이올린 뒷판을 타격하는 방식을 중심으로, 변화된 물리적 인터페이스를 통해 충분히 조절 가능한 소리, 어택, 다이내믹 및 리듬 정확도를 만들어낼 수 있는지를 살펴본다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>연구 목적</h3>
+
+        <p>
+            본 연구의 목적은 비표준적인 신체 인터페이스가 반복 가능하고 음악적으로 의미 있는 타악적 연주를 위한 충분한 물리적 조절력을 제공할 수 있는지를 확인하는 데 있다.
+        </p>
+
+        <p>
+            이를 위해 다음과 같은 요소를 중심으로 관찰한다.
+        </p>
+
+        <ul>
+            <li>소리의 발생</li>
+            <li>어택의 명확성</li>
+            <li>다이내믹 조절</li>
+            <li>리듬 정확도</li>
+            <li>반복 가능성</li>
+            <li>운동 조절</li>
+            <li>지속 가능성</li>
+        </ul>
+
+        <p>
+            단순히 소리가 발생하는지 여부만을 확인하는 것이 아니라, 발생한 소리를 <strong>조절하고 반복하며 의도적으로 하나의 음악적 단위로 구성할 수 있는지</strong>를 주요 기준으로 삼는다.
+        </p>
+
+        <p>
+            특히 기존의 타악적 연주에서는 연주자가 비교적 일정한 물리적 특성을 가진 채나 물체를 사용할 수 있지만, 신체를 인터페이스로 사용할 경우 물리적 조건 자체가 계속 변화할 수 있다.
+        </p>
+
+        <p>
+            따라서 본 연구에서는 소리의 크기나 발생 여부뿐 아니라, 연주 과정에서 요구되는 정밀한 운동 조절과 반복 가능성을 함께 조사한다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>연구 방법</h3>
+
+        <h4>도구</h4>
+
+        <ul>
+            <li>바이올린</li>
+            <li>주요 타격면: 바이올린 뒷판</li>
+            <li>연주 방식: 타격을 통한 타악적 소리 발생</li>
+            <li>변화시키는 것은 악기를 자극하는 물리적 인터페이스이다.</li>
+        </ul>
+
+        <p>
+            본 연구에서는 동일한 바이올린을 유지하면서, 일반적인 손이나 활 대신 다른 신체 인터페이스를 사용하여 소리를 발생시킨다.
+        </p>
+
+        <p>
+            이를 통해 악기의 구조나 음악적 재료의 변화가 아니라 <strong>악기와 연주자의 물리적 관계 변화</strong>를 주요 연구 대상으로 삼는다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>신체 인터페이스</h4>
+
+        <p>
+            이 연구에서 조사하는 신체 인터페이스는 <strong>성기</strong>이다.
+        </p>
+
+        <p>
+            성기는 악기 자체로 취급하지 않으며, 바이올린에 물리적인 힘을 전달하는 하나의 연주 인터페이스로 다룬다.
+        </p>
+
+        <p>
+            타악적 관점에서 보면 성기는 악기가 아니라 바이올린의 뒷판을 타격하는 <strong>연주채와 유사한 물리적 인터페이스</strong>에 해당한다.
+        </p>
+
+        <p>
+            이때 중요한 것은 신체 부위 자체의 의미가 아니라, 그것이 악기에 힘을 전달하는 과정에서 가지는 물리적 특성이다.
+        </p>
+
+        <p>
+            주요하게 관찰하는 특성은 다음과 같다.
+        </p>
+
+        <ul>
+            <li>경직도</li>
+            <li>유연성</li>
+            <li>접촉 면적</li>
+            <li>접촉면의 마찰</li>
+            <li>반발</li>
+            <li>움직임의 범위</li>
+            <li>반복적인 움직임에 대한 지속 가능성</li>
+        </ul>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>물리적 변수</h4>
+
+        <p>
+            신체 인터페이스의 특성이 실제 타격과 연주 조절에 어떤 영향을 주는지를 다음과 같은 변수로 관찰한다.
+        </p>
+
+        <ul>
+            <li>타격의 힘</li>
+            <li>접촉 면적</li>
+            <li>경직도</li>
+            <li>반발 정도</li>
+            <li>리듬 조절</li>
+            <li>다이내믹 조절</li>
+            <li>반복 타격의 일관성</li>
+        </ul>
+
+        <p>
+            예비 관찰에서는 특히 다음 두 가지 신체적 상태를 비교한다.
+        </p>
+
+        <ul>
+            <li>이완 상태</li>
+            <li>발기 상태</li>
+        </ul>
+
+        <p>
+            이 두 상태에서 나타나는 타격의 물리적 차이와 운동 조절의 차이를 비교하여, 신체의 물리적 상태가 실제 소리와 연주 가능성에 어떤 영향을 주는지를 관찰한다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>예비 관찰</h3>
+
+        <h4>이완 상태</h4>
+
+        <p>
+            이완 상태에서는 다음과 같은 특성이 관찰되었다.
+        </p>
+
+        <ul>
+            <li>상대적으로 낮은 타격음량</li>
+            <li>부드러운 어택</li>
+            <li>개별적인 타격이 명확하게 분리되지 않는 경우가 있음</li>
+            <li>발기 상태에 비해 낮은 소리의 투사력</li>
+            <li>타격 시 바이올린 뒷판으로 전달되는 에너지가 상대적으로 제한됨</li>
+        </ul>
+
+        <p>
+            신체의 경직도가 낮을수록 타격면과의 접촉 과정에서 에너지가 충분히 전달되지 않는 것으로 관찰되었다.
+        </p>
+
+        <p>
+            그 결과 소리는 발생하지만, 반복적인 타악적 연주에서 요구되는 명확한 어택과 충분한 음량을 확보하기에는 한계가 나타났다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>발기 상태</h4>
+
+        <p>
+            발기 상태에서는 이완 상태와 비교하여 다음과 같은 차이가 관찰되었다.
+        </p>
+
+        <ul>
+            <li>더 강한 타격</li>
+            <li>더 큰 음량</li>
+            <li>보다 명확한 타악적 어택</li>
+            <li>타격 에너지의 증가</li>
+            <li>동시에 세밀한 운동 조절의 어려움 증가</li>
+            <li>정확한 리듬 반복을 지속하기 어려움</li>
+        </ul>
+
+        <p>
+            경직도가 높아질수록 바이올린 뒷판에 전달되는 충격은 강해졌지만, 반대로 작은 움직임을 조절하거나 일정한 간격으로 반복하는 것은 더 어려워졌다.
+        </p>
+
+        <p>
+            즉, <strong>소리의 발생을 향상시키는 물리적 상태가 음악적 연주에 필요한 정밀도를 감소시킬 수 있다.</strong>
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>충격과 조절</h4>
+
+        <p>
+            위의 관찰을 통해 신체 인터페이스의 적합성을 단순히 소리가 얼마나 크게 발생하는가만으로 판단하기 어렵다는 점이 나타났다.
+        </p>
+
+        <p>
+            경직도가 높아지면 타격 효율은 증가할 수 있지만, 리듬과 다이내믹을 세밀하게 조절하는 데 필요한 유연성은 감소할 수 있다.
+        </p>
+
+        <p>
+            이에 따라 연구의 핵심 질문은 다음과 같이 이동한다.
+        </p>
+
+        <blockquote>
+            <strong>“소리를 낼 수 있는가?”</strong>
+        </blockquote>
+
+        <p>
+            에서
+        </p>
+
+        <blockquote>
+            <strong>“그 소리를 조절할 수 있는가?”</strong>
+        </blockquote>
+
+        <p>
+            비표준적인 신체 인터페이스가 실제 연주기법으로 사용되기 위해서는 단순한 소리의 발생을 넘어, 반복성과 시간적 정확성, 어택의 조절, 다이내믹의 조절이 함께 확보되어야 한다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>한계와 문제점</h3>
+
+        <h4>생리학적 변수</h4>
+
+        <p>
+            신체를 물리적 인터페이스로 사용할 경우 개인마다 다음과 같은 차이가 존재한다.
+        </p>
+
+        <ul>
+            <li>경직도</li>
+            <li>유연성</li>
+            <li>표면의 마찰</li>
+            <li>접촉 면적</li>
+            <li>반발</li>
+            <li>움직임의 범위</li>
+            <li>지속 가능성</li>
+        </ul>
+
+        <p>
+            해부학적 차이 역시 연주 조건에 영향을 줄 수 있다.
+        </p>
+
+        <p>
+            예를 들어 <strong>포경 여부와 같은 개인의 해부학적 특성은 피부와 조직의 움직임, 접촉면의 형태 및 마찰 특성에 차이를 만들 가능성이 있다.</strong> 이러한 차이가 실제 타격의 강도나 조절 가능성에 어떤 영향을 미치는지는 개별적인 관찰과 추가적인 연구가 필요하다.
+        </p>
+
+        <p>
+            따라서 본 연구에서는 이를 하나의 잠재적인 변수로 고려한다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>중간 정도의 경직 상태</h4>
+
+        <p>
+            이론적으로는 이완 상태와 발기 상태 사이의 중간 정도 경직 상태가 타격의 강도와 세밀한 운동 조절 사이에서 절충적인 조건을 제공할 가능성이 있다.
+        </p>
+
+        <p>
+            그러나 이러한 상태를 장시간 일정하게 유지하는 것은 어렵다.
+        </p>
+
+        <p>
+            또한 연주 중 신체적 상태가 자연스럽게 변화할 수 있기 때문에, 동일한 조건을 반복적으로 재현하기 어렵다는 문제가 있다.
+        </p>
+
+        <p>
+            즉, 물리적으로는 이상적인 중간 지점이 존재할 가능성이 있지만, 실제 연주에서 그것을 일정하게 유지하는 것은 별도의 문제이다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>지속적인 마찰과 경직 상태의 변화</h4>
+
+        <p>
+            반복적인 타격을 수행하는 동안 신체와 바이올린 사이에는 지속적인 마찰과 물리적 자극이 발생한다.
+        </p>
+
+        <p>
+            이러한 반복적인 움직임 자체가 연주 중 신체의 경직 상태에 변화를 가져올 수 있다.
+        </p>
+
+        <p>
+            따라서 연주 시작 시의 신체 상태가 연주 전체에 걸쳐 동일하게 유지된다고 볼 수 없다.
+        </p>
+
+        <p>
+            이러한 변화는 다음과 같은 요소에 영향을 줄 수 있다.
+        </p>
+
+        <ul>
+            <li>타격 강도</li>
+            <li>접촉 면적</li>
+            <li>반발</li>
+            <li>리듬 정확도</li>
+            <li>반복 타격의 일관성</li>
+            <li>세밀한 운동 조절</li>
+        </ul>
+
+        <p>
+            이는 개인의 해부학적 차이와는 별개의 문제이다. 개인의 신체적 특성이 처음부터 서로 다를 뿐 아니라, <strong>연주하는 행위 자체가 연주 중 신체 조건을 변화시킬 수 있기 때문이다.</strong>
+        </p>
+
+        <p>
+            따라서 장시간의 연주에서는 신체 상태의 변화 자체를 하나의 연구 변수로 고려할 필요가 있다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>위생 및 악기 관리</h4>
+
+        <p>
+            성기와 바이올린이 직접 접촉하는 방식은 위생과 악기 관리에 관한 실질적인 문제를 발생시킨다.
+        </p>
+
+        <ul>
+            <li>신체와 악기의 직접적인 접촉</li>
+            <li>땀이나 기타 신체 분비물의 접촉 가능성</li>
+        </ul>
+
+        <p>
+            반복적인 실험이나 공연을 위해서는 연주 전후의 신체 및 악기 위생 관리, 악기 표면의 관리 방식 등을 별도로 고려해야 한다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>재현 가능성</h4>
+
+        <p>
+            본 연구에서 중요한 문제 중 하나는 동일한 연주 조건을 반복적으로 재현할 수 있는가이다.
+        </p>
+
+        <p>
+            고정된 물리적 특성을 가진 타악기나 연주 도구와 달리 신체는 항상 동일한 상태를 유지하지 않는다.
+        </p>
+
+        <p>
+            같은 움직임을 수행하더라도 다음과 같은 요인에 따라 결과가 달라질 수 있다.
+        </p>
+
+        <ul>
+            <li>신체적 상태</li>
+            <li>경직도</li>
+            <li>피로</li>
+            <li>접촉 위치</li>
+            <li>접촉 면적</li>
+            <li>움직임의 속도</li>
+            <li>반복 횟수</li>
+        </ul>
+
+        <p>
+            따라서 단 한 번의 연주에서 소리가 발생했다는 사실만으로 하나의 연주기법이 성립했다고 판단하기는 어렵다.
+        </p>
+
+        <p>
+            반복적인 연주에서도 일정한 결과를 얻을 수 있는지가 실제 연주기법으로 발전하기 위한 중요한 기준이 된다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>사회적·공연적 맥락</h4>
+
+        <p>
+            이 방법을 실제 공연으로 제시할 경우 음향적·기술적인 문제 외에도 다음과 같은 조건을 고려해야 한다.
+        </p>
+
+        <ul>
+            <li>관객의 인식</li>
+            <li>노출 여부</li>
+            <li>성적인 해석 가능성</li>
+            <li>공연장 규정</li>
+            <li>동의와 관객의 사전 인지</li>
+            <li>연주자의 신체적 편안함</li>
+            <li>영상 및 사진 기록</li>
+            <li>법적·제도적 제한</li>
+        </ul>
+
+        <p>
+            이러한 문제는 신체 인터페이스 자체의 음향적 가능성과는 별개의 문제이며, 실제 공연으로 확장하기 위해서는 별도로 고려해야 한다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>역사적 맥락과 선례</h3>
+
+        <h4>직접적인 선례</h4>
+
+        <p>
+            현재까지 조사한 자료에서는 <strong>성기 또는 외음부를 기존의 악기를 연주하기 위한 물리적 인터페이스로 의도적으로 사용한 명확하고 충분히 기록된 역사적 선례를 확인하지 못했다.</strong>
+        </p>
+
+        <p>
+            신체는 오랫동안 현대미술과 퍼포먼스에서 중요한 표현 수단으로 사용되어 왔다.
+        </p>
+
+        <p>
+            특히 다음과 같은 형태의 작업은 이미 다양한 방식으로 존재한다.
+        </p>
+
+        <ul>
+            <li>신체 자체를 예술적 소재로 사용하는 작업</li>
+            <li>성을 직접적으로 다루는 퍼포먼스</li>
+            <li>나체와 악기 연주를 결합하는 작업</li>
+            <li>인간의 신체를 음향적·공명적 매체로 사용하는 작업</li>
+        </ul>
+
+        <p>
+            그러나 이러한 작업과 본 연구의 목적은 구분할 필요가 있다.
+        </p>
+
+        <p>
+            본 연구가 조사하는 것은 성이나 신체를 예술적으로 표현하는 것이 아니라, <strong>성기의 조직 자체를 기존 악기에 물리적인 힘을 전달하는 직접적인 인터페이스로 사용하는 연주 방식</strong>이다.
+        </p>
+
+        <p>
+            이처럼 범위를 좁혀 보면 기존의 신체예술이나 성적 퍼포먼스와 직접적으로 동일한 선례로 보기 어렵다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>간접적인 역사적 맥락</h4>
+
+        <h4>백남준(Nam June Paik)과 샬롯 무어만(Charlotte Moorman)</h4>
+
+        <p>
+            백남준과 무어만의 Human Cello (1965)는 인간의 신체와 현악기의 관계를 직접적으로 다룬 작업이다.
+        </p>
+
+        <p>
+            신체와 현악기의 관계를 기존의 연주 방식과 다르게 구성했다는 점에서 본 연구와 관련된 역사적 맥락을 제공한다.
+        </p>
+
+        <p>
+            그러나 이 작업에서 성기가 현악기를 직접 타격하는 물리적 인터페이스로 사용되는 것은 아니다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>백남준(Nam June Paik)</h4>
+
+        <p>
+            백남준의 Opera Sextronique (1967)는 악기 연주와 나체, 성적 이미지 및 퍼포먼스를 결합한다.
+        </p>
+
+        <p>
+            이 작업은 악기 연주와 성적 신체 표현의 관계를 보여주는 중요한 맥락이지만, 성기 자체를 악기 연주의 물리적 인터페이스로 사용하는 작업은 아니다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>비토 아콘치(Vito Acconci)</h4>
+
+        <p>
+            아콘치의 Seedbed (1972)는 성적인 신체 활동을 음성, 공간, 관객과 결합한 퍼포먼스이다.
+        </p>
+
+        <p>
+            신체적 행위가 작품의 소리와 공간적 경험에 직접적으로 연결된다는 점에서 참고할 수 있지만, 기존 악기의 연주기법으로 성기를 사용하는 연구와는 구분된다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>귄터 브루스(Günter Brus)와 빈 행동주의</h4>
+
+        <p>
+            귄터 브루스를 비롯한 빈 행동주의의 작업에서는 신체 자체가 퍼포먼스의 주요한 매체가 된다.
+        </p>
+
+        <p>
+            신체의 물질성, 노출, 고통 및 사회적 규범에 대한 문제를 예술적 행위와 연결한다는 점에서 역사적 맥락을 제공한다.
+        </p>
+
+        <p>
+            그러나 여기에서도 신체의 특정 부위를 기존 악기의 물리적 연주 인터페이스로 사용하는 것과는 직접적인 연관이 없다.
+        </p>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>기존 확장기법과의 구분</h3>
+
+        <p>
+            기존의 확장기법(extended techniques)은 일반적인 연주법에서 벗어나 악기와 소리를 생성하는 방식을 변화시키는 다양한 방법을 포함한다.
+        </p>
+
+        <p>
+            이러한 변화는 다음과 같은 방식으로 나타날 수 있다.
+        </p>
+
+        <ul>
+            <li>악기에 접촉하는 방식의 변화</li>
+            <li>접촉 위치의 변화</li>
+            <li>악기를 자극하는 물체의 변화</li>
+            <li>연주자와 악기 사이의 물리적 관계 변화</li>
+        </ul>
+
+        <p>
+            본 연구에서 변화하는 것은 <strong>악기를 자극하는 신체적 인터페이스</strong>이다.
+        </p>
+
+        <p>
+            즉,
+        </p>
+
+        <ul>
+            <li>악기: 동일</li>
+            <li>음악적 재료: 동일</li>
+            <li>소리를 발생시키는 표면: 동일</li>
+            <li>물리적 인터페이스: 변화</li>
+        </ul>
+
+        <p>
+            이러한 관점에서 본 연구는 확장기법을 단순히 “악기를 다른 방식으로 연주하는 것”으로만 보지 않고, <strong>소리가 발생하는 물리적 관계 자체를 변화시키는 것</strong>으로 확장하여 생각한다.
+        </p>
+
+        <p>
+            이를 통해 다음과 같은 질문을 제기할 수 있다.
+        </p>
+
+        <blockquote>
+            <strong>악기 연주기법이라는 개념은 어디까지 확장될 수 있으며, 어느 지점에서 물리적 인터페이스 자체가 실험의 주요 변수가 되는가?</strong>
+        </blockquote>
+
+    </div>
+
+    <div class="research-section-divider"></div>
+
+    <div class="research-section">
+
+        <h3>작업 가설</h3>
+
+        <p>
+            예비 관찰을 통해 성기를 이용하여 바이올린 뒷판에서 타악적 소리를 발생시키는 것이 가능하다는 점을 확인하였다.
+        </p>
+
+        <p>
+            그러나 소리를 발생시킬 수 있다는 사실만으로 이것을 하나의 연주기법이라고 판단할 수는 없다.
+        </p>
+
+        <p>
+            실제 연주기법으로 사용하기 위해서는 다음과 같은 조건이 필요하다.
+        </p>
+
+        <ul>
+            <li>반복 가능성</li>
+            <li>다이내믹 조절</li>
+            <li>시간적 정확성</li>
+            <li>어택의 조절</li>
+            <li>리듬 정확도</li>
+            <li>지속 가능성</li>
+            <li>의도적인 운동 조절</li>
+        </ul>
+
+        <p>
+            현재까지의 관찰에서는 <strong>소리의 발생 자체는 가능하지만, 정확하고 안정적인 음악적 조절이 가장 큰 기술적 과제</strong>로 나타났다.
+        </p>
+
+        <p>
+            이에 따라 다음 단계의 연구에서는 단순히 소리를 발생시킬 수 있는지를 확인하는 것이 아니라, 발생한 소리를 얼마나 안정적으로 조절하여 하나의 음악적 단위로 구성할 수 있는지를 실제 음악적 재료를 통해 확인한다.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="research-section-divider"></div>
+
+<div class="research-section">
+
+    <div class="research-section-title">
+        PART II — 실험
+    </div>
+
+    <div class="research-section">
+
+        <h3>A Study Using a Penis: Clapping Music</h3>
+
+        <p>
+            앞선 예비 관찰에서 확인된 신체 인터페이스의 물리적 특성을 실제 음악적 재료에 적용하기 위해, 스티브 라이히(Steve Reich)의 Clapping Music (1972)을 연주하고 이를 영상으로 기록하였다.
+        </p>
+
+        <p>
+            이 작품은 짧고 명확한 리듬 패턴의 반복을 중심으로 구성되어 있어, 반복적인 타격과 리듬 정확도를 관찰하기 위한 음악적 재료로 선택하였다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>실험 재료</h4>
+
+        <ul>
+            <li>Steve Reich, Clapping Music (1972)</li>
+            <li>바이올린</li>
+            <li>신체 인터페이스로서의 성기</li>
+            <li>영상 기록</li>
+        </ul>
+
+        <p>
+            원작에서 손뼉으로 연주되는 리듬을 성기를 이용한 바이올린 뒷판의 타격으로 치환한다.
+        </p>
+
+        <p>
+            이를 통해 앞선 연구에서 조사한 신체 인터페이스를 실제 음악적 구조 안에 적용하고, 반복적인 리듬을 연주하는 과정에서 나타나는 물리적 특성을 기록한다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>실험 조건</h4>
+
+        <p>
+            실제 연주 영상에서는 특정한 신체적 상태를 별도의 조건으로 고정하지 않았다.
+        </p>
+
+        <p>
+            앞선 예비 관찰에서는 이완 상태와 발기 상태를 각각 비교했지만, 클래핑 뮤직을 연주하고 영상을 기록하는 과정에서는 두 가지 상태가 자연스럽게 혼합되어 나타났다.
+        </p>
+
+        <p>
+            따라서 본 실험에서는 특정한 경직 상태를 유지하는 것을 목표로 하지 않고, 실제 연주 과정에서 나타나는 신체적 변화와 그에 따른 타격의 변화를 그대로 기록하였다.
+        </p>
+
+        <p>
+            이러한 방식은 앞선 예비 관찰에서 확인된 물리적 특성이 실제 음악적 연주 과정에서 어떻게 나타나는지를 관찰하기 위한 것이다.
+        </p>
+
+    </div>
+
+    <div class="research-section">
+
+        <h4>연주 및 영상 기록 방법</h4>
+
+        <p>
+            클래핑 뮤직의 두 개의 연주 파트를 각각 독립적으로 녹음하였다.
+        </p>
+
+        <p>
+            각 파트에서는 원작의 리듬 구조를 유지하면서 성기를 이용해 바이올린 뒷판을 타격하는 방식으로 연주하였다.
+        </p>
+
+        <p>
+            두 개의 연주를 독립적으로 기록한 후 하나의 영상으로 결합하여 두 파트가 함께 재생되는 형태로 제시하였다.
+        </p>
+
+        <p>
+            영상 편집은 각각의 연주를 하나의 결과물로 결합하기 위한 기록 방식이며, 편집 자체를 별도의 연구 변수로 설정하지 않았다.
+        </p>
+
+        <p>
+            본 영상은 앞선 예비 관찰에서 확인된 신체 인터페이스의 물리적 특성을 실제 음악적 재료에 적용한 연주를 기록한다.
+        </p>
+
+        <p>
+            이를 통해 비표준적인 신체 인터페이스를 이용한 타격이 하나의 구체적인 음악적 구조 안에서 어떻게 수행되는지를 제시한다.
+        </p>
+
+                                    <div class="video-wrapper vertical">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/GABL001ZBxk"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+                    <div class="back-to-research">
+
+                        <a href="../research.html" class="button">
+                            &larr; Back to Research
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <footer id="footer">
+                <p class="copyright">&copy; Youngseo Kim</p>
+            </footer>
+
+        </div>
+
+
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+
+        <script>
+        function showLanguage(lang, button) {
+
+            document.querySelectorAll('.language-content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            document.querySelectorAll('.language-title').forEach(function(title) {
+                title.style.display = 'none';
+            });
+
+            document.querySelectorAll('.lang-button').forEach(function(button) {
+                button.classList.remove('active');
+            });
+
+            document.getElementById('lang-' + lang).style.display = 'block';
+            document.getElementById('title-' + lang).style.display = 'block';
+
+            button.classList.add('active');
+        }
+        </script>
+
+    </body>
+</html>

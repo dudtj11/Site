@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Youngseo Kim - Project</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* 1. 세련된 미니멀 단색 배경 처리 */
+            body {
+                background: #0f0f11 !important;
+                background-image: none !important;
+            }
+            body::before, body::after {
+                display: none !important;
+            }
+            #wrapper {
+                background: transparent !important;
+                background-image: none !important;
+                padding-top: 6rem !important;
+            }
+
+            /* 2. 상단 고정형 헤더 & 내비게이션 */
+            #custom-header-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 4rem !important;
+                background: rgba(15, 15, 17, 0.95) !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 4rem !important;
+                z-index: 10000 !important;
+                box-sizing: border-box;
+            }
+
+            /* 왼쪽 로고 텍스트 */
+            .nav-logo {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+
+            /* 오른쪽 메뉴 구역 */
+            #nav {
+                position: relative !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+            }
+            #nav ul {
+                display: flex !important;
+                flex-direction: row !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            #nav ul li a {
+                display: block !important;
+                height: 4rem !important;
+                line-height: 4rem !important;
+                padding: 0 1.25rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em;
+                border: none !important;
+                background: transparent !important;
+                transition: color 0.2s ease;
+            }
+            #nav ul li a:hover, #nav ul li a.active {
+                color: #ffffff !important;
+                background: transparent !important;
+            }
+
+            /* 3. 제목 및 구분선 검은색 보정 */
+            .main header.major h2::after,
+            .main header.major::after,
+            hr {
+                background-color: #000000 !important;
+                background: #000000 !important;
+                border-bottom-color: #000000 !important;
+            }
+            
+            /* Footer 기본 구분선 제거 및 하단 여백 확보 */
+            #footer {
+                border-top: none !important;
+                padding: 0 !important;
+            }
+            .copyright {
+                margin-top: 4rem !important;
+                padding-bottom: 4rem;
+            }
+
+            /* 본문 텍스트 좌우 맞춤 정렬 */
+            .justify-text {
+                text-align: justify !important;
+                text-justify: inter-word;
+            }
+
+            /* 4. 이미지와 텍스트의 가로 50:50 정렬 및 지그재그 배치 스타일 */
+            .spotlight {
+                display: flex;
+                align-items: center;
+                margin-bottom: 4rem;
+            }
+            .spotlight .content {
+                flex: 1;
+                padding: 0 0 0 3rem;
+            }
+            
+            /* 프로젝트 제목 굵기 및 한 치수 크기 조절 */
+            .spotlight .content h3 {
+                font-size: 1.5rem;
+                font-weight: 800;
+                letter-spacing: -0.02em;
+                margin-bottom: 1rem;
+                color: #ffffff;
+            }
+
+            /* 이미지 원형 마스크 제거 및 1:1 정사각형 칼재단 설정 */
+            .spotlight .image {
+                flex: 1;
+                max-width: 45%;
+                margin: 0;
+                border-radius: 0 !important;
+            }
+            .spotlight .image img {
+                border-radius: 0 !important;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+            }
+
+            .spotlight.reverse {
+                flex-direction: row-reverse;
+            }
+            .spotlight.reverse .content {
+                padding: 0 3rem 0 0;
+            }
+
+            /* 5. 버튼 스타일: 검은색 배경, 흰색 텍스트 */
+            .actions .button,
+            .actions .button.primary {
+                background-color: #000000 !important;
+                color: #ffffff !important;
+                border: 1px solid #ffffff !important; /* 미니멀 느낌을 위한 얇은 흰색 테두리 */
+                box-shadow: none !important;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+            
+            /* 호버 스타일 (반전) */
+            .actions .button:hover,
+            .actions .button.primary:hover {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            /* 모바일 화면 대응 반응형 디자인 */
+            @media screen and (max-width: 980px) {
+                #custom-header-nav {
+                    position: relative !important;
+                    flex-direction: column !important;
+                    height: auto !important;
+                    padding: 1rem !important;
+                }
+                #nav ul {
+                    flex-wrap: wrap !important;
+                    justify-content: center !important;
+                }
+                #nav ul li a {
+                    height: 3rem !important;
+                    line-height: 3rem !important;
+                    padding: 0 0.75rem !important;
+                }
+                #wrapper {
+                    padding-top: 1rem !important;
+                }
+                .spotlight, .spotlight.reverse {
+                    flex-direction: column !important;
+                    margin-bottom: 3rem;
+                }
+                .spotlight .image {
+                    max-width: 100%;
+                    margin-bottom: 2rem;
+                }
+                .spotlight .content, .spotlight.reverse .content {
+                    padding: 0;
+                }
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+		<div id="custom-header-nav">
+			<div class="nav-logo"><a href="index.html">Youngseo Kim</a></div>
+			<nav id="nav">
+				<ul>
+					<li><a href="biography.html">Biography</a></li>
+					<li><a href="calendar.html">Calendar</a></li>
+					<li><a href="watch.html">Watch</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="research.html">Research</a></li>
+					<li><a href="works.html">Works</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+        <div id="wrapper">
+
+            <div id="main">
+
+                <section class="main">
+                    <header class="major">
+                        <h2>Projects</h2>
+                    </header>
+                    
+                    <div class="projects-list">
+
+                        <div class="spotlight">
+                            <span class="image fit"><img src="images/projects/lacote.jpg" alt="L’à côté" /></span>
+                            <div class="content">
+                                <h3>L’à côté (formerly Ensemble NEXT)</h3>
+                                <p class="justify-text">L’à côté is a collective of musicians driven by a passion for new music, artistic experimentation, and sharing contemporary creation with audiences. The collective was formed by the members of Ensemble NEXT, an ensemble established as part of the Artist Diploma – Interpretation and Creation program at the Conservatoire National Supérieur de Musique et de Danse de Paris (CNSMDP). For two years, the 16-member ensemble specialized in contemporary and experimental music, with a focus on both creation and interpretation.</p>
+                                <p class="justify-text">During its time as Ensemble NEXT, the ensemble collaborated closely with the CNSMDP faculty, performing works created by students in composition classes and fostering a dynamic exchange between creation and interpretation. It also worked with Ensemble Intercontemporain (EIC), participating in masterclasses and workshops and receiving technical and musical support. The ensemble collaborated with young conductors to bring new compositions to life.</p>
+                                <p class="justify-text">As Ensemble NEXT, the group performed at the Institut Giacometti and the Philharmonie de Paris under Pierre Bleuse, participated in the Festival Présence, and completed a residency at CRD Aulnay-sous-Bois. From now on, the collective continues its activities independently under the name L’à côté, developing its own artistic identity and new projects.</p>
+                                <ul class="actions">
+                                    <li><a href="https://www.instagram.com/l_a.cote/" class="button primary" target="_blank">Visit Project Site</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr style="margin: 3rem 0;" />
+
+                        <div class="spotlight reverse">
+                            <span class="image fit"><img src="images/projects/make_fluxus_great_again.png" alt="Make Fluxus Great Again" /></span>
+                            <div class="content">
+                                <h3>Make Fluxus Great Again (Working title)</h3>
+                                <p class="justify-text">This is a personal project dedicated to the exploration and development of artistic practices inspired by Fluxus, Dada, Neo-Dada, and the Happening movement. Rooted in the spirit of experimentation and resistance to convention, the project seeks to reimagine concert formats and challenge the boundaries between performer, audience, and space.</p>
+                                <p class="justify-text">With a focus on interdisciplinary approaches, it opens space for philosophical inquiry and cross-genre dialogue, aiming to question not only how art is made and presented, but also why. It is an ongoing research into the potential of art as experience, disruption, and thought.</p>
+                            </div>
+                        </div>
+                        <hr style="margin: 3rem 0;" />
+
+                        <div class="spotlight">
+                            <span class="image fit"><img src="images/projects/edition_idiot.png" alt="Edition Idiot" /></span>
+                            <div class="content">
+                                <h3>Edition Idiot</h3>
+                                <p class="justify-text">Edition Idiot is a project dedicated to the production and publication of scores for works primarily inspired by Fluxus, Dada, and other avant-garde movements. It serves as a means of preservation.</p>
+                                <p class="justify-text">These pieces are not created for commercial success or wide distribution; they are born from a desire to preserve the spirit of absurdity, irony, and playful defiance. The scores themselves are less about precision or beauty, and more about capturing an ephemeral moment, a fleeting idea, or an act of resistance against conventional norms.</p>
+                                <p class="justify-text">Through humor, irony, and a generous dose of mischief, Edition Idiot invites performers to engage in art that questions, subverts, and disrupts. It is a space where imperfection is valued, where failure is celebrated, and where the ridiculous becomes a form of artistic integrity.</p>
+                            </div>
+                        </div>
+                        <hr style="margin: 3rem 0;" />
+
+                        <div class="spotlight reverse">
+                            <span class="image fit"><img src="images/projects/argo_kollektiv.jpg" alt="Argo Kollektiv" /></span>
+                            <div class="content">
+                                <h3>Argo Kollektiv</h3>
+                                <p class="justify-text">Argo Kollektiv is an ensemble formed by Panos Nikitaris (piano), Juan Moreda (saxophone), Taikan Yamasaki (percussion), and Youngseo Kim (violin). The group was founded during their Master’s studies in Contemporary Music Ensemble at the University of Music and Performing Arts Vienna. Their aim as a chamber group is to explore the rich sonic possibilities offered by the unique combination of saxophone, piano, violin, and percussion.</p>
+                                <p class="justify-text">They have worked on their sound and musicality with prominent figures of Vienna’s avant-garde scene, including Alvaro Collao, Mathilde Hoursiangou, Annette Bik, and Jean-Bernard Matter, among others. Their high level of performance, combined with their individual personalities and deep artistic connection, has led them to create distinctive musical experiences on Vienna’s stages.</p>
+                                <p class="justify-text">In 2026, Argo Kollektiv was selected for The New Austrian Sound of Music (NASOM) programme for 2027/2028. The biennial programme supports Austrian musicians and promotes their work internationally. As part of the programme, Argo Kollektiv will present Austrian contemporary music and its performances to new audiences and explore opportunities for international collaborations.</p>
+                                <ul class="actions">
+                                    <li><a href="https://www.argokollektiv.com/" class="button primary" target="_blank">Visit Project Site</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr style="margin: 3rem 0;" />
+
+                        <div class="spotlight">
+                            <span class="image fit"><img src="images/projects/ensemble_kreis.jpg" alt="Ensemble Kreis" /></span>
+                            <div class="content">
+                                <h3>Ensemble Kreis</h3>
+                                <p class="justify-text">Ensemble Kreis was founded this year by young musicians based in Vienna, with the aim of fostering contemporary music and creating a platform for exchange between composers and performers.</p>
+                                <p class="justify-text">Their debut concert, Ex tempore, featured works by Olivier Messiaen and Heinz Holliger, setting the tone for their artistic direction. Following this, the ensemble joined in celebrating the centenary of Luigi Nono, continuing their commitment to meaningful and forward-thinking programming.</p>
+                                <ul class="actions">
+                                    <li><a href="https://ensemblekreis.com/" class="button primary" target="_blank">Visit Project Site</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr style="margin: 3rem 0;" />
+
+                        <div class="spotlight reverse">
+                            <span class="image fit"><img src="images/projects/tacet_quartet.jpg" alt="Tacet Quartet" /></span>
+                            <div class="content">
+                                <h3>Tacet Quartet</h3>
+                                <p class="justify-text">The Tacet Quartett is a versatile ensemble formed in 2023 during their studies at MDW (University of Music and Performing Arts Vienna). Comprising talented musicians from diverse backgrounds, the quartet is active in Vienna and explores a broad repertoire, ranging from the Second Viennese School to contemporary string quartets.</p>
+                                <p class="justify-text">They have premiered works by young emerging composers and refined their skills through lessons with renowned teachers from the Klangforum Wien, as well as professors like Jean Bernard Matter and Clara Iannotta. The quartet has also participated in prestigious masterclasses, including those with the Arditti Quartet, further honing their musical and interpretative abilities.</p>
+                                <p class="justify-text">The Tacet Quartett explores various ensembles such as duos and trios, and has performed works by composers like Luigi Nono, Heinz Holliger, and Clara Iannotta. They have performed at the Arnold Schönberg Center and Musikverein Wien and actively support educational programs to foster a love for music in their community.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+
+            <footer id="footer">
+                <p class="copyright">&copy; Youngseo Kim</p>
+            </footer>
+
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

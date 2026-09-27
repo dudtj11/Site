@@ -360,20 +360,20 @@ def build_html(schedule_data):
     </head>
     <body class="is-preload">
 
-        <div id="custom-header-nav">
-            <div class="nav-logo">Youngseo Kim</div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="biography.html">Biography</a></li>
-                    <li><a href="calendar.html" class="active">Calendar</a></li>
-                    <li><a href="project.html">Project</a></li>
-                    <li><a href="watch.html">Watch</a></li>
-                    <li><a href="works.html">Works</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+	<div id="custom-header-nav">
+		<div class="nav-logo"><a href="index.html">Youngseo Kim</a></div>
+		<nav id="nav">
+			<ul>
+				<li><a href="biography.html">Biography</a></li>
+				<li><a href="calendar.html">Calendar</a></li>
+				<li><a href="watch.html">Watch</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="research.html">Research</a></li>
+				<li><a href="works.html">Works</a></li>
+				<li><a href="index.html#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
 
         <div id="wrapper">
             <div id="main">
@@ -386,26 +386,9 @@ def build_html(schedule_data):
 {sections_html}\t\t\t\t</section>
             </div>
             <footer id="footer">
-                <section id="contact">
-                    <div class="contact-major">
-                        <h2>Contact</h2>
-                    </div>
-                    <div class="contact-container">
-                        <div class="contact-info">
-                            <ul class="alt-info">
-                                <li><strong>Email:</strong> <a href="mailto:dudtj11@gmail.com">dudtj11@gmail.com</a></li>
-                                <li><strong>Location:</strong> Based in Paris</li>
-                            </ul>
-                        </div>
-                        <ul class="icons major">
-                            <li><a href="https://www.instagram.com/youngseo.kiiiiiim/" class="icon brands fa-instagram alt" target="_blank"><span class="label">Instagram</span></a></li>
-                            <li><a href="https://www.youtube.com/@youngseokim4387" class="icon brands fa-youtube alt" target="_blank"><span class="label">Youtube</span></a></li>
-                            <li><a href="https://brunch.co.kr/@fakingispower" class="icon solid fa-pen alt" target="_blank"><span class="label">Brunch</span></a></li>
-                        </ul>
-                    </div>
-                </section>
-                <p class="copyright">&copy; Youngseo Kim</p>
+                  <p class="copyright">&copy; Youngseo Kim</p>
             </footer>
+
         </div>
 
         <script src="assets/js/jquery.min.js"></script>

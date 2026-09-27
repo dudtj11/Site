@@ -16,6 +16,7 @@ const VIDEO_LINKS = {
         https://www.youtube.com/watch?v=iEm9YnLDIVk
         https://www.youtube.com/watch?v=GOQJUJ91eJ4
         https://www.youtube.com/watch?v=agBwteyJWHk
+        https://www.youtube.com/watch?v=OR6ZkfjRdPI
     `,
     fluxus: `
         https://www.youtube.com/watch?v=PkCohsOeVVE
@@ -27,6 +28,7 @@ const VIDEO_LINKS = {
         https://www.youtube.com/watch?v=z1K5KX3yqvQ
         https://www.youtube.com/watch?v=gTPRPGf07mU
         https://www.youtube.com/watch?v=8y4vjxSAdEY
+        https://www.youtube.com/watch?v=4hlyqIL7tBs
     `,
     other: `
         https://www.youtube.com/watch?v=vTDNURl6IOQ
@@ -34,8 +36,12 @@ const VIDEO_LINKS = {
         https://www.youtube.com/watch?v=V6ZMskkYdE0
         https://www.youtube.com/watch?v=8Zq1n6FxRvY
         https://www.youtube.com/watch?v=sJntgUItGt8
+        https://www.youtube.com/watch?v=bcwcFuWA_pA
+        https://www.youtube.com/watch?v=eEKh4X_E7oM
         https://www.youtube.com/watch?v=_LXLTuIPJ0M
+        https://www.youtube.com/watch?v=IYY3C8VGt9s
         https://www.youtube.com/watch?v=PRGWDfVBofs
+        https://www.youtube.com/watch?v=OTF87bvLMoM
         https://www.youtube.com/watch?v=wj0MQzB9hog
         https://www.youtube.com/watch?v=_6ahYn64V50
         https://www.youtube.com/watch?v=pmjOFBhGWTs
